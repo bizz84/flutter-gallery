@@ -49,45 +49,47 @@ ThemeData _buildShrineTheme() {
 }
 
 TextTheme _buildShrineTextTheme(TextTheme base) {
-  return GoogleFonts.rubikTextTheme(base
-      .copyWith(
-        headlineSmall: base.headlineSmall!.copyWith(
-          fontWeight: FontWeight.w500,
-          letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
+  return GoogleFonts.rubikTextTheme(
+    base
+        .copyWith(
+          headlineSmall: base.headlineSmall!.copyWith(
+            fontWeight: FontWeight.w500,
+            letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
+          ),
+          titleLarge: base.titleLarge!.copyWith(
+            fontSize: 18,
+            letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
+          ),
+          bodySmall: base.bodySmall!.copyWith(
+            fontWeight: FontWeight.w400,
+            fontSize: 14,
+            letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
+          ),
+          bodyLarge: base.bodyLarge!.copyWith(
+            fontWeight: FontWeight.w500,
+            fontSize: 16,
+            letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
+          ),
+          bodyMedium: base.bodyMedium!.copyWith(
+            letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
+          ),
+          titleMedium: base.titleMedium!.copyWith(
+            letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
+          ),
+          headlineMedium: base.headlineMedium!.copyWith(
+            letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
+          ),
+          labelLarge: base.labelLarge!.copyWith(
+            fontWeight: FontWeight.w500,
+            fontSize: 14,
+            letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
+          ),
+        )
+        .apply(
+          displayColor: shrineBrown900,
+          bodyColor: shrineBrown900,
         ),
-        titleLarge: base.titleLarge!.copyWith(
-          fontSize: 18,
-          letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
-        ),
-        bodySmall: base.bodySmall!.copyWith(
-          fontWeight: FontWeight.w400,
-          fontSize: 14,
-          letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
-        ),
-        bodyLarge: base.bodyLarge!.copyWith(
-          fontWeight: FontWeight.w500,
-          fontSize: 16,
-          letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
-        ),
-        bodyMedium: base.bodyMedium!.copyWith(
-          letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
-        ),
-        titleMedium: base.titleMedium!.copyWith(
-          letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
-        ),
-        headlineMedium: base.headlineMedium!.copyWith(
-          letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
-        ),
-        labelLarge: base.labelLarge!.copyWith(
-          fontWeight: FontWeight.w500,
-          fontSize: 14,
-          letterSpacing: letterSpacingOrNone(defaultLetterSpacing),
-        ),
-      )
-      .apply(
-        displayColor: shrineBrown900,
-        bodyColor: shrineBrown900,
-      ));
+  );
 }
 
 const ColorScheme _shrineColorScheme = ColorScheme(

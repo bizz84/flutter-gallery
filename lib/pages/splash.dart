@@ -95,7 +95,8 @@ class _SplashPageState extends State<SplashPage>
     BuildContext context,
     BoxConstraints constraints,
   ) {
-    final height = constraints.biggest.height -
+    final height =
+        constraints.biggest.height -
         (isDisplayDesktop(context) ? homePeekDesktop : homePeekMobile);
     return RelativeRectTween(
       begin: const RelativeRect.fromLTRB(0, 0, 0, 0),
@@ -158,7 +159,9 @@ class _SplashPageState extends State<SplashPage>
                     }
                   },
                   child: _SplashBackLayer(
-                      isSplashCollapsed: !_isSplashVisible, effect: _effect),
+                    isSplashCollapsed: !_isSplashVisible,
+                    effect: _effect,
+                  ),
                 ),
               );
             } else {
@@ -236,7 +239,7 @@ class _SplashBackLayer extends StatelessWidget {
                     GalleryLocalizations.of(context)!.splashSelectDemo,
                   ),
                 ),
-              )
+              ),
             ],
           ),
         );
@@ -264,8 +267,8 @@ class _SplashBackLayer extends StatelessWidget {
             bottom: isDisplayDesktop(context)
                 ? homePeekDesktop
                 : isDisplayFoldable(context)
-                    ? 0
-                    : homePeekMobile,
+                ? 0
+                : homePeekMobile,
           ),
           child: child,
         ),

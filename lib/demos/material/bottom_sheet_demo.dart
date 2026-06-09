@@ -54,8 +54,9 @@ class BottomSheetDemo extends StatelessWidget {
               backgroundColor: Theme.of(context).colorScheme.secondary,
               child: Icon(
                 Icons.add,
-                semanticLabel:
-                    GalleryLocalizations.of(context)!.demoBottomSheetAddLabel,
+                semanticLabel: GalleryLocalizations.of(
+                  context,
+                )!.demoBottomSheetAddLabel,
               ),
             ),
             body: _bottomSheetDemo(context),
@@ -123,8 +124,9 @@ class _ModalBottomSheetDemo extends StatelessWidget {
         onPressed: () {
           _showModalBottomSheet(context);
         },
-        child:
-            Text(GalleryLocalizations.of(context)!.demoBottomSheetButtonText),
+        child: Text(
+          GalleryLocalizations.of(context)!.demoBottomSheetButtonText,
+        ),
       ),
     );
   }
@@ -179,8 +181,9 @@ class _PersistentBottomSheetDemoState
     return Center(
       child: ElevatedButton(
         onPressed: _showBottomSheetCallback,
-        child:
-            Text(GalleryLocalizations.of(context)!.demoBottomSheetButtonText),
+        child: Text(
+          GalleryLocalizations.of(context)!.demoBottomSheetButtonText,
+        ),
       ),
     );
   }

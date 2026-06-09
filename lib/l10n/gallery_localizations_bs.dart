@@ -322,7 +322,10 @@ class GalleryLocalizationsBs extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Na račun ($accountName) s brojem $accountNumber je uplaćen iznos od $amount.';
   }
 
@@ -332,8 +335,12 @@ class GalleryLocalizationsBs extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'Od ukupnog budžeta ($budgetName) od $amountTotal iskorišteno je $amountUsed, a preostalo je $amountLeft';
   }
 

@@ -159,8 +159,9 @@ class _ShrineAppState extends State<ShrineApp>
           // ScrollBehavior. This overrides that. All vertical scrollables in
           // the gallery need to be audited before enabling this feature,
           // see https://github.com/flutter/gallery/issues/541
-          scrollBehavior:
-              const MaterialScrollBehavior().copyWith(scrollbars: false),
+          scrollBehavior: const MaterialScrollBehavior().copyWith(
+            scrollbars: false,
+          ),
           restorationScopeId: 'shrineApp',
           title: 'Shrine',
           debugShowCheckedModeBanner: false,

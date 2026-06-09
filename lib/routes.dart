@@ -61,25 +61,31 @@ class RouteConfiguration {
     Path(
       r'^' + rally_routes.homeRoute,
       (context, match) => StudyWrapper(
-        study: DeferredWidget(rally.loadLibrary,
-            () => rally.RallyApp()), // ignore: prefer_const_constructors
+        study: DeferredWidget(
+          rally.loadLibrary,
+          () => rally.RallyApp(),
+        ), // ignore: prefer_const_constructors
       ),
       openInSecondScreen: true,
     ),
     Path(
       r'^' + shrine_routes.homeRoute,
       (context, match) => StudyWrapper(
-        study: DeferredWidget(shrine.loadLibrary,
-            () => shrine.ShrineApp()), // ignore: prefer_const_constructors
+        study: DeferredWidget(
+          shrine.loadLibrary,
+          () => shrine.ShrineApp(),
+        ), // ignore: prefer_const_constructors
       ),
       openInSecondScreen: true,
     ),
     Path(
       r'^' + crane_routes.defaultRoute,
       (context, match) => StudyWrapper(
-        study: DeferredWidget(crane.loadLibrary,
-            () => crane.CraneApp(), // ignore: prefer_const_constructors
-            placeholder: const DeferredLoadingPlaceholder(name: 'Crane')),
+        study: DeferredWidget(
+          crane.loadLibrary,
+          () => crane.CraneApp(), // ignore: prefer_const_constructors
+          placeholder: const DeferredLoadingPlaceholder(name: 'Crane'),
+        ),
       ),
       openInSecondScreen: true,
     ),
@@ -87,9 +93,10 @@ class RouteConfiguration {
       r'^' + fortnightly_routes.defaultRoute,
       (context, match) => StudyWrapper(
         study: DeferredWidget(
-            fortnightly.loadLibrary,
-            // ignore: prefer_const_constructors
-            () => fortnightly.FortnightlyApp()),
+          fortnightly.loadLibrary,
+          // ignore: prefer_const_constructors
+          () => fortnightly.FortnightlyApp(),
+        ),
       ),
       openInSecondScreen: true,
     ),
@@ -179,18 +186,21 @@ class TwoPanePageRoute<T> extends OverlayRoute<T> {
 
   @override
   Iterable<OverlayEntry> createOverlayEntries() sync* {
-    yield OverlayEntry(builder: (context) {
-      final hinge = MediaQuery.of(context).hinge?.bounds;
-      if (hinge == null) {
-        return builder.call(context);
-      } else {
-        return Positioned(
+    yield OverlayEntry(
+      builder: (context) {
+        final hinge = MediaQuery.of(context).hinge?.bounds;
+        if (hinge == null) {
+          return builder.call(context);
+        } else {
+          return Positioned(
             top: 0,
             left: hinge.right,
             right: 0,
             bottom: 0,
-            child: builder.call(context));
-      }
-    });
+            child: builder.call(context),
+          );
+        }
+      },
+    );
   }
 }

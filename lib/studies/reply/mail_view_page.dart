@@ -99,10 +99,9 @@ class _MailViewHeader extends StatelessWidget {
                 SelectableText(
                   'To ${email.recipients},',
                   style: textTheme.bodySmall!.copyWith(
-                    color: Theme.of(context)
-                        .navigationRailTheme
-                        .unselectedLabelTextStyle!
-                        .color,
+                    color: Theme.of(
+                      context,
+                    ).navigationRailTheme.unselectedLabelTextStyle!.color,
                   ),
                 ),
               ],

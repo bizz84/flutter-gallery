@@ -40,7 +40,7 @@ class _NavRailDemoState extends State<NavRailDemo> with RestorationMixin {
     final selectedItem = <String>[
       destinationFirst,
       destinationSecond,
-      destinationThird
+      destinationThird,
     ];
     return Scaffold(
       appBar: AppBar(

@@ -53,8 +53,8 @@ _FileReadStatus _updatedStatus(_FileReadStatus oldStatus, String line) {
     case _FileReadStatus.comments:
       newStatus =
           (line.trim().isEmpty || lineStatus == _FileReadStatus.comments)
-              ? _FileReadStatus.comments
-              : lineStatus;
+          ? _FileReadStatus.comments
+          : lineStatus;
       break;
     case _FileReadStatus.imports:
       newStatus = (line.trim().isEmpty || lineStatus == _FileReadStatus.imports)
@@ -69,10 +69,9 @@ _FileReadStatus _updatedStatus(_FileReadStatus oldStatus, String line) {
 }
 
 Map<String, String> _createSegments(String sourceDirectoryPath) {
-  final files = Directory(sourceDirectoryPath)
-      .listSync(recursive: true)
-      .whereType<File>()
-      .toList();
+  final files = Directory(
+    sourceDirectoryPath,
+  ).listSync(recursive: true).whereType<File>().toList();
 
   var subsegments = <String, StringBuffer>{};
   var subsegmentPrologues = <String, String>{};
@@ -111,7 +110,8 @@ Map<String, String> _createSegments(String sourceDirectoryPath) {
         for (final argument in arguments) {
           if (activeSubsegments.contains(argument)) {
             throw PreformatterException(
-                'BEGIN $argument is used twice in file ${file.path}');
+              'BEGIN $argument is used twice in file ${file.path}',
+            );
           } else if (appearedSubsegments.contains(argument)) {
             throw PreformatterException('BEGIN $argument is used twice');
           } else {
@@ -136,7 +136,8 @@ Map<String, String> _createSegments(String sourceDirectoryPath) {
             activeSubsegments.remove(argument);
           } else {
             throw PreformatterException(
-                'END $argument is used without a paired BEGIN in ${file.path}');
+              'END $argument is used without a paired BEGIN in ${file.path}',
+            );
           }
         }
       } else {
@@ -278,8 +279,11 @@ class PreformatterException implements Exception {
 
 // Function to make sure we capture all of the stdout.
 // Reference: https://github.com/dart-lang/sdk/issues/31666
-Future<String> _startProcess(String executable,
-    {List<String> arguments = const [], required String input}) async {
+Future<String> _startProcess(
+  String executable, {
+  List<String> arguments = const [],
+  required String input,
+}) async {
   final output = <int>[];
   final completer = Completer<int>();
   final process = await Process.start(executable, arguments, runInShell: true);

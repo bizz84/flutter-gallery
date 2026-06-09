@@ -322,7 +322,10 @@ class GalleryLocalizationsEl extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Λογαριασμός $accountName με αριθμό $accountNumber και ποσό $amount.';
   }
 
@@ -332,8 +335,12 @@ class GalleryLocalizationsEl extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'Προϋπολογισμός $budgetName από τον οποίο έχουν χρησιμοποιηθεί $amountUsed από το συνολικό ποσό των $amountTotal, απομένουν $amountLeft';
   }
 

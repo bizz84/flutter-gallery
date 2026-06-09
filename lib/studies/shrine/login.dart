@@ -203,7 +203,8 @@ class _CancelAndNextButtons extends StatelessWidget {
               child: Text(
                 GalleryLocalizations.of(context)!.shrineNextButtonCaption,
                 style: TextStyle(
-                    letterSpacing: letterSpacingOrNone(largeLetterSpacing)),
+                  letterSpacing: letterSpacingOrNone(largeLetterSpacing),
+                ),
               ),
             ),
           ),

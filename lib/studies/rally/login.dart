@@ -151,14 +151,18 @@ class _TopBar extends StatelessWidget {
                 child: SizedBox(
                   height: 80,
                   child: FadeInImagePlaceholder(
-                    image:
-                        const AssetImage('logo.png', package: 'rally_assets'),
-                    placeholder: LayoutBuilder(builder: (context, constraints) {
-                      return SizedBox(
-                        width: constraints.maxHeight,
-                        height: constraints.maxHeight,
-                      );
-                    }),
+                    image: const AssetImage(
+                      'logo.png',
+                      package: 'rally_assets',
+                    ),
+                    placeholder: LayoutBuilder(
+                      builder: (context, constraints) {
+                        return SizedBox(
+                          width: constraints.maxHeight,
+                          height: constraints.maxHeight,
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -166,9 +170,9 @@ class _TopBar extends StatelessWidget {
               Text(
                 localizations.rallyLoginLoginToRally,
                 style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                      fontSize: 35 / reducedTextScale(context),
-                      fontWeight: FontWeight.w600,
-                    ),
+                  fontSize: 35 / reducedTextScale(context),
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ],
           ),
@@ -352,8 +356,10 @@ class _LoginButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 30),
         child: Row(
           children: [
-            const Icon(Icons.check_circle_outline,
-                color: RallyColors.buttonColor),
+            const Icon(
+              Icons.check_circle_outline,
+              color: RallyColors.buttonColor,
+            ),
             const SizedBox(width: 12),
             Text(GalleryLocalizations.of(context)!.rallyLoginRememberMe),
             const Expanded(child: SizedBox.shrink()),

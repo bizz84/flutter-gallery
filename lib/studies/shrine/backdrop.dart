@@ -37,8 +37,9 @@ class _FrontLayer extends StatelessWidget {
     return Material(
       elevation: 16,
       shape: const BeveledRectangleBorder(
-        borderRadius:
-            BorderRadiusDirectional.only(topStart: Radius.circular(46)),
+        borderRadius: BorderRadiusDirectional.only(
+          topStart: Radius.circular(46),
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -83,92 +84,98 @@ class _BackdropTitle extends AnimatedWidget {
       curve: const Interval(0, 0.78),
     );
 
-    final textDirectionScalar =
-        Directionality.of(context) == TextDirection.ltr ? 1 : -1;
+    final textDirectionScalar = Directionality.of(context) == TextDirection.ltr
+        ? 1
+        : -1;
 
-    const slantedMenuIcon =
-        ImageIcon(AssetImage('packages/shrine_images/slanted_menu.png'));
+    const slantedMenuIcon = ImageIcon(
+      AssetImage('packages/shrine_images/slanted_menu.png'),
+    );
 
     final directionalSlantedMenuIcon =
         Directionality.of(context) == TextDirection.ltr
-            ? slantedMenuIcon
-            : Transform(
-                alignment: Alignment.center,
-                transform: Matrix4.rotationY(pi),
-                child: slantedMenuIcon,
-              );
+        ? slantedMenuIcon
+        : Transform(
+            alignment: Alignment.center,
+            transform: Matrix4.rotationY(pi),
+            child: slantedMenuIcon,
+          );
 
     final menuButtonTooltip = animation.isCompleted
         ? GalleryLocalizations.of(context)!.shrineTooltipOpenMenu
         : animation.isDismissed
-            ? GalleryLocalizations.of(context)!.shrineTooltipCloseMenu
-            : null;
+        ? GalleryLocalizations.of(context)!.shrineTooltipCloseMenu
+        : null;
 
     return DefaultTextStyle(
       style: Theme.of(context).primaryTextTheme.titleLarge!,
       softWrap: false,
       overflow: TextOverflow.ellipsis,
-      child: Row(children: [
-        // branded icon
-        SizedBox(
-          width: 72,
-          child: Semantics(
-            container: true,
-            child: IconButton(
-              padding: const EdgeInsetsDirectional.only(end: 8),
-              onPressed: onPress,
-              tooltip: menuButtonTooltip,
-              icon: Stack(children: [
-                Opacity(
-                  opacity: animation.value,
-                  child: directionalSlantedMenuIcon,
+      child: Row(
+        children: [
+          // branded icon
+          SizedBox(
+            width: 72,
+            child: Semantics(
+              container: true,
+              child: IconButton(
+                padding: const EdgeInsetsDirectional.only(end: 8),
+                onPressed: onPress,
+                tooltip: menuButtonTooltip,
+                icon: Stack(
+                  children: [
+                    Opacity(
+                      opacity: animation.value,
+                      child: directionalSlantedMenuIcon,
+                    ),
+                    FractionalTranslation(
+                      translation: Tween<Offset>(
+                        begin: Offset.zero,
+                        end: Offset(1.0 * textDirectionScalar, 0.0),
+                      ).evaluate(animation),
+                      child: const ImageIcon(
+                        AssetImage('packages/shrine_images/diamond.png'),
+                      ),
+                    ),
+                  ],
                 ),
-                FractionalTranslation(
-                  translation: Tween<Offset>(
-                    begin: Offset.zero,
-                    end: Offset(1.0 * textDirectionScalar, 0.0),
-                  ).evaluate(animation),
-                  child: const ImageIcon(
-                    AssetImage('packages/shrine_images/diamond.png'),
-                  ),
-                ),
-              ]),
+              ),
             ),
           ),
-        ),
-        // Here, we do a custom cross fade between backTitle and frontTitle.
-        // This makes a smooth animation between the two texts.
-        Stack(
-          children: [
-            Opacity(
-              opacity: CurvedAnimation(
-                parent: ReverseAnimation(animation),
-                curve: const Interval(0.5, 1),
-              ).value,
-              child: FractionalTranslation(
-                translation: Tween<Offset>(
-                  begin: Offset.zero,
-                  end: Offset(0.5 * textDirectionScalar, 0),
-                ).evaluate(animation),
-                child: backTitle,
+          // Here, we do a custom cross fade between backTitle and frontTitle.
+          // This makes a smooth animation between the two texts.
+          Stack(
+            children: [
+              Opacity(
+                opacity: CurvedAnimation(
+                  parent: ReverseAnimation(animation),
+                  curve: const Interval(0.5, 1),
+                ).value,
+                child: FractionalTranslation(
+                  translation: Tween<Offset>(
+                    begin: Offset.zero,
+                    end: Offset(0.5 * textDirectionScalar, 0),
+                  ).evaluate(animation),
+                  child: backTitle,
+                ),
               ),
-            ),
-            Opacity(
-              opacity: CurvedAnimation(
-                parent: animation,
-                curve: const Interval(0.5, 1),
-              ).value,
-              child: FractionalTranslation(
-                translation: Tween<Offset>(
-                  begin: Offset(-0.25 * textDirectionScalar, 0),
-                  end: Offset.zero,
-                ).evaluate(animation),
-                child: frontTitle,
+              Opacity(
+                opacity: CurvedAnimation(
+                  parent: animation,
+                  curve: const Interval(0.5, 1),
+                ).value,
+                child: FractionalTranslation(
+                  translation: Tween<Offset>(
+                    begin: Offset(-0.25 * textDirectionScalar, 0),
+                    end: Offset.zero,
+                  ).evaluate(animation),
+                  child: frontTitle,
+                ),
               ),
-            ),
-          ],
-        ),
-      ]),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
@@ -388,7 +395,7 @@ class DesktopBackdrop extends StatelessWidget {
             color: Colors.white,
             child: frontLayer,
           ),
-        )
+        ),
       ],
     );
   }

@@ -36,32 +36,35 @@ class HeaderForm extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal:
-            isDesktop && !isSmallDesktop ? appPaddingLarge : appPaddingSmall,
+        horizontal: isDesktop && !isSmallDesktop
+            ? appPaddingLarge
+            : appPaddingSmall,
       ),
       child: isDesktop
-          ? LayoutBuilder(builder: (context, constraints) {
-              var crossAxisCount = isSmallDesktop ? 2 : 4;
-              if (fields.length < crossAxisCount) {
-                crossAxisCount = fields.length;
-              }
-              final itemWidth = constraints.maxWidth / crossAxisCount;
-              return GridView.count(
-                crossAxisCount: crossAxisCount,
-                childAspectRatio: itemWidth / textFieldHeight,
-                physics: const NeverScrollableScrollPhysics(),
-                children: [
-                  for (final field in fields)
-                    if ((field.index + 1) % crossAxisCount == 0)
-                      _HeaderTextField(field: field)
-                    else
-                      Padding(
-                        padding: const EdgeInsetsDirectional.only(end: 16),
-                        child: _HeaderTextField(field: field),
-                      ),
-                ],
-              );
-            })
+          ? LayoutBuilder(
+              builder: (context, constraints) {
+                var crossAxisCount = isSmallDesktop ? 2 : 4;
+                if (fields.length < crossAxisCount) {
+                  crossAxisCount = fields.length;
+                }
+                final itemWidth = constraints.maxWidth / crossAxisCount;
+                return GridView.count(
+                  crossAxisCount: crossAxisCount,
+                  childAspectRatio: itemWidth / textFieldHeight,
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: [
+                    for (final field in fields)
+                      if ((field.index + 1) % crossAxisCount == 0)
+                        _HeaderTextField(field: field)
+                      else
+                        Padding(
+                          padding: const EdgeInsetsDirectional.only(end: 16),
+                          child: _HeaderTextField(field: field),
+                        ),
+                  ],
+                );
+              },
+            )
           : Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -69,7 +72,7 @@ class HeaderForm extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8),
                     child: _HeaderTextField(field: field),
-                  )
+                  ),
               ],
             ),
     );
@@ -86,8 +89,9 @@ class _HeaderTextField extends StatelessWidget {
     return TextField(
       controller: field.textController,
       cursorColor: Theme.of(context).colorScheme.secondary,
-      style:
-          Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white),
+      style: Theme.of(
+        context,
+      ).textTheme.bodyLarge!.copyWith(color: Colors.white),
       onTap: () {},
       decoration: InputDecoration(
         border: OutlineInputBorder(

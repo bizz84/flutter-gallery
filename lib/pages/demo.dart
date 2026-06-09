@@ -61,10 +61,11 @@ class _DemoPageState extends State<DemoPage> {
       Navigator.of(context).pop();
     }
     return ScaffoldMessenger(
-        child: GalleryDemoPage(
-      restorationId: widget.slug!,
-      demo: slugToDemoMap[widget.slug]!,
-    ));
+      child: GalleryDemoPage(
+        restorationId: widget.slug!,
+        demo: slugToDemoMap[widget.slug]!,
+      ),
+    );
   }
 }
 
@@ -148,8 +149,9 @@ class _GalleryDemoPageState extends State<GalleryDemoPage>
     if (_demoStateIndex.value == newStateIndex && isDisplayDesktop(context)) {
       if (_demoStateIndex.value == _DemoState.fullscreen.index) {
         setStateAndUpdate(() {
-          _demoStateIndex.value =
-              _hasOptions ? _DemoState.options.index : _DemoState.info.index;
+          _demoStateIndex.value = _hasOptions
+              ? _DemoState.options.index
+              : _DemoState.info.index;
         });
       }
       return;
@@ -195,8 +197,9 @@ class _GalleryDemoPageState extends State<GalleryDemoPage>
     } else if (_DemoState.values[_demoStateIndex.value] == _DemoState.normal &&
         (isDesktop || isFoldable)) {
       // Do not allow normal state for desktop.
-      _demoStateIndex.value =
-          _hasOptions ? _DemoState.options.index : _DemoState.info.index;
+      _demoStateIndex.value = _hasOptions
+          ? _DemoState.options.index
+          : _DemoState.info.index;
     } else if (isDesktop != _isDesktop) {
       _isDesktop = isDesktop;
       // When going from desktop to mobile, return to normal state.
@@ -290,7 +293,8 @@ class _GalleryDemoPageState extends State<GalleryDemoPage>
 
     final mediaQuery = MediaQuery.of(context);
     final bottomSafeArea = mediaQuery.padding.bottom;
-    final contentHeight = mediaQuery.size.height -
+    final contentHeight =
+        mediaQuery.size.height -
         mediaQuery.padding.top -
         mediaQuery.padding.bottom -
         appBar.preferredSize.height;
@@ -433,61 +437,62 @@ class _GalleryDemoPageState extends State<GalleryDemoPage>
 
     if (isDesktop || isFoldable) {
       page = AnimatedBuilder(
-          animation: _codeBackgroundColorController,
-          builder: (context, child) {
-            Brightness themeBrightness;
+        animation: _codeBackgroundColorController,
+        builder: (context, child) {
+          Brightness themeBrightness;
 
-            switch (GalleryOptions.of(context).themeMode) {
-              case ThemeMode.system:
-                themeBrightness = MediaQuery.of(context).platformBrightness;
-                break;
-              case ThemeMode.light:
-                themeBrightness = Brightness.light;
-                break;
-              case ThemeMode.dark:
-                themeBrightness = Brightness.dark;
-                break;
-            }
+          switch (GalleryOptions.of(context).themeMode) {
+            case ThemeMode.system:
+              themeBrightness = MediaQuery.of(context).platformBrightness;
+              break;
+            case ThemeMode.light:
+              themeBrightness = Brightness.light;
+              break;
+            case ThemeMode.dark:
+              themeBrightness = Brightness.dark;
+              break;
+          }
 
-            Widget contents = Container(
-              padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
-              child: ApplyTextOptions(
-                child: Scaffold(
-                  appBar: appBar,
-                  body: body,
-                  backgroundColor: Colors.transparent,
+          Widget contents = Container(
+            padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
+            child: ApplyTextOptions(
+              child: Scaffold(
+                appBar: appBar,
+                body: body,
+                backgroundColor: Colors.transparent,
+              ),
+            ),
+          );
+
+          if (themeBrightness == Brightness.light) {
+            // If it is currently in light mode, add a
+            // dark background for code.
+            Widget codeBackground = SafeArea(
+              child: Container(
+                padding: const EdgeInsets.only(top: 56),
+                child: Container(
+                  color: ColorTween(
+                    begin: Colors.transparent,
+                    end: GalleryThemeData.darkThemeData.canvasColor,
+                  ).animate(_codeBackgroundColorController).value,
                 ),
               ),
             );
 
-            if (themeBrightness == Brightness.light) {
-              // If it is currently in light mode, add a
-              // dark background for code.
-              Widget codeBackground = SafeArea(
-                child: Container(
-                  padding: const EdgeInsets.only(top: 56),
-                  child: Container(
-                    color: ColorTween(
-                      begin: Colors.transparent,
-                      end: GalleryThemeData.darkThemeData.canvasColor,
-                    ).animate(_codeBackgroundColorController).value,
-                  ),
-                ),
-              );
-
-              contents = Stack(
-                children: [
-                  codeBackground,
-                  contents,
-                ],
-              );
-            }
-
-            return Container(
-              color: colorScheme.surface,
-              child: contents,
+            contents = Stack(
+              children: [
+                codeBackground,
+                contents,
+              ],
             );
-          });
+          }
+
+          return Container(
+            color: colorScheme.surface,
+            child: contents,
+          );
+        },
+      );
     } else {
       page = Container(
         color: colorScheme.surface,
@@ -554,8 +559,9 @@ class _DemoSectionOptions extends StatelessWidget {
                 GalleryLocalizations.of(context)!.demoOptionsTooltip,
                 style: textTheme.headlineMedium!.apply(
                   color: colorScheme.onSurface,
-                  fontSizeDelta:
-                      isDisplayDesktop(context) ? desktopDisplay1FontDelta : 0,
+                  fontSizeDelta: isDisplayDesktop(context)
+                      ? desktopDisplay1FontDelta
+                      : 0,
                 ),
               ),
             ),
@@ -612,9 +618,8 @@ class _DemoSectionOptionsItem extends StatelessWidget {
           child: Text(
             title,
             style: Theme.of(context).textTheme.bodyMedium!.apply(
-                  color:
-                      isSelected ? colorScheme.primary : colorScheme.onSurface,
-                ),
+              color: isSelected ? colorScheme.primary : colorScheme.onSurface,
+            ),
           ),
         ),
       ),
@@ -659,8 +664,9 @@ class _DemoSectionInfo extends StatelessWidget {
                 title,
                 style: textTheme.headlineMedium!.apply(
                   color: colorScheme.onSurface,
-                  fontSizeDelta:
-                      isDisplayDesktop(context) ? desktopDisplay1FontDelta : 0,
+                  fontSizeDelta: isDisplayDesktop(context)
+                      ? desktopDisplay1FontDelta
+                      : 0,
                 ),
               ),
               const SizedBox(height: 12),
@@ -704,8 +710,9 @@ class DemoWrapper extends StatelessWidget {
             platform: GalleryOptions.of(context).platform,
           ),
           child: CupertinoTheme(
-            data: const CupertinoThemeData()
-                .copyWith(brightness: Brightness.light),
+            data: const CupertinoThemeData().copyWith(
+              brightness: Brightness.light,
+            ),
             child: ApplyTextOptions(
               child: Builder(builder: buildRoute),
             ),
@@ -760,8 +767,9 @@ class CodeDisplayPage extends StatelessWidget {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            GalleryLocalizations.of(context)!
-                .demoCodeViewerCopiedToClipboardMessage,
+            GalleryLocalizations.of(
+              context,
+            )!.demoCodeViewerCopiedToClipboardMessage,
           ),
         ),
       );
@@ -771,8 +779,9 @@ class CodeDisplayPage extends StatelessWidget {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            GalleryLocalizations.of(context)!
-                .demoCodeViewerFailedToCopyToClipboardMessage(exception),
+            GalleryLocalizations.of(
+              context,
+            )!.demoCodeViewerFailedToCopyToClipboardMessage(exception),
           ),
         ),
       );
@@ -801,9 +810,9 @@ class CodeDisplayPage extends StatelessWidget {
             child: Text(
               GalleryLocalizations.of(context)!.demoCodeViewerCopyAll,
               style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
-                  ),
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
         ),

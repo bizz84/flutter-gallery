@@ -190,7 +190,7 @@ class _PaletteTabView extends StatelessWidget {
     600,
     700,
     800,
-    900
+    900,
   ];
   static const accentKeys = <int>[100, 200, 400, 700];
 

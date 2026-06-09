@@ -321,7 +321,10 @@ class GalleryLocalizationsTe extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return '$accountNumber నంబర్ కలిగిన $accountName అకౌంట్‌లో $amount.';
   }
 
@@ -331,8 +334,12 @@ class GalleryLocalizationsTe extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'మొత్తంగా $amountTotal కలిగిన $budgetName బడ్జెట్‌లో $amountUsed ఉపయోగించబడింది, అందు వల్ల $amountLeft మిగిలి ఉంది';
   }
 

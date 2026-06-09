@@ -29,10 +29,9 @@ class SharedZAxisTransitionDemo extends StatelessWidget {
                 Text(localizations.demoSharedZAxisTitle),
                 Text(
                   '(${localizations.demoSharedZAxisDemoInstructions})',
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleSmall!
-                      .copyWith(color: Colors.white),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleSmall!.copyWith(color: Colors.white),
                 ),
               ],
             ),
@@ -197,7 +196,7 @@ class _RecipePage extends StatelessWidget {
             padding: const EdgeInsets.all(8),
             children: [
               for (var recipe in savedRecipes)
-                _RecipeTile(recipe, savedRecipes.indexOf(recipe))
+                _RecipeTile(recipe, savedRecipes.indexOf(recipe)),
             ],
           ),
         ),

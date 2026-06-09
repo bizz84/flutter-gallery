@@ -105,8 +105,10 @@ class GalleryAutomator {
         );
       }
 
-      final demoButton =
-          find.byKey(ValueKey(demo), skipOffstage: false).evaluate().single;
+      final demoButton = find
+          .byKey(ValueKey(demo), skipOffstage: false)
+          .evaluate()
+          .single;
 
       await scrollUntilVisible(
         element: demoButton,
@@ -163,14 +165,17 @@ class GalleryAutomator {
         );
       } else if (scrolled && categoryOf(demo) == 'study') {
         scrolled = false;
-        final pageScrollable =
-            Scrollable.of(find.text('Categories').evaluate().single);
+        final pageScrollable = Scrollable.of(
+          find.text('Categories').evaluate().single,
+        );
         await scrollToExtreme(scrollable: pageScrollable, toEnd: false);
       }
 
       // Scroll that scrollable
-      final demoButton =
-          find.byKey(ValueKey(demo), skipOffstage: false).evaluate().single;
+      final demoButton = find
+          .byKey(ValueKey(demo), skipOffstage: false)
+          .evaluate()
+          .single;
       final scrollable = Scrollable.of(demoButton);
 
       for (var i = 0; i < 2; ++i) {

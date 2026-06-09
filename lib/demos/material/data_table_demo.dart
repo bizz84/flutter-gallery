@@ -61,8 +61,9 @@ class _DataTableDemoState extends State<DataTableDemo> with RestorationMixin {
   final _RestorableDessertSelections _dessertSelections =
       _RestorableDessertSelections();
   final RestorableInt _rowIndex = RestorableInt(0);
-  final RestorableInt _rowsPerPage =
-      RestorableInt(PaginatedDataTable.defaultRowsPerPage);
+  final RestorableInt _rowsPerPage = RestorableInt(
+    PaginatedDataTable.defaultRowsPerPage,
+  );
   final RestorableBool _sortAscending = RestorableBool(true);
   final RestorableIntN _sortColumnIndex = RestorableIntN(null);
   _DessertDataSource? _dessertsDataSource;
@@ -84,8 +85,10 @@ class _DataTableDemoState extends State<DataTableDemo> with RestorationMixin {
         _dessertsDataSource!._sort<String>((d) => d.name, _sortAscending.value);
         break;
       case 1:
-        _dessertsDataSource!
-            ._sort<num>((d) => d.calories, _sortAscending.value);
+        _dessertsDataSource!._sort<num>(
+          (d) => d.calories,
+          _sortAscending.value,
+        );
         break;
       case 2:
         _dessertsDataSource!._sort<num>((d) => d.fat, _sortAscending.value);

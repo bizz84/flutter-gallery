@@ -321,7 +321,10 @@ class GalleryLocalizationsSq extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Llogaria $accountName $accountNumber me $amount.';
   }
 
@@ -331,8 +334,12 @@ class GalleryLocalizationsSq extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'Buxheti $budgetName me $amountUsed të përdorura nga $amountTotal, $amountLeft të mbetura';
   }
 

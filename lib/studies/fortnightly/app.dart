@@ -135,8 +135,9 @@ class _FortnightlyHomeDesktop extends StatelessWidget {
                       alignment: AlignmentDirectional.centerEnd,
                       child: IconButton(
                         icon: const Icon(Icons.search),
-                        tooltip: GalleryLocalizations.of(context)!
-                            .shrineTooltipSearch,
+                        tooltip: GalleryLocalizations.of(
+                          context,
+                        )!.shrineTooltipSearch,
                         onPressed: () {},
                       ),
                     ),

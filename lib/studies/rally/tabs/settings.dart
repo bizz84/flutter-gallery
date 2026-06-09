@@ -25,14 +25,15 @@ class _SettingsViewState extends State<SettingsView> {
           restorationId: 'settings_list_view',
           shrinkWrap: true,
           children: [
-            for (String title
-                in DummyDataService.getSettingsTitles(context)) ...[
+            for (String title in DummyDataService.getSettingsTitles(
+              context,
+            )) ...[
               _SettingsItem(title),
               const Divider(
                 color: RallyColors.dividerColor,
                 height: 1,
-              )
-            ]
+              ),
+            ],
           ],
         ),
       ),

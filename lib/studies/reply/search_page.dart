@@ -38,7 +38,7 @@ class SearchPage extends StatelessWidget {
                     IconButton(
                       icon: const Icon(Icons.mic),
                       onPressed: () {},
-                    )
+                    ),
                   ],
                 ),
               ),

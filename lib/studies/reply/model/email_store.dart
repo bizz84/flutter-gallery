@@ -11,7 +11,8 @@ class EmailStore with ChangeNotifier {
       sender: 'Google Express',
       time: '15 minutes ago',
       subject: 'Package shipped!',
-      message: 'Cucumber Mask Facial has shipped.\n\n'
+      message:
+          'Cucumber Mask Facial has shipped.\n\n'
           'Keep an eye out for a package to arrive between this Thursday and next Tuesday. If for any reason you don\'t receive your package before the end of next week, please reach out to us for details on your shipment.\n\n'
           'As always, thank you for shopping with us and we hope you love our specially formulated Cucumber Mask!',
       avatar: '$_avatarsLocation/avatar_express.png',
@@ -151,7 +152,8 @@ class EmailStore with ChangeNotifier {
       sender: 'Sandra Adams',
       time: '2 hrs ago',
       subject: '(No subject)',
-      message: 'Hey,\n\n'
+      message:
+          'Hey,\n\n'
           'Wanted to email and see what you thought of',
       avatar: '$_avatarsLocation/avatar_2.jpg',
       recipients: 'Jeff',
@@ -160,10 +162,10 @@ class EmailStore with ChangeNotifier {
   ];
 
   List<Email> get _allEmails => [
-        ..._inbox,
-        ..._outbox,
-        ..._drafts,
-      ];
+    ..._inbox,
+    ..._outbox,
+    ..._drafts,
+  ];
 
   List<Email> get inboxEmails {
     return _inbox.where((email) {

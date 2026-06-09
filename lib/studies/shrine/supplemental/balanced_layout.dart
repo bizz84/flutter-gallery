@@ -47,8 +47,9 @@ String _encodeParameters({
   required double largeImageWidth,
   required double smallImageWidth,
 }) {
-  final productString =
-      [for (final product in products) product.id.toString()].join(',');
+  final productString = [
+    for (final product in products) product.id.toString(),
+  ].join(',');
   return '$columnCount;$productString,$largeImageWidth,$smallImageWidth';
 }
 
@@ -61,7 +62,7 @@ List<List<Product>> _generateLayout({
     for (final column in layout)
       [
         for (final index in column) products[index],
-      ]
+      ],
   ];
 }
 
@@ -166,7 +167,9 @@ List<List<int>> _balancedDistribution({
   assert(biases.length == columnCount);
 
   final columnObjects = List<Set<_TaggedHeightData>>.generate(
-      columnCount, (column) => <_TaggedHeightData>{});
+    columnCount,
+    (column) => <_TaggedHeightData>{},
+  );
 
   final columnHeights = List<double>.from(biases);
 

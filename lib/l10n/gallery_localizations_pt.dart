@@ -320,7 +320,10 @@ class GalleryLocalizationsPt extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Conta $accountName $accountNumber com $amount.';
   }
 
@@ -330,8 +333,12 @@ class GalleryLocalizationsPt extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'O orçamento $budgetName com $amountUsed usados de $amountTotal. Valor restante: $amountLeft';
   }
 
@@ -3015,7 +3022,10 @@ class GalleryLocalizationsPtBr extends GalleryLocalizationsPt {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Conta $accountName $accountNumber com $amount.';
   }
 
@@ -3025,8 +3035,12 @@ class GalleryLocalizationsPtBr extends GalleryLocalizationsPt {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'O orçamento $budgetName com $amountUsed usados de $amountTotal. Valor restante: $amountLeft';
   }
 
@@ -5709,7 +5723,10 @@ class GalleryLocalizationsPtPt extends GalleryLocalizationsPt {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Conta $accountName $accountNumber com $amount.';
   }
 
@@ -5719,8 +5736,12 @@ class GalleryLocalizationsPtPt extends GalleryLocalizationsPt {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'Orçamento $budgetName com $amountUsed utilizado(s) de $amountTotal, com $amountLeft restante(s).';
   }
 

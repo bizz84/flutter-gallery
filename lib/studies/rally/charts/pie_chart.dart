@@ -28,7 +28,8 @@ class RallyPieChartSegment {
 const pieChartMaxSize = 500.0;
 
 List<RallyPieChartSegment> buildSegmentsFromAccountItems(
-    List<AccountData> items) {
+  List<AccountData> items,
+) {
   return List<RallyPieChartSegment>.generate(
     items.length,
     (i) {
@@ -53,7 +54,8 @@ List<RallyPieChartSegment> buildSegmentsFromBillItems(List<BillData> items) {
 }
 
 List<RallyPieChartSegment> buildSegmentsFromBudgetItems(
-    List<BudgetData> items) {
+  List<BudgetData> items,
+) {
   return List<RallyPieChartSegment>.generate(
     items.length,
     (i) {
@@ -98,17 +100,18 @@ class _RallyPieChartState extends State<RallyPieChart>
       vsync: this,
     );
     animation = CurvedAnimation(
-        parent: TweenSequence<double>(<TweenSequenceItem<double>>[
-          TweenSequenceItem<double>(
-            tween: Tween<double>(begin: 0, end: 0),
-            weight: 1,
-          ),
-          TweenSequenceItem<double>(
-            tween: Tween<double>(begin: 0, end: 1),
-            weight: 1.5,
-          ),
-        ]).animate(controller),
-        curve: Curves.decelerate);
+      parent: TweenSequence<double>(<TweenSequenceItem<double>>[
+        TweenSequenceItem<double>(
+          tween: Tween<double>(begin: 0, end: 0),
+          weight: 1,
+        ),
+        TweenSequenceItem<double>(
+          tween: Tween<double>(begin: 0, end: 1),
+          weight: 1.5,
+        ),
+      ]).animate(controller),
+      curve: Curves.decelerate,
+    );
     controller.forward();
   }
 
@@ -155,44 +158,46 @@ class _AnimatedRallyPieChart extends AnimatedWidget {
       letterSpacing: letterSpacingOrNone(0.5),
     );
 
-    return LayoutBuilder(builder: (context, constraints) {
-      // When the widget is larger, we increase the font size.
-      var headlineStyle = constraints.maxHeight >= pieChartMaxSize
-          ? textTheme.headlineSmall!.copyWith(fontSize: 70)
-          : textTheme.headlineSmall;
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        // When the widget is larger, we increase the font size.
+        var headlineStyle = constraints.maxHeight >= pieChartMaxSize
+            ? textTheme.headlineSmall!.copyWith(fontSize: 70)
+            : textTheme.headlineSmall;
 
-      // With a large text scale factor, we set a max font size.
-      if (GalleryOptions.of(context).textScaleFactor(context) > 1.0) {
-        headlineStyle = headlineStyle!.copyWith(
-          fontSize: (headlineStyle.fontSize! / reducedTextScale(context)),
-        );
-      }
+        // With a large text scale factor, we set a max font size.
+        if (GalleryOptions.of(context).textScaleFactor(context) > 1.0) {
+          headlineStyle = headlineStyle!.copyWith(
+            fontSize: (headlineStyle.fontSize! / reducedTextScale(context)),
+          );
+        }
 
-      return DecoratedBox(
-        decoration: _RallyPieChartOutlineDecoration(
-          maxFraction: animation.value,
-          total: total,
-          segments: segments,
-        ),
-        child: Container(
-          height: constraints.maxHeight,
-          alignment: Alignment.center,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                centerLabel,
-                style: labelTextStyle,
-              ),
-              SelectableText(
-                usdWithSignFormat(context).format(centerAmount),
-                style: headlineStyle,
-              ),
-            ],
+        return DecoratedBox(
+          decoration: _RallyPieChartOutlineDecoration(
+            maxFraction: animation.value,
+            total: total,
+            segments: segments,
           ),
-        ),
-      );
-    });
+          child: Container(
+            height: constraints.maxHeight,
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  centerLabel,
+                  style: labelTextStyle,
+                ),
+                SelectableText(
+                  usdWithSignFormat(context).format(centerAmount),
+                  style: headlineStyle,
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
   }
 }
 
@@ -235,7 +240,8 @@ class _RallyPieChartOutlineBoxPainter extends BoxPainter {
     // Create two padded reacts to draw arcs in: one for colored arcs and one for
     // inner bg arc.
     const strokeWidth = 4.0;
-    final outerRadius = math.min(
+    final outerRadius =
+        math.min(
           configuration.size!.width,
           configuration.size!.height,
         ) /
@@ -265,8 +271,10 @@ class _RallyPieChartOutlineBoxPainter extends BoxPainter {
     final remaining = wholeAmount - cumulativeTotal;
     if (remaining > 0) {
       final paint = Paint()..color = Colors.black;
-      final startAngle =
-          _calculateStartAngle(cumulativeTotal, spaceRadians * segments.length);
+      final startAngle = _calculateStartAngle(
+        cumulativeTotal,
+        spaceRadians * segments.length,
+      );
       final sweepAngle = _calculateSweepAngle(remaining, -spaceRadians);
       canvas.drawArc(outerRect, startAngle, sweepAngle, true, paint);
     }

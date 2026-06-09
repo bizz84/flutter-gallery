@@ -32,7 +32,8 @@ ThemeData _buildCraneTheme() {
     ),
     primaryTextTheme: _buildCraneTextTheme(base.primaryTextTheme),
     iconTheme: _customIconTheme(base.iconTheme, craneWhite60),
-    primaryIconTheme: _customIconTheme(base.iconTheme, cranePrimaryWhite), tabBarTheme: const TabBarThemeData(indicatorColor: cranePrimaryWhite),
+    primaryIconTheme: _customIconTheme(base.iconTheme, cranePrimaryWhite),
+    tabBarTheme: const TabBarThemeData(indicatorColor: cranePrimaryWhite),
   );
 }
 

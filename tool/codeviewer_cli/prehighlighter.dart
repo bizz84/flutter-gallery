@@ -93,19 +93,22 @@ class DartSyntaxPrehighlighter extends SyntaxPrehighlighter {
 
       for (final span in _spans) {
         if (currentPosition != span.start) {
-          formattedText
-              .add(CodeSpan(text: _src.substring(currentPosition, span.start)));
+          formattedText.add(
+            CodeSpan(text: _src.substring(currentPosition, span.start)),
+          );
         }
 
-        formattedText
-            .add(CodeSpan(type: span.type, text: span.textForSpan(_src)));
+        formattedText.add(
+          CodeSpan(type: span.type, text: span.textForSpan(_src)),
+        );
 
         currentPosition = span.end;
       }
 
       if (currentPosition != _src.length) {
-        formattedText
-            .add(CodeSpan(text: _src.substring(currentPosition, _src.length)));
+        formattedText.add(
+          CodeSpan(text: _src.substring(currentPosition, _src.length)),
+        );
       }
 
       return formattedText;
@@ -124,11 +127,13 @@ class DartSyntaxPrehighlighter extends SyntaxPrehighlighter {
 
       // Block comments
       if (_scanner.scan(RegExp(r'/\*(.|\n)*\*/'))) {
-        _spans.add(_HighlightSpan(
-          HighlightType.comment,
-          _scanner.lastMatch!.start,
-          _scanner.lastMatch!.end,
-        ));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.comment,
+            _scanner.lastMatch!.start,
+            _scanner.lastMatch!.end,
+          ),
+        );
         continue;
       }
 
@@ -145,11 +150,13 @@ class DartSyntaxPrehighlighter extends SyntaxPrehighlighter {
           endComment = _src.length;
         }
 
-        _spans.add(_HighlightSpan(
-          HighlightType.comment,
-          startComment,
-          endComment,
-        ));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.comment,
+            startComment,
+            endComment,
+          ),
+        );
 
         if (eof) {
           break;
@@ -160,98 +167,121 @@ class DartSyntaxPrehighlighter extends SyntaxPrehighlighter {
 
       // Raw r"String"
       if (_scanner.scan(RegExp(r'r".*"'))) {
-        _spans.add(_HighlightSpan(
-          HighlightType.string,
-          _scanner.lastMatch!.start,
-          _scanner.lastMatch!.end,
-        ));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.string,
+            _scanner.lastMatch!.start,
+            _scanner.lastMatch!.end,
+          ),
+        );
         continue;
       }
 
       // Raw r'String'
       if (_scanner.scan(RegExp(r"r'.*'"))) {
-        _spans.add(_HighlightSpan(
-          HighlightType.string,
-          _scanner.lastMatch!.start,
-          _scanner.lastMatch!.end,
-        ));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.string,
+            _scanner.lastMatch!.start,
+            _scanner.lastMatch!.end,
+          ),
+        );
         continue;
       }
 
       // Multiline """String"""
       if (_scanner.scan(RegExp(r'"""(?:[^"\\]|\\(.|\n))*"""'))) {
-        _spans.add(_HighlightSpan(
-          HighlightType.string,
-          _scanner.lastMatch!.start,
-          _scanner.lastMatch!.end,
-        ));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.string,
+            _scanner.lastMatch!.start,
+            _scanner.lastMatch!.end,
+          ),
+        );
         continue;
       }
 
       // Multiline '''String'''
       if (_scanner.scan(RegExp(r"'''(?:[^'\\]|\\(.|\n))*'''"))) {
-        _spans.add(_HighlightSpan(
-          HighlightType.string,
-          _scanner.lastMatch!.start,
-          _scanner.lastMatch!.end,
-        ));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.string,
+            _scanner.lastMatch!.start,
+            _scanner.lastMatch!.end,
+          ),
+        );
         continue;
       }
 
       // "String"
       if (_scanner.scan(RegExp(r'"(?:[^"\\]|\\.)*"'))) {
-        _spans.add(_HighlightSpan(
-          HighlightType.string,
-          _scanner.lastMatch!.start,
-          _scanner.lastMatch!.end,
-        ));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.string,
+            _scanner.lastMatch!.start,
+            _scanner.lastMatch!.end,
+          ),
+        );
         continue;
       }
 
       // 'String'
       if (_scanner.scan(RegExp(r"'(?:[^'\\]|\\.)*'"))) {
-        _spans.add(_HighlightSpan(
-          HighlightType.string,
-          _scanner.lastMatch!.start,
-          _scanner.lastMatch!.end,
-        ));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.string,
+            _scanner.lastMatch!.start,
+            _scanner.lastMatch!.end,
+          ),
+        );
         continue;
       }
 
       // Double
       if (_scanner.scan(RegExp(r'\d+\.\d+'))) {
-        _spans.add(_HighlightSpan(
-          HighlightType.number,
-          _scanner.lastMatch!.start,
-          _scanner.lastMatch!.end,
-        ));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.number,
+            _scanner.lastMatch!.start,
+            _scanner.lastMatch!.end,
+          ),
+        );
         continue;
       }
 
       // Integer
       if (_scanner.scan(RegExp(r'\d+'))) {
-        _spans.add(_HighlightSpan(HighlightType.number,
-            _scanner.lastMatch!.start, _scanner.lastMatch!.end));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.number,
+            _scanner.lastMatch!.start,
+            _scanner.lastMatch!.end,
+          ),
+        );
         continue;
       }
 
       // Punctuation
       if (_scanner.scan(RegExp(r'[\[\]{}().!=<>&\|\?\+\-\*/%\^~;:,]'))) {
-        _spans.add(_HighlightSpan(
-          HighlightType.punctuation,
-          _scanner.lastMatch!.start,
-          _scanner.lastMatch!.end,
-        ));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.punctuation,
+            _scanner.lastMatch!.start,
+            _scanner.lastMatch!.end,
+          ),
+        );
         continue;
       }
 
       // Meta data
       if (_scanner.scan(RegExp(r'@\w+'))) {
-        _spans.add(_HighlightSpan(
-          HighlightType.keyword,
-          _scanner.lastMatch!.start,
-          _scanner.lastMatch!.end,
-        ));
+        _spans.add(
+          _HighlightSpan(
+            HighlightType.keyword,
+            _scanner.lastMatch!.start,
+            _scanner.lastMatch!.end,
+          ),
+        );
         continue;
       }
 
@@ -277,11 +307,13 @@ class DartSyntaxPrehighlighter extends SyntaxPrehighlighter {
         }
 
         if (type != null) {
-          _spans.add(_HighlightSpan(
-            type,
-            _scanner.lastMatch!.start,
-            _scanner.lastMatch!.end,
-          ));
+          _spans.add(
+            _HighlightSpan(
+              type,
+              _scanner.lastMatch!.start,
+              _scanner.lastMatch!.end,
+            ),
+          );
         }
       }
 

@@ -28,7 +28,7 @@ class _PickerDemoState extends State<PickerDemo> with RestorationMixin {
 
   late RestorableRouteFuture<DateTime?> _restorableDatePickerRouteFuture;
   late RestorableRouteFuture<DateTimeRange?>
-      _restorableDateRangePickerRouteFuture;
+  _restorableDateRangePickerRouteFuture;
   late RestorableRouteFuture<TimeOfDay?> _restorableTimePickerRouteFuture;
 
   void _selectDate(DateTime? selectedDate) {
@@ -124,10 +124,10 @@ class _PickerDemoState extends State<PickerDemo> with RestorationMixin {
     );
     _restorableDateRangePickerRouteFuture =
         RestorableRouteFuture<DateTimeRange?>(
-      onComplete: _selectDateRange,
-      onPresent: (navigator, arguments) =>
-          navigator.restorablePush(_dateRangePickerRoute),
-    );
+          onComplete: _selectDateRange,
+          onPresent: (navigator, arguments) =>
+              navigator.restorablePush(_dateRangePickerRoute),
+        );
 
     _restorableTimePickerRouteFuture = RestorableRouteFuture<TimeOfDay?>(
       onComplete: _selectTime,
@@ -219,7 +219,7 @@ class _PickerDemoState extends State<PickerDemo> with RestorationMixin {
                     child: Text(
                       GalleryLocalizations.of(context)!.demoPickersShowPicker,
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

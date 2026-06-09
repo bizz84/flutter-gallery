@@ -15,20 +15,20 @@ class MailboxBody extends StatelessWidget {
     final startPadding = isTablet
         ? 60.0
         : isDesktop
-            ? 120.0
-            : 4.0;
+        ? 120.0
+        : 4.0;
     final endPadding = isTablet
         ? 30.0
         : isDesktop
-            ? 60.0
-            : 4.0;
+        ? 60.0
+        : 4.0;
 
     return Consumer<EmailStore>(
       builder: (context, model, child) {
         final destination = model.selectedMailboxPage;
-        final destinationString = destination
-            .toString()
-            .substring(destination.toString().indexOf('.') + 1);
+        final destinationString = destination.toString().substring(
+          destination.toString().indexOf('.') + 1,
+        );
         late List<Email> emails;
 
         switch (destination) {
@@ -98,7 +98,8 @@ class MailboxBody extends StatelessWidget {
                                 model.starEmail(emailId);
                               }
                             },
-                            onStarredMailbox: model.selectedMailboxPage ==
+                            onStarredMailbox:
+                                model.selectedMailboxPage ==
                                 MailboxPageType.starred,
                           );
                         },
@@ -123,7 +124,7 @@ class MailboxBody extends StatelessWidget {
                     ],
                   ),
                 ),
-              ]
+              ],
             ],
           ),
         );

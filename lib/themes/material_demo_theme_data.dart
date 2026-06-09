@@ -7,66 +7,68 @@ import 'package:flutter/material.dart';
 
 class MaterialDemoThemeData {
   static final themeData = ThemeData(
-      colorScheme: _colorScheme.copyWith(
-        surface: Colors.white,
-      ),
-      canvasColor: _colorScheme.surface,
-      highlightColor: Colors.transparent,
-      scaffoldBackgroundColor: _colorScheme.surface,
-      secondaryHeaderColor: _colorScheme.surface,
-      typography: Typography.material2018(
-        platform: defaultTargetPlatform,
-      ),
-      visualDensity: VisualDensity.standard,
-      // Component themes
-      appBarTheme: AppBarTheme(
-        backgroundColor: _colorScheme.primary,
-        iconTheme: IconThemeData(color: _colorScheme.onPrimary),
-      ),
-      bottomAppBarTheme: BottomAppBarThemeData(
-        color: _colorScheme.primary,
-      ),
-      checkboxTheme: CheckboxThemeData(
-        fillColor: WidgetStateProperty.resolveWith<Color?>((states) {
-          if (states.contains(WidgetState.disabled)) {
-            return null;
-          }
-          return states.contains(WidgetState.selected)
-              ? _colorScheme.primary
-              : null;
-        }),
-      ),
-      radioTheme: RadioThemeData(
-        fillColor: WidgetStateProperty.resolveWith<Color?>((states) {
-          if (states.contains(WidgetState.disabled)) {
-            return null;
-          }
-          return states.contains(WidgetState.selected)
-              ? _colorScheme.primary
-              : null;
-        }),
-      ),
-      snackBarTheme: const SnackBarThemeData(
-        behavior: SnackBarBehavior.floating,
-      ),
-      switchTheme: SwitchThemeData(
-        thumbColor: WidgetStateProperty.resolveWith<Color?>((states) {
-          if (states.contains(WidgetState.disabled)) {
-            return null;
-          }
-          return states.contains(WidgetState.selected)
-              ? _colorScheme.primary
-              : null;
-        }),
-        trackColor: WidgetStateProperty.resolveWith<Color?>((states) {
-          if (states.contains(WidgetState.disabled)) {
-            return null;
-          }
-          return states.contains(WidgetState.selected)
-              ? _colorScheme.primary.withAlpha(0x80)
-              : null;
-        }),
-      ), tabBarTheme: TabBarThemeData(indicatorColor: _colorScheme.onPrimary));
+    colorScheme: _colorScheme.copyWith(
+      surface: Colors.white,
+    ),
+    canvasColor: _colorScheme.surface,
+    highlightColor: Colors.transparent,
+    scaffoldBackgroundColor: _colorScheme.surface,
+    secondaryHeaderColor: _colorScheme.surface,
+    typography: Typography.material2018(
+      platform: defaultTargetPlatform,
+    ),
+    visualDensity: VisualDensity.standard,
+    // Component themes
+    appBarTheme: AppBarTheme(
+      backgroundColor: _colorScheme.primary,
+      iconTheme: IconThemeData(color: _colorScheme.onPrimary),
+    ),
+    bottomAppBarTheme: BottomAppBarThemeData(
+      color: _colorScheme.primary,
+    ),
+    checkboxTheme: CheckboxThemeData(
+      fillColor: WidgetStateProperty.resolveWith<Color?>((states) {
+        if (states.contains(WidgetState.disabled)) {
+          return null;
+        }
+        return states.contains(WidgetState.selected)
+            ? _colorScheme.primary
+            : null;
+      }),
+    ),
+    radioTheme: RadioThemeData(
+      fillColor: WidgetStateProperty.resolveWith<Color?>((states) {
+        if (states.contains(WidgetState.disabled)) {
+          return null;
+        }
+        return states.contains(WidgetState.selected)
+            ? _colorScheme.primary
+            : null;
+      }),
+    ),
+    snackBarTheme: const SnackBarThemeData(
+      behavior: SnackBarBehavior.floating,
+    ),
+    switchTheme: SwitchThemeData(
+      thumbColor: WidgetStateProperty.resolveWith<Color?>((states) {
+        if (states.contains(WidgetState.disabled)) {
+          return null;
+        }
+        return states.contains(WidgetState.selected)
+            ? _colorScheme.primary
+            : null;
+      }),
+      trackColor: WidgetStateProperty.resolveWith<Color?>((states) {
+        if (states.contains(WidgetState.disabled)) {
+          return null;
+        }
+        return states.contains(WidgetState.selected)
+            ? _colorScheme.primary.withAlpha(0x80)
+            : null;
+      }),
+    ),
+    tabBarTheme: TabBarThemeData(indicatorColor: _colorScheme.onPrimary),
+  );
 
   static const _colorScheme = ColorScheme(
     primary: Color(0xFF6200EE),

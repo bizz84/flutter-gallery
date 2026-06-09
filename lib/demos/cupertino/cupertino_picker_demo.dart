@@ -33,8 +33,12 @@ class _CupertinoPickerDemoState extends State<CupertinoPickerDemo> {
     final now = DateTime.now();
     final firstDayOfWeek = now.subtract(Duration(days: now.weekday - 1));
     return List.generate(7, (index) => index)
-        .map((value) => DateFormat(DateFormat.WEEKDAY, locale)
-            .format(firstDayOfWeek.add(Duration(days: value))))
+        .map(
+          (value) => DateFormat(
+            DateFormat.WEEKDAY,
+            locale,
+          ).format(firstDayOfWeek.add(Duration(days: value))),
+        )
         .toList();
   }
 
@@ -63,8 +67,9 @@ class _CupertinoPickerDemoState extends State<CupertinoPickerDemo> {
             context: context,
             child: _BottomPicker(
               child: CupertinoDatePicker(
-                backgroundColor:
-                    CupertinoColors.systemBackground.resolveFrom(context),
+                backgroundColor: CupertinoColors.systemBackground.resolveFrom(
+                  context,
+                ),
                 mode: CupertinoDatePickerMode.date,
                 initialDateTime: date,
                 onDateTimeChanged: (newDateTime) {
@@ -96,8 +101,9 @@ class _CupertinoPickerDemoState extends State<CupertinoPickerDemo> {
             context: context,
             child: _BottomPicker(
               child: CupertinoDatePicker(
-                backgroundColor:
-                    CupertinoColors.systemBackground.resolveFrom(context),
+                backgroundColor: CupertinoColors.systemBackground.resolveFrom(
+                  context,
+                ),
                 mode: CupertinoDatePickerMode.time,
                 initialDateTime: time,
                 onDateTimeChanged: (newDateTime) {
@@ -129,8 +135,9 @@ class _CupertinoPickerDemoState extends State<CupertinoPickerDemo> {
             context: context,
             child: _BottomPicker(
               child: CupertinoDatePicker(
-                backgroundColor:
-                    CupertinoColors.systemBackground.resolveFrom(context),
+                backgroundColor: CupertinoColors.systemBackground.resolveFrom(
+                  context,
+                ),
                 mode: CupertinoDatePickerMode.dateAndTime,
                 initialDateTime: dateTime,
                 onDateTimeChanged: (newDateTime) {
@@ -164,8 +171,9 @@ class _CupertinoPickerDemoState extends State<CupertinoPickerDemo> {
             context: context,
             child: _BottomPicker(
               child: CupertinoTimerPicker(
-                backgroundColor:
-                    CupertinoColors.systemBackground.resolveFrom(context),
+                backgroundColor: CupertinoColors.systemBackground.resolveFrom(
+                  context,
+                ),
                 initialTimerDuration: timer,
                 onTimerDurationChanged: (newTimer) {
                   setState(() => timer = newTimer);
@@ -200,8 +208,9 @@ class _CupertinoPickerDemoState extends State<CupertinoPickerDemo> {
             context: context,
             child: _BottomPicker(
               child: CupertinoPicker(
-                backgroundColor:
-                    CupertinoColors.systemBackground.resolveFrom(context),
+                backgroundColor: CupertinoColors.systemBackground.resolveFrom(
+                  context,
+                ),
                 itemExtent: 32.0,
                 magnification: 1.22,
                 squeeze: 1.2,
@@ -241,8 +250,9 @@ class _CupertinoPickerDemoState extends State<CupertinoPickerDemo> {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         automaticallyImplyLeading: false,
-        middle:
-            Text(GalleryLocalizations.of(context)!.demoCupertinoPickerTitle),
+        middle: Text(
+          GalleryLocalizations.of(context)!.demoCupertinoPickerTitle,
+        ),
       ),
       child: DefaultTextStyle(
         style: CupertinoTheme.of(context).textTheme.textStyle,

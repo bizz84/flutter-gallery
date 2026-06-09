@@ -53,15 +53,16 @@ class CategoryMenuPage extends StatelessWidget {
 
     final categoryString = category.name(context);
 
-    final selectedCategoryTextStyle = Theme.of(context)
-        .textTheme
-        .bodyLarge!
-        .copyWith(fontSize: isDesktop ? 17 : 19);
+    final selectedCategoryTextStyle = Theme.of(
+      context,
+    ).textTheme.bodyLarge!.copyWith(fontSize: isDesktop ? 17 : 19);
 
     final unselectedCategoryTextStyle = selectedCategoryTextStyle.copyWith(
-        color: shrineBrown900.withValues(alpha: 0.6));
+      color: shrineBrown900.withValues(alpha: 0.6),
+    );
 
-    final indicatorHeight = (isDesktop ? 28 : 30) *
+    final indicatorHeight =
+        (isDesktop ? 28 : 30) *
         GalleryOptions.of(context).textScaleFactor(context);
     final indicatorWidth = indicatorHeight * 34 / 28;
 
@@ -85,8 +86,10 @@ class CategoryMenuPage extends StatelessWidget {
                       indicatorWidth,
                       indicatorHeight,
                     ),
-                    child:
-                        _buttonText(categoryString, selectedCategoryTextStyle),
+                    child: _buttonText(
+                      categoryString,
+                      selectedCategoryTextStyle,
+                    ),
                   )
                 : _buttonText(categoryString, unselectedCategoryTextStyle),
           ),
@@ -100,9 +103,9 @@ class CategoryMenuPage extends StatelessWidget {
     final isDesktop = isDisplayDesktop(context);
 
     final logoutTextStyle = Theme.of(context).textTheme.bodyLarge!.copyWith(
-          fontSize: isDesktop ? 17 : 19,
-          color: shrineBrown900.withValues(alpha: 0.6),
-        );
+      fontSize: isDesktop ? 17 : 19,
+      color: shrineBrown900.withValues(alpha: 0.6),
+    );
 
     if (isDesktop) {
       return AnimatedBuilder(
@@ -139,12 +142,14 @@ class CategoryMenuPage extends StatelessWidget {
                       cursor: SystemMouseCursors.click,
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.of(context)
-                              .restorablePushNamed(ShrineApp.loginRoute);
+                          Navigator.of(
+                            context,
+                          ).restorablePushNamed(ShrineApp.loginRoute);
                         },
                         child: _buttonText(
-                          GalleryLocalizations.of(context)!
-                              .shrineLogoutButtonCaption,
+                          GalleryLocalizations.of(
+                            context,
+                          )!.shrineLogoutButtonCaption,
                           logoutTextStyle,
                         ),
                       ),
@@ -153,8 +158,9 @@ class CategoryMenuPage extends StatelessWidget {
                   const Spacer(),
                   IconButton(
                     icon: const Icon(Icons.search),
-                    tooltip:
-                        GalleryLocalizations.of(context)!.shrineTooltipSearch,
+                    tooltip: GalleryLocalizations.of(
+                      context,
+                    )!.shrineTooltipSearch,
                     onPressed: () {},
                   ),
                   const SizedBox(height: 72),
@@ -192,12 +198,14 @@ class CategoryMenuPage extends StatelessWidget {
                             if (onCategoryTap != null) {
                               onCategoryTap!();
                             }
-                            Navigator.of(context)
-                                .restorablePushNamed(ShrineApp.loginRoute);
+                            Navigator.of(
+                              context,
+                            ).restorablePushNamed(ShrineApp.loginRoute);
                           },
                           child: _buttonText(
-                            GalleryLocalizations.of(context)!
-                                .shrineLogoutButtonCaption,
+                            GalleryLocalizations.of(
+                              context,
+                            )!.shrineLogoutButtonCaption,
                             logoutTextStyle,
                           ),
                         ),

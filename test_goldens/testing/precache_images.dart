@@ -13,18 +13,20 @@ Future<void> pumpWidgetWithImages(
 ) async {
   Future<void>? precacheFuture;
   await tester.pumpWidget(
-    Builder(builder: (buildContext) {
-      precacheFuture = tester.runAsync(() async {
-        await Future.wait([
-          for (final asset in assets)
-            precacheImage(
-              asset,
-              buildContext,
-            ),
-        ]);
-      });
-      return widget;
-    }),
+    Builder(
+      builder: (buildContext) {
+        precacheFuture = tester.runAsync(() async {
+          await Future.wait([
+            for (final asset in assets)
+              precacheImage(
+                asset,
+                buildContext,
+              ),
+          ]);
+        });
+        return widget;
+      },
+    ),
   );
   await precacheFuture;
 }

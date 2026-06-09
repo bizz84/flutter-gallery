@@ -25,8 +25,8 @@ class BorderPainter extends BoxPainter {
     this.indicatorHeight,
     this.textScaleFactor,
     VoidCallback? onChanged,
-  )   : assert(indicatorHeight >= 0),
-        super(onChanged);
+  ) : assert(indicatorHeight >= 0),
+      super(onChanged);
 
   final BorderTabIndicator decoration;
   final double indicatorHeight;
@@ -36,8 +36,11 @@ class BorderPainter extends BoxPainter {
   void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {
     assert(configuration.size != null);
     final horizontalInset = 16 - 4 * textScaleFactor;
-    final rect = Offset(offset.dx + horizontalInset,
-            (configuration.size!.height / 2) - indicatorHeight / 2 - 1) &
+    final rect =
+        Offset(
+          offset.dx + horizontalInset,
+          (configuration.size!.height / 2) - indicatorHeight / 2 - 1,
+        ) &
         Size(configuration.size!.width - 2 * horizontalInset, indicatorHeight);
     final paint = Paint();
     paint.color = Colors.white;

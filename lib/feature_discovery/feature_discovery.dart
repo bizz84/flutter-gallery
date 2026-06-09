@@ -23,16 +23,17 @@ class FeatureDiscoveryController extends StatefulWidget {
   const FeatureDiscoveryController(this.child, {super.key});
 
   static _FeatureDiscoveryControllerState _of(BuildContext context) {
-    final matchResult =
-        context.findAncestorStateOfType<_FeatureDiscoveryControllerState>();
+    final matchResult = context
+        .findAncestorStateOfType<_FeatureDiscoveryControllerState>();
     if (matchResult != null) {
       return matchResult;
     }
 
     throw FlutterError(
-        'FeatureDiscoveryController.of() called with a context that does not '
-        'contain a FeatureDiscoveryController.\n The context used was:\n '
-        '$context');
+      'FeatureDiscoveryController.of() called with a context that does not '
+      'contain a FeatureDiscoveryController.\n The context used was:\n '
+      '$context',
+    );
   }
 
   @override
@@ -221,36 +222,38 @@ class _FeatureDiscoveryState extends State<FeatureDiscovery>
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (ctx, _) {
-      if (overlay != null) {
-        SchedulerBinding.instance.addPostFrameCallback((_) {
-          // [OverlayEntry] needs to be explicitly rebuilt when necessary.
-          overlay!.markNeedsBuild();
-        });
-      } else {
-        if (showOverlay && !FeatureDiscoveryController._of(ctx).isLocked) {
-          final entry = OverlayEntry(
-            builder: (_) => buildOverlay(ctx, getOverlayCenter(ctx)),
-          );
-
-          // Lock [FeatureDiscoveryController] early in order to prevent
-          // another [FeatureDiscovery] widget from trying to show its
-          // overlay while the post frame callback and set state are not
-          // complete.
-          FeatureDiscoveryController._of(ctx).lock();
-
+    return LayoutBuilder(
+      builder: (ctx, _) {
+        if (overlay != null) {
           SchedulerBinding.instance.addPostFrameCallback((_) {
-            setState(() {
-              overlay = entry;
-              status = FeatureDiscoveryStatus.closed;
-              openController.forward(from: 0.0);
-            });
-            Overlay.of(context).insert(entry);
+            // [OverlayEntry] needs to be explicitly rebuilt when necessary.
+            overlay!.markNeedsBuild();
           });
+        } else {
+          if (showOverlay && !FeatureDiscoveryController._of(ctx).isLocked) {
+            final entry = OverlayEntry(
+              builder: (_) => buildOverlay(ctx, getOverlayCenter(ctx)),
+            );
+
+            // Lock [FeatureDiscoveryController] early in order to prevent
+            // another [FeatureDiscovery] widget from trying to show its
+            // overlay while the post frame callback and set state are not
+            // complete.
+            FeatureDiscoveryController._of(ctx).lock();
+
+            SchedulerBinding.instance.addPostFrameCallback((_) {
+              setState(() {
+                overlay = entry;
+                status = FeatureDiscoveryStatus.closed;
+                openController.forward(from: 0.0);
+              });
+              Overlay.of(context).insert(entry);
+            });
+          }
         }
-      }
-      return widget.child;
-    });
+        return widget.child;
+      },
+    );
   }
 
   /// Compute the center position of the overlay.
@@ -283,67 +286,71 @@ class _FeatureDiscoveryState extends State<FeatureDiscovery>
   }
 
   void initAnimationControllers() {
-    openController = AnimationController(
-      duration: const Duration(milliseconds: 500),
-      vsync: this,
-    )
-      ..addListener(() {
-        setState(() {});
-      })
-      ..addStatusListener((animationStatus) {
-        if (animationStatus == AnimationStatus.forward) {
-          setState(() => status = FeatureDiscoveryStatus.open);
-        } else if (animationStatus == AnimationStatus.completed) {
-          rippleController.forward(from: 0.0);
-        }
-      });
+    openController =
+        AnimationController(
+            duration: const Duration(milliseconds: 500),
+            vsync: this,
+          )
+          ..addListener(() {
+            setState(() {});
+          })
+          ..addStatusListener((animationStatus) {
+            if (animationStatus == AnimationStatus.forward) {
+              setState(() => status = FeatureDiscoveryStatus.open);
+            } else if (animationStatus == AnimationStatus.completed) {
+              rippleController.forward(from: 0.0);
+            }
+          });
 
-    rippleController = AnimationController(
-      duration: const Duration(milliseconds: 1000),
-      vsync: this,
-    )
-      ..addListener(() {
-        setState(() {});
-      })
-      ..addStatusListener((animationStatus) {
-        if (animationStatus == AnimationStatus.forward) {
-          setState(() => status = FeatureDiscoveryStatus.ripple);
-        } else if (animationStatus == AnimationStatus.completed) {
-          rippleController.forward(from: 0.0);
-        }
-      });
+    rippleController =
+        AnimationController(
+            duration: const Duration(milliseconds: 1000),
+            vsync: this,
+          )
+          ..addListener(() {
+            setState(() {});
+          })
+          ..addStatusListener((animationStatus) {
+            if (animationStatus == AnimationStatus.forward) {
+              setState(() => status = FeatureDiscoveryStatus.ripple);
+            } else if (animationStatus == AnimationStatus.completed) {
+              rippleController.forward(from: 0.0);
+            }
+          });
 
-    tapController = AnimationController(
-      duration: const Duration(milliseconds: 250),
-      vsync: this,
-    )
-      ..addListener(() {
-        setState(() {});
-      })
-      ..addStatusListener((animationStatus) {
-        if (animationStatus == AnimationStatus.forward) {
-          setState(() => status = FeatureDiscoveryStatus.tap);
-        } else if (animationStatus == AnimationStatus.completed) {
-          widget.onTap?.call();
-          cleanUponOverlayClose();
-        }
-      });
+    tapController =
+        AnimationController(
+            duration: const Duration(milliseconds: 250),
+            vsync: this,
+          )
+          ..addListener(() {
+            setState(() {});
+          })
+          ..addStatusListener((animationStatus) {
+            if (animationStatus == AnimationStatus.forward) {
+              setState(() => status = FeatureDiscoveryStatus.tap);
+            } else if (animationStatus == AnimationStatus.completed) {
+              widget.onTap?.call();
+              cleanUponOverlayClose();
+            }
+          });
 
-    dismissController = AnimationController(
-      duration: const Duration(milliseconds: 250),
-      vsync: this,
-    )
-      ..addListener(() {
-        setState(() {});
-      })
-      ..addStatusListener((animationStatus) {
-        if (animationStatus == AnimationStatus.forward) {
-          setState(() => status = FeatureDiscoveryStatus.dismiss);
-        } else if (animationStatus == AnimationStatus.completed) {
-          widget.onDismiss?.call();
-          cleanUponOverlayClose();
-        }
-      });
+    dismissController =
+        AnimationController(
+            duration: const Duration(milliseconds: 250),
+            vsync: this,
+          )
+          ..addListener(() {
+            setState(() {});
+          })
+          ..addStatusListener((animationStatus) {
+            if (animationStatus == AnimationStatus.forward) {
+              setState(() => status = FeatureDiscoveryStatus.dismiss);
+            } else if (animationStatus == AnimationStatus.completed) {
+              widget.onDismiss?.call();
+              cleanUponOverlayClose();
+            }
+          });
   }
 
   void initAnimations() {

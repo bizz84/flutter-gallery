@@ -26,50 +26,52 @@ final valueList = <String>[
 
 /// Tests that the Gallery web benchmarks are run and reported correctly.
 Future<void> main() async {
-  test('Can run a web benchmark', () async {
-    stdout.writeln('Starting web benchmark tests ...');
+  test(
+    'Can run a web benchmark',
+    () async {
+      stdout.writeln('Starting web benchmark tests ...');
 
-    final taskResult = await serveWebBenchmark(
-      benchmarkAppDirectory: projectRootDirectory(),
-      entryPoint: 'test_benchmarks/benchmarks/client.dart',
-      useCanvasKit: false,
-    );
-
-    stdout.writeln('Web benchmark tests finished.');
-
-    expect(taskResult.scores.keys, hasLength(benchmarkList.length));
-
-    for (final benchmarkName in benchmarkList) {
-      expect(
-        taskResult.scores[benchmarkName],
-        hasLength(metricList.length * valueList.length + 1),
+      final taskResult = await serveWebBenchmark(
+        benchmarkAppDirectory: projectRootDirectory(),
+        entryPoint: 'test_benchmarks/benchmarks/client.dart',
+        useCanvasKit: false,
       );
 
-      for (final metricName in metricList) {
-        for (final valueName in valueList) {
-          expect(
-            taskResult.scores[benchmarkName]?.where(
-              (score) => score.metric == '$metricName.$valueName',
-            ),
-            hasLength(1),
-          );
+      stdout.writeln('Web benchmark tests finished.');
+
+      expect(taskResult.scores.keys, hasLength(benchmarkList.length));
+
+      for (final benchmarkName in benchmarkList) {
+        expect(
+          taskResult.scores[benchmarkName],
+          hasLength(metricList.length * valueList.length + 1),
+        );
+
+        for (final metricName in metricList) {
+          for (final valueName in valueList) {
+            expect(
+              taskResult.scores[benchmarkName]?.where(
+                (score) => score.metric == '$metricName.$valueName',
+              ),
+              hasLength(1),
+            );
+          }
         }
+
+        expect(
+          taskResult.scores[benchmarkName]?.where(
+            (score) => score.metric == 'totalUiFrame.average',
+          ),
+          hasLength(1),
+        );
       }
 
       expect(
-        taskResult.scores[benchmarkName]?.where(
-          (score) => score.metric == 'totalUiFrame.average',
-        ),
-        hasLength(1),
+        const JsonEncoder.withIndent('  ').convert(taskResult.toJson()),
+        isA<String>(),
       );
-    }
-
-    expect(
-      const JsonEncoder.withIndent('  ').convert(taskResult.toJson()),
-      isA<String>(),
-    );
-  },
-      timeout: Timeout.none,
-      skip:
-          true); // TODO(guidezpl): re-enable these benchmarks https://github.com/flutter/gallery/issues/903
+    },
+    timeout: Timeout.none,
+    skip: true,
+  ); // TODO(guidezpl): re-enable these benchmarks https://github.com/flutter/gallery/issues/903
 }

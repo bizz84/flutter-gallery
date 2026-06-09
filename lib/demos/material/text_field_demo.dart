@@ -103,10 +103,12 @@ class _PasswordFieldState extends State<PasswordField> with RestorationMixin {
           icon: Icon(
             _obscureText.value ? Icons.visibility : Icons.visibility_off,
             semanticLabel: _obscureText.value
-                ? GalleryLocalizations.of(context)!
-                    .demoTextFieldShowPasswordLabel
-                : GalleryLocalizations.of(context)!
-                    .demoTextFieldHidePasswordLabel,
+                ? GalleryLocalizations.of(
+                    context,
+                  )!.demoTextFieldShowPasswordLabel
+                : GalleryLocalizations.of(
+                    context,
+                  )!.demoTextFieldHidePasswordLabel,
           ),
         ),
       ),
@@ -142,9 +144,11 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo>
 
   void showInSnackBar(String value) {
     ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(value),
-    ));
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(value),
+      ),
+    );
   }
 
   @override
@@ -155,8 +159,9 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo>
     registerForRestoration(_autoValidateModeIndex, 'autovalidate_mode');
   }
 
-  final RestorableInt _autoValidateModeIndex =
-      RestorableInt(AutovalidateMode.disabled.index);
+  final RestorableInt _autoValidateModeIndex = RestorableInt(
+    AutovalidateMode.disabled.index,
+  );
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final GlobalKey<FormFieldState<String>> _passwordFieldKey =
@@ -174,8 +179,11 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo>
       );
     } else {
       form.save();
-      showInSnackBar(GalleryLocalizations.of(context)!
-          .demoTextFieldNameHasPhoneNumber(person.name!, person.phoneNumber!));
+      showInSnackBar(
+        GalleryLocalizations.of(
+          context,
+        )!.demoTextFieldNameHasPhoneNumber(person.name!, person.phoneNumber!),
+      );
     }
   }
 
@@ -185,8 +193,9 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo>
     }
     final nameExp = RegExp(r'^[A-Za-z ]+$');
     if (!nameExp.hasMatch(value)) {
-      return GalleryLocalizations.of(context)!
-          .demoTextFieldOnlyAlphabeticalChars;
+      return GalleryLocalizations.of(
+        context,
+      )!.demoTextFieldOnlyAlphabeticalChars;
     }
     return null;
   }

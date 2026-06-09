@@ -31,9 +31,11 @@ class MenuDemo extends StatefulWidget {
 class _MenuDemoState extends State<MenuDemo> {
   void showInSnackBar(String value) {
     ScaffoldMessenger.of(context).hideCurrentSnackBar();
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(value),
-    ));
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(value),
+      ),
+    );
   }
 
   @override
@@ -203,8 +205,9 @@ class _SimpleMenuDemoState extends State<_SimpleMenuDemo> {
       _simpleValue = value;
     });
     widget.showInSnackBar(
-      GalleryLocalizations.of(context)!
-          .demoMenuSelected(simpleValueToString(context, value)),
+      GalleryLocalizations.of(
+        context,
+      )!.demoMenuSelected(simpleValueToString(context, value)),
     );
   }
 
@@ -232,29 +235,36 @@ class _SimpleMenuDemoState extends State<_SimpleMenuDemo> {
       itemBuilder: (context) => <PopupMenuItem<SimpleValue>>[
         PopupMenuItem<SimpleValue>(
           value: SimpleValue.one,
-          child: Text(simpleValueToString(
-            context,
-            SimpleValue.one,
-          )),
+          child: Text(
+            simpleValueToString(
+              context,
+              SimpleValue.one,
+            ),
+          ),
         ),
         PopupMenuItem<SimpleValue>(
           value: SimpleValue.two,
-          child: Text(simpleValueToString(
-            context,
-            SimpleValue.two,
-          )),
+          child: Text(
+            simpleValueToString(
+              context,
+              SimpleValue.two,
+            ),
+          ),
         ),
         PopupMenuItem<SimpleValue>(
           value: SimpleValue.three,
-          child: Text(simpleValueToString(
-            context,
-            SimpleValue.three,
-          )),
+          child: Text(
+            simpleValueToString(
+              context,
+              SimpleValue.three,
+            ),
+          ),
         ),
       ],
       child: ListTile(
         title: Text(
-            GalleryLocalizations.of(context)!.demoMenuAnItemWithASimpleMenu),
+          GalleryLocalizations.of(context)!.demoMenuAnItemWithASimpleMenu,
+        ),
         subtitle: Text(simpleValueToString(context, _simpleValue)),
       ),
     );
@@ -318,9 +328,11 @@ class _RestorableCheckedValues extends RestorableProperty<Set<CheckedValue>> {
   @override
   Set<CheckedValue> fromPrimitives(Object? data) {
     final checkedValues = data as List<dynamic>;
-    return Set.from(checkedValues.map<CheckedValue>((dynamic id) {
-      return CheckedValue.values[id as int];
-    }));
+    return Set.from(
+      checkedValues.map<CheckedValue>((dynamic id) {
+        return CheckedValue.values[id as int];
+      }),
+    );
   }
 }
 

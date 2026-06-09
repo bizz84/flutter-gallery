@@ -27,8 +27,9 @@ class _AboutDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
-    final bodyTextStyle =
-        textTheme.bodyLarge!.apply(color: colorScheme.onPrimary);
+    final bodyTextStyle = textTheme.bodyLarge!.apply(
+      color: colorScheme.onPrimary,
+    );
     final localizations = GalleryLocalizations.of(context)!;
 
     const name = 'Flutter Gallery'; // Don't need to localize.
@@ -73,8 +74,9 @@ class _AboutDialog extends StatelessWidget {
                     text: repoText,
                     recognizer: TapGestureRecognizer()
                       ..onTap = () async {
-                        final url =
-                            Uri.parse('https://github.com/flutter/gallery/');
+                        final url = Uri.parse(
+                          'https://github.com/flutter/gallery/',
+                        );
                         if (await canLaunchUrl(url)) {
                           await launchUrl(url);
                         }
@@ -98,20 +100,22 @@ class _AboutDialog extends StatelessWidget {
       actions: [
         TextButton(
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute<void>(
-              builder: (context) => Theme(
-                data: Theme.of(context).copyWith(
-                  textTheme: Typography.material2018(
-                    platform: Theme.of(context).platform,
-                  ).black,
-                  cardColor: Colors.white,
-                ),
-                child: const LicensePage(
-                  applicationName: name,
-                  applicationLegalese: legalese,
+            Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (context) => Theme(
+                  data: Theme.of(context).copyWith(
+                    textTheme: Typography.material2018(
+                      platform: Theme.of(context).platform,
+                    ).black,
+                    cardColor: Colors.white,
+                  ),
+                  child: const LicensePage(
+                    applicationName: name,
+                    applicationLegalese: legalese,
+                  ),
                 ),
               ),
-            ));
+            );
           },
           child: Text(
             MaterialLocalizations.of(context).viewLicensesButtonLabel,

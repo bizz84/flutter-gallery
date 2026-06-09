@@ -23,8 +23,9 @@ class CupertinoNavigationBarDemo extends StatelessWidget {
         switch (settings.name) {
           case CupertinoNavigationBarDemo.homeRoute:
             return _NoAnimationCupertinoPageRoute<void>(
-              title: GalleryLocalizations.of(context)!
-                  .demoCupertinoNavigationBarTitle,
+              title: GalleryLocalizations.of(
+                context,
+              )!.demoCupertinoNavigationBarTitle,
               settings: settings,
               builder: (context) => _FirstPage(),
             );
@@ -53,13 +54,15 @@ class _FirstPage extends StatelessWidget {
             automaticallyImplyLeading: false,
           ),
           SliverPadding(
-            padding:
-                MediaQuery.of(context).removePadding(removeTop: true).padding,
+            padding: MediaQuery.of(
+              context,
+            ).removePadding(removeTop: true).padding,
             sliver: SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
-                  final title = GalleryLocalizations.of(context)!
-                      .starterAppDrawerItem(index + 1);
+                  final title = GalleryLocalizations.of(
+                    context,
+                  )!.starterAppDrawerItem(index + 1);
                   return ListTile(
                     onTap: () {
                       Navigator.of(context).restorablePushNamed<void>(

@@ -39,16 +39,19 @@ class MobileAsymmetricView extends StatelessWidget {
 
     // Decide whether the page size and text size allow 2-column products.
 
-    final cardHeight = (constraints.biggest.height -
+    final cardHeight =
+        (constraints.biggest.height -
             _topPadding -
             _bottomPadding -
             TwoProductCardColumn.spacerHeight) /
         2;
 
-    final imageWidth = _cardToScreenWidthRatio * constraints.biggest.width -
+    final imageWidth =
+        _cardToScreenWidthRatio * constraints.biggest.width -
         TwoProductCardColumn.horizontalPadding;
 
-    final imageHeight = cardHeight -
+    final imageHeight =
+        cardHeight -
         MobileProductCard.defaultTextBoxHeight *
             GalleryOptions.of(context).textScaleFactor(context);
 
@@ -76,8 +79,9 @@ class MobileAsymmetricView extends StatelessWidget {
           final bottom = _evenCasesIndex(index);
           column = TwoProductCardColumn(
             bottom: products[bottom],
-            top:
-                products.length - 1 >= bottom + 1 ? products[bottom + 1] : null,
+            top: products.length - 1 >= bottom + 1
+                ? products[bottom + 1]
+                : null,
             imageAspectRatio: imageWidth / imageHeight,
           );
           width += 32;
@@ -110,7 +114,7 @@ class MobileAsymmetricView extends StatelessWidget {
                 reverse: false,
               ),
             ),
-          )
+          ),
       ];
     }
   }

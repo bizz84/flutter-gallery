@@ -65,11 +65,13 @@ class _HomePageState extends State<HomePage>
     if (isDesktop) {
       final isTextDirectionRtl =
           GalleryOptions.of(context).resolvedTextDirection() ==
-              TextDirection.rtl;
-      final verticalRotation =
-          isTextDirectionRtl ? turnsToRotateLeft : turnsToRotateRight;
-      final revertVerticalRotation =
-          isTextDirectionRtl ? turnsToRotateRight : turnsToRotateLeft;
+          TextDirection.rtl;
+      final verticalRotation = isTextDirectionRtl
+          ? turnsToRotateLeft
+          : turnsToRotateRight;
+      final revertVerticalRotation = isTextDirectionRtl
+          ? turnsToRotateRight
+          : turnsToRotateLeft;
       tabBarView = Row(
         children: [
           Container(
@@ -93,17 +95,20 @@ class _HomePageState extends State<HomePage>
                 RotatedBox(
                   quarterTurns: verticalRotation,
                   child: _RallyTabBar(
-                    tabs: _buildTabs(
-                            context: context, theme: theme, isVertical: true)
-                        .map(
-                      (widget) {
-                        // Revert the rotation on the tabs.
-                        return RotatedBox(
-                          quarterTurns: revertVerticalRotation,
-                          child: widget,
-                        );
-                      },
-                    ).toList(),
+                    tabs:
+                        _buildTabs(
+                          context: context,
+                          theme: theme,
+                          isVertical: true,
+                        ).map(
+                          (widget) {
+                            // Revert the rotation on the tabs.
+                            return RotatedBox(
+                              quarterTurns: revertVerticalRotation,
+                              child: widget,
+                            );
+                          },
+                        ).toList(),
                     tabController: _tabController,
                   ),
                 ),
@@ -171,10 +176,11 @@ class _HomePageState extends State<HomePage>
     );
   }
 
-  List<Widget> _buildTabs(
-      {required BuildContext context,
-      required ThemeData theme,
-      bool isVertical = false}) {
+  List<Widget> _buildTabs({
+    required BuildContext context,
+    required ThemeData theme,
+    bool isVertical = false,
+  }) {
     final localizations = GalleryLocalizations.of(context)!;
     return [
       _RallyTab(
@@ -267,9 +273,9 @@ class _RallyTab extends StatefulWidget {
     int? tabIndex,
     required TabController tabController,
     required this.isVertical,
-  })  : titleText = Text(title, style: theme.textTheme.labelLarge),
-        isExpanded = tabController.index == tabIndex,
-        icon = Icon(iconData, semanticLabel: title);
+  }) : titleText = Text(title, style: theme.textTheme.labelLarge),
+       isExpanded = tabController.index == tabIndex,
+       icon = Icon(iconData, semanticLabel: title);
 
   final Text titleText;
   final Icon icon;

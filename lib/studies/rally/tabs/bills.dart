@@ -42,7 +42,7 @@ class _BillsViewState extends State<BillsView>
       ),
       sidebarItems: [
         for (UserDetailData item in detailItems)
-          SidebarItem(title: item.title, value: item.value)
+          SidebarItem(title: item.title, value: item.value),
       ],
     );
   }

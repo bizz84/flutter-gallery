@@ -14,14 +14,17 @@ class SelectionControlsDemo extends StatelessWidget {
   String _title(BuildContext context) {
     switch (type) {
       case SelectionControlsDemoType.checkbox:
-        return GalleryLocalizations.of(context)!
-            .demoSelectionControlsCheckboxTitle;
+        return GalleryLocalizations.of(
+          context,
+        )!.demoSelectionControlsCheckboxTitle;
       case SelectionControlsDemoType.radio:
-        return GalleryLocalizations.of(context)!
-            .demoSelectionControlsRadioTitle;
+        return GalleryLocalizations.of(
+          context,
+        )!.demoSelectionControlsRadioTitle;
       case SelectionControlsDemoType.switches:
-        return GalleryLocalizations.of(context)!
-            .demoSelectionControlsSwitchTitle;
+        return GalleryLocalizations.of(
+          context,
+        )!.demoSelectionControlsSwitchTitle;
     }
   }
 

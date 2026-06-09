@@ -323,7 +323,10 @@ class GalleryLocalizationsMy extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return '$amount ထည့်ထားသော $accountName အကောင့် $accountNumber။';
   }
 
@@ -333,8 +336,12 @@ class GalleryLocalizationsMy extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return '$amountTotal အနက် $amountUsed အသုံးပြုထားသော $budgetName အသုံးစရိတ်တွင် $amountLeft ကျန်ပါသည်';
   }
 

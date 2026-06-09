@@ -97,24 +97,26 @@ class _DialogDemoState extends State<DialogDemo> with RestorationMixin {
     Object? arguments,
   ) {
     final theme = Theme.of(context);
-    final dialogTextStyle = theme.textTheme.titleMedium!
-        .copyWith(color: theme.textTheme.bodySmall!.color);
+    final dialogTextStyle = theme.textTheme.titleMedium!.copyWith(
+      color: theme.textTheme.bodySmall!.color,
+    );
 
     return DialogRoute<String>(
       context: context,
       builder: (context) {
         final localizations = GalleryLocalizations.of(context)!;
         return ApplyTextOptions(
-            child: AlertDialog(
-          content: Text(
-            localizations.dialogDiscardTitle,
-            style: dialogTextStyle,
+          child: AlertDialog(
+            content: Text(
+              localizations.dialogDiscardTitle,
+              style: dialogTextStyle,
+            ),
+            actions: [
+              _DialogButton(text: localizations.dialogCancel),
+              _DialogButton(text: localizations.dialogDiscard),
+            ],
           ),
-          actions: [
-            _DialogButton(text: localizations.dialogCancel),
-            _DialogButton(text: localizations.dialogDiscard),
-          ],
-        ));
+        );
       },
     );
   }
@@ -124,8 +126,9 @@ class _DialogDemoState extends State<DialogDemo> with RestorationMixin {
     Object? arguments,
   ) {
     final theme = Theme.of(context);
-    final dialogTextStyle = theme.textTheme.titleMedium!
-        .copyWith(color: theme.textTheme.bodySmall!.color);
+    final dialogTextStyle = theme.textTheme.titleMedium!.copyWith(
+      color: theme.textTheme.bodySmall!.color,
+    );
 
     return DialogRoute<String>(
       context: context,
@@ -221,7 +224,9 @@ class _DialogDemoState extends State<DialogDemo> with RestorationMixin {
                       break;
                     case DialogDemoType.fullscreen:
                       Navigator.restorablePush<void>(
-                          context, _fullscreenDialogRoute);
+                        context,
+                        _fullscreenDialogRoute,
+                      );
                       break;
                   }
                 },

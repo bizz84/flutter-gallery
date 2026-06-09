@@ -44,8 +44,8 @@ class GalleryOptions {
     required this.timeDilation,
     required this.platform,
     required this.isTestMode,
-  })  : _textScaleFactor = textScaleFactor ?? 1.0,
-        _locale = locale;
+  }) : _textScaleFactor = textScaleFactor ?? 1.0,
+       _locale = locale;
 
   final ThemeMode themeMode;
   final double _textScaleFactor;
@@ -146,24 +146,24 @@ class GalleryOptions {
 
   @override
   int get hashCode => Object.hash(
-        themeMode,
-        _textScaleFactor,
-        customTextDirection,
-        locale,
-        timeDilation,
-        platform,
-        isTestMode,
-      );
+    themeMode,
+    _textScaleFactor,
+    customTextDirection,
+    locale,
+    timeDilation,
+    platform,
+    isTestMode,
+  );
 
   static GalleryOptions of(BuildContext context) {
-    final scope =
-        context.dependOnInheritedWidgetOfExactType<_ModelBindingScope>()!;
+    final scope = context
+        .dependOnInheritedWidgetOfExactType<_ModelBindingScope>()!;
     return scope.modelBindingState.currentModel;
   }
 
   static void update(BuildContext context, GalleryOptions newModel) {
-    final scope =
-        context.dependOnInheritedWidgetOfExactType<_ModelBindingScope>()!;
+    final scope = context
+        .dependOnInheritedWidgetOfExactType<_ModelBindingScope>()!;
     scope.modelBindingState.updateModel(newModel);
   }
 }

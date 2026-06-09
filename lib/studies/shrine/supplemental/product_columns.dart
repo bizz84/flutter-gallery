@@ -24,32 +24,36 @@ class TwoProductCardColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      return ListView(
-        physics: const ClampingScrollPhysics(),
-        children: [
-          Padding(
-            padding: const EdgeInsetsDirectional.only(start: horizontalPadding),
-            child: top != null
-                ? MobileProductCard(
-                    imageAspectRatio: imageAspectRatio,
-                    product: top!,
-                  )
-                : const SizedBox(
-                    height: spacerHeight,
-                  ),
-          ),
-          const SizedBox(height: spacerHeight),
-          Padding(
-            padding: const EdgeInsetsDirectional.only(end: horizontalPadding),
-            child: MobileProductCard(
-              imageAspectRatio: imageAspectRatio,
-              product: bottom,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return ListView(
+          physics: const ClampingScrollPhysics(),
+          children: [
+            Padding(
+              padding: const EdgeInsetsDirectional.only(
+                start: horizontalPadding,
+              ),
+              child: top != null
+                  ? MobileProductCard(
+                      imageAspectRatio: imageAspectRatio,
+                      product: top!,
+                    )
+                  : const SizedBox(
+                      height: spacerHeight,
+                    ),
             ),
-          ),
-        ],
-      );
-    });
+            const SizedBox(height: spacerHeight),
+            Padding(
+              padding: const EdgeInsetsDirectional.only(end: horizontalPadding),
+              child: MobileProductCard(
+                imageAspectRatio: imageAspectRatio,
+                product: bottom,
+              ),
+            ),
+          ],
+        );
+      },
+    );
   }
 }
 

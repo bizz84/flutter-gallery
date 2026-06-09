@@ -189,7 +189,7 @@ class _DemoBottomAppBar extends StatelessWidget {
                 tooltip: localizations.starterAppTooltipFavorite,
                 icon: const Icon(Icons.favorite),
                 onPressed: () {},
-              )
+              ),
             ],
           ),
         ),

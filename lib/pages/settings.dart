@@ -124,16 +124,19 @@ class _SettingsPageState extends State<SettingsPage> {
                 : ''),
       ),
     });
-    var supportedLocales =
-        List<Locale>.from(GalleryLocalizations.supportedLocales);
+    var supportedLocales = List<Locale>.from(
+      GalleryLocalizations.supportedLocales,
+    );
     supportedLocales.removeWhere((locale) => locale == deviceLocale);
 
-    final displayLocales = Map<Locale, DisplayOption>.fromIterable(
-      supportedLocales,
-      value: (dynamic locale) =>
-          _getLocaleDisplayOption(context, locale as Locale?),
-    ).entries.toList()
-      ..sort((l1, l2) => compareAsciiUpperCase(l1.value.title, l2.value.title));
+    final displayLocales =
+        Map<Locale, DisplayOption>.fromIterable(
+          supportedLocales,
+          value: (dynamic locale) =>
+              _getLocaleDisplayOption(context, locale as Locale?),
+        ).entries.toList()..sort(
+          (l1, l2) => compareAsciiUpperCase(l1.value.title, l2.value.title),
+        );
 
     localeOptions.addAll(LinkedHashMap.fromEntries(displayLocales));
     return localeOptions;
@@ -337,8 +340,9 @@ class SettingsFeedback extends StatelessWidget {
       title: GalleryLocalizations.of(context)!.settingsFeedback,
       icon: Icons.feedback,
       onTap: () async {
-        final url =
-            Uri.parse('https://github.com/flutter/gallery/issues/new/choose/');
+        final url = Uri.parse(
+          'https://github.com/flutter/gallery/issues/new/choose/',
+        );
         if (await canLaunchUrl(url)) {
           await launchUrl(url);
         }
@@ -365,9 +369,9 @@ class SettingsAttribution extends StatelessWidget {
         child: SelectableText(
           GalleryLocalizations.of(context)!.settingsAttribution,
           style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                fontSize: 12,
-                color: Theme.of(context).colorScheme.onSecondary,
-              ),
+            fontSize: 12,
+            color: Theme.of(context).colorScheme.onSecondary,
+          ),
           textAlign: isDesktop ? TextAlign.end : TextAlign.start,
         ),
       ),

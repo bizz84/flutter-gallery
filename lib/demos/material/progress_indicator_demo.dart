@@ -31,17 +31,18 @@ class _ProgressIndicatorDemoState extends State<ProgressIndicatorDemo>
       animationBehavior: AnimationBehavior.preserve,
     )..forward();
 
-    _animation = CurvedAnimation(
-      parent: _controller,
-      curve: const Interval(0.0, 0.9, curve: Curves.fastOutSlowIn),
-      reverseCurve: Curves.fastOutSlowIn,
-    )..addStatusListener((status) {
-        if (status == AnimationStatus.dismissed) {
-          _controller.forward();
-        } else if (status == AnimationStatus.completed) {
-          _controller.reverse();
-        }
-      });
+    _animation =
+        CurvedAnimation(
+          parent: _controller,
+          curve: const Interval(0.0, 0.9, curve: Curves.fastOutSlowIn),
+          reverseCurve: Curves.fastOutSlowIn,
+        )..addStatusListener((status) {
+          if (status == AnimationStatus.dismissed) {
+            _controller.forward();
+          } else if (status == AnimationStatus.completed) {
+            _controller.reverse();
+          }
+        });
   }
 
   @override
@@ -53,11 +54,13 @@ class _ProgressIndicatorDemoState extends State<ProgressIndicatorDemo>
   String get _title {
     switch (widget.type) {
       case ProgressIndicatorDemoType.circular:
-        return GalleryLocalizations.of(context)!
-            .demoCircularProgressIndicatorTitle;
+        return GalleryLocalizations.of(
+          context,
+        )!.demoCircularProgressIndicatorTitle;
       case ProgressIndicatorDemoType.linear:
-        return GalleryLocalizations.of(context)!
-            .demoLinearProgressIndicatorTitle;
+        return GalleryLocalizations.of(
+          context,
+        )!.demoLinearProgressIndicatorTitle;
     }
   }
 
