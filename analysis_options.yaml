@@ -4,6 +4,9 @@ analyzer:
   enable-experiment:
     - primary-constructors
 
+formatter:
+  trailing_commas: preserve
+
 linter:
   # In addition to the flutter_lints
   rules:
