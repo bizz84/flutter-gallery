@@ -1,7 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
 import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/letter_spacing.dart';
 import 'package:gallery/studies/reply/adaptive_nav.dart';
 import 'package:gallery/studies/reply/colors.dart';
@@ -145,7 +145,7 @@ class _RestorableEmailState extends RestorableListenable<EmailStore> {
 ThemeData _buildReplyLightTheme(BuildContext context) {
   final base = ThemeData.light();
   return base.copyWith(
-    bottomAppBarTheme: const BottomAppBarTheme(color: ReplyColors.blue700),
+    bottomAppBarTheme: const BottomAppBarThemeData(color: ReplyColors.blue700),
     bottomSheetTheme: BottomSheetThemeData(
       backgroundColor: ReplyColors.blue700,
       modalBackgroundColor: Colors.white.withOpacity(0.7),
@@ -192,7 +192,7 @@ ThemeData _buildReplyLightTheme(BuildContext context) {
 ThemeData _buildReplyDarkTheme(BuildContext context) {
   final base = ThemeData.dark();
   return base.copyWith(
-    bottomAppBarTheme: const BottomAppBarTheme(
+    bottomAppBarTheme: const BottomAppBarThemeData(
       color: ReplyColors.darkBottomAppBarBackground,
     ),
     bottomSheetTheme: BottomSheetThemeData(

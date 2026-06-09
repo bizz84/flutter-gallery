@@ -4,10 +4,9 @@
   <summary>Generating localizations</summary>
 
 If this is the first time building the Flutter Gallery, the localized
-code will not be present in the project directory. However, after running
-the application for the first time, a synthetic package will be generated
-containing the app's localizations through importing
-`package:flutter_gen/gen_l10n/`.
+code will not be present in the project directory. After running the
+application for the first time, Flutter will generate the app's
+localizations in `lib/l10n`, imported as `package:gallery/l10n/...`.
 
 ```bash
 flutter pub get

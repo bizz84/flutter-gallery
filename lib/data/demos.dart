@@ -6,9 +6,6 @@ import 'dart:collection';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/gallery_localizations.dart';
-import 'package:flutter_gen/gen_l10n/gallery_localizations_en.dart'
-    show GalleryLocalizationsEn;
 import 'package:gallery/codeviewer/code_displayer.dart';
 import 'package:gallery/codeviewer/code_segments.dart';
 import 'package:gallery/data/icons.dart';
@@ -34,6 +31,9 @@ import 'package:gallery/demos/reference/two_pane_demo.dart'
     deferred as twopane_demo;
 import 'package:gallery/demos/reference/typography_demo.dart'
     deferred as typography;
+import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/l10n/gallery_localizations_en.dart'
+    show GalleryLocalizationsEn;
 
 const _docsBaseUrl = 'https://api.flutter.dev/flutter';
 const _docsAnimationsUrl =
