@@ -24,10 +24,8 @@ to be completed.
 
 ## Generating GalleryLocalizations
 
-Running the application for the first time should generate a synthetic package
-containing the app's localizations through importing
-`package:flutter_gen/gen_l10n/`. The code is generated will be generated in
-`.dart_tool/flutter_gen/gen_l10n/`.
+Running the application for the first time should generate the app's
+localizations in `lib/l10n`, imported as `package:gallery/l10n/...`.
 
 The generated localizations code is updated every time `flutter run`
 is called, and during hot reload and restart. This means that updates to
@@ -39,6 +37,8 @@ From the root directory, run:
 
 ```bash
 flutter gen-l10n \
+    --arb-dir=lib/l10n \
+    --output-dir=lib/l10n \
     --template-arb-file=intl_en.arb \
     --output-localization-file=gallery_localizations.dart \
     --output-class=GalleryLocalizations
