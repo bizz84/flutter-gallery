@@ -185,7 +185,7 @@ class _CategoryHeader extends StatelessWidget {
       margin: margin,
       child: Material(
         shape: RoundedRectangleBorder(borderRadius: borderRadius),
-        color: colorScheme.onBackground,
+        color: colorScheme.onSurface,
         clipBehavior: Clip.antiAlias,
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
@@ -323,14 +323,14 @@ class CategoryDemoItem extends StatelessWidget {
                       Text(
                         demo.subtitle,
                         style: textTheme.labelSmall!.apply(
-                          color: colorScheme.onSurface.withOpacity(0.5),
+                          color: colorScheme.onSurface.withValues(alpha: 0.5),
                         ),
                       ),
                       const SizedBox(height: 20),
                       Divider(
                         thickness: 1,
                         height: 1,
-                        color: Theme.of(context).colorScheme.background,
+                        color: Theme.of(context).colorScheme.surface,
                       ),
                     ],
                   ),

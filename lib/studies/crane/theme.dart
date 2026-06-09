@@ -23,7 +23,6 @@ ThemeData _buildCraneTheme() {
       error: craneErrorOrange,
     ),
     hintColor: craneWhite60,
-    indicatorColor: cranePrimaryWhite,
     scaffoldBackgroundColor: cranePrimaryWhite,
     cardColor: cranePrimaryWhite,
     highlightColor: Colors.transparent,
@@ -33,7 +32,7 @@ ThemeData _buildCraneTheme() {
     ),
     primaryTextTheme: _buildCraneTextTheme(base.primaryTextTheme),
     iconTheme: _customIconTheme(base.iconTheme, craneWhite60),
-    primaryIconTheme: _customIconTheme(base.iconTheme, cranePrimaryWhite),
+    primaryIconTheme: _customIconTheme(base.iconTheme, cranePrimaryWhite), tabBarTheme: const TabBarThemeData(indicatorColor: cranePrimaryWhite),
   );
 }
 
