@@ -11,18 +11,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 class ArticleData({
-    required final String imageUrl,
-    required final double imageAspectRatio,
-    required final String category,
-    required final String title,
-    final String? snippet,
-  }) ;
+  required final String imageUrl,
+  required final double imageAspectRatio,
+  required final String category,
+  required final String title,
+  final String? snippet,
+});
 
 class const HorizontalArticlePreview({
-    super.key,
-    required final ArticleData data,
-    final int? minutes,
-  }) extends StatelessWidget {
+  super.key,
+  required final ArticleData data,
+  final int? minutes,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -69,12 +69,12 @@ class const HorizontalArticlePreview({
 }
 
 class const VerticalArticlePreview({
-    super.key,
-    required final ArticleData data,
-    final double? width,
-    final TextStyle? headlineTextStyle,
-    final bool showSnippet = false,
-  }) extends StatelessWidget {
+  super.key,
+  required final ArticleData data,
+  final double? width,
+  final TextStyle? headlineTextStyle,
+  final bool showSnippet = false,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -270,7 +270,8 @@ class const HashtagBar({super.key}) extends StatelessWidget {
   }
 }
 
-class const NavigationMenu({super.key, final bool isCloseable = false}) extends StatelessWidget {
+class const NavigationMenu({super.key, final bool isCloseable = false})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
@@ -310,7 +311,8 @@ class const NavigationMenu({super.key, final bool isCloseable = false}) extends 
   }
 }
 
-class const MenuItem(final String title, {super.key, final bool header = false}) extends StatelessWidget {
+class const MenuItem(final String title, {super.key, final bool header = false})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -338,11 +340,11 @@ class const MenuItem(final String title, {super.key, final bool header = false})
 }
 
 class const StockItem({
-    super.key,
-    required final String ticker,
-    required final String price,
-    required final double percent,
-  }) extends StatelessWidget {
+  super.key,
+  required final String ticker,
+  required final String price,
+  required final double percent,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -455,10 +457,10 @@ List<Widget> buildStockItems(BuildContext context) {
 }
 
 class const VideoPreview({
-    super.key,
-    required final ArticleData data,
-    required final String time,
-  }) extends StatelessWidget {
+  super.key,
+  required final ArticleData data,
+  required final String time,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;

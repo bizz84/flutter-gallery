@@ -18,9 +18,9 @@ const List<Offset> _vertices = [
 ];
 
 class const TriangleCategoryIndicator(
-    final double triangleWidth,
-    final double triangleHeight,
-  ) extends CustomPainter {
+  final double triangleWidth,
+  final double triangleHeight,
+) extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final myPath = Path()

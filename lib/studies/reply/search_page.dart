@@ -81,7 +81,8 @@ class const SearchPage({super.key}) extends StatelessWidget {
   }
 }
 
-class const _SectionHeader({required final String title}) extends StatelessWidget {
+class const _SectionHeader({required final String title})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -99,10 +100,10 @@ class const _SectionHeader({required final String title}) extends StatelessWidge
 }
 
 class const _SearchHistoryTile({
-    final IconData icon = Icons.access_time,
-    required final String search,
-    required final String address,
-  }) extends StatelessWidget {
+  final IconData icon = Icons.access_time,
+  required final String search,
+  required final String address,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(

@@ -370,9 +370,9 @@ class _HighlightSpan(final HighlightType type, final int start, final int end) {
 }
 
 class CodeSpan({
-    final HighlightType type = HighlightType.base,
-    required final String text,
-  }) {
+  final HighlightType type = HighlightType.base,
+  required final String text,
+}) {
   @override
   String toString() {
     return 'TextSpan('

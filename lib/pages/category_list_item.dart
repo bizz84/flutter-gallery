@@ -12,14 +12,14 @@ import 'package:gallery/pages/demo.dart';
 typedef CategoryHeaderTapCallback = Function(bool shouldOpenList);
 
 class const CategoryListItem({
-    super.key,
-    final String? restorationId,
-    required final GalleryDemoCategory category,
-    required final String imageString,
-    final List<GalleryDemo> demos = const [],
-    final bool initiallyExpanded = false,
-    final CategoryHeaderTapCallback? onTap,
-  }) extends StatefulWidget {
+  super.key,
+  final String? restorationId,
+  required final GalleryDemoCategory category,
+  required final String imageString,
+  final List<GalleryDemo> demos = const [],
+  final bool initiallyExpanded = false,
+  final CategoryHeaderTapCallback? onTap,
+}) extends StatefulWidget {
   @override
   State<CategoryListItem> createState() => _CategoryListItemState();
 }
@@ -150,15 +150,15 @@ class _CategoryListItemState extends State<CategoryListItem>
 }
 
 class const _CategoryHeader({
-    final EdgeInsetsGeometry? margin,
-    required final EdgeInsetsGeometry imagePadding,
-    required final BorderRadiusGeometry borderRadius,
-    final double? height,
-    required final double chevronOpacity,
-    required final String imageString,
-    required final GalleryDemoCategory category,
-    final GestureTapCallback? onTap,
-  }) extends StatelessWidget {
+  final EdgeInsetsGeometry? margin,
+  required final EdgeInsetsGeometry imagePadding,
+  required final BorderRadiusGeometry borderRadius,
+  final double? height,
+  required final double chevronOpacity,
+  required final String imageString,
+  required final GalleryDemoCategory category,
+  final GestureTapCallback? onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -234,9 +234,9 @@ class const _CategoryHeader({
 }
 
 class const _ExpandedCategoryDemos({
-    required final GalleryDemoCategory category,
-    required final List<GalleryDemo> demos,
-  }) extends StatelessWidget {
+  required final GalleryDemoCategory category,
+  required final List<GalleryDemo> demos,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -253,7 +253,8 @@ class const _ExpandedCategoryDemos({
   }
 }
 
-class const CategoryDemoItem({super.key, required final GalleryDemo demo}) extends StatelessWidget {
+class const CategoryDemoItem({super.key, required final GalleryDemo demo})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;

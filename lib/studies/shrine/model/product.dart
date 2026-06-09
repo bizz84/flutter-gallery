@@ -7,10 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
 class const Category({
-    // A function taking a BuildContext as input and
+  // A function taking a BuildContext as input and
   // returns the internationalized name of the category.
-required final String Function(BuildContext) name,
-  }) ;
+  required final String Function(BuildContext) name,
+});
 
 Category categoryAll = Category(
   name: (context) => GalleryLocalizations.of(context)!.shrineCategoryNameAll,
@@ -38,15 +38,15 @@ List<Category> categories = [
 ];
 
 class const Product({
-    required final Category category,
-    required final int id,
-    required final bool isFeatured,
-    // A function taking a BuildContext as input and
+  required final Category category,
+  required final int id,
+  required final bool isFeatured,
+  // A function taking a BuildContext as input and
   // returns the internationalized name of the product.
-required final String Function(BuildContext) name,
-    required final int price,
-    final double assetAspectRatio = 1,
-  }) {
+  required final String Function(BuildContext) name,
+  required final int price,
+  final double assetAspectRatio = 1,
+}) {
   String get assetName => '$id-0.jpg';
 
   String get assetPackage => 'shrine_images';

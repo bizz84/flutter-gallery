@@ -29,9 +29,9 @@ enum _DemoState {
 }
 
 class const DemoPage({
-    super.key,
-    required final String? slug,
-  }) extends StatefulWidget {
+  super.key,
+  required final String? slug,
+}) extends StatefulWidget {
   static const String baseRoute = '/demo';
   @override
   State<DemoPage> createState() => _DemoPageState();
@@ -66,10 +66,10 @@ class _DemoPageState extends State<DemoPage> {
 }
 
 class const GalleryDemoPage({
-    super.key,
-    required final String restorationId,
-    required final GalleryDemo demo,
-  }) extends StatefulWidget {
+  super.key,
+  required final String restorationId,
+  required final GalleryDemo demo,
+}) extends StatefulWidget {
   @override
   State<GalleryDemoPage> createState() => _GalleryDemoPageState();
 }
@@ -513,12 +513,12 @@ class _GalleryDemoPageState extends State<GalleryDemoPage>
 }
 
 class const _DemoSectionOptions({
-    required final double maxHeight,
-    required final double maxWidth,
-    required final List<GalleryDemoConfiguration> configurations,
-    required final int configIndex,
-    required final ValueChanged<int> onConfigChanged,
-  }) extends StatelessWidget {
+  required final double maxHeight,
+  required final double maxWidth,
+  required final List<GalleryDemoConfiguration> configurations,
+  required final int configIndex,
+  required final ValueChanged<int> onConfigChanged,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -577,10 +577,10 @@ class const _DemoSectionOptions({
 }
 
 class const _DemoSectionOptionsItem({
-    required final String title,
-    required final bool isSelected,
-    final GestureTapCallback? onTap,
-  }) extends StatelessWidget {
+  required final String title,
+  required final bool isSelected,
+  final GestureTapCallback? onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -605,11 +605,11 @@ class const _DemoSectionOptionsItem({
 }
 
 class const _DemoSectionInfo({
-    required final double maxHeight,
-    required final double maxWidth,
-    required final String title,
-    required final String description,
-  }) extends StatelessWidget {
+  required final double maxHeight,
+  required final double maxWidth,
+  required final String title,
+  required final String description,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -655,10 +655,10 @@ class const _DemoSectionInfo({
 }
 
 class const DemoWrapper({
-    super.key,
-    required final double height,
-    required final WidgetBuilder buildRoute,
-  }) extends StatelessWidget {
+  super.key,
+  required final double height,
+  required final WidgetBuilder buildRoute,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -689,9 +689,9 @@ class const DemoWrapper({
 }
 
 class const _DemoSectionCode({
-    final double? maxHeight,
-    final Widget? codeWidget,
-  }) extends StatelessWidget {
+  final double? maxHeight,
+  final Widget? codeWidget,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
@@ -711,7 +711,8 @@ class const _DemoSectionCode({
   }
 }
 
-class const CodeDisplayPage(final CodeDisplayer code, {super.key}) extends StatelessWidget {
+class const CodeDisplayPage(final CodeDisplayer code, {super.key})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);

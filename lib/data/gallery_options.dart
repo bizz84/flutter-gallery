@@ -170,9 +170,9 @@ class GalleryOptions {
 
 // Applies text GalleryOptions to a widget
 class const ApplyTextOptions({
-    super.key,
-    required final Widget child,
-  }) extends StatelessWidget {
+  super.key,
+  required final Widget child,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final options = GalleryOptions.of(context);
@@ -199,18 +199,18 @@ class const ApplyTextOptions({
 // See https://medium.com/flutter/managing-flutter-application-state-with-inheritedwidgets-1140452befe1
 
 class const _ModelBindingScope({
-    required final _ModelBindingState modelBindingState,
-    required super.child,
-  }) extends InheritedWidget {
+  required final _ModelBindingState modelBindingState,
+  required super.child,
+}) extends InheritedWidget {
   @override
   bool updateShouldNotify(_ModelBindingScope oldWidget) => true;
 }
 
 class const ModelBinding({
-    super.key,
-    required final GalleryOptions initialModel,
-    required final Widget child,
-  }) extends StatefulWidget {
+  super.key,
+  required final GalleryOptions initialModel,
+  required final Widget child,
+}) extends StatefulWidget {
   @override
   State<ModelBinding> createState() => _ModelBindingState();
 }

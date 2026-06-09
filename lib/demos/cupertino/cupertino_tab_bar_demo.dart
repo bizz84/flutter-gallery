@@ -8,7 +8,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN cupertinoNavigationDemo
 
-class const _TabInfo(final String title, final IconData icon) ;
+class const _TabInfo(final String title, final IconData icon);
 
 class const CupertinoTabBarDemo({super.key}) extends StatelessWidget {
   @override
@@ -58,9 +58,9 @@ class const CupertinoTabBarDemo({super.key}) extends StatelessWidget {
 }
 
 class const _CupertinoDemoTab({
-    required final String title,
-    required final IconData icon,
-  }) extends StatelessWidget {
+  required final String title,
+  required final IconData icon,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(

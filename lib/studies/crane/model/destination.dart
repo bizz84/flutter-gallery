@@ -8,11 +8,11 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/crane/model/formatters.dart';
 
 abstract class const Destination({
-    required final int id,
-    required final String destination,
-    required final String assetSemanticLabel,
-    required final double imageAspectRatio,
-  }) {
+  required final int id,
+  required final String destination,
+  required final String assetSemanticLabel,
+  required final double imageAspectRatio,
+}) {
   String get assetName;
 
   String subtitle(BuildContext context);
@@ -24,13 +24,13 @@ abstract class const Destination({
 }
 
 class const FlyDestination({
-    required super.id,
-    required super.destination,
-    required super.assetSemanticLabel,
-    required final int stops,
-    super.imageAspectRatio = 1,
-    final Duration? duration,
-  }) extends Destination {
+  required super.id,
+  required super.destination,
+  required super.assetSemanticLabel,
+  required final int stops,
+  super.imageAspectRatio = 1,
+  final Duration? duration,
+}) extends Destination {
   @override
   String get assetName => 'crane/destinations/fly_$id.jpg';
 
@@ -71,12 +71,12 @@ class const FlyDestination({
 }
 
 class const SleepDestination({
-    required super.id,
-    required super.destination,
-    required super.assetSemanticLabel,
-    required final int total,
-    super.imageAspectRatio = 1,
-  }) extends Destination {
+  required super.id,
+  required super.destination,
+  required super.assetSemanticLabel,
+  required final int total,
+  super.imageAspectRatio = 1,
+}) extends Destination {
   @override
   String get assetName => 'crane/destinations/sleep_$id.jpg';
 
@@ -87,12 +87,12 @@ class const SleepDestination({
 }
 
 class const EatDestination({
-    required super.id,
-    required super.destination,
-    required super.assetSemanticLabel,
-    required final int total,
-    super.imageAspectRatio = 1,
-  }) extends Destination {
+  required super.id,
+  required super.destination,
+  required super.assetSemanticLabel,
+  required final int total,
+  super.imageAspectRatio = 1,
+}) extends Destination {
   @override
   String get assetName => 'crane/destinations/eat_$id.jpg';
 

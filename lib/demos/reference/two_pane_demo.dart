@@ -16,10 +16,10 @@ enum TwoPaneDemoType {
 }
 
 class const TwoPaneDemo({
-    super.key,
-    required final String restorationId,
-    required final TwoPaneDemoType type,
-  }) extends StatefulWidget {
+  super.key,
+  required final String restorationId,
+  required final TwoPaneDemoType type,
+}) extends StatefulWidget {
   @override
   TwoPaneDemoState createState() => TwoPaneDemoState();
 }
@@ -78,10 +78,10 @@ class TwoPaneDemoState extends State<TwoPaneDemo> with RestorationMixin {
 }
 
 class const ListPane({
-    super.key,
-    required final ValueChanged<int> onSelect,
-    required final int selectedIndex,
-  }) extends StatelessWidget {
+  super.key,
+  required final ValueChanged<int> onSelect,
+  required final int selectedIndex,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,10 +115,10 @@ class const ListPane({
 }
 
 class const DetailsPane({
-    super.key,
-    required final int selectedIndex,
-    final VoidCallback? onClose,
-  }) extends StatelessWidget {
+  super.key,
+  required final int selectedIndex,
+  final VoidCallback? onClose,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -148,10 +148,10 @@ class const DetailsPane({
 }
 
 class const SimulateScreen({
-    super.key,
-    required final TwoPaneDemoType type,
-    required final TwoPane child,
-  }) extends StatelessWidget {
+  super.key,
+  required final TwoPaneDemoType type,
+  required final TwoPane child,
+}) extends StatelessWidget {
   // An approximation of a real foldable
   static const double foldableAspectRatio = 20 / 18;
   // 16x9 candy bar phone

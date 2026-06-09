@@ -9,10 +9,10 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 // BEGIN typographyDemo
 
 class const _TextStyleItem({
-    required final String name,
-    required final TextStyle style,
-    required final String text,
-  }) extends StatelessWidget {
+  required final String name,
+  required final TextStyle style,
+  required final String text,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(

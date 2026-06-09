@@ -8,7 +8,8 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN listDemo
 
-class const ListDemo({super.key, required final ListDemoType type}) extends StatelessWidget {
+class const ListDemo({super.key, required final ListDemoType type})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;

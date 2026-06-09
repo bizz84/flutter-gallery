@@ -22,9 +22,9 @@ double desktopCategoryMenuPageWidth({
 }
 
 class const CategoryMenuPage({
-    super.key,
-    final VoidCallback? onCategoryTap,
-  }) extends StatelessWidget {
+  super.key,
+  final VoidCallback? onCategoryTap,
+}) extends StatelessWidget {
   Widget _buttonText(String caption, TextStyle style) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16),

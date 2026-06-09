@@ -220,7 +220,8 @@ class Board extends Object with IterableMixin<BoardPoint?> {
   }
 }
 
-class _BoardIterator(final List<BoardPoint> boardPoints) implements Iterator<BoardPoint?> {
+class _BoardIterator(final List<BoardPoint> boardPoints)
+    implements Iterator<BoardPoint?> {
   int? currentIndex;
 
   @override
@@ -248,7 +249,6 @@ class _BoardIterator(final List<BoardPoint> boardPoints) implements Iterator<Boa
 @immutable
 class const _Range(final int min, final int max) {
   this : assert(min <= max);
-
 }
 
 // A location on the board in axial coordinates.
@@ -256,10 +256,10 @@ class const _Range(final int min, final int max) {
 // https://www.redblobgames.com/grids/hexagons/#coordinates-axial
 @immutable
 class const BoardPoint(
-    final int q,
-    final int r, {
-    final Color color = const Color(0xFFCDCDCD),
-  }) {
+  final int q,
+  final int r, {
+  final Color color = const Color(0xFFCDCDCD),
+}) {
   @override
   String toString() {
     return 'BoardPoint($q, $r, $color)';

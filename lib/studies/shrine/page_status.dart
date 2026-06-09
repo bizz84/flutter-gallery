@@ -7,11 +7,11 @@ import 'package:flutter/material.dart';
 import 'package:gallery/layout/adaptive.dart';
 
 class const PageStatus({
-    super.key,
-    required final AnimationController cartController,
-    required final AnimationController menuController,
-    required super.child,
-  }) extends InheritedWidget {
+  super.key,
+  required final AnimationController cartController,
+  required final AnimationController menuController,
+  required super.child,
+}) extends InheritedWidget {
   static PageStatus? of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<PageStatus>();
   }

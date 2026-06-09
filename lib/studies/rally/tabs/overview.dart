@@ -77,7 +77,8 @@ class _OverviewViewState extends State<OverviewView> {
   }
 }
 
-class const _OverviewGrid({required final double spacing}) extends StatelessWidget {
+class const _OverviewGrid({required final double spacing})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final accountDataList = DummyDataService.getAccountDataList(context);
@@ -149,7 +150,8 @@ class const _OverviewGrid({required final double spacing}) extends StatelessWidg
   }
 }
 
-class const _AlertsView({final List<AlertData>? alerts}) extends StatelessWidget {
+class const _AlertsView({final List<AlertData>? alerts})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
@@ -225,12 +227,12 @@ class const _Alert({required final AlertData alert}) extends StatelessWidget {
 }
 
 class const _FinancialView({
-    final String? title,
-    final double? total,
-    final List<FinancialEntityCategoryView>? financialItemViews,
-    final String? buttonSemanticsLabel,
-    final double? order,
-  }) extends StatelessWidget {
+  final String? title,
+  final double? total,
+  final List<FinancialEntityCategoryView>? financialItemViews,
+  final String? buttonSemanticsLabel,
+  final double? order,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

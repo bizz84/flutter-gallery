@@ -19,7 +19,8 @@ enum CheckedValue {
   four,
 }
 
-class const MenuDemo({super.key, required final MenuDemoType type}) extends StatefulWidget {
+class const MenuDemo({super.key, required final MenuDemoType type})
+    extends StatefulWidget {
   @override
   State<MenuDemo> createState() => _MenuDemoState();
 }
@@ -72,7 +73,9 @@ class _MenuDemoState extends State<MenuDemo> {
 // Pressing the PopupMenuButton on the right of this item shows
 // a simple menu with one disabled item. Typically the contents
 // of this "contextual menu" would reflect the app's state.
-class const _ContextMenuDemo({required final void Function(String value) showInSnackBar}) extends StatelessWidget {
+class const _ContextMenuDemo({
+  required final void Function(String value) showInSnackBar,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
@@ -115,7 +118,9 @@ class const _ContextMenuDemo({required final void Function(String value) showInS
 // Pressing the PopupMenuButton on the right of this item shows
 // a menu whose items have text labels and icons and a divider
 // That separates the first three items from the last one.
-class const _SectionedMenuDemo({required final void Function(String value) showInSnackBar}) extends StatelessWidget {
+class const _SectionedMenuDemo({
+  required final void Function(String value) showInSnackBar,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
@@ -176,7 +181,9 @@ class const _SectionedMenuDemo({required final void Function(String value) showI
 // This entire list item is a PopupMenuButton. Tapping anywhere shows
 // a menu whose current value is highlighted and aligned over the
 // list item's center line.
-class const _SimpleMenuDemo({required final void Function(String value) showInSnackBar}) extends StatefulWidget {
+class const _SimpleMenuDemo({
+  required final void Function(String value) showInSnackBar,
+}) extends StatefulWidget {
   @override
   _SimpleMenuDemoState createState() => _SimpleMenuDemoState();
 }
@@ -261,7 +268,9 @@ class _SimpleMenuDemoState extends State<_SimpleMenuDemo> {
 
 // Pressing the PopupMenuButton on the right of this item shows a menu
 // whose items have checked icons that reflect this app's state.
-class const _ChecklistMenuDemo({required final void Function(String value) showInSnackBar}) extends StatefulWidget {
+class const _ChecklistMenuDemo({
+  required final void Function(String value) showInSnackBar,
+}) extends StatefulWidget {
   @override
   _ChecklistMenuDemoState createState() => _ChecklistMenuDemoState();
 }

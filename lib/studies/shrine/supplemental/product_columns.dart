@@ -8,11 +8,11 @@ import 'package:gallery/studies/shrine/model/product.dart';
 import 'package:gallery/studies/shrine/supplemental/product_card.dart';
 
 class const TwoProductCardColumn({
-    super.key,
-    required final Product bottom,
-    final Product? top,
-    required final double imageAspectRatio,
-  }) extends StatelessWidget {
+  super.key,
+  required final Product bottom,
+  final Product? top,
+  required final double imageAspectRatio,
+}) extends StatelessWidget {
   static const double spacerHeight = 44;
   static const double horizontalPadding = 28;
 
@@ -52,11 +52,11 @@ class const TwoProductCardColumn({
 }
 
 class const OneProductCardColumn({
-    super.key,
-    required final Product product,
-    // Whether the product column should align to the bottom.
-required final bool reverse,
-  }) extends StatelessWidget {
+  super.key,
+  required final Product product,
+  // Whether the product column should align to the bottom.
+  required final bool reverse,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(

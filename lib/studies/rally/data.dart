@@ -42,58 +42,70 @@ double sumOf<T>(List<T> list, double Function(T elt) getValue) {
 ///
 /// The [primaryAmount] is the balance of the account in USD.
 class const AccountData({
-    /// The display name of this entity.
-required final String name,
-    /// The primary amount or value of this entity.
-required final double primaryAmount,
-    /// The full displayable account number.
-required final String accountNumber,
-  }) ;
+  /// The display name of this entity.
+  required final String name,
+
+  /// The primary amount or value of this entity.
+  required final double primaryAmount,
+
+  /// The full displayable account number.
+  required final String accountNumber,
+});
 
 /// A data model for a bill.
 ///
 /// The [primaryAmount] is the amount due in USD.
 class const BillData({
-    /// The display name of this entity.
-required final String name,
-    /// The primary amount or value of this entity.
-required final double primaryAmount,
-    /// The due date of this bill.
-required final String dueDate,
-    /// If this bill has been paid.
-final bool isPaid = false,
-  }) ;
+  /// The display name of this entity.
+  required final String name,
+
+  /// The primary amount or value of this entity.
+  required final double primaryAmount,
+
+  /// The due date of this bill.
+  required final String dueDate,
+
+  /// If this bill has been paid.
+  final bool isPaid = false,
+});
 
 /// A data model for a budget.
 ///
 /// The [primaryAmount] is the budget cap in USD.
 class const BudgetData({
-    /// The display name of this entity.
-required final String name,
-    /// The primary amount or value of this entity.
-required final double primaryAmount,
-    /// Amount of the budget that is consumed or used.
-required final double amountUsed,
-  }) ;
+  /// The display name of this entity.
+  required final String name,
+
+  /// The primary amount or value of this entity.
+  required final double primaryAmount,
+
+  /// Amount of the budget that is consumed or used.
+  required final double amountUsed,
+});
 
 /// A data model for an alert.
-class AlertData({/// The alert message to display.
-final String? message, /// The icon to display with the alert.
-final IconData? iconData}) ;
+class AlertData({
+  /// The alert message to display.
+  final String? message,
+
+  /// The icon to display with the alert.
+  final IconData? iconData,
+});
 
 class const DetailedEventData({
-    required final String title,
-    required final DateTime date,
-    required final double amount,
-  }) ;
+  required final String title,
+  required final DateTime date,
+  required final double amount,
+});
 
 /// A data model for data displayed to the user.
 class UserDetailData({
-    /// The display name of this entity.
-required final String title,
-    /// The value of this entity.
-required final String value,
-  }) ;
+  /// The display name of this entity.
+  required final String title,
+
+  /// The value of this entity.
+  required final String value,
+});
 
 /// Class to return dummy data lists.
 ///

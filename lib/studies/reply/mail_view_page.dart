@@ -6,10 +6,10 @@ import 'package:gallery/studies/reply/profile_avatar.dart';
 import 'package:provider/provider.dart';
 
 class const MailViewPage({
-    super.key,
-    required final int id,
-    required final Email email,
-  }) extends StatelessWidget {
+  super.key,
+  required final int id,
+  required final Email email,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +46,8 @@ class const MailViewPage({
   }
 }
 
-class const _MailViewHeader({required final Email email}) extends StatelessWidget {
+class const _MailViewHeader({required final Email email})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -108,7 +109,8 @@ class const _MailViewHeader({required final Email email}) extends StatelessWidge
   }
 }
 
-class const _MailViewBody({required final String message}) extends StatelessWidget {
+class const _MailViewBody({required final String message})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SelectableText(

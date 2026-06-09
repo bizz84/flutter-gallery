@@ -55,9 +55,9 @@ class _LoginPageState extends State<LoginPage> with RestorationMixin {
 }
 
 class const _MainView({
-    final TextEditingController? usernameController,
-    final TextEditingController? passwordController,
-  }) extends StatelessWidget {
+  final TextEditingController? usernameController,
+  final TextEditingController? passwordController,
+}) extends StatelessWidget {
   void _login(BuildContext context) {
     Navigator.of(context).restorablePushNamed(RallyApp.homeRoute);
   }
@@ -205,9 +205,9 @@ class const _SmallLogo() extends StatelessWidget {
 }
 
 class const _UsernameInput({
-    final double? maxWidth,
-    final TextEditingController? usernameController,
-  }) extends StatelessWidget {
+  final double? maxWidth,
+  final TextEditingController? usernameController,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -228,9 +228,9 @@ class const _UsernameInput({
 }
 
 class const _PasswordInput({
-    final double? maxWidth,
-    final TextEditingController? passwordController,
-  }) extends StatelessWidget {
+  final double? maxWidth,
+  final TextEditingController? passwordController,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -250,8 +250,8 @@ class const _PasswordInput({
 }
 
 class const _ThumbButton({
-    required final VoidCallback onTap,
-  }) extends StatefulWidget {
+  required final VoidCallback onTap,
+}) extends StatefulWidget {
   @override
   _ThumbButtonState createState() => _ThumbButtonState();
 }
@@ -314,9 +314,9 @@ class _ThumbButtonState extends State<_ThumbButton> {
 }
 
 class const _LoginButton({
-    required final VoidCallback onTap,
-    final double? maxWidth,
-  }) extends StatelessWidget {
+  required final VoidCallback onTap,
+  final double? maxWidth,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -344,7 +344,8 @@ class const _LoginButton({
   }
 }
 
-class const _BorderButton({required final String text}) extends StatelessWidget {
+class const _BorderButton({required final String text})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
@@ -364,7 +365,10 @@ class const _BorderButton({required final String text}) extends StatelessWidget 
   }
 }
 
-class const _FilledButton({required final String text, required final VoidCallback onTap}) extends StatelessWidget {
+class const _FilledButton({
+  required final String text,
+  required final VoidCallback onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(

@@ -19,14 +19,14 @@ const productCardDividerHeight = 84.0;
 const columnTopSpace = 84.0;
 
 class const DesktopProductCardColumn({
-    super.key,
-    required final bool alignToEnd,
-    required final bool startLarge,
-    required final bool lowerStart,
-    required final List<Product> products,
-    required final double largeImageWidth,
-    required final double smallImageWidth,
-  }) extends StatelessWidget {
+  super.key,
+  required final bool alignToEnd,
+  required final bool startLarge,
+  required final bool lowerStart,
+  required final List<Product> products,
+  required final double largeImageWidth,
+  required final double smallImageWidth,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(

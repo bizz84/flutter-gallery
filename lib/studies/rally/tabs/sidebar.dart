@@ -7,11 +7,11 @@ import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/colors.dart';
 
 class const TabWithSidebar({
-    super.key,
-    final String? restorationId,
-    required final Widget mainView,
-    required final List<Widget> sidebarItems,
-  }) extends StatelessWidget {
+  super.key,
+  final String? restorationId,
+  required final Widget mainView,
+  required final List<Widget> sidebarItems,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (isDisplayDesktop(context)) {
@@ -51,10 +51,10 @@ class const TabWithSidebar({
 }
 
 class const SidebarItem({
-    super.key,
-    required final String value,
-    required final String title,
-  }) extends StatelessWidget {
+  super.key,
+  required final String value,
+  required final String title,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;

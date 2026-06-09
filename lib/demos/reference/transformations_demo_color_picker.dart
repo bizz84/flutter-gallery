@@ -7,11 +7,11 @@ import 'package:flutter/material.dart';
 // A generic widget for a list of selectable colors.
 @immutable
 class const ColorPicker({
-    super.key,
-    required final Set<Color> colors,
-    required final Color selectedColor,
-    final ValueChanged<Color>? onColorSelection,
-  }) extends StatelessWidget {
+  super.key,
+  required final Set<Color> colors,
+  required final Color selectedColor,
+  final ValueChanged<Color>? onColorSelection,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -34,10 +34,10 @@ class const ColorPicker({
 // A single selectable color widget in the ColorPicker.
 @immutable
 class const _ColorPickerSwatch({
-    required final Color color,
-    required final bool selected,
-    final Function? onTap,
-  }) extends StatelessWidget {
+  required final Color color,
+  required final bool selected,
+  final Function? onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

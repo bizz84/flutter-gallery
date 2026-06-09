@@ -10,14 +10,14 @@ import 'package:flutter/material.dart';
 final settingItemBorderRadius = BorderRadius.circular(10);
 const settingItemHeaderMargin = EdgeInsetsDirectional.fromSTEB(32, 0, 32, 8);
 
-class DisplayOption(final String title, {final String? subtitle}) ;
+class DisplayOption(final String title, {final String? subtitle});
 
 class const ToggleSetting({
-    super.key,
-    required final String text,
-    required final bool value,
-    required final Function(bool) onChanged,
-  }) extends StatelessWidget {
+  super.key,
+  required final String text,
+  required final bool value,
+  required final Function(bool) onChanged,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -68,14 +68,14 @@ class const ToggleSetting({
 }
 
 class const SettingsListItem<T>({
-    super.key,
-    required final LinkedHashMap<T, DisplayOption> optionsMap,
-    required final String title,
-    required final T selectedOption,
-    required final ValueChanged<T> onOptionChanged,
-    required final Function onTapSetting,
-    required final bool isExpanded,
-  }) extends StatefulWidget {
+  super.key,
+  required final LinkedHashMap<T, DisplayOption> optionsMap,
+  required final String title,
+  required final T selectedOption,
+  required final ValueChanged<T> onOptionChanged,
+  required final Function onTapSetting,
+  required final bool isExpanded,
+}) extends StatefulWidget {
   @override
   State<SettingsListItem<T?>> createState() => _SettingsListItemState<T?>();
 }
@@ -241,15 +241,15 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T?>>
 }
 
 class const _CategoryHeader({
-    final EdgeInsetsGeometry? margin,
-    required final EdgeInsetsGeometry padding,
-    required final BorderRadiusGeometry borderRadius,
-    required final Animation<double> subtitleHeight,
-    required final Animation<double> chevronRotation,
-    required final String title,
-    required final String subtitle,
-    final GestureTapCallback? onTap,
-  }) extends StatelessWidget {
+  final EdgeInsetsGeometry? margin,
+  required final EdgeInsetsGeometry padding,
+  required final BorderRadiusGeometry borderRadius,
+  required final Animation<double> subtitleHeight,
+  required final Animation<double> chevronRotation,
+  required final String title,
+  required final String subtitle,
+  final GestureTapCallback? onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;

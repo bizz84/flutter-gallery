@@ -19,11 +19,12 @@ const _deviationImprovementThreshold = 10;
 
 /// Height of a product image, paired with the product's id.
 class const _TaggedHeightData({
-    /// The id of the corresponding product.
-required final int index,
-    /// The height of the product image.
-required final double height,
-  }) ;
+  /// The id of the corresponding product.
+  required final int index,
+
+  /// The height of the product image.
+  required final double height,
+});
 
 /// Converts a set of [_TaggedHeightData] elements to a list,
 /// and add an empty element.

@@ -90,9 +90,9 @@ class const HomePage({super.key}) extends StatelessWidget {
 }
 
 class const AdaptiveAppBar({
-    super.key,
-    final bool isDesktop = false,
-  }) extends StatelessWidget implements PreferredSizeWidget {
+  super.key,
+  final bool isDesktop = false,
+}) extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => isDesktop
       ? const Size.fromHeight(appBarDesktopHeight)

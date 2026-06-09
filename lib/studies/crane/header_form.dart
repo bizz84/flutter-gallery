@@ -11,13 +11,14 @@ const appPaddingLarge = 120.0;
 const appPaddingSmall = 24.0;
 
 class const HeaderFormField({
-    required final int index,
-    required final IconData iconData,
-    required final String title,
-    required final TextEditingController textController,
-  }) ;
+  required final int index,
+  required final IconData iconData,
+  required final String title,
+  required final TextEditingController textController,
+});
 
-class const HeaderForm({super.key, required final List<HeaderFormField> fields}) extends StatelessWidget {
+class const HeaderForm({super.key, required final List<HeaderFormField> fields})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
@@ -68,7 +69,8 @@ class const HeaderForm({super.key, required final List<HeaderFormField> fields})
   }
 }
 
-class const _HeaderTextField({required final HeaderFormField field}) extends StatelessWidget {
+class const _HeaderTextField({required final HeaderFormField field})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(

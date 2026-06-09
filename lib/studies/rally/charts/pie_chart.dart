@@ -15,9 +15,9 @@ import 'package:gallery/studies/rally/formatters.dart';
 
 /// A colored piece of the [RallyPieChart].
 class const RallyPieChartSegment({
-    required final Color color,
-    required final double value,
-  }) ;
+  required final Color color,
+  required final double value,
+});
 
 /// The max height and width of the [RallyPieChart].
 const pieChartMaxSize = 500.0;
@@ -65,12 +65,12 @@ List<RallyPieChartSegment> buildSegmentsFromBudgetItems(
 /// An animated circular pie chart to represent pieces of a whole, which can
 /// have empty space.
 class const RallyPieChart({
-    super.key,
-    required final String heroLabel,
-    required final double heroAmount,
-    required final double wholeAmount,
-    required final List<RallyPieChartSegment> segments,
-  }) extends StatefulWidget {
+  super.key,
+  required final String heroLabel,
+  required final double heroAmount,
+  required final double wholeAmount,
+  required final List<RallyPieChartSegment> segments,
+}) extends StatefulWidget {
   @override
   State<RallyPieChart> createState() => _RallyPieChartState();
 }
@@ -190,10 +190,10 @@ class _AnimatedRallyPieChart extends AnimatedWidget {
 }
 
 class const _RallyPieChartOutlineDecoration({
-    required final double maxFraction,
-    required final double total,
-    required final List<RallyPieChartSegment> segments,
-  }) extends Decoration {
+  required final double maxFraction,
+  required final double total,
+  required final List<RallyPieChartSegment> segments,
+}) extends Decoration {
   @override
   BoxPainter createBoxPainter([VoidCallback? onChanged]) {
     return _RallyPieChartOutlineBoxPainter(
@@ -205,10 +205,10 @@ class const _RallyPieChartOutlineDecoration({
 }
 
 class _RallyPieChartOutlineBoxPainter({
-    required final double maxFraction,
-    required final double wholeAmount,
-    required final List<RallyPieChartSegment> segments,
-  }) extends BoxPainter {
+  required final double maxFraction,
+  required final double wholeAmount,
+  required final List<RallyPieChartSegment> segments,
+}) extends BoxPainter {
   static const double wholeRadians = 2 * math.pi;
   static const double spaceRadians = wholeRadians / 180;
 
