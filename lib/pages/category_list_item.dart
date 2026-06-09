@@ -11,24 +11,15 @@ import 'package:gallery/pages/demo.dart';
 
 typedef CategoryHeaderTapCallback = Function(bool shouldOpenList);
 
-class CategoryListItem extends StatefulWidget {
-  const CategoryListItem({
+class const CategoryListItem({
     super.key,
-    this.restorationId,
-    required this.category,
-    required this.imageString,
-    this.demos = const [],
-    this.initiallyExpanded = false,
-    this.onTap,
-  });
-
-  final GalleryDemoCategory category;
-  final String? restorationId;
-  final String imageString;
-  final List<GalleryDemo> demos;
-  final bool initiallyExpanded;
-  final CategoryHeaderTapCallback? onTap;
-
+    final String? restorationId,
+    required final GalleryDemoCategory category,
+    required final String imageString,
+    final List<GalleryDemo> demos = const [],
+    final bool initiallyExpanded = false,
+    final CategoryHeaderTapCallback? onTap,
+  }) extends StatefulWidget {
   @override
   State<CategoryListItem> createState() => _CategoryListItemState();
 }
@@ -158,27 +149,16 @@ class _CategoryListItemState extends State<CategoryListItem>
   }
 }
 
-class _CategoryHeader extends StatelessWidget {
-  const _CategoryHeader({
-    this.margin,
-    required this.imagePadding,
-    required this.borderRadius,
-    this.height,
-    required this.chevronOpacity,
-    required this.imageString,
-    required this.category,
-    this.onTap,
-  });
-
-  final EdgeInsetsGeometry? margin;
-  final EdgeInsetsGeometry imagePadding;
-  final double? height;
-  final BorderRadiusGeometry borderRadius;
-  final String imageString;
-  final GalleryDemoCategory category;
-  final double chevronOpacity;
-  final GestureTapCallback? onTap;
-
+class const _CategoryHeader({
+    final EdgeInsetsGeometry? margin,
+    required final EdgeInsetsGeometry imagePadding,
+    required final BorderRadiusGeometry borderRadius,
+    final double? height,
+    required final double chevronOpacity,
+    required final String imageString,
+    required final GalleryDemoCategory category,
+    final GestureTapCallback? onTap,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -253,15 +233,10 @@ class _CategoryHeader extends StatelessWidget {
   }
 }
 
-class _ExpandedCategoryDemos extends StatelessWidget {
-  const _ExpandedCategoryDemos({
-    required this.category,
-    required this.demos,
-  });
-
-  final GalleryDemoCategory category;
-  final List<GalleryDemo> demos;
-
+class const _ExpandedCategoryDemos({
+    required final GalleryDemoCategory category,
+    required final List<GalleryDemo> demos,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -278,11 +253,7 @@ class _ExpandedCategoryDemos extends StatelessWidget {
   }
 }
 
-class CategoryDemoItem extends StatelessWidget {
-  const CategoryDemoItem({super.key, required this.demo});
-
-  final GalleryDemo demo;
-
+class const CategoryDemoItem({super.key, required final GalleryDemo demo}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;

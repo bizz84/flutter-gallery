@@ -4,11 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-class Scrim extends StatelessWidget {
-  const Scrim({super.key, required this.controller});
-
-  final AnimationController controller;
-
+class const Scrim({super.key, required final AnimationController controller}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;

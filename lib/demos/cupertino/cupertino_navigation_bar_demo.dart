@@ -8,9 +8,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN cupertinoNavigationBarDemo
 
-class CupertinoNavigationBarDemo extends StatelessWidget {
-  const CupertinoNavigationBarDemo({super.key});
-
+class const CupertinoNavigationBarDemo({super.key}) extends StatelessWidget {
   static const String homeRoute = '/home';
   static const String secondPageRoute = '/home/item';
 
@@ -94,13 +92,11 @@ class _SecondPage extends StatelessWidget {
 }
 
 /// A CupertinoPageRoute without any transition animations.
-class _NoAnimationCupertinoPageRoute<T> extends CupertinoPageRoute<T> {
-  _NoAnimationCupertinoPageRoute({
+class _NoAnimationCupertinoPageRoute<T>({
     required super.builder,
     super.settings,
     super.title,
-  });
-
+  }) extends CupertinoPageRoute<T> {
   @override
   Widget buildTransitions(
     BuildContext context,

@@ -5,16 +5,11 @@ import 'package:gallery/studies/reply/model/email_store.dart';
 import 'package:gallery/studies/reply/profile_avatar.dart';
 import 'package:provider/provider.dart';
 
-class MailViewPage extends StatelessWidget {
-  const MailViewPage({
+class const MailViewPage({
     super.key,
-    required this.id,
-    required this.email,
-  });
-
-  final int id;
-  final Email email;
-
+    required final int id,
+    required final Email email,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,11 +46,7 @@ class MailViewPage extends StatelessWidget {
   }
 }
 
-class _MailViewHeader extends StatelessWidget {
-  const _MailViewHeader({required this.email});
-
-  final Email email;
-
+class const _MailViewHeader({required final Email email}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -117,11 +108,7 @@ class _MailViewHeader extends StatelessWidget {
   }
 }
 
-class _MailViewBody extends StatelessWidget {
-  const _MailViewBody({required this.message});
-
-  final String message;
-
+class const _MailViewBody({required final String message}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SelectableText(
@@ -131,9 +118,7 @@ class _MailViewBody extends StatelessWidget {
   }
 }
 
-class _PictureGrid extends StatelessWidget {
-  const _PictureGrid();
-
+class const _PictureGrid() extends StatelessWidget {
   bool _shouldShrinkImage() {
     switch (defaultTargetPlatform) {
       case TargetPlatform.iOS:

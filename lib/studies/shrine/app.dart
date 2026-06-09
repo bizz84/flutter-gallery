@@ -20,9 +20,7 @@ import 'package:gallery/studies/shrine/supplemental/layout_cache.dart';
 import 'package:gallery/studies/shrine/theme.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-class ShrineApp extends StatefulWidget {
-  const ShrineApp({super.key});
-
+class const ShrineApp({super.key}) extends StatefulWidget {
   static const String loginRoute = routes.loginRoute;
   static const String homeRoute = routes.homeRoute;
 

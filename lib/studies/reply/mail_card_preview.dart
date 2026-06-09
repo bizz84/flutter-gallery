@@ -12,24 +12,15 @@ import 'package:provider/provider.dart';
 const _assetsPackage = 'flutter_gallery_assets';
 const _iconAssetLocation = 'reply/icons';
 
-class MailPreviewCard extends StatelessWidget {
-  const MailPreviewCard({
+class const MailPreviewCard({
     super.key,
-    required this.id,
-    required this.email,
-    required this.onDelete,
-    required this.onStar,
-    required this.isStarred,
-    required this.onStarredMailbox,
-  });
-
-  final int id;
-  final Email email;
-  final VoidCallback onDelete;
-  final VoidCallback onStar;
-  final bool isStarred;
-  final bool onStarredMailbox;
-
+    required final int id,
+    required final Email email,
+    required final VoidCallback onDelete,
+    required final VoidCallback onStar,
+    required final bool isStarred,
+    required final bool onStarredMailbox,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -115,21 +106,13 @@ class MailPreviewCard extends StatelessWidget {
   }
 }
 
-class _DismissibleContainer extends StatelessWidget {
-  const _DismissibleContainer({
-    required this.icon,
-    required this.backgroundColor,
-    required this.iconColor,
-    required this.alignment,
-    required this.padding,
-  });
-
-  final String icon;
-  final Color backgroundColor;
-  final Color iconColor;
-  final Alignment alignment;
-  final EdgeInsetsDirectional padding;
-
+class const _DismissibleContainer({
+    required final String icon,
+    required final Color backgroundColor,
+    required final Color iconColor,
+    required final Alignment alignment,
+    required final EdgeInsetsDirectional padding,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
@@ -153,21 +136,13 @@ class _DismissibleContainer extends StatelessWidget {
   }
 }
 
-class _MailPreview extends StatelessWidget {
-  const _MailPreview({
-    required this.id,
-    required this.email,
-    required this.onTap,
-    this.onStar,
-    this.onDelete,
-  });
-
-  final int id;
-  final Email email;
-  final VoidCallback onTap;
-  final VoidCallback? onStar;
-  final VoidCallback? onDelete;
-
+class const _MailPreview({
+    required final int id,
+    required final Email email,
+    required final VoidCallback onTap,
+    final VoidCallback? onStar,
+    final VoidCallback? onDelete,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -253,9 +228,7 @@ class _MailPreview extends StatelessWidget {
   }
 }
 
-class _PicturePreview extends StatelessWidget {
-  const _PicturePreview();
-
+class const _PicturePreview() extends StatelessWidget {
   bool _shouldShrinkImage() {
     switch (defaultTargetPlatform) {
       case TargetPlatform.iOS:
@@ -289,19 +262,12 @@ class _PicturePreview extends StatelessWidget {
   }
 }
 
-class _MailPreviewActionBar extends StatelessWidget {
-  const _MailPreviewActionBar({
-    required this.avatar,
-    required this.isStarred,
-    this.onStar,
-    this.onDelete,
-  });
-
-  final String avatar;
-  final bool isStarred;
-  final VoidCallback? onStar;
-  final VoidCallback? onDelete;
-
+class const _MailPreviewActionBar({
+    required final String avatar,
+    required final bool isStarred,
+    final VoidCallback? onStar,
+    final VoidCallback? onDelete,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;

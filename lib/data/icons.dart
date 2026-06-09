@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 class GalleryIcons {
-  GalleryIcons._();
+  new _();
 
   static const IconData tooltip = IconData(
     0xe900,

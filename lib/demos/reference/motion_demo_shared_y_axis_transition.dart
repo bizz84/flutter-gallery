@@ -5,9 +5,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN sharedYAxisTransitionDemo
 
-class SharedYAxisTransitionDemo extends StatefulWidget {
-  const SharedYAxisTransitionDemo({super.key});
-
+class const SharedYAxisTransitionDemo({super.key}) extends StatefulWidget {
   @override
   State<SharedYAxisTransitionDemo> createState() =>
       _SharedYAxisTransitionDemoState();
@@ -151,10 +149,7 @@ class _SharedYAxisTransitionDemoState extends State<SharedYAxisTransitionDemo>
   }
 }
 
-class _AlbumTile extends StatelessWidget {
-  const _AlbumTile(this._title);
-  final String _title;
-
+class const _AlbumTile(final String _title) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final randomNumberGenerator = Random();

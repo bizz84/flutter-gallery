@@ -6,11 +6,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:gallery/pages/settings_icon/metrics.dart';
 
-class SettingsIcon extends StatelessWidget {
-  const SettingsIcon(this.time, {super.key});
-
-  final double time;
-
+class const SettingsIcon(final double time, {super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
@@ -19,12 +15,7 @@ class SettingsIcon extends StatelessWidget {
   }
 }
 
-class _SettingsIconPainter extends CustomPainter {
-  _SettingsIconPainter({required this.time, required this.context});
-
-  final double time;
-  final BuildContext context;
-
+class _SettingsIconPainter({required final double time, required final BuildContext context}) extends CustomPainter {
   late Offset _center;
   late double _scaling;
   late Canvas _canvas;

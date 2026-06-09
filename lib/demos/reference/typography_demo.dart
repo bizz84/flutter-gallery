@@ -8,17 +8,11 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN typographyDemo
 
-class _TextStyleItem extends StatelessWidget {
-  const _TextStyleItem({
-    required this.name,
-    required this.style,
-    required this.text,
-  });
-
-  final String name;
-  final TextStyle style;
-  final String text;
-
+class const _TextStyleItem({
+    required final String name,
+    required final TextStyle style,
+    required final String text,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -39,9 +33,7 @@ class _TextStyleItem extends StatelessWidget {
   }
 }
 
-class TypographyDemo extends StatelessWidget {
-  const TypographyDemo({super.key});
-
+class const TypographyDemo({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;

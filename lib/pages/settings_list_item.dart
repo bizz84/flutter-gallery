@@ -10,25 +10,14 @@ import 'package:flutter/material.dart';
 final settingItemBorderRadius = BorderRadius.circular(10);
 const settingItemHeaderMargin = EdgeInsetsDirectional.fromSTEB(32, 0, 32, 8);
 
-class DisplayOption {
-  final String title;
-  final String? subtitle;
+class DisplayOption(final String title, {final String? subtitle}) ;
 
-  DisplayOption(this.title, {this.subtitle});
-}
-
-class ToggleSetting extends StatelessWidget {
-  final String text;
-  final bool value;
-  final Function(bool) onChanged;
-
-  const ToggleSetting({
+class const ToggleSetting({
     super.key,
-    required this.text,
-    required this.value,
-    required this.onChanged,
-  });
-
+    required final String text,
+    required final bool value,
+    required final Function(bool) onChanged,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -78,24 +67,15 @@ class ToggleSetting extends StatelessWidget {
   }
 }
 
-class SettingsListItem<T> extends StatefulWidget {
-  const SettingsListItem({
+class const SettingsListItem<T>({
     super.key,
-    required this.optionsMap,
-    required this.title,
-    required this.selectedOption,
-    required this.onOptionChanged,
-    required this.onTapSetting,
-    required this.isExpanded,
-  });
-
-  final LinkedHashMap<T, DisplayOption> optionsMap;
-  final String title;
-  final T selectedOption;
-  final ValueChanged<T> onOptionChanged;
-  final Function onTapSetting;
-  final bool isExpanded;
-
+    required final LinkedHashMap<T, DisplayOption> optionsMap,
+    required final String title,
+    required final T selectedOption,
+    required final ValueChanged<T> onOptionChanged,
+    required final Function onTapSetting,
+    required final bool isExpanded,
+  }) extends StatefulWidget {
   @override
   State<SettingsListItem<T?>> createState() => _SettingsListItemState<T?>();
 }
@@ -260,27 +240,16 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T?>>
   }
 }
 
-class _CategoryHeader extends StatelessWidget {
-  const _CategoryHeader({
-    this.margin,
-    required this.padding,
-    required this.borderRadius,
-    required this.subtitleHeight,
-    required this.chevronRotation,
-    required this.title,
-    required this.subtitle,
-    this.onTap,
-  });
-
-  final EdgeInsetsGeometry? margin;
-  final EdgeInsetsGeometry padding;
-  final BorderRadiusGeometry borderRadius;
-  final String title;
-  final String subtitle;
-  final Animation<double> subtitleHeight;
-  final Animation<double> chevronRotation;
-  final GestureTapCallback? onTap;
-
+class const _CategoryHeader({
+    final EdgeInsetsGeometry? margin,
+    required final EdgeInsetsGeometry padding,
+    required final BorderRadiusGeometry borderRadius,
+    required final Animation<double> subtitleHeight,
+    required final Animation<double> chevronRotation,
+    required final String title,
+    required final String subtitle,
+    final GestureTapCallback? onTap,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;

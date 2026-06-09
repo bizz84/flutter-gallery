@@ -17,9 +17,7 @@ const int tabCount = 5;
 const int turnsToRotateRight = 1;
 const int turnsToRotateLeft = 3;
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
+class const HomePage({super.key}) extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -237,15 +235,10 @@ class _HomePageState extends State<HomePage>
   }
 }
 
-class _RallyTabBar extends StatelessWidget {
-  const _RallyTabBar({
-    required this.tabs,
-    this.tabController,
-  });
-
-  final List<Widget> tabs;
-  final TabController? tabController;
-
+class const _RallyTabBar({
+    required final List<Widget> tabs,
+    final TabController? tabController,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FocusTraversalOrder(

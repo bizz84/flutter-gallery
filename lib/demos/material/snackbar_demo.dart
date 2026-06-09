@@ -7,9 +7,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN snackbarsDemo
 
-class SnackbarsDemo extends StatelessWidget {
-  const SnackbarsDemo({super.key});
-
+class const SnackbarsDemo({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;

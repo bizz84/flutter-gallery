@@ -169,14 +169,10 @@ class GalleryOptions {
 }
 
 // Applies text GalleryOptions to a widget
-class ApplyTextOptions extends StatelessWidget {
-  const ApplyTextOptions({
+class const ApplyTextOptions({
     super.key,
-    required this.child,
-  });
-
-  final Widget child;
-
+    required final Widget child,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final options = GalleryOptions.of(context);
@@ -202,28 +198,19 @@ class ApplyTextOptions extends StatelessWidget {
 // Everything below is boilerplate except code relating to time dilation.
 // See https://medium.com/flutter/managing-flutter-application-state-with-inheritedwidgets-1140452befe1
 
-class _ModelBindingScope extends InheritedWidget {
-  const _ModelBindingScope({
-    required this.modelBindingState,
+class const _ModelBindingScope({
+    required final _ModelBindingState modelBindingState,
     required super.child,
-  });
-
-  final _ModelBindingState modelBindingState;
-
+  }) extends InheritedWidget {
   @override
   bool updateShouldNotify(_ModelBindingScope oldWidget) => true;
 }
 
-class ModelBinding extends StatefulWidget {
-  const ModelBinding({
+class const ModelBinding({
     super.key,
-    required this.initialModel,
-    required this.child,
-  });
-
-  final GalleryOptions initialModel;
-  final Widget child;
-
+    required final GalleryOptions initialModel,
+    required final Widget child,
+  }) extends StatefulWidget {
   @override
   State<ModelBinding> createState() => _ModelBindingState();
 }

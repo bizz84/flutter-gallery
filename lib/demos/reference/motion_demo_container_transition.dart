@@ -41,9 +41,7 @@ const String _loremIpsumParagraph =
 
 const double _fabDimension = 56;
 
-class OpenContainerTransformDemo extends StatefulWidget {
-  const OpenContainerTransformDemo({super.key});
-
+class const OpenContainerTransformDemo({super.key}) extends StatefulWidget {
   @override
   State<OpenContainerTransformDemo> createState() =>
       _OpenContainerTransformDemoState();
@@ -313,15 +311,10 @@ class _OpenContainerTransformDemoState
   }
 }
 
-class _OpenContainerWrapper extends StatelessWidget {
-  const _OpenContainerWrapper({
-    required this.closedBuilder,
-    required this.transitionType,
-  });
-
-  final CloseContainerBuilder closedBuilder;
-  final ContainerTransitionType transitionType;
-
+class const _OpenContainerWrapper({
+    required final CloseContainerBuilder closedBuilder,
+    required final ContainerTransitionType transitionType,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OpenContainer<bool>(
@@ -333,11 +326,7 @@ class _OpenContainerWrapper extends StatelessWidget {
   }
 }
 
-class _DetailsCard extends StatelessWidget {
-  const _DetailsCard({required this.openContainer});
-
-  final VoidCallback openContainer;
-
+class const _DetailsCard({required final VoidCallback openContainer}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
@@ -389,15 +378,10 @@ class _DetailsCard extends StatelessWidget {
   }
 }
 
-class _SmallDetailsCard extends StatelessWidget {
-  const _SmallDetailsCard({
-    required this.openContainer,
-    required this.subtitle,
-  });
-
-  final VoidCallback openContainer;
-  final String subtitle;
-
+class const _SmallDetailsCard({
+    required final VoidCallback openContainer,
+    required final String subtitle,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -449,11 +433,7 @@ class _SmallDetailsCard extends StatelessWidget {
   }
 }
 
-class _DetailsListTile extends StatelessWidget {
-  const _DetailsListTile({required this.openContainer});
-
-  final VoidCallback openContainer;
-
+class const _DetailsListTile({required final VoidCallback openContainer}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -506,17 +486,11 @@ class _DetailsListTile extends StatelessWidget {
   }
 }
 
-class _InkWellOverlay extends StatelessWidget {
-  const _InkWellOverlay({
-    required this.openContainer,
-    required this.height,
-    required this.child,
-  });
-
-  final VoidCallback openContainer;
-  final double height;
-  final Widget child;
-
+class const _InkWellOverlay({
+    required final VoidCallback openContainer,
+    required final double height,
+    required final Widget child,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -529,9 +503,7 @@ class _InkWellOverlay extends StatelessWidget {
   }
 }
 
-class _DetailsPage extends StatelessWidget {
-  const _DetailsPage();
-
+class const _DetailsPage() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;

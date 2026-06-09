@@ -17,18 +17,12 @@ const double _settingsButtonWidth = 64;
 const double _settingsButtonHeightDesktop = 56;
 const double _settingsButtonHeightMobile = 40;
 
-class Backdrop extends StatefulWidget {
-  const Backdrop({
+class const Backdrop({
     super.key,
-    required this.isDesktop,
-    this.settingsPage,
-    this.homePage,
-  });
-
-  final bool isDesktop;
-  final Widget? settingsPage;
-  final Widget? homePage;
-
+    required final bool isDesktop,
+    final Widget? settingsPage,
+    final Widget? homePage,
+  }) extends StatefulWidget {
   @override
   State<Backdrop> createState() => _BackdropState();
 }

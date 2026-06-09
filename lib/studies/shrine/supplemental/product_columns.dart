@@ -7,20 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:gallery/studies/shrine/model/product.dart';
 import 'package:gallery/studies/shrine/supplemental/product_card.dart';
 
-class TwoProductCardColumn extends StatelessWidget {
-  const TwoProductCardColumn({
+class const TwoProductCardColumn({
     super.key,
-    required this.bottom,
-    this.top,
-    required this.imageAspectRatio,
-  });
-
+    required final Product bottom,
+    final Product? top,
+    required final double imageAspectRatio,
+  }) extends StatelessWidget {
   static const double spacerHeight = 44;
   static const double horizontalPadding = 28;
-
-  final Product bottom;
-  final Product? top;
-  final double imageAspectRatio;
 
   @override
   Widget build(BuildContext context) {
@@ -57,18 +51,12 @@ class TwoProductCardColumn extends StatelessWidget {
   }
 }
 
-class OneProductCardColumn extends StatelessWidget {
-  const OneProductCardColumn({
+class const OneProductCardColumn({
     super.key,
-    required this.product,
-    required this.reverse,
-  });
-
-  final Product product;
-
-  // Whether the product column should align to the bottom.
-  final bool reverse;
-
+    required final Product product,
+    // Whether the product column should align to the bottom.
+required final bool reverse,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(

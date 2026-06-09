@@ -8,9 +8,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN cupertinoSearchTextFieldDemo
 
-class CupertinoSearchTextFieldDemo extends StatefulWidget {
-  const CupertinoSearchTextFieldDemo({super.key});
-
+class const CupertinoSearchTextFieldDemo({super.key}) extends StatefulWidget {
   @override
   State<CupertinoSearchTextFieldDemo> createState() =>
       _CupertinoSearchTextFieldDemoState();

@@ -8,39 +8,25 @@ import 'package:flutter/services.dart';
 /// [HighlightFocus] is a helper widget for giving a child focus
 /// allowing tab-navigation.
 /// Wrap your widget as [child] of a [HighlightFocus] widget.
-class HighlightFocus extends StatefulWidget {
-  const HighlightFocus({
+class const HighlightFocus({
     super.key,
-    required this.onPressed,
-    required this.child,
-    this.highlightColor,
-    this.borderColor,
-    this.hasFocus = true,
-    this.debugLabel,
-  });
-
-  /// [onPressed] is called when you press space, enter, or numpad-enter
+    /// [onPressed] is called when you press space, enter, or numpad-enter
   /// when the widget is focused.
-  final VoidCallback onPressed;
-
-  /// [child] is your widget.
-  final Widget child;
-
-  /// [highlightColor] is the color filled in the border when the widget
+required final VoidCallback onPressed,
+    /// [child] is your widget.
+required final Widget child,
+    /// [highlightColor] is the color filled in the border when the widget
   /// is focused.
   /// Use [Colors.transparent] if you do not want one.
   /// Use an opacity less than 1 to make the underlying widget visible.
-  final Color? highlightColor;
-
-  /// [borderColor] is the color of the border when the widget is focused.
-  final Color? borderColor;
-
-  /// [hasFocus] is true when focusing on the widget is allowed.
+final Color? highlightColor,
+    /// [borderColor] is the color of the border when the widget is focused.
+final Color? borderColor,
+    /// [hasFocus] is true when focusing on the widget is allowed.
   /// Set to false if you want the child to skip focus.
-  final bool hasFocus;
-
-  final String? debugLabel;
-
+final bool hasFocus = true,
+    final String? debugLabel,
+  }) extends StatefulWidget {
   @override
   State<HighlightFocus> createState() => _HighlightFocusState();
 }
