@@ -484,13 +484,13 @@ class _GalleryDemoPageState extends State<GalleryDemoPage>
             }
 
             return Container(
-              color: colorScheme.background,
+              color: colorScheme.surface,
               child: contents,
             );
           });
     } else {
       page = Container(
-        color: colorScheme.background,
+        color: colorScheme.surface,
         child: ApplyTextOptions(
           child: Scaffold(
             appBar: appBar,
@@ -787,7 +787,7 @@ class CodeDisplayPage extends StatelessWidget {
               : const EdgeInsets.symmetric(vertical: 8),
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white.withOpacity(0.15),
+              backgroundColor: Colors.white.withValues(alpha: 0.15),
               padding: const EdgeInsets.symmetric(horizontal: 8),
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(4)),

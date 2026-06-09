@@ -12,20 +12,20 @@ void main() {
     final ThemeData themeData = MaterialDemoThemeData.themeData;
 
     expect(
-      themeData.checkboxTheme.fillColor!.resolve({MaterialState.selected}),
+      themeData.checkboxTheme.fillColor!.resolve({WidgetState.selected}),
       primaryColor,
     );
     expect(
-      themeData.radioTheme.fillColor!.resolve({MaterialState.selected}),
+      themeData.radioTheme.fillColor!.resolve({WidgetState.selected}),
       primaryColor,
     );
     expect(
-      themeData.switchTheme.thumbColor!.resolve({MaterialState.selected}),
+      themeData.switchTheme.thumbColor!.resolve({WidgetState.selected}),
       primaryColor,
     );
     expect(
-      themeData.switchTheme.trackColor!.resolve({MaterialState.selected}),
-      primaryColor.withOpacity(0.5),
+      themeData.switchTheme.trackColor!.resolve({WidgetState.selected}),
+      primaryColor.withValues(alpha: 0.5),
     );
   });
 }
