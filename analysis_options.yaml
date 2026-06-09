@@ -1,5 +1,9 @@
 include: package:flutter_lints/flutter.yaml
 
+analyzer:
+  enable-experiment:
+    - primary-constructors
+
 linter:
   # In addition to the flutter_lints
   rules:
