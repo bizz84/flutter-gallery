@@ -38,42 +38,44 @@ class FinancialEntityView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final maxWidth = pieChartMaxSize + (cappedTextScale(context) - 1.0) * 100.0;
-    return LayoutBuilder(builder: (context, constraints) {
-      return Column(
-        children: [
-          ConstrainedBox(
-            constraints: BoxConstraints(
-              // We decrease the max height to ensure the [RallyPieChart] does
-              // not take up the full height when it is smaller than
-              // [kPieChartMaxSize].
-              maxHeight: math.min(
-                constraints.biggest.shortestSide * 0.9,
-                maxWidth,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Column(
+          children: [
+            ConstrainedBox(
+              constraints: BoxConstraints(
+                // We decrease the max height to ensure the [RallyPieChart] does
+                // not take up the full height when it is smaller than
+                // [kPieChartMaxSize].
+                maxHeight: math.min(
+                  constraints.biggest.shortestSide * 0.9,
+                  maxWidth,
+                ),
+              ),
+              child: RallyPieChart(
+                heroLabel: heroLabel,
+                heroAmount: heroAmount,
+                wholeAmount: wholeAmount,
+                segments: segments,
               ),
             ),
-            child: RallyPieChart(
-              heroLabel: heroLabel,
-              heroAmount: heroAmount,
-              wholeAmount: wholeAmount,
-              segments: segments,
+            const SizedBox(height: 24),
+            Container(
+              height: 1,
+              constraints: BoxConstraints(maxWidth: maxWidth),
+              color: RallyColors.inputBackground,
             ),
-          ),
-          const SizedBox(height: 24),
-          Container(
-            height: 1,
-            constraints: BoxConstraints(maxWidth: maxWidth),
-            color: RallyColors.inputBackground,
-          ),
-          Container(
-            constraints: BoxConstraints(maxWidth: maxWidth),
-            color: RallyColors.cardBackground,
-            child: Column(
-              children: financialEntityCards,
+            Container(
+              constraints: BoxConstraints(maxWidth: maxWidth),
+              color: RallyColors.cardBackground,
+              child: Column(
+                children: financialEntityCards,
+              ),
             ),
-          ),
-        ],
-      );
-    });
+          ],
+        );
+      },
+    );
   }
 }
 
@@ -124,8 +126,10 @@ class FinancialEntityCategoryView extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 16,
+                    horizontal: 8,
+                  ),
                   child: Row(
                     children: [
                       Container(
@@ -148,13 +152,15 @@ class FinancialEntityCategoryView extends StatelessWidget {
                               children: [
                                 Text(
                                   title,
-                                  style: textTheme.bodyMedium!
-                                      .copyWith(fontSize: 16),
+                                  style: textTheme.bodyMedium!.copyWith(
+                                    fontSize: 16,
+                                  ),
                                 ),
                                 Text(
                                   subtitle,
-                                  style: textTheme.bodyMedium!
-                                      .copyWith(color: RallyColors.gray60),
+                                  style: textTheme.bodyMedium!.copyWith(
+                                    color: RallyColors.gray60,
+                                  ),
                                 ),
                               ],
                             ),
@@ -260,16 +266,16 @@ FinancialEntityCategoryView buildFinancialEntityFromBudgetData(
 ) {
   final amountUsed = usdWithSignFormat(context).format(model.amountUsed);
   final primaryAmount = usdWithSignFormat(context).format(model.primaryAmount);
-  final amount =
-      usdWithSignFormat(context).format(model.primaryAmount - model.amountUsed);
+  final amount = usdWithSignFormat(
+    context,
+  ).format(model.primaryAmount - model.amountUsed);
 
   return FinancialEntityCategoryView(
     suffix: Text(
       GalleryLocalizations.of(context)!.rallyFinanceLeft,
-      style: Theme.of(context)
-          .textTheme
-          .bodyMedium!
-          .copyWith(color: RallyColors.gray60, fontSize: 10),
+      style: Theme.of(
+        context,
+      ).textTheme.bodyMedium!.copyWith(color: RallyColors.gray60, fontSize: 10),
     ),
     title: model.name,
     subtitle: '$amountUsed / $primaryAmount',
@@ -311,7 +317,7 @@ List<FinancialEntityCategoryView> buildBudgetDataListViews(
 ) {
   return <FinancialEntityCategoryView>[
     for (int i = 0; i < items.length; i++)
-      buildFinancialEntityFromBudgetData(items[i], i, context)
+      buildFinancialEntityFromBudgetData(items[i], i, context),
   ];
 }
 
@@ -332,8 +338,9 @@ class FinancialEntityCategoryDetailsPage extends StatelessWidget {
           centerTitle: true,
           title: Text(
             GalleryLocalizations.of(context)!.rallyAccountDataChecking,
-            style:
-                Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 18),
+            style: Theme.of(
+              context,
+            ).textTheme.bodyMedium!.copyWith(fontSize: 18),
           ),
         ),
         body: Column(

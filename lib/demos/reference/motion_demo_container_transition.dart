@@ -136,10 +136,9 @@ class _OpenContainerTransformDemoState
                   ),
                   Text(
                     '(${localizations.demoContainerTransformDemoInstructions})',
-                    style: Theme.of(context)
-                        .textTheme
-                        .titleSmall!
-                        .copyWith(color: Colors.white),
+                    style: Theme.of(
+                      context,
+                    ).textTheme.titleSmall!.copyWith(color: Colors.white),
                   ),
                 ],
               ),
@@ -379,9 +378,9 @@ class _DetailsCard extends StatelessWidget {
               'Lorem ipsum dolor sit amet, consectetur '
               'adipiscing elit, sed do eiusmod tempor.',
               style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    color: Colors.black54,
-                    inherit: false,
-                  ),
+                color: Colors.black54,
+                inherit: false,
+              ),
             ),
           ),
         ],
@@ -428,8 +427,9 @@ class _SmallDetailsCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    GalleryLocalizations.of(context)!
-                        .demoMotionPlaceholderTitle,
+                    GalleryLocalizations.of(
+                      context,
+                    )!.demoMotionPlaceholderTitle,
                     style: textTheme.titleLarge,
                   ),
                   const SizedBox(
@@ -483,8 +483,9 @@ class _DetailsListTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    GalleryLocalizations.of(context)!
-                        .demoMotionPlaceholderTitle,
+                    GalleryLocalizations.of(
+                      context,
+                    )!.demoMotionPlaceholderTitle,
                     style: textTheme.titleMedium,
                   ),
                   const SizedBox(

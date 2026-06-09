@@ -20,9 +20,9 @@ class Board extends Object with IterableMixin<BoardPoint?> {
     required this.hexagonMargin,
     this.selected,
     List<BoardPoint>? boardPoints,
-  })  : assert(boardRadius > 0),
-        assert(hexagonRadius > 0),
-        assert(hexagonMargin >= 0) {
+  }) : assert(boardRadius > 0),
+       assert(hexagonRadius > 0),
+       assert(hexagonMargin >= 0) {
     // Set up the positions for the center hexagon where the entire board is
     // centered on the origin.
     // Start point of hexagon (top vertex).
@@ -196,8 +196,10 @@ class Board extends Object with IterableMixin<BoardPoint?> {
   // Return a new board where boardPoint has the given color.
   Board copyWithBoardPointColor(BoardPoint boardPoint, Color color) {
     final nextBoardPoint = boardPoint.copyWithColor(color);
-    final boardPointIndex = _boardPoints.indexWhere((boardPointI) =>
-        boardPointI.q == boardPoint.q && boardPointI.r == boardPoint.r);
+    final boardPointIndex = _boardPoints.indexWhere(
+      (boardPointI) =>
+          boardPointI.q == boardPoint.q && boardPointI.r == boardPoint.r,
+    );
 
     if (elementAt(boardPointIndex) == boardPoint && boardPoint.color == color) {
       return this;
@@ -205,8 +207,9 @@ class Board extends Object with IterableMixin<BoardPoint?> {
 
     final nextBoardPoints = List<BoardPoint>.from(_boardPoints);
     nextBoardPoints[boardPointIndex] = nextBoardPoint;
-    final selectedBoardPoint =
-        boardPoint == selected ? nextBoardPoint : selected;
+    final selectedBoardPoint = boardPoint == selected
+        ? nextBoardPoint
+        : selected;
     return Board(
       boardRadius: boardRadius,
       hexagonRadius: hexagonRadius,

@@ -17,7 +17,8 @@ class CupertinoSegmentedControlDemo extends StatefulWidget {
 }
 
 class _CupertinoSegmentedControlDemoState
-    extends State<CupertinoSegmentedControlDemo> with RestorationMixin {
+    extends State<CupertinoSegmentedControlDemo>
+    with RestorationMixin {
   RestorableInt currentSegment = RestorableInt(0);
 
   @override
@@ -52,10 +53,9 @@ class _CupertinoSegmentedControlDemoState
         ),
       ),
       child: DefaultTextStyle(
-        style: CupertinoTheme.of(context)
-            .textTheme
-            .textStyle
-            .copyWith(fontSize: 13),
+        style: CupertinoTheme.of(
+          context,
+        ).textTheme.textStyle.copyWith(fontSize: 13),
         child: SafeArea(
           child: ListView(
             children: [

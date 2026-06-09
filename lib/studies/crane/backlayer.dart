@@ -41,7 +41,7 @@ class _BackLayerState extends State<BackLayer> {
           ExcludeFocus(
             excluding: backLayerItem.index != tabIndex,
             child: backLayerItem,
-          )
+          ),
       ],
     );
   }

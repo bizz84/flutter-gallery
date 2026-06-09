@@ -321,7 +321,10 @@ class GalleryLocalizationsHu extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return '$accountName bankszámla ($accountNumber) $amount összeggel.';
   }
 
@@ -331,8 +334,12 @@ class GalleryLocalizationsHu extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return '$amountTotal összegű $budgetName költségkeret, amelyből felhasználásra került $amountUsed, és maradt $amountLeft';
   }
 

@@ -65,8 +65,10 @@ class DestinationCard extends StatelessWidget {
                     child: _DestinationImage(destination: destination),
                   ),
                 ),
-                title: SelectableText(destination.destination,
-                    style: textTheme.titleMedium),
+                title: SelectableText(
+                  destination.destination,
+                  style: textTheme.titleMedium,
+                ),
                 subtitle: SelectableText(
                   destination.subtitle(context),
                   semanticsLabel: destination.subtitleSemantics(context),
@@ -108,13 +110,15 @@ class _DestinationImage extends StatelessWidget {
           fit: BoxFit.cover,
           width: isDesktop ? null : mobileThumbnailSize,
           height: isDesktop ? null : mobileThumbnailSize,
-          placeholder: LayoutBuilder(builder: (context, constraints) {
-            return Container(
-              color: Colors.black.withValues(alpha: 0.1),
-              width: constraints.maxWidth,
-              height: constraints.maxWidth / destination.imageAspectRatio,
-            );
-          }),
+          placeholder: LayoutBuilder(
+            builder: (context, constraints) {
+              return Container(
+                color: Colors.black.withValues(alpha: 0.1),
+                width: constraints.maxWidth,
+                height: constraints.maxWidth / destination.imageAspectRatio,
+              );
+            },
+          ),
         ),
       ),
     );

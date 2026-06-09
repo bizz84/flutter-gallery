@@ -111,13 +111,15 @@ class VerticalArticlePreview extends StatelessWidget {
                 data.imageUrl,
                 package: 'flutter_gallery_assets',
               ),
-              placeholder: LayoutBuilder(builder: (context, constraints) {
-                return Container(
-                  color: Colors.black.withValues(alpha: 0.1),
-                  width: constraints.maxWidth,
-                  height: constraints.maxWidth / data.imageAspectRatio,
-                );
-              }),
+              placeholder: LayoutBuilder(
+                builder: (context, constraints) {
+                  return Container(
+                    color: Colors.black.withValues(alpha: 0.1),
+                    width: constraints.maxWidth,
+                    height: constraints.maxWidth / data.imageAspectRatio,
+                  );
+                },
+              ),
               fit: BoxFit.fitWidth,
               width: double.infinity,
               excludeFromSemantics: true,
@@ -355,9 +357,9 @@ class MenuItem extends StatelessWidget {
             child: SelectableText(
               title,
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    fontWeight: header ? FontWeight.w700 : FontWeight.w600,
-                    fontSize: 16,
-                  ),
+                fontWeight: header ? FontWeight.w700 : FontWeight.w600,
+                fontSize: 16,
+              ),
             ),
           ),
         ],
@@ -419,7 +421,7 @@ class StockItem extends StatelessWidget {
               ),
             ),
           ],
-        )
+        ),
       ],
     );
   }
@@ -441,13 +443,15 @@ List<Widget> buildStockItems(BuildContext context) {
           'fortnightly/fortnightly_chart.png',
           package: 'flutter_gallery_assets',
         ),
-        placeholder: LayoutBuilder(builder: (context, constraints) {
-          return Container(
-            color: Colors.black.withValues(alpha: 0.1),
-            width: constraints.maxWidth,
-            height: constraints.maxWidth / imageAspectRatio,
-          );
-        }),
+        placeholder: LayoutBuilder(
+          builder: (context, constraints) {
+            return Container(
+              color: Colors.black.withValues(alpha: 0.1),
+              width: constraints.maxWidth,
+              height: constraints.maxWidth / imageAspectRatio,
+            );
+          },
+        ),
         width: double.infinity,
         fit: BoxFit.contain,
         excludeFromSemantics: true,
@@ -511,13 +515,15 @@ class VideoPreview extends StatelessWidget {
               data.imageUrl,
               package: 'flutter_gallery_assets',
             ),
-            placeholder: LayoutBuilder(builder: (context, constraints) {
-              return Container(
-                color: Colors.black.withValues(alpha: 0.1),
-                width: constraints.maxWidth,
-                height: constraints.maxWidth / data.imageAspectRatio,
-              );
-            }),
+            placeholder: LayoutBuilder(
+              builder: (context, constraints) {
+                return Container(
+                  color: Colors.black.withValues(alpha: 0.1),
+                  width: constraints.maxWidth,
+                  height: constraints.maxWidth / data.imageAspectRatio,
+                );
+              },
+            ),
             fit: BoxFit.contain,
             width: double.infinity,
             excludeFromSemantics: true,
@@ -532,12 +538,14 @@ class VideoPreview extends StatelessWidget {
                 style: textTheme.titleMedium,
               ),
             ),
-            SelectableText(time, style: textTheme.bodyLarge)
+            SelectableText(time, style: textTheme.bodyLarge),
           ],
         ),
         const SizedBox(height: 4),
-        SelectableText(data.title,
-            style: textTheme.headlineSmall!.copyWith(fontSize: 16)),
+        SelectableText(
+          data.title,
+          style: textTheme.headlineSmall!.copyWith(fontSize: 16),
+        ),
       ],
     );
   }

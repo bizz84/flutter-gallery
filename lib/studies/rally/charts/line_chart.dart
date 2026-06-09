@@ -150,7 +150,8 @@ class RallyLineChartPainter extends CustomPainter {
       // [numGroups], all have the same width with the median amount as label.
       return List.generate(numGroups, (i) {
         return CustomPainterSemantics(
-          rect: Offset((i / numGroups) * size.width, 0) &
+          rect:
+              Offset((i / numGroups) * size.width, 0) &
               Size(size.width / numGroups, size.height),
           properties: SemanticsProperties(
             label: numberFormat.format(medians[i]),
@@ -263,8 +264,10 @@ class RallyLineChartPainter extends CustomPainter {
       textDirection: textDirection,
     );
     leftLabel.layout();
-    leftLabel.paint(canvas,
-        Offset(rect.left + space / 2 + padding.vertical, rect.topCenter.dy));
+    leftLabel.paint(
+      canvas,
+      Offset(rect.left + space / 2 + padding.vertical, rect.topCenter.dy),
+    );
 
     final centerLabel = TextPainter(
       text: TextSpan(
@@ -292,8 +295,10 @@ class RallyLineChartPainter extends CustomPainter {
     rightLabel.layout();
     rightLabel.paint(
       canvas,
-      Offset(rect.right - centerLabel.width - space / 2 - padding.vertical,
-          rect.topCenter.dy),
+      Offset(
+        rect.right - centerLabel.width - space / 2 - padding.vertical,
+        rect.topCenter.dy,
+      ),
     );
   }
 }

@@ -95,9 +95,10 @@ class _FrontLayerState extends State<_FrontLayer> {
           child: Padding(
             padding: isDesktop
                 ? EdgeInsets.symmetric(
-                        horizontal:
-                            isSmallDesktop ? appPaddingSmall : appPaddingLarge)
-                    .add(bottomPadding)
+                    horizontal: isSmallDesktop
+                        ? appPaddingSmall
+                        : appPaddingLarge,
+                  ).add(bottomPadding)
                 : const EdgeInsets.symmetric(horizontal: 20).add(bottomPadding),
             child: Column(
               children: [
@@ -183,13 +184,16 @@ class _BackdropState extends State<Backdrop>
     final tabControllerAnimation = _tabController.animation!;
 
     _flyLayerHorizontalOffset = tabControllerAnimation.drive(
-        Tween<Offset>(begin: const Offset(0, 0), end: const Offset(-0.05, 0)));
+      Tween<Offset>(begin: const Offset(0, 0), end: const Offset(-0.05, 0)),
+    );
 
     _sleepLayerHorizontalOffset = tabControllerAnimation.drive(
-        Tween<Offset>(begin: const Offset(0.05, 0), end: const Offset(0, 0)));
+      Tween<Offset>(begin: const Offset(0.05, 0), end: const Offset(0, 0)),
+    );
 
-    _eatLayerHorizontalOffset = tabControllerAnimation.drive(Tween<Offset>(
-        begin: const Offset(0.10, 0), end: const Offset(0.05, 0)));
+    _eatLayerHorizontalOffset = tabControllerAnimation.drive(
+      Tween<Offset>(begin: const Offset(0.10, 0), end: const Offset(0.05, 0)),
+    );
   }
 
   @override
@@ -200,8 +204,10 @@ class _BackdropState extends State<Backdrop>
   }
 
   void _handleTabs(int tabIndex) {
-    _tabController.animateTo(tabIndex,
-        duration: const Duration(milliseconds: 300));
+    _tabController.animateTo(
+      tabIndex,
+      duration: const Duration(milliseconds: 300),
+    );
   }
 
   @override
@@ -237,56 +243,58 @@ class _BackdropState extends State<Backdrop>
                   margin: EdgeInsets.only(
                     top: isDesktop
                         ? (isDisplaySmallDesktop(context)
-                                ? textFieldHeight * 3
-                                : textFieldHeight * 2) +
-                            20 * textScaleFactor / 2
+                                  ? textFieldHeight * 3
+                                  : textFieldHeight * 2) +
+                              20 * textScaleFactor / 2
                         : 175 + 140 * textScaleFactor / 2,
                   ),
                   // To display the middle front layer higher than the others,
                   // we allow the TabBarView to overflow by an offset
                   // (doubled because it technically overflows top & bottom).
                   // The other front layers are top padded by this offset.
-                  child: LayoutBuilder(builder: (context, constraints) {
-                    return OverflowBox(
-                      maxHeight:
-                          constraints.maxHeight + _sleepLayerTopOffset * 2,
-                      child: TabBarView(
-                        physics: isDesktop
-                            ? const NeverScrollableScrollPhysics()
-                            : null, // use default TabBarView physics
-                        controller: _tabController,
-                        children: [
-                          SlideTransition(
-                            position: _flyLayerHorizontalOffset,
-                            child: _FrontLayer(
-                              title: localizations.craneFlySubhead,
-                              index: 0,
-                              mobileTopOffset: _sleepLayerTopOffset,
-                              restorationId: 'fly-subhead',
+                  child: LayoutBuilder(
+                    builder: (context, constraints) {
+                      return OverflowBox(
+                        maxHeight:
+                            constraints.maxHeight + _sleepLayerTopOffset * 2,
+                        child: TabBarView(
+                          physics: isDesktop
+                              ? const NeverScrollableScrollPhysics()
+                              : null, // use default TabBarView physics
+                          controller: _tabController,
+                          children: [
+                            SlideTransition(
+                              position: _flyLayerHorizontalOffset,
+                              child: _FrontLayer(
+                                title: localizations.craneFlySubhead,
+                                index: 0,
+                                mobileTopOffset: _sleepLayerTopOffset,
+                                restorationId: 'fly-subhead',
+                              ),
                             ),
-                          ),
-                          SlideTransition(
-                            position: _sleepLayerHorizontalOffset,
-                            child: _FrontLayer(
-                              title: localizations.craneSleepSubhead,
-                              index: 1,
-                              mobileTopOffset: 0,
-                              restorationId: 'sleep-subhead',
+                            SlideTransition(
+                              position: _sleepLayerHorizontalOffset,
+                              child: _FrontLayer(
+                                title: localizations.craneSleepSubhead,
+                                index: 1,
+                                mobileTopOffset: 0,
+                                restorationId: 'sleep-subhead',
+                              ),
                             ),
-                          ),
-                          SlideTransition(
-                            position: _eatLayerHorizontalOffset,
-                            child: _FrontLayer(
-                              title: localizations.craneEatSubhead,
-                              index: 2,
-                              mobileTopOffset: _sleepLayerTopOffset,
-                              restorationId: 'eat-subhead',
+                            SlideTransition(
+                              position: _eatLayerHorizontalOffset,
+                              child: _FrontLayer(
+                                title: localizations.craneEatSubhead,
+                                index: 2,
+                                mobileTopOffset: _sleepLayerTopOffset,
+                                restorationId: 'eat-subhead',
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                    );
-                  }),
+                          ],
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ],
             ),
@@ -322,8 +330,9 @@ class _CraneAppBarState extends State<CraneAppBar> {
     return SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal:
-              isDesktop && !isSmallDesktop ? appPaddingLarge : appPaddingSmall,
+          horizontal: isDesktop && !isSmallDesktop
+              ? appPaddingLarge
+              : appPaddingSmall,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -362,7 +371,9 @@ class _CraneAppBarState extends State<CraneAppBar> {
                     labelStyle: Theme.of(context).textTheme.labelLarge,
                     labelColor: cranePrimaryWhite,
                     physics: const BouncingScrollPhysics(),
-                    unselectedLabelColor: cranePrimaryWhite.withValues(alpha: .6),
+                    unselectedLabelColor: cranePrimaryWhite.withValues(
+                      alpha: .6,
+                    ),
                     onTap: (index) => widget.tabController.animateTo(
                       index,
                       duration: const Duration(milliseconds: 300),

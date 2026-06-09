@@ -313,7 +313,10 @@ class GalleryLocalizationsKo extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return '$accountName 계좌 $accountNumber의 잔액은 $amount입니다.';
   }
 
@@ -323,8 +326,12 @@ class GalleryLocalizationsKo extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return '$budgetName 예산 $amountTotal 중 $amountUsed 사용, $amountLeft 남음';
   }
 

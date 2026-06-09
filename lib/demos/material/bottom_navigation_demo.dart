@@ -82,7 +82,9 @@ class _BottomNavigationDemoState extends State<BottomNavigationDemo>
 
     if (widget.type == BottomNavigationDemoType.withLabels) {
       bottomNavigationBarItems = bottomNavigationBarItems.sublist(
-          0, bottomNavigationBarItems.length - 2);
+        0,
+        bottomNavigationBarItems.length - 2,
+      );
       _currentIndex.value = _currentIndex.value
           .clamp(0, bottomNavigationBarItems.length - 1)
           .toInt();
@@ -165,8 +167,8 @@ class _NavigationDestinationView extends StatelessWidget {
             child: Semantics(
               label: GalleryLocalizations.of(context)!
                   .bottomNavigationContentPlaceholder(
-                item.label!,
-              ),
+                    item.label!,
+                  ),
               child: item.icon,
             ),
           ),

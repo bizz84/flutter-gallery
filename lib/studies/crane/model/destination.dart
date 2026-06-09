@@ -54,8 +54,11 @@ class FlyDestination extends Destination {
       return stopsText;
     } else {
       final textDirection = GalleryOptions.of(context).resolvedTextDirection();
-      final durationText =
-          formattedDuration(context, duration!, abbreviated: true);
+      final durationText = formattedDuration(
+        context,
+        duration!,
+        abbreviated: true,
+      );
       return textDirection == TextDirection.ltr
           ? '$stopsText · $durationText'
           : '$durationText · $stopsText';
@@ -69,8 +72,11 @@ class FlyDestination extends Destination {
     if (duration == null) {
       return stopsText;
     } else {
-      final durationText =
-          formattedDuration(context, duration!, abbreviated: false);
+      final durationText = formattedDuration(
+        context,
+        duration!,
+        abbreviated: false,
+      );
       return '$stopsText, $durationText';
     }
   }

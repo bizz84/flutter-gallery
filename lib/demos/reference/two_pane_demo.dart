@@ -152,8 +152,9 @@ class DetailsPane extends StatelessWidget {
           child: Text(
             selectedIndex == -1
                 ? GalleryLocalizations.of(context)!.demoTwoPaneSelectItem
-                : GalleryLocalizations.of(context)!
-                    .demoTwoPaneItemDetails(selectedIndex),
+                : GalleryLocalizations.of(
+                    context,
+                  )!.demoTwoPaneItemDetails(selectedIndex),
           ),
         ),
       ),
@@ -193,33 +194,35 @@ class SimulateScreen extends StatelessWidget {
           aspectRatio: type == TwoPaneDemoType.foldable
               ? foldableAspectRatio
               : type == TwoPaneDemoType.tablet
-                  ? tabletAspectRatio
-                  : singleScreenAspectRatio,
-          child: LayoutBuilder(builder: (context, constraints) {
-            final size = Size(constraints.maxWidth, constraints.maxHeight);
-            final hingeSize = Size(size.width * hingeProportion, size.height);
-            // Position the hinge in the middle of the display
-            final hingeBounds = Rect.fromLTWH(
-              (size.width - hingeSize.width) / 2,
-              0,
-              hingeSize.width,
-              hingeSize.height,
-            );
-            return MediaQuery(
-              data: MediaQueryData(
-                size: size,
-                displayFeatures: [
-                  if (type == TwoPaneDemoType.foldable)
-                    DisplayFeature(
-                      bounds: hingeBounds,
-                      type: DisplayFeatureType.hinge,
-                      state: DisplayFeatureState.postureFlat,
-                    ),
-                ],
-              ),
-              child: child,
-            );
-          }),
+              ? tabletAspectRatio
+              : singleScreenAspectRatio,
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              final size = Size(constraints.maxWidth, constraints.maxHeight);
+              final hingeSize = Size(size.width * hingeProportion, size.height);
+              // Position the hinge in the middle of the display
+              final hingeBounds = Rect.fromLTWH(
+                (size.width - hingeSize.width) / 2,
+                0,
+                hingeSize.width,
+                hingeSize.height,
+              );
+              return MediaQuery(
+                data: MediaQueryData(
+                  size: size,
+                  displayFeatures: [
+                    if (type == TwoPaneDemoType.foldable)
+                      DisplayFeature(
+                        bounds: hingeBounds,
+                        type: DisplayFeatureType.hinge,
+                        state: DisplayFeatureState.postureFlat,
+                      ),
+                  ],
+                ),
+                child: child,
+              );
+            },
+          ),
         ),
       ),
     );

@@ -240,8 +240,9 @@ class _RecipientsRow extends StatelessWidget {
             child: Wrap(
               children: [
                 Chip(
-                  backgroundColor:
-                      Theme.of(context).chipTheme.secondarySelectedColor,
+                  backgroundColor: Theme.of(
+                    context,
+                  ).chipTheme.secondarySelectedColor,
                   padding: EdgeInsets.zero,
                   avatar: CircleAvatar(
                     backgroundImage: AssetImage(

@@ -28,8 +28,9 @@ void main() {
     await tester.pumpWidget(const GalleryApp());
     await tester.pumpAndSettle();
 
-    ListView listview =
-        tester.widget(find.byKey(const ValueKey('HomeListView')));
+    ListView listview = tester.widget(
+      find.byKey(const ValueKey('HomeListView')),
+    );
 
     expect(listview.primary, true);
   });

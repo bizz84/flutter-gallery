@@ -58,7 +58,7 @@ class AppBarDemo extends StatelessWidget {
                 ),
               ];
             },
-          )
+          ),
         ],
       ),
       body: Center(

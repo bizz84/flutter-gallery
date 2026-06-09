@@ -321,7 +321,10 @@ class GalleryLocalizationsFil extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return '$accountName account $accountNumber na may $amount.';
   }
 
@@ -331,8 +334,12 @@ class GalleryLocalizationsFil extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'Badyet sa $budgetName na may nagamit nang $amountUsed sa $amountTotal, $amountLeft ang natitira';
   }
 

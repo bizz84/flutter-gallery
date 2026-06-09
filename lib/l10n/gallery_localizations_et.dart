@@ -321,7 +321,10 @@ class GalleryLocalizationsEt extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Konto $accountName ($accountNumber) – $amount.';
   }
 
@@ -331,8 +334,12 @@ class GalleryLocalizationsEt extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'Eelarve $budgetName summast $amountTotal on kasutatud $amountUsed, järel on $amountLeft';
   }
 

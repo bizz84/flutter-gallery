@@ -105,8 +105,9 @@ class _TransformationsDemoState extends State<TransformationsDemo>
       backgroundColor: Theme.of(context).colorScheme.primary,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title:
-            Text(GalleryLocalizations.of(context)!.demo2dTransformationsTitle),
+        title: Text(
+          GalleryLocalizations.of(context)!.demo2dTransformationsTitle,
+        ),
       ),
       body: Container(
         color: backgroundColor,
@@ -183,24 +184,27 @@ class _TransformationsDemoState extends State<TransformationsDemo>
           return;
         }
         showModalBottomSheet<Widget>(
-            context: context,
-            builder: (context) {
-              return Container(
-                width: double.infinity,
-                height: 150,
-                padding: const EdgeInsets.all(12),
-                child: EditBoardPoint(
-                  boardPoint: _board.selected!,
-                  onColorSelection: (color) {
-                    setState(() {
-                      _board = _board.copyWithBoardPointColor(
-                          _board.selected!, color);
-                      Navigator.pop(context);
-                    });
-                  },
-                ),
-              );
-            });
+          context: context,
+          builder: (context) {
+            return Container(
+              width: double.infinity,
+              height: 150,
+              padding: const EdgeInsets.all(12),
+              child: EditBoardPoint(
+                boardPoint: _board.selected!,
+                onColorSelection: (color) {
+                  setState(() {
+                    _board = _board.copyWithBoardPointColor(
+                      _board.selected!,
+                      color,
+                    );
+                    Navigator.pop(context);
+                  });
+                },
+              ),
+            );
+          },
+        );
       },
       tooltip: 'Edit',
       color: Theme.of(context).colorScheme.surface,

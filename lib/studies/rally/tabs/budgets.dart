@@ -41,7 +41,7 @@ class _BudgetsViewState extends State<BudgetsView>
       ),
       sidebarItems: [
         for (UserDetailData item in detailItems)
-          SidebarItem(title: item.title, value: item.value)
+          SidebarItem(title: item.title, value: item.value),
       ],
     );
   }

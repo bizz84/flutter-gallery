@@ -12,8 +12,12 @@ void main() {
     final currentXml = readEnglishXml();
     final newXml = await generateXmlFromArb();
 
-    expect(standardizeLineEndings(currentXml), standardizeLineEndings(newXml),
-        reason: 'intl_en_US.xml is not up to date. '
-            'Did you forget to run `flutter pub run grinder l10n`?');
+    expect(
+      standardizeLineEndings(currentXml),
+      standardizeLineEndings(newXml),
+      reason:
+          'intl_en_US.xml is not up to date. '
+          'Did you forget to run `flutter pub run grinder l10n`?',
+    );
   });
 }

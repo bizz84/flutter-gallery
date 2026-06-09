@@ -74,10 +74,9 @@ class _SharedYAxisTransitionDemoState extends State<SharedYAxisTransitionDemo>
             Text(localizations.demoSharedYAxisTitle),
             Text(
               '(${localizations.demoSharedYAxisDemoInstructions})',
-              style: Theme.of(context)
-                  .textTheme
-                  .titleSmall!
-                  .copyWith(color: Colors.white),
+              style: Theme.of(
+                context,
+              ).textTheme.titleSmall!.copyWith(color: Colors.white),
             ),
           ],
         ),
@@ -113,12 +112,16 @@ class _SharedYAxisTransitionDemoState extends State<SharedYAxisTransitionDemo>
                   },
                   child: Row(
                     children: [
-                      Text(_isAlphabetical
-                          ? localizations.demoSharedYAxisAlphabeticalSortTitle
-                          : localizations.demoSharedYAxisRecentSortTitle),
+                      Text(
+                        _isAlphabetical
+                            ? localizations.demoSharedYAxisAlphabeticalSortTitle
+                            : localizations.demoSharedYAxisRecentSortTitle,
+                      ),
                       RotationTransition(
-                        turns: Tween(begin: 0.0, end: 1.0)
-                            .animate(_controller.view),
+                        turns: Tween(
+                          begin: 0.0,
+                          end: 1.0,
+                        ).animate(_controller.view),
                         child: const Icon(Icons.arrow_drop_down),
                       ),
                     ],

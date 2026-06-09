@@ -107,14 +107,20 @@ class CutCornersBorder extends OutlineInputBorder {
         case TextDirection.rtl:
           {
             final path = _notchedCornerPath(
-                outer.middleRect, gapStart + gapPadding - extent!, extent);
+              outer.middleRect,
+              gapStart + gapPadding - extent!,
+              extent,
+            );
             canvas.drawPath(path, paint);
             break;
           }
         case TextDirection.ltr:
           {
             final path = _notchedCornerPath(
-                outer.middleRect, gapStart - gapPadding, extent!);
+              outer.middleRect,
+              gapStart - gapPadding,
+              extent!,
+            );
             canvas.drawPath(path, paint);
             break;
           }

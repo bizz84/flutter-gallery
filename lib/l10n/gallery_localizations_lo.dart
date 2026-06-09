@@ -322,7 +322,10 @@ class GalleryLocalizationsLo extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'ບັນຊີ $accountName ໝາຍເລກ $accountNumber ຈຳນວນ $amount.';
   }
 
@@ -332,8 +335,12 @@ class GalleryLocalizationsLo extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'ງົບປະມານ $budgetName ໃຊ້ໄປແລ້ວ $amountUsed ຈາກຈຳນວນ $amountTotal, ເຫຼືອ $amountLeft';
   }
 

@@ -204,7 +204,8 @@ class HomePage extends StatelessWidget {
                       },
                       excludeFromSemantics: true,
                       child: FadeInImage(
-                        image: Theme.of(context).colorScheme.brightness ==
+                        image:
+                            Theme.of(context).colorScheme.brightness ==
                                 Brightness.dark
                             ? const AssetImage(
                                 'assets/logo/flutter_logo.png',
@@ -242,8 +243,9 @@ class HomePage extends StatelessWidget {
       return Scaffold(
         body: _AnimatedHomePage(
           restorationId: 'animated_page',
-          isSplashPageAnimationFinished:
-              SplashPageAnimation.of(context)!.isFinished,
+          isSplashPageAnimationFinished: SplashPageAnimation.of(
+            context,
+          )!.isFinished,
           carouselCards: carouselCards,
         ),
       );
@@ -300,10 +302,11 @@ class Header extends StatelessWidget {
         child: SelectableText(
           text,
           style: Theme.of(context).textTheme.headlineMedium!.apply(
-                color: color,
-                fontSizeDelta:
-                    isDisplayDesktop(context) ? desktopDisplay1FontDelta : 0,
-              ),
+            color: color,
+            fontSizeDelta: isDisplayDesktop(context)
+                ? desktopDisplay1FontDelta
+                : 0,
+          ),
         ),
       ),
     );
@@ -392,8 +395,9 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
           children: [
             const SizedBox(height: 8),
             Container(
-              margin:
-                  const EdgeInsets.symmetric(horizontal: _horizontalPadding),
+              margin: const EdgeInsets.symmetric(
+                horizontal: _horizontalPadding,
+              ),
               child: _GalleryHeader(),
             ),
             _MobileCarousel(
@@ -402,59 +406,61 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
               children: widget.carouselCards,
             ),
             Container(
-              margin:
-                  const EdgeInsets.symmetric(horizontal: _horizontalPadding),
+              margin: const EdgeInsets.symmetric(
+                horizontal: _horizontalPadding,
+              ),
               child: _CategoriesHeader(),
             ),
             _AnimatedCategoryItem(
               startDelayFraction: 0.00,
               controller: _animationController,
               child: CategoryListItem(
-                  key: const PageStorageKey<GalleryDemoCategory>(
-                    GalleryDemoCategory.material,
-                  ),
-                  restorationId: 'home_material_category_list',
-                  category: GalleryDemoCategory.material,
-                  imageString: 'assets/icons/material/material.png',
-                  demos: Demos.materialDemos(localizations),
-                  initiallyExpanded:
-                      _isMaterialListExpanded.value || isTestMode,
-                  onTap: (shouldOpenList) {
-                    _isMaterialListExpanded.value = shouldOpenList;
-                  }),
+                key: const PageStorageKey<GalleryDemoCategory>(
+                  GalleryDemoCategory.material,
+                ),
+                restorationId: 'home_material_category_list',
+                category: GalleryDemoCategory.material,
+                imageString: 'assets/icons/material/material.png',
+                demos: Demos.materialDemos(localizations),
+                initiallyExpanded: _isMaterialListExpanded.value || isTestMode,
+                onTap: (shouldOpenList) {
+                  _isMaterialListExpanded.value = shouldOpenList;
+                },
+              ),
             ),
             _AnimatedCategoryItem(
               startDelayFraction: 0.05,
               controller: _animationController,
               child: CategoryListItem(
-                  key: const PageStorageKey<GalleryDemoCategory>(
-                    GalleryDemoCategory.cupertino,
-                  ),
-                  restorationId: 'home_cupertino_category_list',
-                  category: GalleryDemoCategory.cupertino,
-                  imageString: 'assets/icons/cupertino/cupertino.png',
-                  demos: Demos.cupertinoDemos(localizations),
-                  initiallyExpanded:
-                      _isCupertinoListExpanded.value || isTestMode,
-                  onTap: (shouldOpenList) {
-                    _isCupertinoListExpanded.value = shouldOpenList;
-                  }),
+                key: const PageStorageKey<GalleryDemoCategory>(
+                  GalleryDemoCategory.cupertino,
+                ),
+                restorationId: 'home_cupertino_category_list',
+                category: GalleryDemoCategory.cupertino,
+                imageString: 'assets/icons/cupertino/cupertino.png',
+                demos: Demos.cupertinoDemos(localizations),
+                initiallyExpanded: _isCupertinoListExpanded.value || isTestMode,
+                onTap: (shouldOpenList) {
+                  _isCupertinoListExpanded.value = shouldOpenList;
+                },
+              ),
             ),
             _AnimatedCategoryItem(
               startDelayFraction: 0.10,
               controller: _animationController,
               child: CategoryListItem(
-                  key: const PageStorageKey<GalleryDemoCategory>(
-                    GalleryDemoCategory.other,
-                  ),
-                  restorationId: 'home_other_category_list',
-                  category: GalleryDemoCategory.other,
-                  imageString: 'assets/icons/reference/reference.png',
-                  demos: Demos.otherDemos(localizations),
-                  initiallyExpanded: _isOtherListExpanded.value || isTestMode,
-                  onTap: (shouldOpenList) {
-                    _isOtherListExpanded.value = shouldOpenList;
-                  }),
+                key: const PageStorageKey<GalleryDemoCategory>(
+                  GalleryDemoCategory.other,
+                ),
+                restorationId: 'home_other_category_list',
+                category: GalleryDemoCategory.other,
+                imageString: 'assets/icons/reference/reference.png',
+                demos: Demos.otherDemos(localizations),
+                initiallyExpanded: _isOtherListExpanded.value || isTestMode,
+                onTap: (shouldOpenList) {
+                  _isOtherListExpanded.value = shouldOpenList;
+                },
+              ),
             ),
           ],
         ),
@@ -588,8 +594,8 @@ class _DesktopCategoryHeader extends StatelessWidget {
                 child: SelectableText(
                   category.displayTitle(GalleryLocalizations.of(context)!)!,
                   style: Theme.of(context).textTheme.headlineSmall!.apply(
-                        color: colorScheme.onSurface,
-                      ),
+                    color: colorScheme.onSurface,
+                  ),
                 ),
               ),
             ),
@@ -608,19 +614,20 @@ class _AnimatedCategoryItem extends StatelessWidget {
     required double startDelayFraction,
     required this.controller,
     required this.child,
-  }) : topPaddingAnimation = Tween(
-          begin: 60.0,
-          end: 0.0,
-        ).animate(
-          CurvedAnimation(
-            parent: controller,
-            curve: Interval(
-              0.000 + startDelayFraction,
-              0.400 + startDelayFraction,
-              curve: Curves.ease,
-            ),
-          ),
-        );
+  }) : topPaddingAnimation =
+           Tween(
+             begin: 60.0,
+             end: 0.0,
+           ).animate(
+             CurvedAnimation(
+               parent: controller,
+               curve: Interval(
+                 0.000 + startDelayFraction,
+                 0.400 + startDelayFraction,
+                 curve: Curves.ease,
+               ),
+             ),
+           );
 
   final Widget child;
   final AnimationController controller;
@@ -646,19 +653,20 @@ class _AnimatedCarousel extends StatelessWidget {
   _AnimatedCarousel({
     required this.child,
     required this.controller,
-  }) : startPositionAnimation = Tween(
-          begin: 1.0,
-          end: 0.0,
-        ).animate(
-          CurvedAnimation(
-            parent: controller,
-            curve: const Interval(
-              0.200,
-              0.800,
-              curve: Curves.ease,
-            ),
-          ),
-        );
+  }) : startPositionAnimation =
+           Tween(
+             begin: 1.0,
+             end: 0.0,
+           ).animate(
+             CurvedAnimation(
+               parent: controller,
+               curve: const Interval(
+                 0.200,
+                 0.800,
+                 curve: Curves.ease,
+               ),
+             ),
+           );
 
   final Widget child;
   final AnimationController controller;
@@ -666,27 +674,29 @@ class _AnimatedCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      return Stack(
-        children: [
-          SizedBox(height: _carouselHeight(.4, context)),
-          AnimatedBuilder(
-            animation: controller,
-            builder: (context, child) {
-              return PositionedDirectional(
-                start: constraints.maxWidth * startPositionAnimation.value,
-                child: child!,
-              );
-            },
-            child: SizedBox(
-              height: _carouselHeight(.4, context),
-              width: constraints.maxWidth,
-              child: child,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Stack(
+          children: [
+            SizedBox(height: _carouselHeight(.4, context)),
+            AnimatedBuilder(
+              animation: controller,
+              builder: (context, child) {
+                return PositionedDirectional(
+                  start: constraints.maxWidth * startPositionAnimation.value,
+                  child: child!,
+                );
+              },
+              child: SizedBox(
+                height: _carouselHeight(.4, context),
+                width: constraints.maxWidth,
+                child: child,
+              ),
             ),
-          ),
-        ],
-      );
-    });
+          ],
+        );
+      },
+    );
   }
 }
 
@@ -695,19 +705,20 @@ class _AnimatedCarouselCard extends StatelessWidget {
   _AnimatedCarouselCard({
     required this.child,
     required this.controller,
-  }) : startPaddingAnimation = Tween(
-          begin: _horizontalPadding,
-          end: 0.0,
-        ).animate(
-          CurvedAnimation(
-            parent: controller,
-            curve: const Interval(
-              0.900,
-              1.000,
-              curve: Curves.ease,
-            ),
-          ),
-        );
+  }) : startPaddingAnimation =
+           Tween(
+             begin: _horizontalPadding,
+             end: 0.0,
+           ).animate(
+             CurvedAnimation(
+               parent: controller,
+               curve: const Interval(
+                 0.900,
+                 1.000,
+                 curve: Curves.ease,
+               ),
+             ),
+           );
 
   final Widget child;
   final AnimationController controller;
@@ -1061,14 +1072,17 @@ class _CarouselCard extends StatelessWidget {
     final isDark = Theme.of(context).colorScheme.brightness == Brightness.dark;
     final asset = isDark ? assetDark : this.asset;
     final assetColor = isDark ? assetDarkColor : this.assetColor;
-    final textColor = isDark ? Colors.white.withValues(alpha: 0.87) : this.textColor;
+    final textColor = isDark
+        ? Colors.white.withValues(alpha: 0.87)
+        : this.textColor;
     final isDesktop = isDisplayDesktop(context);
 
     return Container(
       padding: EdgeInsets.symmetric(
-          horizontal: isDesktop
-              ? _carouselItemDesktopMargin
-              : _carouselItemMobileMargin),
+        horizontal: isDesktop
+            ? _carouselItemDesktopMargin
+            : _carouselItemMobileMargin,
+      ),
       margin: const EdgeInsets.symmetric(vertical: 16.0),
       height: _carouselHeight(0.7, context),
       width: _carouselItemWidth,
@@ -1116,8 +1130,9 @@ class _CarouselCard extends StatelessWidget {
                 color: Colors.transparent,
                 child: InkWell(
                   onTap: () {
-                    Navigator.of(context)
-                        .popUntil((route) => route.settings.name == '/');
+                    Navigator.of(
+                      context,
+                    ).popUntil((route) => route.settings.name == '/');
                     Navigator.of(context).restorablePushNamed(studyRoute);
                   },
                 ),
@@ -1131,10 +1146,11 @@ class _CarouselCard extends StatelessWidget {
 }
 
 double _carouselHeight(double scaleFactor, BuildContext context) => math.max(
-    _carouselHeightMin *
-        GalleryOptions.of(context).textScaleFactor(context) *
-        scaleFactor,
-    _carouselHeightMin);
+  _carouselHeightMin *
+      GalleryOptions.of(context).textScaleFactor(context) *
+      scaleFactor,
+  _carouselHeightMin,
+);
 
 /// Wrap the studies with this to display a back button and allow the user to
 /// exit them at any time.
@@ -1175,10 +1191,11 @@ class _StudyWrapperState extends State<StudyWrapper> {
                 alignment: widget.alignment,
                 child: Padding(
                   padding: EdgeInsets.symmetric(
-                      horizontal: 16.0,
-                      vertical: widget.hasBottomNavBar
-                          ? kBottomNavigationBarHeight + 16.0
-                          : 16.0),
+                    horizontal: 16.0,
+                    vertical: widget.hasBottomNavBar
+                        ? kBottomNavigationBarHeight + 16.0
+                        : 16.0,
+                  ),
                   child: Semantics(
                     sortKey: const OrdinalSortKey(0),
                     label: GalleryLocalizations.of(context)!.backToGallery,
@@ -1189,8 +1206,9 @@ class _StudyWrapperState extends State<StudyWrapper> {
                       heroTag: _BackButtonHeroTag(),
                       key: const ValueKey('Back'),
                       onPressed: () {
-                        Navigator.of(context)
-                            .popUntil((route) => route.settings.name == '/');
+                        Navigator.of(
+                          context,
+                        ).popUntil((route) => route.settings.name == '/');
                       },
                       icon: IconTheme(
                         data: IconThemeData(color: colorScheme.onPrimary),
@@ -1198,8 +1216,9 @@ class _StudyWrapperState extends State<StudyWrapper> {
                       ),
                       label: Text(
                         MaterialLocalizations.of(context).backButtonTooltip,
-                        style: textTheme.labelLarge!
-                            .apply(color: colorScheme.onPrimary),
+                        style: textTheme.labelLarge!.apply(
+                          color: colorScheme.onPrimary,
+                        ),
                       ),
                     ),
                   ),

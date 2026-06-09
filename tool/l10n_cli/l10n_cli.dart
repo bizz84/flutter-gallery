@@ -101,8 +101,9 @@ Future<String> generateXmlFromArb([String arbPath = _englishArbPath]) async {
       for (final suffix in _pluralSuffixes) {
         final pluralKey = '$resourceId$suffix';
         if (bundle.containsKey(pluralKey)) {
-          final translation =
-              translationFor(pluralKey).replaceFirst(quantityVar, '%d');
+          final translation = translationFor(
+            pluralKey,
+          ).replaceFirst(quantityVar, '%d');
           xml.writeln('    <item');
           xml.writeln('      quantity="${suffix.toLowerCase()}"');
           xml.writeln('      >$translation</item>');

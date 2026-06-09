@@ -45,26 +45,25 @@ double _progress(
   double time, {
   required double begin,
   required double end,
-}) =>
-    _curve.transform(((time - begin) / (end - begin)).clamp(0, 1).toDouble());
+}) => _curve.transform(((time - begin) / (end - begin)).clamp(0, 1).toDouble());
 
 double _monoKnobProgress(double time) => _progress(
-      time,
-      begin: 0,
-      end: _monoKnobExpansionEnds,
-    );
+  time,
+  begin: 0,
+  end: _monoKnobExpansionEnds,
+);
 
 double _colorKnobProgress(double time) => _progress(
-      time,
-      begin: _colorKnobContractionBegins,
-      end: _colorKnobContractionEnds,
-    );
+  time,
+  begin: _colorKnobContractionBegins,
+  end: _colorKnobContractionEnds,
+);
 
 double _rotationProgress(double time) => _progress(
-      time,
-      begin: _colorKnobContractionEnds,
-      end: 1,
-    );
+  time,
+  begin: _colorKnobContractionEnds,
+  end: 1,
+);
 
 // Changing lengths: mono.
 double monoLength(double time) =>

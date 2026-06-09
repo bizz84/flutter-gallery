@@ -320,7 +320,10 @@ class GalleryLocalizationsVi extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Số dư tài khoản $accountName $accountNumber là $amount.';
   }
 
@@ -330,8 +333,12 @@ class GalleryLocalizationsVi extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'Đã dùng hết $amountUsed/$amountTotal ngân sách $budgetName, số tiền còn lại là $amountLeft';
   }
 

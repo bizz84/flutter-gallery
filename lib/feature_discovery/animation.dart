@@ -33,23 +33,26 @@ class Animations {
       case FeatureDiscoveryStatus.closed:
         return const AlwaysStoppedAnimation<double>(0);
       case FeatureDiscoveryStatus.open:
-        return Tween<double>(begin: 0, end: backgroundMaxOpacity)
-            .animate(CurvedAnimation(
-          parent: openController,
-          curve: const Interval(0, 0.5, curve: Curves.ease),
-        ));
+        return Tween<double>(begin: 0, end: backgroundMaxOpacity).animate(
+          CurvedAnimation(
+            parent: openController,
+            curve: const Interval(0, 0.5, curve: Curves.ease),
+          ),
+        );
       case FeatureDiscoveryStatus.tap:
-        return Tween<double>(begin: backgroundMaxOpacity, end: 0)
-            .animate(CurvedAnimation(
-          parent: tapController,
-          curve: Curves.ease,
-        ));
+        return Tween<double>(begin: backgroundMaxOpacity, end: 0).animate(
+          CurvedAnimation(
+            parent: tapController,
+            curve: Curves.ease,
+          ),
+        );
       case FeatureDiscoveryStatus.dismiss:
-        return Tween<double>(begin: backgroundMaxOpacity, end: 0)
-            .animate(CurvedAnimation(
-          parent: dismissController,
-          curve: const Interval(0.2, 1.0, curve: Curves.ease),
-        ));
+        return Tween<double>(begin: backgroundMaxOpacity, end: 0).animate(
+          CurvedAnimation(
+            parent: dismissController,
+            curve: const Interval(0.2, 1.0, curve: Curves.ease),
+          ),
+        );
       default:
         return const AlwaysStoppedAnimation<double>(backgroundMaxOpacity);
     }
@@ -63,25 +66,29 @@ class Animations {
       case FeatureDiscoveryStatus.closed:
         return const AlwaysStoppedAnimation<double>(0);
       case FeatureDiscoveryStatus.open:
-        return Tween<double>(begin: 0, end: backgroundRadiusMax)
-            .animate(CurvedAnimation(
-          parent: openController,
-          curve: const Interval(0, 0.5, curve: Curves.ease),
-        ));
+        return Tween<double>(begin: 0, end: backgroundRadiusMax).animate(
+          CurvedAnimation(
+            parent: openController,
+            curve: const Interval(0, 0.5, curve: Curves.ease),
+          ),
+        );
       case FeatureDiscoveryStatus.tap:
         return Tween<double>(
-                begin: backgroundRadiusMax,
-                end: backgroundRadiusMax + backgroundTapRadius)
-            .animate(CurvedAnimation(
-          parent: tapController,
-          curve: Curves.ease,
-        ));
+          begin: backgroundRadiusMax,
+          end: backgroundRadiusMax + backgroundTapRadius,
+        ).animate(
+          CurvedAnimation(
+            parent: tapController,
+            curve: Curves.ease,
+          ),
+        );
       case FeatureDiscoveryStatus.dismiss:
-        return Tween<double>(begin: backgroundRadiusMax, end: 0)
-            .animate(CurvedAnimation(
-          parent: dismissController,
-          curve: Curves.ease,
-        ));
+        return Tween<double>(begin: backgroundRadiusMax, end: 0).animate(
+          CurvedAnimation(
+            parent: dismissController,
+            curve: Curves.ease,
+          ),
+        );
       default:
         return AlwaysStoppedAnimation<double>(backgroundRadiusMax);
     }
@@ -96,20 +103,26 @@ class Animations {
       case FeatureDiscoveryStatus.closed:
         return AlwaysStoppedAnimation<Offset>(start);
       case FeatureDiscoveryStatus.open:
-        return Tween<Offset>(begin: start, end: end).animate(CurvedAnimation(
-          parent: openController,
-          curve: const Interval(0, 0.5, curve: Curves.ease),
-        ));
+        return Tween<Offset>(begin: start, end: end).animate(
+          CurvedAnimation(
+            parent: openController,
+            curve: const Interval(0, 0.5, curve: Curves.ease),
+          ),
+        );
       case FeatureDiscoveryStatus.tap:
-        return Tween<Offset>(begin: end, end: start).animate(CurvedAnimation(
-          parent: tapController,
-          curve: Curves.ease,
-        ));
+        return Tween<Offset>(begin: end, end: start).animate(
+          CurvedAnimation(
+            parent: tapController,
+            curve: Curves.ease,
+          ),
+        );
       case FeatureDiscoveryStatus.dismiss:
-        return Tween<Offset>(begin: end, end: start).animate(CurvedAnimation(
-          parent: dismissController,
-          curve: Curves.ease,
-        ));
+        return Tween<Offset>(begin: end, end: start).animate(
+          CurvedAnimation(
+            parent: dismissController,
+            curve: Curves.ease,
+          ),
+        );
       default:
         return AlwaysStoppedAnimation<Offset>(end);
     }
@@ -120,20 +133,26 @@ class Animations {
       case FeatureDiscoveryStatus.closed:
         return const AlwaysStoppedAnimation<double>(0);
       case FeatureDiscoveryStatus.open:
-        return Tween<double>(begin: 0, end: 1.0).animate(CurvedAnimation(
-          parent: openController,
-          curve: const Interval(0.4, 0.7, curve: Curves.ease),
-        ));
+        return Tween<double>(begin: 0, end: 1.0).animate(
+          CurvedAnimation(
+            parent: openController,
+            curve: const Interval(0.4, 0.7, curve: Curves.ease),
+          ),
+        );
       case FeatureDiscoveryStatus.tap:
-        return Tween<double>(begin: 1.0, end: 0).animate(CurvedAnimation(
-          parent: tapController,
-          curve: const Interval(0, 0.4, curve: Curves.ease),
-        ));
+        return Tween<double>(begin: 1.0, end: 0).animate(
+          CurvedAnimation(
+            parent: tapController,
+            curve: const Interval(0, 0.4, curve: Curves.ease),
+          ),
+        );
       case FeatureDiscoveryStatus.dismiss:
-        return Tween<double>(begin: 1.0, end: 0).animate(CurvedAnimation(
-          parent: dismissController,
-          curve: const Interval(0, 0.4, curve: Curves.ease),
-        ));
+        return Tween<double>(begin: 1.0, end: 0).animate(
+          CurvedAnimation(
+            parent: dismissController,
+            curve: const Interval(0, 0.4, curve: Curves.ease),
+          ),
+        );
       default:
         return const AlwaysStoppedAnimation<double>(1.0);
     }
@@ -142,11 +161,12 @@ class Animations {
   Animation<double> rippleOpacity(FeatureDiscoveryStatus status) {
     switch (status) {
       case FeatureDiscoveryStatus.ripple:
-        return Tween<double>(begin: rippleMaxOpacity, end: 0)
-            .animate(CurvedAnimation(
-          parent: rippleController,
-          curve: const Interval(0.3, 0.8, curve: Curves.ease),
-        ));
+        return Tween<double>(begin: rippleMaxOpacity, end: 0).animate(
+          CurvedAnimation(
+            parent: rippleController,
+            curve: const Interval(0.3, 0.8, curve: Curves.ease),
+          ),
+        );
       default:
         return const AlwaysStoppedAnimation<double>(0);
     }
@@ -156,11 +176,12 @@ class Animations {
     switch (status) {
       case FeatureDiscoveryStatus.ripple:
         if (rippleController.value >= 0.3 && rippleController.value <= 0.8) {
-          return Tween<double>(begin: tapTargetMaxRadius, end: 79.0)
-              .animate(CurvedAnimation(
-            parent: rippleController,
-            curve: const Interval(0.3, 0.8, curve: Curves.ease),
-          ));
+          return Tween<double>(begin: tapTargetMaxRadius, end: 79.0).animate(
+            CurvedAnimation(
+              parent: rippleController,
+              curve: const Interval(0.3, 0.8, curve: Curves.ease),
+            ),
+          );
         }
         return const AlwaysStoppedAnimation<double>(tapTargetMaxRadius);
       default:
@@ -173,20 +194,26 @@ class Animations {
       case FeatureDiscoveryStatus.closed:
         return const AlwaysStoppedAnimation<double>(0);
       case FeatureDiscoveryStatus.open:
-        return Tween<double>(begin: 0, end: 1.0).animate(CurvedAnimation(
-          parent: openController,
-          curve: const Interval(0, 0.4, curve: Curves.ease),
-        ));
+        return Tween<double>(begin: 0, end: 1.0).animate(
+          CurvedAnimation(
+            parent: openController,
+            curve: const Interval(0, 0.4, curve: Curves.ease),
+          ),
+        );
       case FeatureDiscoveryStatus.tap:
-        return Tween<double>(begin: 1.0, end: 0).animate(CurvedAnimation(
-          parent: tapController,
-          curve: const Interval(0.1, 0.6, curve: Curves.ease),
-        ));
+        return Tween<double>(begin: 1.0, end: 0).animate(
+          CurvedAnimation(
+            parent: tapController,
+            curve: const Interval(0.1, 0.6, curve: Curves.ease),
+          ),
+        );
       case FeatureDiscoveryStatus.dismiss:
-        return Tween<double>(begin: 1.0, end: 0).animate(CurvedAnimation(
-          parent: dismissController,
-          curve: const Interval(0.2, 0.8, curve: Curves.ease),
-        ));
+        return Tween<double>(begin: 1.0, end: 0).animate(
+          CurvedAnimation(
+            parent: dismissController,
+            curve: const Interval(0.2, 0.8, curve: Curves.ease),
+          ),
+        );
       default:
         return const AlwaysStoppedAnimation<double>(1.0);
     }
@@ -197,40 +224,58 @@ class Animations {
       case FeatureDiscoveryStatus.closed:
         return const AlwaysStoppedAnimation<double>(tapTargetMinRadius);
       case FeatureDiscoveryStatus.open:
-        return Tween<double>(begin: tapTargetMinRadius, end: tapTargetMaxRadius)
-            .animate(CurvedAnimation(
-          parent: openController,
-          curve: const Interval(0, 0.4, curve: Curves.ease),
-        ));
+        return Tween<double>(
+          begin: tapTargetMinRadius,
+          end: tapTargetMaxRadius,
+        ).animate(
+          CurvedAnimation(
+            parent: openController,
+            curve: const Interval(0, 0.4, curve: Curves.ease),
+          ),
+        );
       case FeatureDiscoveryStatus.ripple:
         if (rippleController.value < 0.3) {
           return Tween<double>(
-                  begin: tapTargetMaxRadius, end: tapTargetRippleRadius)
-              .animate(CurvedAnimation(
-            parent: rippleController,
-            curve: const Interval(0, 0.3, curve: Curves.ease),
-          ));
+            begin: tapTargetMaxRadius,
+            end: tapTargetRippleRadius,
+          ).animate(
+            CurvedAnimation(
+              parent: rippleController,
+              curve: const Interval(0, 0.3, curve: Curves.ease),
+            ),
+          );
         } else if (rippleController.value < 0.6) {
           return Tween<double>(
-                  begin: tapTargetRippleRadius, end: tapTargetMaxRadius)
-              .animate(CurvedAnimation(
-            parent: rippleController,
-            curve: const Interval(0.3, 0.6, curve: Curves.ease),
-          ));
+            begin: tapTargetRippleRadius,
+            end: tapTargetMaxRadius,
+          ).animate(
+            CurvedAnimation(
+              parent: rippleController,
+              curve: const Interval(0.3, 0.6, curve: Curves.ease),
+            ),
+          );
         }
         return const AlwaysStoppedAnimation<double>(tapTargetMaxRadius);
       case FeatureDiscoveryStatus.tap:
-        return Tween<double>(begin: tapTargetMaxRadius, end: tapTargetMinRadius)
-            .animate(CurvedAnimation(
-          parent: tapController,
-          curve: Curves.ease,
-        ));
+        return Tween<double>(
+          begin: tapTargetMaxRadius,
+          end: tapTargetMinRadius,
+        ).animate(
+          CurvedAnimation(
+            parent: tapController,
+            curve: Curves.ease,
+          ),
+        );
       case FeatureDiscoveryStatus.dismiss:
-        return Tween<double>(begin: tapTargetMaxRadius, end: tapTargetMinRadius)
-            .animate(CurvedAnimation(
-          parent: dismissController,
-          curve: Curves.ease,
-        ));
+        return Tween<double>(
+          begin: tapTargetMaxRadius,
+          end: tapTargetMinRadius,
+        ).animate(
+          CurvedAnimation(
+            parent: dismissController,
+            curve: Curves.ease,
+          ),
+        );
       default:
         return const AlwaysStoppedAnimation<double>(tapTargetMaxRadius);
     }

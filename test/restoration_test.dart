@@ -43,9 +43,13 @@ void main() {
       expect(find.byKey(const ValueKey('app-bar@material')), findsNothing);
 
       // Open material samples list view.
-      await tester.tap(find.byKey(
-        const PageStorageKey<GalleryDemoCategory>(GalleryDemoCategory.material),
-      ));
+      await tester.tap(
+        find.byKey(
+          const PageStorageKey<GalleryDemoCategory>(
+            GalleryDemoCategory.material,
+          ),
+        ),
+      );
       await tester.pumpAndSettle();
 
       expect(find.byKey(const ValueKey('app-bar@material')), findsOneWidget);
@@ -68,9 +72,13 @@ void main() {
       expect(find.byType(HomePage), findsOneWidget);
 
       // Open material samples list view.
-      await tester.tap(find.byKey(
-        const PageStorageKey<GalleryDemoCategory>(GalleryDemoCategory.material),
-      ));
+      await tester.tap(
+        find.byKey(
+          const PageStorageKey<GalleryDemoCategory>(
+            GalleryDemoCategory.material,
+          ),
+        ),
+      );
       await tester.pumpAndSettle();
 
       await tester.tap(find.byKey(const ValueKey('banner@material')));
@@ -82,7 +90,8 @@ void main() {
       await tester.pump(const Duration(seconds: 1));
       expect(find.byType(GalleryDemoPage), findsOneWidget);
 
-      const bannerDescriptionText = 'A banner displays an important, succinct '
+      const bannerDescriptionText =
+          'A banner displays an important, succinct '
           'message, and provides actions for users to address (or dismiss the '
           'banner). A user action is required for it to be dismissed.';
 

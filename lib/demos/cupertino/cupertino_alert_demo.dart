@@ -142,11 +142,12 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo>
             ),
             CupertinoDialogAction(
               isDefaultAction: true,
-              onPressed: () => Navigator.of(
-                context,
-              ).pop(
-                localizations.cupertinoAlertCancel,
-              ),
+              onPressed: () =>
+                  Navigator.of(
+                    context,
+                  ).pop(
+                    localizations.cupertinoAlertCancel,
+                  ),
               child: Text(
                 localizations.cupertinoAlertCancel,
               ),
@@ -174,21 +175,23 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo>
           ),
           actions: [
             CupertinoDialogAction(
-              onPressed: () => Navigator.of(
-                context,
-              ).pop(
-                localizations.cupertinoAlertDontAllow,
-              ),
+              onPressed: () =>
+                  Navigator.of(
+                    context,
+                  ).pop(
+                    localizations.cupertinoAlertDontAllow,
+                  ),
               child: Text(
                 localizations.cupertinoAlertDontAllow,
               ),
             ),
             CupertinoDialogAction(
-              onPressed: () => Navigator.of(
-                context,
-              ).pop(
-                localizations.cupertinoAlertAllow,
-              ),
+              onPressed: () =>
+                  Navigator.of(
+                    context,
+                  ).pop(
+                    localizations.cupertinoAlertAllow,
+                  ),
               child: Text(
                 localizations.cupertinoAlertAllow,
               ),
@@ -247,31 +250,34 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo>
           ),
           actions: [
             CupertinoActionSheetAction(
-              onPressed: () => Navigator.of(
-                context,
-              ).pop(
-                localizations.cupertinoAlertCheesecake,
-              ),
+              onPressed: () =>
+                  Navigator.of(
+                    context,
+                  ).pop(
+                    localizations.cupertinoAlertCheesecake,
+                  ),
               child: Text(
                 localizations.cupertinoAlertCheesecake,
               ),
             ),
             CupertinoActionSheetAction(
-              onPressed: () => Navigator.of(
-                context,
-              ).pop(
-                localizations.cupertinoAlertTiramisu,
-              ),
+              onPressed: () =>
+                  Navigator.of(
+                    context,
+                  ).pop(
+                    localizations.cupertinoAlertTiramisu,
+                  ),
               child: Text(
                 localizations.cupertinoAlertTiramisu,
               ),
             ),
             CupertinoActionSheetAction(
-              onPressed: () => Navigator.of(
-                context,
-              ).pop(
-                localizations.cupertinoAlertApplePie,
-              ),
+              onPressed: () =>
+                  Navigator.of(
+                    context,
+                  ).pop(
+                    localizations.cupertinoAlertApplePie,
+                  ),
               child: Text(
                 localizations.cupertinoAlertApplePie,
               ),
@@ -279,11 +285,12 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo>
           ],
           cancelButton: CupertinoActionSheetAction(
             isDefaultAction: true,
-            onPressed: () => Navigator.of(
-              context,
-            ).pop(
-              localizations.cupertinoAlertCancel,
-            ),
+            onPressed: () =>
+                Navigator.of(
+                  context,
+                ).pop(
+                  localizations.cupertinoAlertCancel,
+                ),
             child: Text(
               localizations.cupertinoAlertCancel,
             ),
@@ -336,8 +343,9 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo>
                 Padding(
                   padding: const EdgeInsets.all(16),
                   child: Text(
-                    GalleryLocalizations.of(context)!
-                        .dialogSelectedOption(lastSelectedValue.value!),
+                    GalleryLocalizations.of(
+                      context,
+                    )!.dialogSelectedOption(lastSelectedValue.value!),
                     style: CupertinoTheme.of(context).textTheme.textStyle,
                     textAlign: TextAlign.center,
                   ),

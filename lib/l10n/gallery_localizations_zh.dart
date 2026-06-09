@@ -313,7 +313,10 @@ class GalleryLocalizationsZh extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return '账号为 $accountNumber 的$accountName账户中的存款金额为 $amount。';
   }
 
@@ -323,8 +326,12 @@ class GalleryLocalizationsZh extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return '$budgetName预算的总金额为 $amountTotal，已用 $amountUsed，剩余 $amountLeft';
   }
 
@@ -2907,7 +2914,10 @@ class GalleryLocalizationsZhCn extends GalleryLocalizationsZh {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return '账号为 $accountNumber 的$accountName账户中的存款金额为 $amount。';
   }
 
@@ -2917,8 +2927,12 @@ class GalleryLocalizationsZhCn extends GalleryLocalizationsZh {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return '$budgetName预算的总金额为 $amountTotal，已用 $amountUsed，剩余 $amountLeft';
   }
 
@@ -5501,7 +5515,10 @@ class GalleryLocalizationsZhHk extends GalleryLocalizationsZh {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return '$accountName帳戶 ($accountNumber) 存入 $amount。';
   }
 
@@ -5511,8 +5528,12 @@ class GalleryLocalizationsZhHk extends GalleryLocalizationsZh {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return '$budgetName財務預算已使用 $amountTotal 中的 $amountUsed，尚餘 $amountLeft';
   }
 
@@ -8090,7 +8111,10 @@ class GalleryLocalizationsZhTw extends GalleryLocalizationsZh {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return '$accountName帳戶 $accountNumber 的存款金額為 $amount。';
   }
 
@@ -8100,8 +8124,12 @@ class GalleryLocalizationsZhTw extends GalleryLocalizationsZh {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return '$budgetName預算金額為 $amountTotal，已使用 $amountUsed，還剩下 $amountLeft';
   }
 

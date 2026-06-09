@@ -134,7 +134,8 @@ class _BannerDemoState extends State<BannerDemo> with RestorationMixin {
           return ListTile(
             title: Text(
               localizations.starterAppDrawerItem(
-                  _displayBanner.value ? index : index + 1),
+                _displayBanner.value ? index : index + 1,
+              ),
             ),
           );
         },

@@ -328,7 +328,10 @@ class GalleryLocalizationsAr extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'الحساب $accountName رقم $accountNumber بمبلغ $amount.';
   }
 
@@ -338,8 +341,12 @@ class GalleryLocalizationsAr extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'ميزانية $budgetName مع استخدام $amountUsed من إجمالي $amountTotal، المبلغ المتبقي $amountLeft';
   }
 
@@ -3029,7 +3036,10 @@ class GalleryLocalizationsArEg extends GalleryLocalizationsAr {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'الحساب $accountName رقم $accountNumber بمبلغ $amount.';
   }
 
@@ -3039,8 +3049,12 @@ class GalleryLocalizationsArEg extends GalleryLocalizationsAr {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'ميزانية $budgetName مع استخدام $amountUsed من إجمالي $amountTotal، المبلغ المتبقي $amountLeft';
   }
 
@@ -5730,7 +5744,10 @@ class GalleryLocalizationsArJo extends GalleryLocalizationsAr {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'الحساب $accountName رقم $accountNumber بمبلغ $amount.';
   }
 
@@ -5740,8 +5757,12 @@ class GalleryLocalizationsArJo extends GalleryLocalizationsAr {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'ميزانية $budgetName مع استخدام $amountUsed من إجمالي $amountTotal، المبلغ المتبقي $amountLeft';
   }
 
@@ -8431,7 +8452,10 @@ class GalleryLocalizationsArMa extends GalleryLocalizationsAr {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'الحساب $accountName رقم $accountNumber بمبلغ $amount.';
   }
 
@@ -8441,8 +8465,12 @@ class GalleryLocalizationsArMa extends GalleryLocalizationsAr {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'ميزانية $budgetName مع استخدام $amountUsed من إجمالي $amountTotal، المبلغ المتبقي $amountLeft';
   }
 
@@ -11132,7 +11160,10 @@ class GalleryLocalizationsArSa extends GalleryLocalizationsAr {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'الحساب $accountName رقم $accountNumber بمبلغ $amount.';
   }
 
@@ -11142,8 +11173,12 @@ class GalleryLocalizationsArSa extends GalleryLocalizationsAr {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'ميزانية $budgetName مع استخدام $amountUsed من إجمالي $amountTotal، المبلغ المتبقي $amountLeft';
   }
 

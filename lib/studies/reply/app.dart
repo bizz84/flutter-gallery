@@ -64,8 +64,9 @@ class _ReplyAppState extends State<ReplyApp> with RestorationMixin {
         ? Theme.of(context).brightness == Brightness.dark
         : galleryThemeMode == ThemeMode.dark;
 
-    final replyTheme =
-        isDark ? _buildReplyDarkTheme(context) : _buildReplyLightTheme(context);
+    final replyTheme = isDark
+        ? _buildReplyDarkTheme(context)
+        : _buildReplyLightTheme(context);
 
     return MultiProvider(
       providers: [
@@ -153,15 +154,15 @@ ThemeData _buildReplyLightTheme(BuildContext context) {
     navigationRailTheme: NavigationRailThemeData(
       backgroundColor: ReplyColors.blue700,
       selectedIconTheme: const IconThemeData(color: ReplyColors.orange500),
-      selectedLabelTextStyle:
-          GoogleFonts.workSansTextTheme().headlineSmall!.copyWith(
-                color: ReplyColors.orange500,
-              ),
+      selectedLabelTextStyle: GoogleFonts.workSansTextTheme().headlineSmall!
+          .copyWith(
+            color: ReplyColors.orange500,
+          ),
       unselectedIconTheme: const IconThemeData(color: ReplyColors.blue200),
-      unselectedLabelTextStyle:
-          GoogleFonts.workSansTextTheme().headlineSmall!.copyWith(
-                color: ReplyColors.blue200,
-              ),
+      unselectedLabelTextStyle: GoogleFonts.workSansTextTheme().headlineSmall!
+          .copyWith(
+            color: ReplyColors.blue200,
+          ),
     ),
     canvasColor: ReplyColors.white50,
     cardColor: ReplyColors.white50,
@@ -200,15 +201,15 @@ ThemeData _buildReplyDarkTheme(BuildContext context) {
     navigationRailTheme: NavigationRailThemeData(
       backgroundColor: ReplyColors.darkBottomAppBarBackground,
       selectedIconTheme: const IconThemeData(color: ReplyColors.orange300),
-      selectedLabelTextStyle:
-          GoogleFonts.workSansTextTheme().headlineSmall!.copyWith(
-                color: ReplyColors.orange300,
-              ),
+      selectedLabelTextStyle: GoogleFonts.workSansTextTheme().headlineSmall!
+          .copyWith(
+            color: ReplyColors.orange300,
+          ),
       unselectedIconTheme: const IconThemeData(color: ReplyColors.greyLabel),
-      unselectedLabelTextStyle:
-          GoogleFonts.workSansTextTheme().headlineSmall!.copyWith(
-                color: ReplyColors.greyLabel,
-              ),
+      unselectedLabelTextStyle: GoogleFonts.workSansTextTheme().headlineSmall!
+          .copyWith(
+            color: ReplyColors.greyLabel,
+          ),
     ),
     canvasColor: ReplyColors.black900,
     cardColor: ReplyColors.darkCardBackground,
@@ -247,10 +248,10 @@ ChipThemeData _buildChipTheme(
     padding: const EdgeInsets.all(4),
     shape: const StadiumBorder(),
     labelStyle: GoogleFonts.workSansTextTheme().bodyMedium!.copyWith(
-          color: brightness == Brightness.dark
-              ? ReplyColors.white50
-              : ReplyColors.black900,
-        ),
+      color: brightness == Brightness.dark
+          ? ReplyColors.white50
+          : ReplyColors.black900,
+    ),
     secondaryLabelStyle: GoogleFonts.workSansTextTheme().bodyMedium,
     brightness: brightness,
   );

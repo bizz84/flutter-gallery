@@ -307,8 +307,9 @@ class _MailPreviewActionBar extends StatelessWidget {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final color = isDark ? ReplyColors.white50 : ReplyColors.blue600;
     final isDesktop = isDisplayDesktop(context);
-    final starredIconColor =
-        isStarred ? Theme.of(context).colorScheme.secondary : color;
+    final starredIconColor = isStarred
+        ? Theme.of(context).colorScheme.secondary
+        : color;
 
     return Row(
       children: [

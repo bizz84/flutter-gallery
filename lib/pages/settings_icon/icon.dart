@@ -37,9 +37,13 @@ class _SettingsIconPainter extends CustomPainter {
     _scaling = min(size.width / unitWidth, size.height / unitHeight);
     _center = Directionality.of(context) == TextDirection.ltr
         ? Offset(
-            unitWidth * _scaling / 2, size.height - unitHeight * _scaling / 2)
-        : Offset(size.width - unitWidth * _scaling / 2,
-            size.height - unitHeight * _scaling / 2);
+            unitWidth * _scaling / 2,
+            size.height - unitHeight * _scaling / 2,
+          )
+        : Offset(
+            size.width - unitWidth * _scaling / 2,
+            size.height - unitHeight * _scaling / 2,
+          );
   }
 
   /// Transforms an offset in relative units into an offset in logical pixels.
@@ -63,8 +67,8 @@ class _SettingsIconPainter extends CustomPainter {
   Paint get _monoPaint {
     final monoColor =
         Theme.of(context).colorScheme.brightness == Brightness.light
-            ? Colors.black
-            : Colors.white;
+        ? Colors.black
+        : Colors.white;
     return Paint()..color = monoColor;
   }
 

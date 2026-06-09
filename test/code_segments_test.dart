@@ -12,16 +12,24 @@ void main() {
     return standardizeLineEndings(a) == standardizeLineEndings(b);
   }
 
-  test('verify code segments are up to date', () async {
-    final currentCodeSegments = readCodeSegments();
-    var newCodeSegments = await getCodeSegments();
+  test(
+    'verify code segments are up to date',
+    () async {
+      final currentCodeSegments = readCodeSegments();
+      var newCodeSegments = await getCodeSegments();
 
-    expect(compareCodeSegments(currentCodeSegments, newCodeSegments), true,
-        reason: 'code_segments.dart is not up to date. '
-            'Did you forget to run `dart run grinder update-code-segments`?');
-  }, onPlatform: <String, dynamic>{
-    'linux': [
-      const Skip('TODO: figure out why this test fails on Linux.'),
-    ],
-  });
+      expect(
+        compareCodeSegments(currentCodeSegments, newCodeSegments),
+        true,
+        reason:
+            'code_segments.dart is not up to date. '
+            'Did you forget to run `dart run grinder update-code-segments`?',
+      );
+    },
+    onPlatform: <String, dynamic>{
+      'linux': [
+        const Skip('TODO: figure out why this test fails on Linux.'),
+      ],
+    },
+  );
 }

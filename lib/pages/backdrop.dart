@@ -45,17 +45,19 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _settingsPanelController = AnimationController(
-        vsync: this,
-        duration: widget.isDesktop
-            ? settingsPanelMobileAnimationDuration
-            : settingsPanelDesktopAnimationDuration);
+      vsync: this,
+      duration: widget.isDesktop
+          ? settingsPanelMobileAnimationDuration
+          : settingsPanelDesktopAnimationDuration,
+    );
     _iconController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 500),
     );
     _settingsPageFocusNode = FocusNode();
     _isSettingsOpenNotifier = ValueNotifier(false);
-    _settingsPage = widget.settingsPage ??
+    _settingsPage =
+        widget.settingsPage ??
         SettingsPage(
           animationController: _settingsPanelController,
         );
@@ -84,7 +86,8 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
   }
 
   Animation<RelativeRect> _slideDownSettingsPageAnimation(
-      BoxConstraints constraints) {
+    BoxConstraints constraints,
+  ) {
     return RelativeRectTween(
       begin: RelativeRect.fromLTRB(0, -constraints.maxHeight, 0, 0),
       end: const RelativeRect.fromLTRB(0, 0, 0, 0),
@@ -101,7 +104,8 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
   }
 
   Animation<RelativeRect> _slideDownHomePageAnimation(
-      BoxConstraints constraints) {
+    BoxConstraints constraints,
+  ) {
     return RelativeRectTween(
       begin: const RelativeRect.fromLTRB(0, 0, 0, 0),
       end: RelativeRect.fromLTRB(
@@ -279,8 +283,8 @@ class _SettingsIcon extends AnimatedWidget {
             ),
             color:
                 isSettingsOpenNotifier.value & !animationController.isAnimating
-                    ? Colors.transparent
-                    : Theme.of(context).colorScheme.secondaryContainer,
+                ? Colors.transparent
+                : Theme.of(context).colorScheme.secondaryContainer,
             clipBehavior: Clip.antiAlias,
             child: InkWell(
               onTap: () {

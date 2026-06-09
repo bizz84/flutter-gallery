@@ -27,8 +27,10 @@ class CupertinoScrollbarDemo extends StatelessWidget {
           itemCount: 120,
           itemBuilder: (context, index) {
             return Center(
-              child: Text('item $index',
-                  style: CupertinoTheme.of(context).textTheme.textStyle),
+              child: Text(
+                'item $index',
+                style: CupertinoTheme.of(context).textTheme.textStyle,
+              ),
             );
           },
         ),

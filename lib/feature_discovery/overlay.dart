@@ -63,7 +63,8 @@ class Background extends StatelessWidget {
       // [Content] from the [center].
       double endY;
       if (_isOnTopHalfOfScreen(center, deviceSize)) {
-        endY = center.dy -
+        endY =
+            center.dy -
             tapTargetRadius -
             tapTargetToContentDistance -
             contentHeight;
@@ -73,7 +74,8 @@ class Background extends StatelessWidget {
       } else {
         endY = center.dy + tapTargetRadius + tapTargetToContentDistance;
         if (endY + contentHeight > deviceSize.height) {
-          endY = center.dy -
+          endY =
+              center.dy -
               tapTargetRadius -
               tapTargetToContentDistance -
               contentHeight;
@@ -125,22 +127,23 @@ class Background extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-        left: centerPosition.dx,
-        top: centerPosition.dy,
-        child: FractionalTranslation(
-          translation: const Offset(-0.5, -0.5),
-          child: Opacity(
-            opacity: opacity,
-            child: Container(
-              height: radius * 2,
-              width: radius * 2,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: color,
-              ),
+      left: centerPosition.dx,
+      top: centerPosition.dy,
+      child: FractionalTranslation(
+        translation: const Offset(-0.5, -0.5),
+        child: Opacity(
+          opacity: opacity,
+          child: Container(
+            height: radius * 2,
+            width: radius * 2,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: color,
             ),
           ),
-        ));
+        ),
+      ),
+    );
   }
 
   /// Compute the maximum distance from [point] to the four corners of [bounds].
@@ -345,7 +348,8 @@ class TapTarget extends StatelessWidget {
 Rect _getContentBounds(Size deviceSize, Offset overlayCenter) {
   double top;
   if (_isOnTopHalfOfScreen(overlayCenter, deviceSize)) {
-    top = overlayCenter.dy -
+    top =
+        overlayCenter.dy -
         tapTargetRadius -
         tapTargetToContentDistance -
         contentHeight;
@@ -355,7 +359,8 @@ Rect _getContentBounds(Size deviceSize, Offset overlayCenter) {
   } else {
     top = overlayCenter.dy + tapTargetRadius + tapTargetToContentDistance;
     if (top + contentHeight > deviceSize.height) {
-      top = overlayCenter.dy -
+      top =
+          overlayCenter.dy -
           tapTargetRadius -
           tapTargetToContentDistance -
           contentHeight;
@@ -363,8 +368,10 @@ Rect _getContentBounds(Size deviceSize, Offset overlayCenter) {
   }
 
   final left = max(contentHorizontalPadding, overlayCenter.dx - contentWidth);
-  final right =
-      min(deviceSize.width - contentHorizontalPadding, left + contentWidth);
+  final right = min(
+    deviceSize.width - contentHorizontalPadding,
+    left + contentWidth,
+  );
   return Rect.fromLTRB(left, top, right, top + contentHeight);
 }
 

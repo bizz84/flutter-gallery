@@ -37,26 +37,26 @@ class _FadeThroughTransitionDemoState extends State<FadeThroughTransitionDemo> {
             Text(localizations.demoFadeThroughTitle),
             Text(
               '(${localizations.demoFadeThroughDemoInstructions})',
-              style: Theme.of(context)
-                  .textTheme
-                  .titleSmall!
-                  .copyWith(color: Colors.white),
+              style: Theme.of(
+                context,
+              ).textTheme.titleSmall!.copyWith(color: Colors.white),
             ),
           ],
         ),
       ),
       body: PageTransitionSwitcher(
-        transitionBuilder: (
-          child,
-          animation,
-          secondaryAnimation,
-        ) {
-          return FadeThroughTransition(
-            animation: animation,
-            secondaryAnimation: secondaryAnimation,
-            child: child,
-          );
-        },
+        transitionBuilder:
+            (
+              child,
+              animation,
+              secondaryAnimation,
+            ) {
+              return FadeThroughTransition(
+                animation: animation,
+                secondaryAnimation: secondaryAnimation,
+                child: child,
+              );
+            },
         child: _pageList[_pageIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(

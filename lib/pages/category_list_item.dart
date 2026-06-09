@@ -35,8 +35,9 @@ class CategoryListItem extends StatefulWidget {
 
 class _CategoryListItemState extends State<CategoryListItem>
     with SingleTickerProviderStateMixin {
-  static final Animatable<double> _easeInTween =
-      CurveTween(curve: Curves.easeIn);
+  static final Animatable<double> _easeInTween = CurveTween(
+    curve: Curves.easeIn,
+  );
   static const _expandDuration = Duration(milliseconds: 200);
   late AnimationController _controller;
   late Animation<double> _childrenHeightFactor;
@@ -219,10 +220,10 @@ class _CategoryHeader extends StatelessWidget {
                           category.displayTitle(
                             GalleryLocalizations.of(context)!,
                           )!,
-                          style:
-                              Theme.of(context).textTheme.headlineSmall!.apply(
-                                    color: colorScheme.onSurface,
-                                  ),
+                          style: Theme.of(context).textTheme.headlineSmall!
+                              .apply(
+                                color: colorScheme.onSurface,
+                              ),
                         ),
                       ),
                     ],
@@ -317,8 +318,9 @@ class CategoryDemoItem extends StatelessWidget {
                     children: [
                       Text(
                         demo.title,
-                        style: textTheme.titleMedium!
-                            .apply(color: colorScheme.onSurface),
+                        style: textTheme.titleMedium!.apply(
+                          color: colorScheme.onSurface,
+                        ),
                       ),
                       Text(
                         demo.subtitle,

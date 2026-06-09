@@ -68,8 +68,9 @@ Widget _buildProductCard({
   // In case of desktop , imageWidth is passed through [DesktopProductCard] in
   // case of mobile imageAspectRatio is passed through [MobileProductCard].
   // Below assert is so that correct combination should always be present.
-  assert(isDesktop && imageWidth != null ||
-      !isDesktop && imageAspectRatio != null);
+  assert(
+    isDesktop && imageWidth != null || !isDesktop && imageAspectRatio != null,
+  );
 
   final formatter = NumberFormat.simpleCurrency(
     decimalDigits: 0,
@@ -92,8 +93,9 @@ Widget _buildProductCard({
   return ScopedModelDescendant<AppStateModel>(
     builder: (context, child, model) {
       return Semantics(
-        hint: GalleryLocalizations.of(context)!
-            .shrineScreenReaderProductAddToCart,
+        hint: GalleryLocalizations.of(
+          context,
+        )!.shrineScreenReaderProductAddToCart,
         child: MouseRegion(
           cursor: SystemMouseCursors.click,
           child: GestureDetector(

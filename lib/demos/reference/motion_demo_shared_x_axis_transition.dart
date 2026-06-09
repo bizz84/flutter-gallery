@@ -37,10 +37,9 @@ class _SharedXAxisTransitionDemoState extends State<SharedXAxisTransitionDemo> {
             Text(localizations.demoSharedXAxisTitle),
             Text(
               '(${localizations.demoSharedXAxisDemoInstructions})',
-              style: Theme.of(context)
-                  .textTheme
-                  .titleSmall!
-                  .copyWith(color: Colors.white),
+              style: Theme.of(
+                context,
+              ).textTheme.titleSmall!.copyWith(color: Colors.white),
             ),
           ],
         ),
@@ -52,18 +51,19 @@ class _SharedXAxisTransitionDemoState extends State<SharedXAxisTransitionDemo> {
               child: PageTransitionSwitcher(
                 duration: const Duration(milliseconds: 300),
                 reverse: !_isLoggedIn,
-                transitionBuilder: (
-                  child,
-                  animation,
-                  secondaryAnimation,
-                ) {
-                  return SharedAxisTransition(
-                    animation: animation,
-                    secondaryAnimation: secondaryAnimation,
-                    transitionType: SharedAxisTransitionType.horizontal,
-                    child: child,
-                  );
-                },
+                transitionBuilder:
+                    (
+                      child,
+                      animation,
+                      secondaryAnimation,
+                    ) {
+                      return SharedAxisTransition(
+                        animation: animation,
+                        secondaryAnimation: secondaryAnimation,
+                        transitionType: SharedAxisTransitionType.horizontal,
+                        child: child,
+                      );
+                    },
                 child: _isLoggedIn ? const _CoursePage() : const _SignInPage(),
               ),
             ),
@@ -118,10 +118,12 @@ class _CoursePage extends StatelessWidget {
           ),
         ),
         _CourseSwitch(
-            course: localizations.demoSharedXAxisArtsAndCraftsCourseTitle),
+          course: localizations.demoSharedXAxisArtsAndCraftsCourseTitle,
+        ),
         _CourseSwitch(course: localizations.demoSharedXAxisBusinessCourseTitle),
         _CourseSwitch(
-            course: localizations.demoSharedXAxisIllustrationCourseTitle),
+          course: localizations.demoSharedXAxisIllustrationCourseTitle,
+        ),
         _CourseSwitch(course: localizations.demoSharedXAxisDesignCourseTitle),
         _CourseSwitch(course: localizations.demoSharedXAxisCulinaryCourseTitle),
       ],

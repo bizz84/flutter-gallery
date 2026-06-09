@@ -21,11 +21,12 @@ class ProductPage extends StatelessWidget {
     final isDesktop = isDisplayDesktop(context);
 
     return ScopedModelDescendant<AppStateModel>(
-        builder: (context, child, model) {
-      return isDesktop
-          ? DesktopAsymmetricView(products: model.getProducts())
-          : MobileAsymmetricView(products: model.getProducts());
-    });
+      builder: (context, child, model) {
+        return isDesktop
+            ? DesktopAsymmetricView(products: model.getProducts())
+            : MobileAsymmetricView(products: model.getProducts());
+      },
+    );
   }
 }
 

@@ -322,7 +322,10 @@ class GalleryLocalizationsHe extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'בחשבון $accountName עם המספר $accountNumber יש $amount.';
   }
 
@@ -332,8 +335,12 @@ class GalleryLocalizationsHe extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'בתקציב $budgetName הייתה הוצאה של $amountUsed מתוך $amountTotal ונותר הסכום $amountLeft';
   }
 

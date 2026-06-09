@@ -165,13 +165,15 @@ class _DesktopNavState extends State<_DesktopNav>
             builder: (context, model, child) {
               return LayoutBuilder(
                 builder: (context, constraints) {
-                  final selectedIndex =
-                      widget.destinations.indexWhere((destination) {
+                  final selectedIndex = widget.destinations.indexWhere((
+                    destination,
+                  ) {
                     return destination.type == model.selectedMailboxPage;
                   });
                   return Container(
-                    color:
-                        Theme.of(context).navigationRailTheme.backgroundColor,
+                    color: Theme.of(
+                      context,
+                    ).navigationRailTheme.backgroundColor,
                     child: SingleChildScrollView(
                       clipBehavior: Clip.antiAlias,
                       child: ConstrainedBox(
@@ -387,7 +389,8 @@ class _NavigationRailFolderSection extends StatelessWidget {
                         'FOLDERS',
                         style: textTheme.bodySmall!.copyWith(
                           color: navigationRailTheme
-                              .unselectedLabelTextStyle!.color,
+                              .unselectedLabelTextStyle!
+                              .color,
                         ),
                       ),
                     ),
@@ -409,14 +412,16 @@ class _NavigationRailFolderSection extends StatelessWidget {
                                     package: _assetsPackage,
                                   ),
                                   color: navigationRailTheme
-                                      .unselectedLabelTextStyle!.color,
+                                      .unselectedLabelTextStyle!
+                                      .color,
                                 ),
                                 const SizedBox(width: 24),
                                 Text(
                                   folder,
                                   style: textTheme.bodyLarge!.copyWith(
                                     color: navigationRailTheme
-                                        .unselectedLabelTextStyle!.color,
+                                        .unselectedLabelTextStyle!
+                                        .color,
                                   ),
                                 ),
                                 const SizedBox(height: 72),
@@ -463,19 +468,20 @@ class _MobileNavState extends State<_MobileNav> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _drawerController = AnimationController(
-      duration: _kAnimationDuration,
-      value: 0,
-      vsync: this,
-    )..addListener(() {
-        if (_drawerController.value < 0.01) {
-          setState(() {
-            //Reload state when drawer is at its smallest to toggle visibility
-            //If state is reloaded before this drawer closes abruptly instead
-            //of animating.
-          });
-        }
-      });
+    _drawerController =
+        AnimationController(
+          duration: _kAnimationDuration,
+          value: 0,
+          vsync: this,
+        )..addListener(() {
+          if (_drawerController.value < 0.01) {
+            setState(() {
+              //Reload state when drawer is at its smallest to toggle visibility
+              //If state is reloaded before this drawer closes abruptly instead
+              //of animating.
+            });
+          }
+        });
 
     _dropArrowController = AnimationController(
       duration: _kAnimationDuration,
@@ -567,8 +573,9 @@ class _MobileNavState extends State<_MobileNav> with TickerProviderStateMixin {
         _dropArrowController.forward();
       }
       _drawerController.fling(
-        velocity:
-            _drawerController.value < 0.6 ? -_kFlingVelocity : _kFlingVelocity,
+        velocity: _drawerController.value < 0.6
+            ? -_kFlingVelocity
+            : _kFlingVelocity,
       );
     }
   }
@@ -626,8 +633,9 @@ class _MobileNavState extends State<_MobileNav> with TickerProviderStateMixin {
                 child: Container(
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
-                  color:
-                      Theme.of(context).bottomSheetTheme.modalBackgroundColor,
+                  color: Theme.of(
+                    context,
+                  ).bottomSheetTheme.modalBackgroundColor,
                 ),
               ),
             ),
@@ -767,8 +775,9 @@ class _AnimatedBottomAppBar extends StatelessWidget {
                                 : FadeTransition(
                                     opacity: fadeOut,
                                     child: Text(
-                                      navigationDestinations
-                                          .firstWhere((destination) {
+                                      navigationDestinations.firstWhere((
+                                        destination,
+                                      ) {
                                         return destination.type ==
                                             selectedMailbox;
                                       }).textLabel,
@@ -832,72 +841,72 @@ class _BottomAppBarActionItems extends StatelessWidget {
                   ),
                 )
               : onMailView
-                  ? Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        IconButton(
-                          key: const ValueKey('star_email_button'),
-                          icon: ImageIcon(
-                            const AssetImage(
-                              '$_iconAssetLocation/twotone_star.png',
-                              package: _assetsPackage,
-                            ),
-                            color: starIconColor,
-                          ),
-                          onPressed: () {
-                            final currentEmail = model.currentEmail;
-                            if (model.isCurrentEmailStarred) {
-                              model.unstarEmail(currentEmail.id);
-                            } else {
-                              model.starEmail(currentEmail.id);
-                            }
-                            if (model.selectedMailboxPage ==
-                                MailboxPageType.starred) {
-                              mobileMailNavKey.currentState!.pop();
-                              model.selectedEmailId = -1;
-                            }
-                          },
-                          color: ReplyColors.white50,
+              ? Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    IconButton(
+                      key: const ValueKey('star_email_button'),
+                      icon: ImageIcon(
+                        const AssetImage(
+                          '$_iconAssetLocation/twotone_star.png',
+                          package: _assetsPackage,
                         ),
-                        IconButton(
-                          icon: const ImageIcon(
-                            AssetImage(
-                              '$_iconAssetLocation/twotone_delete.png',
-                              package: _assetsPackage,
-                            ),
-                          ),
-                          onPressed: () {
-                            model.deleteEmail(
-                              model.selectedEmailId,
-                            );
-
-                            mobileMailNavKey.currentState!.pop();
-                            model.selectedEmailId = -1;
-                          },
-                          color: ReplyColors.white50,
-                        ),
-                        IconButton(
-                          icon: const Icon(Icons.more_vert),
-                          onPressed: () {},
-                          color: ReplyColors.white50,
-                        ),
-                      ],
-                    )
-                  : Align(
-                      alignment: Alignment.centerRight,
-                      child: IconButton(
-                        key: const ValueKey('ReplySearch'),
-                        icon: const Icon(Icons.search),
-                        color: ReplyColors.white50,
-                        onPressed: () {
-                          Provider.of<EmailStore>(
-                            context,
-                            listen: false,
-                          ).onSearchPage = true;
-                        },
+                        color: starIconColor,
                       ),
+                      onPressed: () {
+                        final currentEmail = model.currentEmail;
+                        if (model.isCurrentEmailStarred) {
+                          model.unstarEmail(currentEmail.id);
+                        } else {
+                          model.starEmail(currentEmail.id);
+                        }
+                        if (model.selectedMailboxPage ==
+                            MailboxPageType.starred) {
+                          mobileMailNavKey.currentState!.pop();
+                          model.selectedEmailId = -1;
+                        }
+                      },
+                      color: ReplyColors.white50,
                     ),
+                    IconButton(
+                      icon: const ImageIcon(
+                        AssetImage(
+                          '$_iconAssetLocation/twotone_delete.png',
+                          package: _assetsPackage,
+                        ),
+                      ),
+                      onPressed: () {
+                        model.deleteEmail(
+                          model.selectedEmailId,
+                        );
+
+                        mobileMailNavKey.currentState!.pop();
+                        model.selectedEmailId = -1;
+                      },
+                      color: ReplyColors.white50,
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.more_vert),
+                      onPressed: () {},
+                      color: ReplyColors.white50,
+                    ),
+                  ],
+                )
+              : Align(
+                  alignment: Alignment.centerRight,
+                  child: IconButton(
+                    key: const ValueKey('ReplySearch'),
+                    icon: const Icon(Icons.search),
+                    color: ReplyColors.white50,
+                    onPressed: () {
+                      Provider.of<EmailStore>(
+                        context,
+                        listen: false,
+                      ).onSearchPage = true;
+                    },
+                  ),
+                ),
         );
       },
     );
@@ -934,7 +943,8 @@ class _BottomDrawerDestinations extends StatelessWidget {
             dropArrowController.forward();
             Future.delayed(
               Duration(
-                milliseconds: (drawerController.value == 1 ? 300 : 120) *
+                milliseconds:
+                    (drawerController.value == 1 ? 300 : 120) *
                     GalleryOptions.of(context).timeDilation.toInt(),
               ),
               () {
@@ -1117,8 +1127,9 @@ class _ReplyFabState extends State<_ReplyFab>
       (route) {
         var currentRoute = route.settings.name;
         if (currentRoute != ReplyApp.composeRoute && !onSearchPage) {
-          desktopMailNavKey.currentState!
-              .restorablePushNamed(ReplyApp.composeRoute);
+          desktopMailNavKey.currentState!.restorablePushNamed(
+            ReplyApp.composeRoute,
+          );
         }
         return true;
       },
@@ -1176,9 +1187,7 @@ class _ReplyFabState extends State<_ReplyFab>
                             widthFactor: animation.value,
                             child: Text(
                               tooltip.toUpperCase(),
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .headlineSmall!
+                              style: Theme.of(context).textTheme.headlineSmall!
                                   .copyWith(
                                     fontSize: 16,
                                     color: theme.colorScheme.onSecondary,

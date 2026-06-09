@@ -16,11 +16,15 @@ class Scrim extends StatelessWidget {
       child: AnimatedBuilder(
         animation: controller,
         builder: (context, child) {
-          final color =
-              const Color(0xFFFFF0EA).withValues(alpha: controller.value * 0.87);
+          final color = const Color(
+            0xFFFFF0EA,
+          ).withValues(alpha: controller.value * 0.87);
 
           final Widget scrimRectangle = Container(
-              width: deviceSize.width, height: deviceSize.height, color: color);
+            width: deviceSize.width,
+            height: deviceSize.height,
+            color: color,
+          );
 
           final ignorePointer =
               (controller.status == AnimationStatus.dismissed);

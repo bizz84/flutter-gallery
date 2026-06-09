@@ -321,7 +321,10 @@ class GalleryLocalizationsDe extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Konto \"$accountName\" $accountNumber mit einem Kontostand von $amount.';
   }
 
@@ -331,8 +334,12 @@ class GalleryLocalizationsDe extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'Budget \"$budgetName\" mit einem Gesamtbetrag von $amountTotal ($amountUsed verwendet, $amountLeft verbleibend)';
   }
 
@@ -3018,7 +3025,10 @@ class GalleryLocalizationsDeAt extends GalleryLocalizationsDe {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Konto \"$accountName\" $accountNumber mit einem Kontostand von $amount.';
   }
 
@@ -3028,8 +3038,12 @@ class GalleryLocalizationsDeAt extends GalleryLocalizationsDe {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'Budget \"$budgetName\" mit einem Gesamtbetrag von $amountTotal ($amountUsed verwendet, $amountLeft verbleibend)';
   }
 
@@ -5715,7 +5729,10 @@ class GalleryLocalizationsDeCh extends GalleryLocalizationsDe {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Konto \"$accountName\" $accountNumber mit einem Kontostand von $amount.';
   }
 
@@ -5725,8 +5742,12 @@ class GalleryLocalizationsDeCh extends GalleryLocalizationsDe {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'Budget \"$budgetName\" mit einem Gesamtbetrag von $amountTotal ($amountUsed verwendet, $amountLeft verbleibend)';
   }
 

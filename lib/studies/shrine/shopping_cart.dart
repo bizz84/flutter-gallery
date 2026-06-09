@@ -54,8 +54,10 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                 ListView(
                   children: [
                     Semantics(
-                      sortKey:
-                          const OrdinalSortKey(0, name: _ordinalSortKeyName),
+                      sortKey: const OrdinalSortKey(
+                        0,
+                        name: _ordinalSortKeyName,
+                      ),
                       child: Row(
                         children: [
                           SizedBox(
@@ -68,8 +70,9 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                           ),
                           Text(
                             localizations.shrineCartPageCaption,
-                            style: localTheme.textTheme.titleMedium!
-                                .copyWith(fontWeight: FontWeight.w600),
+                            style: localTheme.textTheme.titleMedium!.copyWith(
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                           const SizedBox(width: 16),
                           Text(
@@ -82,15 +85,19 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                     ),
                     const SizedBox(height: 16),
                     Semantics(
-                      sortKey:
-                          const OrdinalSortKey(1, name: _ordinalSortKeyName),
+                      sortKey: const OrdinalSortKey(
+                        1,
+                        name: _ordinalSortKeyName,
+                      ),
                       child: Column(
                         children: _createShoppingCartRows(model),
                       ),
                     ),
                     Semantics(
-                      sortKey:
-                          const OrdinalSortKey(2, name: _ordinalSortKeyName),
+                      sortKey: const OrdinalSortKey(
+                        2,
+                        name: _ordinalSortKeyName,
+                      ),
                       child: ShoppingCartSummary(model: model),
                     ),
                     const SizedBox(height: 100),
@@ -118,8 +125,10 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                         child: Text(
                           localizations.shrineCartClearButtonCaption,
                           style: TextStyle(
-                              letterSpacing:
-                                  letterSpacingOrNone(largeLetterSpacing)),
+                            letterSpacing: letterSpacingOrNone(
+                              largeLetterSpacing,
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -144,11 +153,10 @@ class ShoppingCartSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final smallAmountStyle =
-        Theme.of(context).textTheme.bodyMedium!.copyWith(color: shrineBrown600);
-    final largeAmountStyle = Theme.of(context)
-        .textTheme
-        .headlineMedium!
+    final smallAmountStyle = Theme.of(
+      context,
+    ).textTheme.bodyMedium!.copyWith(color: shrineBrown600);
+    final largeAmountStyle = Theme.of(context).textTheme.headlineMedium!
         .copyWith(letterSpacing: letterSpacingOrNone(mediumLetterSpacing));
     final formatter = NumberFormat.simpleCurrency(
       decimalDigits: 2,
@@ -271,8 +279,9 @@ class ShoppingCartRow extends StatelessWidget {
         children: [
           Semantics(
             container: true,
-            label: localizations
-                .shrineScreenReaderRemoveProductButton(product.name(context)),
+            label: localizations.shrineScreenReaderRemoveProductButton(
+              product.name(context),
+            ),
             button: true,
             enabled: true,
             child: ExcludeSemantics(
@@ -313,8 +322,9 @@ class ShoppingCartRow extends StatelessWidget {
                                   children: [
                                     Expanded(
                                       child: SelectableText(
-                                        localizations
-                                            .shrineProductQuantity(quantity!),
+                                        localizations.shrineProductQuantity(
+                                          quantity!,
+                                        ),
                                       ),
                                     ),
                                     SelectableText(

@@ -69,8 +69,11 @@ List<TravelDestination> destinations(BuildContext context) {
 }
 
 class TravelDestinationItem extends StatelessWidget {
-  const TravelDestinationItem(
-      {super.key, required this.destination, this.shape});
+  const TravelDestinationItem({
+    super.key,
+    required this.destination,
+    this.shape,
+  });
 
   // This height will allow for all the Card's content to fit comfortably within the card.
   static const height = 360.0;
@@ -87,8 +90,10 @@ class TravelDestinationItem extends StatelessWidget {
         child: Column(
           children: [
             SectionTitle(
-                title: GalleryLocalizations.of(context)!
-                    .settingsTextScalingNormal),
+              title: GalleryLocalizations.of(
+                context,
+              )!.settingsTextScalingNormal,
+            ),
             SizedBox(
               height: height,
               child: Card(
@@ -130,7 +135,8 @@ class TappableTravelDestinationItem extends StatelessWidget {
         child: Column(
           children: [
             SectionTitle(
-                title: GalleryLocalizations.of(context)!.cardsDemoTappable),
+              title: GalleryLocalizations.of(context)!.cardsDemoTappable,
+            ),
             SizedBox(
               height: height,
               child: Card(
@@ -140,8 +146,9 @@ class TappableTravelDestinationItem extends StatelessWidget {
                 child: InkWell(
                   onTap: () {},
                   // Generally, material cards use onSurface with 12% opacity for the pressed state.
-                  splashColor:
-                      Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.12),
+                  splashColor: Theme.of(
+                    context,
+                  ).colorScheme.onSurface.withValues(alpha: 0.12),
                   // Generally, material cards do not have a highlight overlay.
                   highlightColor: Colors.transparent,
                   child: Semantics(
@@ -218,8 +225,9 @@ class SelectableTravelDestinationItem extends StatelessWidget {
                         onLongPressHint: isSelected
                             ? GalleryLocalizations.of(context)!.deselect
                             : GalleryLocalizations.of(context)!.select,
-                        child:
-                            TravelDestinationContent(destination: destination),
+                        child: TravelDestinationContent(
+                          destination: destination,
+                        ),
                       ),
                       Align(
                         alignment: Alignment.topRight,
@@ -359,15 +367,21 @@ class TravelDestinationContent extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {},
-                  child: Text(localizations.demoMenuShare,
-                      semanticsLabel: localizations
-                          .cardsDemoShareSemantics(destination.title)),
+                  child: Text(
+                    localizations.demoMenuShare,
+                    semanticsLabel: localizations.cardsDemoShareSemantics(
+                      destination.title,
+                    ),
+                  ),
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Text(localizations.cardsDemoExplore,
-                      semanticsLabel: localizations
-                          .cardsDemoExploreSemantics(destination.title)),
+                  child: Text(
+                    localizations.cardsDemoExplore,
+                    semanticsLabel: localizations.cardsDemoExploreSemantics(
+                      destination.title,
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -419,17 +433,16 @@ class _CardsDemoState extends State<CardsDemo> with RestorationMixin {
                 child: (destination.cardType == CardType.standard)
                     ? TravelDestinationItem(destination: destination)
                     : destination.cardType == CardType.tappable
-                        ? TappableTravelDestinationItem(
-                            destination: destination)
-                        : SelectableTravelDestinationItem(
-                            destination: destination,
-                            isSelected: _isSelected.value,
-                            onSelected: () {
-                              setState(() {
-                                _isSelected.value = !_isSelected.value;
-                              });
-                            },
-                          ),
+                    ? TappableTravelDestinationItem(destination: destination)
+                    : SelectableTravelDestinationItem(
+                        destination: destination,
+                        isSelected: _isSelected.value,
+                        onSelected: () {
+                          setState(() {
+                            _isSelected.value = !_isSelected.value;
+                          });
+                        },
+                      ),
               ),
           ],
         ),

@@ -91,56 +91,67 @@ class _OverviewGrid extends StatelessWidget {
     final budgetDataList = DummyDataService.getBudgetDataList(context);
     final localizations = GalleryLocalizations.of(context)!;
 
-    return LayoutBuilder(builder: (context, constraints) {
-      final textScaleFactor =
-          GalleryOptions.of(context).textScaleFactor(context);
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final textScaleFactor = GalleryOptions.of(
+          context,
+        ).textScaleFactor(context);
 
-      // Only display multiple columns when the constraints allow it and we
-      // have a regular text scale factor.
-      const minWidthForTwoColumns = 600;
-      final hasMultipleColumns = isDisplayDesktop(context) &&
-          constraints.maxWidth > minWidthForTwoColumns &&
-          textScaleFactor <= 2;
-      final boxWidth = hasMultipleColumns
-          ? constraints.maxWidth / 2 - spacing / 2
-          : double.infinity;
+        // Only display multiple columns when the constraints allow it and we
+        // have a regular text scale factor.
+        const minWidthForTwoColumns = 600;
+        final hasMultipleColumns =
+            isDisplayDesktop(context) &&
+            constraints.maxWidth > minWidthForTwoColumns &&
+            textScaleFactor <= 2;
+        final boxWidth = hasMultipleColumns
+            ? constraints.maxWidth / 2 - spacing / 2
+            : double.infinity;
 
-      return Wrap(
-        runSpacing: spacing,
-        children: [
-          SizedBox(
-            width: boxWidth,
-            child: _FinancialView(
-              title: localizations.rallyAccounts,
-              total: sumAccountDataPrimaryAmount(accountDataList),
-              financialItemViews:
-                  buildAccountDataListViews(accountDataList, context),
-              buttonSemanticsLabel: localizations.rallySeeAllAccounts,
-              order: 1,
+        return Wrap(
+          runSpacing: spacing,
+          children: [
+            SizedBox(
+              width: boxWidth,
+              child: _FinancialView(
+                title: localizations.rallyAccounts,
+                total: sumAccountDataPrimaryAmount(accountDataList),
+                financialItemViews: buildAccountDataListViews(
+                  accountDataList,
+                  context,
+                ),
+                buttonSemanticsLabel: localizations.rallySeeAllAccounts,
+                order: 1,
+              ),
             ),
-          ),
-          if (hasMultipleColumns) SizedBox(width: spacing),
-          SizedBox(
-            width: boxWidth,
-            child: _FinancialView(
-              title: localizations.rallyBills,
-              total: sumBillDataPrimaryAmount(billDataList),
-              financialItemViews: buildBillDataListViews(billDataList, context),
-              buttonSemanticsLabel: localizations.rallySeeAllBills,
-              order: 2,
+            if (hasMultipleColumns) SizedBox(width: spacing),
+            SizedBox(
+              width: boxWidth,
+              child: _FinancialView(
+                title: localizations.rallyBills,
+                total: sumBillDataPrimaryAmount(billDataList),
+                financialItemViews: buildBillDataListViews(
+                  billDataList,
+                  context,
+                ),
+                buttonSemanticsLabel: localizations.rallySeeAllBills,
+                order: 2,
+              ),
             ),
-          ),
-          _FinancialView(
-            title: localizations.rallyBudgets,
-            total: sumBudgetDataPrimaryAmount(budgetDataList),
-            financialItemViews:
-                buildBudgetDataListViews(budgetDataList, context),
-            buttonSemanticsLabel: localizations.rallySeeAllBudgets,
-            order: 3,
-          ),
-        ],
-      );
-    });
+            _FinancialView(
+              title: localizations.rallyBudgets,
+              total: sumBudgetDataPrimaryAmount(budgetDataList),
+              financialItemViews: buildBudgetDataListViews(
+                budgetDataList,
+                context,
+              ),
+              buttonSemanticsLabel: localizations.rallySeeAllBudgets,
+              order: 3,
+            ),
+          ],
+        );
+      },
+    );
   }
 }
 
@@ -161,8 +172,9 @@ class _AlertsView extends StatelessWidget {
         children: [
           Container(
             width: double.infinity,
-            padding:
-                isDesktop ? const EdgeInsets.symmetric(vertical: 16) : null,
+            padding: isDesktop
+                ? const EdgeInsets.symmetric(vertical: 16)
+                : null,
             child: MergeSemantics(
               child: Wrap(
                 alignment: WrapAlignment.spaceBetween,
@@ -184,7 +196,7 @@ class _AlertsView extends StatelessWidget {
           for (AlertData alert in alerts!) ...[
             Container(color: RallyColors.primaryBackground, height: 1),
             _Alert(alert: alert),
-          ]
+          ],
         ],
       ),
     );
@@ -276,8 +288,10 @@ class _FinancialView extends StatelessWidget {
                 ],
               ),
             ),
-            ...financialItemViews!
-                .sublist(0, math.min(financialItemViews!.length, 3)),
+            ...financialItemViews!.sublist(
+              0,
+              math.min(financialItemViews!.length, 3),
+            ),
             TextButton(
               style: TextButton.styleFrom(foregroundColor: Colors.white),
               onPressed: () {},

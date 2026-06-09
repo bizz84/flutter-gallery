@@ -24,7 +24,7 @@ class _CupertinoSearchTextFieldDemoState
     'Windows',
     'Linux',
     'MacOS',
-    'Web'
+    'Web',
   ];
 
   final TextEditingController _queryTextController = TextEditingController();
@@ -86,9 +86,9 @@ class _CupertinoSearchTextFieldDemoState
     if (_searchPlatform.isNotEmpty) {
       List<String> tempList = [];
       for (int i = 0; i < filteredPlatforms.length; i++) {
-        if (filteredPlatforms[i]
-            .toLowerCase()
-            .contains(_searchPlatform.toLowerCase())) {
+        if (filteredPlatforms[i].toLowerCase().contains(
+          _searchPlatform.toLowerCase(),
+        )) {
           tempList.add(filteredPlatforms[i]);
         }
       }

@@ -23,8 +23,9 @@ Future<void> main() async {
 
   stdout.writeln('==== Results ====');
 
-  stdout
-      .writeln(const JsonEncoder.withIndent('  ').convert(taskResult.toJson()));
+  stdout.writeln(
+    const JsonEncoder.withIndent('  ').convert(taskResult.toJson()),
+  );
 
   stdout.writeln('==== End of results ====');
 }

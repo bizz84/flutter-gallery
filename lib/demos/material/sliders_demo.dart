@@ -126,8 +126,9 @@ class _SlidersState extends State<_Sliders> with RestorationMixin {
                 max: 100,
                 onChanged: null,
               ),
-              Text(localizations
-                  .demoSlidersContinuousWithEditableNumericalValue),
+              Text(
+                localizations.demoSlidersContinuousWithEditableNumericalValue,
+              ),
             ],
           ),
           const SizedBox(height: 80),
@@ -291,10 +292,14 @@ Path _downTriangle(double size, Offset thumbCenter, {bool invert = false}) {
   final halfSize = size / 2;
   final sign = invert ? -1 : 1;
   thumbPath.moveTo(
-      thumbCenter.dx - halfSize, thumbCenter.dy + sign * centerHeight);
+    thumbCenter.dx - halfSize,
+    thumbCenter.dy + sign * centerHeight,
+  );
   thumbPath.lineTo(thumbCenter.dx, thumbCenter.dy - 2 * sign * centerHeight);
   thumbPath.lineTo(
-      thumbCenter.dx + halfSize, thumbCenter.dy + sign * centerHeight);
+    thumbCenter.dx + halfSize,
+    thumbCenter.dy + sign * centerHeight,
+  );
   thumbPath.close();
   return thumbPath;
 }
@@ -474,8 +479,10 @@ class _CustomValueIndicatorShape extends SliderComponentShape {
       end: _slideUpHeight,
     );
     final size = _indicatorSize * sizeTween.evaluate(enableAnimation);
-    final slideUpOffset =
-        Offset(0, -slideUpTween.evaluate(activationAnimation));
+    final slideUpOffset = Offset(
+      0,
+      -slideUpTween.evaluate(activationAnimation),
+    );
     final thumbPath = _upTriangle(size, thumbCenter + slideUpOffset);
     final paintColor = enableColor
         .evaluate(enableAnimation)!
@@ -485,12 +492,13 @@ class _CustomValueIndicatorShape extends SliderComponentShape {
       Paint()..color = paintColor,
     );
     canvas.drawLine(
-        thumbCenter,
-        thumbCenter + slideUpOffset,
-        Paint()
-          ..color = paintColor
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 2);
+      thumbCenter,
+      thumbCenter + slideUpOffset,
+      Paint()
+        ..color = paintColor
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2,
+    );
     labelPainter.paint(
       canvas,
       thumbCenter +
@@ -516,9 +524,13 @@ class _CustomSlidersState extends State<_CustomSliders> with RestorationMixin {
   @override
   void restoreState(RestorationBucket? oldBucket, bool initialRestore) {
     registerForRestoration(
-        _continuousStartCustomValue, 'continuous_start_custom_value');
+      _continuousStartCustomValue,
+      'continuous_start_custom_value',
+    );
     registerForRestoration(
-        _continuousEndCustomValue, 'continuous_end_custom_value');
+      _continuousEndCustomValue,
+      'continuous_end_custom_value',
+    );
     registerForRestoration(_discreteCustomValue, 'discrete_custom_value');
   }
 
@@ -550,19 +562,25 @@ class _CustomSlidersState extends State<_CustomSliders> with RestorationMixin {
                 data: theme.sliderTheme.copyWith(
                   trackHeight: 2,
                   activeTrackColor: Colors.deepPurple,
-                  inactiveTrackColor:
-                      theme.colorScheme.onSurface.withValues(alpha: 0.5),
-                  activeTickMarkColor:
-                      theme.colorScheme.onSurface.withValues(alpha: 0.7),
-                  inactiveTickMarkColor:
-                      theme.colorScheme.surface.withValues(alpha: 0.7),
-                  overlayColor: theme.colorScheme.onSurface.withValues(alpha: 0.12),
+                  inactiveTrackColor: theme.colorScheme.onSurface.withValues(
+                    alpha: 0.5,
+                  ),
+                  activeTickMarkColor: theme.colorScheme.onSurface.withValues(
+                    alpha: 0.7,
+                  ),
+                  inactiveTickMarkColor: theme.colorScheme.surface.withValues(
+                    alpha: 0.7,
+                  ),
+                  overlayColor: theme.colorScheme.onSurface.withValues(
+                    alpha: 0.12,
+                  ),
                   thumbColor: Colors.deepPurple,
                   valueIndicatorColor: Colors.deepPurpleAccent,
                   thumbShape: const _CustomThumbShape(),
                   valueIndicatorShape: const _CustomValueIndicatorShape(),
-                  valueIndicatorTextStyle: theme.textTheme.bodyLarge!
-                      .copyWith(color: theme.colorScheme.onSurface),
+                  valueIndicatorTextStyle: theme.textTheme.bodyLarge!.copyWith(
+                    color: theme.colorScheme.onSurface,
+                  ),
                 ),
                 child: Slider(
                   value: _discreteCustomValue.value,
@@ -610,8 +628,9 @@ class _CustomSlidersState extends State<_CustomSliders> with RestorationMixin {
                   },
                 ),
               ),
-              Text(localizations
-                  .demoSlidersContinuousRangeSliderWithCustomTheme),
+              Text(
+                localizations.demoSlidersContinuousRangeSliderWithCustomTheme,
+              ),
             ],
           ),
         ],

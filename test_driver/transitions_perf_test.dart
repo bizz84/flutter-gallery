@@ -109,8 +109,11 @@ Future scrollToTop(SerializableFinder demoItem, FlutterDriver driver) async {
 
 /// Returns a [Future] that resolves to true if the widget specified by [finder]
 /// is present, false otherwise.
-Future<bool> isPresent(SerializableFinder finder, FlutterDriver driver,
-    {Duration timeout = const Duration(seconds: 5)}) async {
+Future<bool> isPresent(
+  SerializableFinder finder,
+  FlutterDriver driver, {
+  Duration timeout = const Duration(seconds: 5),
+}) async {
   try {
     await driver.waitFor(finder, timeout: timeout);
     return true;
@@ -176,10 +179,14 @@ Future<void> runDemos(
     // back to its previous position, if it's too large, it may scroll too far.
     // To resolve this, we scroll 75% of the list width/height dimensions on
     // each increment.
-    final DriverOffset topLeft =
-        await driver.getTopLeft(demoList, timeout: const Duration(seconds: 10));
-    final DriverOffset bottomRight = await driver.getBottomRight(demoList,
-        timeout: const Duration(seconds: 10));
+    final DriverOffset topLeft = await driver.getTopLeft(
+      demoList,
+      timeout: const Duration(seconds: 10),
+    );
+    final DriverOffset bottomRight = await driver.getBottomRight(
+      demoList,
+      timeout: const Duration(seconds: 10),
+    );
     final double listWidth = bottomRight.dx - topLeft.dx;
     final double listHeight = bottomRight.dy - topLeft.dy;
     await driver.scrollUntilVisible(
@@ -226,9 +233,12 @@ void main([List<String> args = const <String>[]]) {
       driver = await FlutterDriver.connect();
 
       // See _handleMessages() in transitions_perf.dart.
-      _allDemos = List<String>.from(json.decode(
-        await driver.requestData('demoDescriptions'),
-      ) as List<dynamic>);
+      _allDemos = List<String>.from(
+        json.decode(
+              await driver.requestData('demoDescriptions'),
+            )
+            as List<dynamic>,
+      );
       if (_allDemos.isEmpty) throw 'no demo names found';
 
       // See _handleMessages() in transitions_perf.dart.
@@ -251,7 +261,8 @@ void main([List<String> args = const <String>[]]) {
       await driver.close();
 
       stdout.writeln(
-          'Timeline summaries for profiled demos have been output to the build/ directory.');
+        'Timeline summaries for profiled demos have been output to the build/ directory.',
+      );
     });
 
     test('only Crane', () async {

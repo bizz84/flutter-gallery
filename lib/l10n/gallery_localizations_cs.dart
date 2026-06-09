@@ -326,7 +326,10 @@ class GalleryLocalizationsCs extends GalleryLocalizations {
 
   @override
   String rallyAccountAmount(
-      Object accountName, Object accountNumber, Object amount) {
+    Object accountName,
+    Object accountNumber,
+    Object amount,
+  ) {
     return 'Účet $accountName č. $accountNumber s částkou $amount.';
   }
 
@@ -336,8 +339,12 @@ class GalleryLocalizationsCs extends GalleryLocalizations {
   }
 
   @override
-  String rallyBudgetAmount(Object budgetName, Object amountUsed,
-      Object amountTotal, Object amountLeft) {
+  String rallyBudgetAmount(
+    Object budgetName,
+    Object amountUsed,
+    Object amountTotal,
+    Object amountLeft,
+  ) {
     return 'Rozpočet $budgetName: využito $amountUsed z $amountTotal, zbývá $amountLeft';
   }
 
