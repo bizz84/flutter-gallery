@@ -7,12 +7,12 @@ import 'package:flutter/material.dart';
 /// Animations class to compute animation values for overlay widgets.
 ///
 /// Values are loosely based on Material Design specs, which are minimal.
-class Animations {
-  final AnimationController openController;
-  final AnimationController tapController;
-  final AnimationController rippleController;
-  final AnimationController dismissController;
-
+class Animations(
+    final AnimationController openController,
+    final AnimationController tapController,
+    final AnimationController rippleController,
+    final AnimationController dismissController,
+  ) {
   static const backgroundMaxOpacity = 0.96;
   static const backgroundTapRadius = 20.0;
   static const rippleMaxOpacity = 0.75;
@@ -20,13 +20,6 @@ class Animations {
   static const tapTargetMaxRadius = 44.0;
   static const tapTargetMinRadius = 20.0;
   static const tapTargetRippleRadius = 64.0;
-
-  Animations(
-    this.openController,
-    this.tapController,
-    this.rippleController,
-    this.dismissController,
-  );
 
   Animation<double> backgroundOpacity(FeatureDiscoveryStatus status) {
     switch (status) {

@@ -9,9 +9,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // Press the Navigation Drawer button to the left of AppBar to show
 // a simple Drawer with two items.
-class NavDrawerDemo extends StatelessWidget {
-  const NavDrawerDemo({super.key});
-
+class const NavDrawerDemo({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var localization = GalleryLocalizations.of(context)!;

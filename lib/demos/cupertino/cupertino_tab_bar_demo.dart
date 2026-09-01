@@ -8,16 +8,9 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN cupertinoNavigationDemo
 
-class _TabInfo {
-  const _TabInfo(this.title, this.icon);
+class const _TabInfo(final String title, final IconData icon) ;
 
-  final String title;
-  final IconData icon;
-}
-
-class CupertinoTabBarDemo extends StatelessWidget {
-  const CupertinoTabBarDemo({super.key});
-
+class const CupertinoTabBarDemo({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
@@ -64,15 +57,10 @@ class CupertinoTabBarDemo extends StatelessWidget {
   }
 }
 
-class _CupertinoDemoTab extends StatelessWidget {
-  const _CupertinoDemoTab({
-    required this.title,
-    required this.icon,
-  });
-
-  final String title;
-  final IconData icon;
-
+class const _CupertinoDemoTab({
+    required final String title,
+    required final IconData icon,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(

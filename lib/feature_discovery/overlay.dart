@@ -15,37 +15,23 @@ const tapTargetToContentDistance = 20.0;
 const gutterHeight = 88.0;
 
 /// Background of the overlay.
-class Background extends StatelessWidget {
-  /// Animations.
-  final Animations animations;
-
-  /// Overlay center position.
-  final Offset center;
-
-  /// Color of the background.
-  final Color color;
-
-  /// Device size.
-  final Size deviceSize;
-
-  /// Status of the parent overlay.
-  final FeatureDiscoveryStatus status;
-
-  /// Directionality of content.
-  final TextDirection textDirection;
-
+class const Background({
+    super.key,
+    /// Animations.
+required final Animations animations,
+    /// Overlay center position.
+required final Offset center,
+    /// Color of the background.
+required final Color color,
+    /// Device size.
+required final Size deviceSize,
+    /// Status of the parent overlay.
+required final FeatureDiscoveryStatus status,
+    /// Directionality of content.
+required final TextDirection textDirection,
+  }) extends StatelessWidget {
   static const horizontalShift = 20.0;
   static const padding = 40.0;
-
-  const Background({
-    super.key,
-    required this.animations,
-    required this.center,
-    required this.color,
-    required this.deviceSize,
-    required this.status,
-    required this.textDirection,
-  });
 
   /// Compute the center position of the background.
   ///
@@ -161,39 +147,23 @@ class Background extends StatelessWidget {
 }
 
 /// Widget that represents the text to show in the overlay.
-class Content extends StatelessWidget {
-  /// Animations.
-  final Animations animations;
-
-  /// Overlay center position.
-  final Offset center;
-
-  /// Description.
-  final String description;
-
-  /// Device size.
-  final Size deviceSize;
-
-  /// Status of the parent overlay.
-  final FeatureDiscoveryStatus status;
-
-  /// Title.
-  final String title;
-
-  /// [TextTheme] to use for drawing the [title] and the [description].
-  final TextTheme textTheme;
-
-  const Content({
+class const Content({
     super.key,
-    required this.animations,
-    required this.center,
-    required this.description,
-    required this.deviceSize,
-    required this.status,
-    required this.title,
-    required this.textTheme,
-  });
-
+    /// Animations.
+required final Animations animations,
+    /// Overlay center position.
+required final Offset center,
+    /// Description.
+required final String description,
+    /// Device size.
+required final Size deviceSize,
+    /// Status of the parent overlay.
+required final FeatureDiscoveryStatus status,
+    /// Title.
+required final String title,
+    /// [TextTheme] to use for drawing the [title] and the [description].
+required final TextTheme textTheme,
+  }) extends StatelessWidget {
   double get opacity => animations.contentOpacity(status).value;
 
   @override
@@ -239,23 +209,15 @@ class Content extends StatelessWidget {
 }
 
 /// Widget that represents the ripple effect of [TapTarget].
-class Ripple extends StatelessWidget {
-  /// Animations.
-  final Animations animations;
-
-  /// Overlay center position.
-  final Offset center;
-
-  /// Status of the parent overlay.
-  final FeatureDiscoveryStatus status;
-
-  const Ripple({
+class const Ripple({
     super.key,
-    required this.animations,
-    required this.center,
-    required this.status,
-  });
-
+    /// Animations.
+required final Animations animations,
+    /// Overlay center position.
+required final Offset center,
+    /// Status of the parent overlay.
+required final FeatureDiscoveryStatus status,
+  }) extends StatelessWidget {
   double get radius => animations.rippleRadius(status).value;
   double get opacity => animations.rippleOpacity(status).value;
 
@@ -283,31 +245,19 @@ class Ripple extends StatelessWidget {
 }
 
 /// Wrapper widget around [child] representing the anchor of the overlay.
-class TapTarget extends StatelessWidget {
-  /// Animations.
-  final Animations animations;
-
-  /// Device size.
-  final Offset center;
-
-  /// Status of the parent overlay.
-  final FeatureDiscoveryStatus status;
-
-  /// Callback invoked when the user taps on the [TapTarget].
-  final void Function() onTap;
-
-  /// Child widget that will be promoted by the overlay.
-  final Icon child;
-
-  const TapTarget({
+class const TapTarget({
     super.key,
-    required this.animations,
-    required this.center,
-    required this.status,
-    required this.onTap,
-    required this.child,
-  });
-
+    /// Animations.
+required final Animations animations,
+    /// Device size.
+required final Offset center,
+    /// Status of the parent overlay.
+required final FeatureDiscoveryStatus status,
+    /// Callback invoked when the user taps on the [TapTarget].
+required final void Function() onTap,
+    /// Child widget that will be promoted by the overlay.
+required final Icon child,
+  }) extends StatelessWidget {
   double get radius => animations.tapTargetRadius(status).value;
   double get opacity => animations.tapTargetOpacity(status).value;
 

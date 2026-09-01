@@ -23,9 +23,7 @@ double desktopLoginScreenMainAreaWidth({required BuildContext context}) {
   );
 }
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
-
+class const LoginPage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
@@ -80,9 +78,7 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-class _ShrineLogo extends StatelessWidget {
-  const _ShrineLogo();
-
+class const _ShrineLogo() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExcludeSemantics(
@@ -106,9 +102,7 @@ class _ShrineLogo extends StatelessWidget {
   }
 }
 
-class _UsernameTextField extends StatelessWidget {
-  const _UsernameTextField();
-
+class const _UsernameTextField() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -127,9 +121,7 @@ class _UsernameTextField extends StatelessWidget {
   }
 }
 
-class _PasswordTextField extends StatelessWidget {
-  const _PasswordTextField();
-
+class const _PasswordTextField() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -148,9 +140,7 @@ class _PasswordTextField extends StatelessWidget {
   }
 }
 
-class _CancelAndNextButtons extends StatelessWidget {
-  const _CancelAndNextButtons();
-
+class const _CancelAndNextButtons() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;

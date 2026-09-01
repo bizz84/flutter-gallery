@@ -10,9 +10,7 @@ import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/finance.dart';
 import 'package:gallery/studies/rally/tabs/sidebar.dart';
 
-class BudgetsView extends StatefulWidget {
-  const BudgetsView({super.key});
-
+class const BudgetsView({super.key}) extends StatefulWidget {
   @override
   State<BudgetsView> createState() => _BudgetsViewState();
 }

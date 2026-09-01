@@ -46,16 +46,11 @@ double _paddedThumbnailHeight(BuildContext context) {
   return _thumbnailHeight(context) + _thumbnailGap;
 }
 
-class ExpandingBottomSheet extends StatefulWidget {
-  const ExpandingBottomSheet({
+class const ExpandingBottomSheet({
     super.key,
-    required this.hideController,
-    required this.expandingController,
-  });
-
-  final AnimationController hideController;
-  final AnimationController expandingController;
-
+    required final AnimationController hideController,
+    required final AnimationController expandingController,
+  }) extends StatefulWidget {
   @override
   ExpandingBottomSheetState createState() => ExpandingBottomSheetState();
 
@@ -578,9 +573,7 @@ class ExpandingBottomSheetState extends State<ExpandingBottomSheet> {
   }
 }
 
-class ProductThumbnailRow extends StatefulWidget {
-  const ProductThumbnailRow({super.key});
-
+class const ProductThumbnailRow({super.key}) extends StatefulWidget {
   @override
   State<ProductThumbnailRow> createState() => _ProductThumbnailRowState();
 }
@@ -707,9 +700,7 @@ class _ProductThumbnailRowState extends State<ProductThumbnailRow> {
   }
 }
 
-class ExtraProductsNumber extends StatelessWidget {
-  const ExtraProductsNumber({super.key});
-
+class const ExtraProductsNumber({super.key}) extends StatelessWidget {
   // Calculates the number to be displayed at the end of the row if there are
   // more than three products in the cart. This calculates overflow products,
   // including their duplicates (but not duplicates of products shown as
@@ -751,18 +742,12 @@ class ExtraProductsNumber extends StatelessWidget {
   }
 }
 
-class ProductThumbnail extends StatelessWidget {
-  const ProductThumbnail(
-    this.animation,
-    this.opacityAnimation,
-    this.product, {
+class const ProductThumbnail(
+    final Animation<double> animation,
+    final Animation<double> opacityAnimation,
+    final Product product, {
     super.key,
-  });
-
-  final Animation<double> animation;
-  final Animation<double> opacityAnimation;
-  final Product product;
-
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
@@ -794,17 +779,12 @@ class ProductThumbnail extends StatelessWidget {
 }
 
 // _ListModel manipulates an internal list and an AnimatedList
-class _ListModel {
-  _ListModel({
-    required this.listKey,
-    required this.removedItemBuilder,
+class _ListModel({
+    required final GlobalKey<AnimatedListState> listKey,
+    required final Widget Function(int, BuildContext, Animation<double>) removedItemBuilder,
     Iterable<int>? initialItems,
-  }) : _items = initialItems?.toList() ?? [];
-
-  final GlobalKey<AnimatedListState> listKey;
-  final Widget Function(int, BuildContext, Animation<double>)
-  removedItemBuilder;
-  final List<int> _items;
+  }) {
+  final List<int> _items = initialItems?.toList() ?? [];
 
   AnimatedListState? get _animatedList => listKey.currentState;
 

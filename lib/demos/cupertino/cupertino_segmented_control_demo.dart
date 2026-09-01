@@ -8,9 +8,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN cupertinoSegmentedControlDemo
 
-class CupertinoSegmentedControlDemo extends StatefulWidget {
-  const CupertinoSegmentedControlDemo({super.key});
-
+class const CupertinoSegmentedControlDemo({super.key}) extends StatefulWidget {
   @override
   State<CupertinoSegmentedControlDemo> createState() =>
       _CupertinoSegmentedControlDemoState();

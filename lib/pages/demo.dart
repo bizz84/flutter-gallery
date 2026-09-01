@@ -28,15 +28,11 @@ enum _DemoState {
   fullscreen,
 }
 
-class DemoPage extends StatefulWidget {
-  const DemoPage({
+class const DemoPage({
     super.key,
-    required this.slug,
-  });
-
+    required final String? slug,
+  }) extends StatefulWidget {
   static const String baseRoute = '/demo';
-  final String? slug;
-
   @override
   State<DemoPage> createState() => _DemoPageState();
 }
@@ -69,16 +65,11 @@ class _DemoPageState extends State<DemoPage> {
   }
 }
 
-class GalleryDemoPage extends StatefulWidget {
-  const GalleryDemoPage({
+class const GalleryDemoPage({
     super.key,
-    required this.restorationId,
-    required this.demo,
-  });
-
-  final String restorationId;
-  final GalleryDemo demo;
-
+    required final String restorationId,
+    required final GalleryDemo demo,
+  }) extends StatefulWidget {
   @override
   State<GalleryDemoPage> createState() => _GalleryDemoPageState();
 }
@@ -521,21 +512,13 @@ class _GalleryDemoPageState extends State<GalleryDemoPage>
   }
 }
 
-class _DemoSectionOptions extends StatelessWidget {
-  const _DemoSectionOptions({
-    required this.maxHeight,
-    required this.maxWidth,
-    required this.configurations,
-    required this.configIndex,
-    required this.onConfigChanged,
-  });
-
-  final double maxHeight;
-  final double maxWidth;
-  final List<GalleryDemoConfiguration> configurations;
-  final int configIndex;
-  final ValueChanged<int> onConfigChanged;
-
+class const _DemoSectionOptions({
+    required final double maxHeight,
+    required final double maxWidth,
+    required final List<GalleryDemoConfiguration> configurations,
+    required final int configIndex,
+    required final ValueChanged<int> onConfigChanged,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -593,17 +576,11 @@ class _DemoSectionOptions extends StatelessWidget {
   }
 }
 
-class _DemoSectionOptionsItem extends StatelessWidget {
-  const _DemoSectionOptionsItem({
-    required this.title,
-    required this.isSelected,
-    this.onTap,
-  });
-
-  final String title;
-  final bool isSelected;
-  final GestureTapCallback? onTap;
-
+class const _DemoSectionOptionsItem({
+    required final String title,
+    required final bool isSelected,
+    final GestureTapCallback? onTap,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -627,19 +604,12 @@ class _DemoSectionOptionsItem extends StatelessWidget {
   }
 }
 
-class _DemoSectionInfo extends StatelessWidget {
-  const _DemoSectionInfo({
-    required this.maxHeight,
-    required this.maxWidth,
-    required this.title,
-    required this.description,
-  });
-
-  final double maxHeight;
-  final double maxWidth;
-  final String title;
-  final String description;
-
+class const _DemoSectionInfo({
+    required final double maxHeight,
+    required final double maxWidth,
+    required final String title,
+    required final String description,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -684,16 +654,11 @@ class _DemoSectionInfo extends StatelessWidget {
   }
 }
 
-class DemoWrapper extends StatelessWidget {
-  const DemoWrapper({
+class const DemoWrapper({
     super.key,
-    required this.height,
-    required this.buildRoute,
-  });
-
-  final double height;
-  final WidgetBuilder buildRoute;
-
+    required final double height,
+    required final WidgetBuilder buildRoute,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -723,15 +688,10 @@ class DemoWrapper extends StatelessWidget {
   }
 }
 
-class _DemoSectionCode extends StatelessWidget {
-  const _DemoSectionCode({
-    this.maxHeight,
-    this.codeWidget,
-  });
-
-  final double? maxHeight;
-  final Widget? codeWidget;
-
+class const _DemoSectionCode({
+    final double? maxHeight,
+    final Widget? codeWidget,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
@@ -751,11 +711,7 @@ class _DemoSectionCode extends StatelessWidget {
   }
 }
 
-class CodeDisplayPage extends StatelessWidget {
-  const CodeDisplayPage(this.code, {super.key});
-
-  final CodeDisplayer code;
-
+class const CodeDisplayPage(final CodeDisplayer code, {super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);

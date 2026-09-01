@@ -4,14 +4,11 @@
 
 import 'package:flutter/material.dart';
 
-class BorderTabIndicator extends Decoration {
-  const BorderTabIndicator({
-    required this.indicatorHeight,
-    required this.textScaleFactor,
-  }) : super();
-
-  final double indicatorHeight;
-  final double textScaleFactor;
+class const BorderTabIndicator({
+    required final double indicatorHeight,
+    required final double textScaleFactor,
+  }) extends Decoration {
+  this : super();
 
   @override
   BorderPainter createBoxPainter([VoidCallback? onChanged]) {
@@ -19,18 +16,13 @@ class BorderTabIndicator extends Decoration {
   }
 }
 
-class BorderPainter extends BoxPainter {
-  BorderPainter(
-    this.decoration,
-    this.indicatorHeight,
-    this.textScaleFactor,
+class BorderPainter(
+    final BorderTabIndicator decoration,
+    final double indicatorHeight,
+    final double textScaleFactor,
     VoidCallback? onChanged,
-  ) : assert(indicatorHeight >= 0),
-      super(onChanged);
-
-  final BorderTabIndicator decoration;
-  final double indicatorHeight;
-  final double textScaleFactor;
+  ) extends BoxPainter {
+  this : assert(indicatorHeight >= 0), super(onChanged);
 
   @override
   void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {

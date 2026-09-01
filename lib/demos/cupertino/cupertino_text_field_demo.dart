@@ -7,9 +7,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN cupertinoTextFieldDemo
 
-class CupertinoTextFieldDemo extends StatelessWidget {
-  const CupertinoTextFieldDemo({super.key});
-
+class const CupertinoTextFieldDemo({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;

@@ -14,15 +14,10 @@ import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/formatters.dart';
 
 /// A colored piece of the [RallyPieChart].
-class RallyPieChartSegment {
-  const RallyPieChartSegment({
-    required this.color,
-    required this.value,
-  });
-
-  final Color color;
-  final double value;
-}
+class const RallyPieChartSegment({
+    required final Color color,
+    required final double value,
+  }) ;
 
 /// The max height and width of the [RallyPieChart].
 const pieChartMaxSize = 500.0;
@@ -69,20 +64,13 @@ List<RallyPieChartSegment> buildSegmentsFromBudgetItems(
 
 /// An animated circular pie chart to represent pieces of a whole, which can
 /// have empty space.
-class RallyPieChart extends StatefulWidget {
-  const RallyPieChart({
+class const RallyPieChart({
     super.key,
-    required this.heroLabel,
-    required this.heroAmount,
-    required this.wholeAmount,
-    required this.segments,
-  });
-
-  final String heroLabel;
-  final double heroAmount;
-  final double wholeAmount;
-  final List<RallyPieChartSegment> segments;
-
+    required final String heroLabel,
+    required final double heroAmount,
+    required final double wholeAmount,
+    required final List<RallyPieChartSegment> segments,
+  }) extends StatefulWidget {
   @override
   State<RallyPieChart> createState() => _RallyPieChartState();
 }
@@ -135,20 +123,14 @@ class _RallyPieChartState extends State<RallyPieChart>
   }
 }
 
-class _AnimatedRallyPieChart extends AnimatedWidget {
-  const _AnimatedRallyPieChart({
-    required this.animation,
-    required this.centerLabel,
-    required this.centerAmount,
-    required this.total,
-    required this.segments,
-  }) : super(listenable: animation);
-
-  final Animation<double> animation;
-  final String centerLabel;
-  final double centerAmount;
-  final double total;
-  final List<RallyPieChartSegment> segments;
+class const _AnimatedRallyPieChart({
+    required final Animation<double> animation,
+    required final String centerLabel,
+    required final double centerAmount,
+    required final double total,
+    required final List<RallyPieChartSegment> segments,
+  }) extends AnimatedWidget {
+  this : super(listenable: animation);
 
   @override
   Widget build(BuildContext context) {
@@ -201,17 +183,11 @@ class _AnimatedRallyPieChart extends AnimatedWidget {
   }
 }
 
-class _RallyPieChartOutlineDecoration extends Decoration {
-  const _RallyPieChartOutlineDecoration({
-    required this.maxFraction,
-    required this.total,
-    required this.segments,
-  });
-
-  final double maxFraction;
-  final double total;
-  final List<RallyPieChartSegment> segments;
-
+class const _RallyPieChartOutlineDecoration({
+    required final double maxFraction,
+    required final double total,
+    required final List<RallyPieChartSegment> segments,
+  }) extends Decoration {
   @override
   BoxPainter createBoxPainter([VoidCallback? onChanged]) {
     return _RallyPieChartOutlineBoxPainter(
@@ -222,16 +198,11 @@ class _RallyPieChartOutlineDecoration extends Decoration {
   }
 }
 
-class _RallyPieChartOutlineBoxPainter extends BoxPainter {
-  _RallyPieChartOutlineBoxPainter({
-    required this.maxFraction,
-    required this.wholeAmount,
-    required this.segments,
-  });
-
-  final double maxFraction;
-  final double wholeAmount;
-  final List<RallyPieChartSegment> segments;
+class _RallyPieChartOutlineBoxPainter({
+    required final double maxFraction,
+    required final double wholeAmount,
+    required final List<RallyPieChartSegment> segments,
+  }) extends BoxPainter {
   static const double wholeRadians = 2 * math.pi;
   static const double spaceRadians = wholeRadians / 180;
 

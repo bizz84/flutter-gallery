@@ -10,32 +10,19 @@ import 'package:gallery/layout/text_scale.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
-class ArticleData {
-  ArticleData({
-    required this.imageUrl,
-    required this.imageAspectRatio,
-    required this.category,
-    required this.title,
-    this.snippet,
-  });
+class ArticleData({
+    required final String imageUrl,
+    required final double imageAspectRatio,
+    required final String category,
+    required final String title,
+    final String? snippet,
+  }) ;
 
-  final String imageUrl;
-  final double imageAspectRatio;
-  final String category;
-  final String title;
-  final String? snippet;
-}
-
-class HorizontalArticlePreview extends StatelessWidget {
-  const HorizontalArticlePreview({
+class const HorizontalArticlePreview({
     super.key,
-    required this.data,
-    this.minutes,
-  });
-
-  final ArticleData data;
-  final int? minutes;
-
+    required final ArticleData data,
+    final int? minutes,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -81,20 +68,13 @@ class HorizontalArticlePreview extends StatelessWidget {
   }
 }
 
-class VerticalArticlePreview extends StatelessWidget {
-  const VerticalArticlePreview({
+class const VerticalArticlePreview({
     super.key,
-    required this.data,
-    this.width,
-    this.headlineTextStyle,
-    this.showSnippet = false,
-  });
-
-  final ArticleData data;
-  final double? width;
-  final TextStyle? headlineTextStyle;
-  final bool showSnippet;
-
+    required final ArticleData data,
+    final double? width,
+    final TextStyle? headlineTextStyle,
+    final bool showSnippet = false,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -229,9 +209,7 @@ List<Widget> buildArticlePreviewItems(BuildContext context) {
   ];
 }
 
-class HashtagBar extends StatelessWidget {
-  const HashtagBar({super.key});
-
+class const HashtagBar({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final verticalDivider = Container(
@@ -292,11 +270,7 @@ class HashtagBar extends StatelessWidget {
   }
 }
 
-class NavigationMenu extends StatelessWidget {
-  const NavigationMenu({super.key, this.isCloseable = false});
-
-  final bool isCloseable;
-
+class const NavigationMenu({super.key, final bool isCloseable = false}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
@@ -336,12 +310,7 @@ class NavigationMenu extends StatelessWidget {
   }
 }
 
-class MenuItem extends StatelessWidget {
-  const MenuItem(this.title, {super.key, this.header = false});
-
-  final String title;
-  final bool header;
-
+class const MenuItem(final String title, {super.key, final bool header = false}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -368,18 +337,12 @@ class MenuItem extends StatelessWidget {
   }
 }
 
-class StockItem extends StatelessWidget {
-  const StockItem({
+class const StockItem({
     super.key,
-    required this.ticker,
-    required this.price,
-    required this.percent,
-  });
-
-  final String ticker;
-  final String price;
-  final double percent;
-
+    required final String ticker,
+    required final String price,
+    required final double percent,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -491,16 +454,11 @@ List<Widget> buildStockItems(BuildContext context) {
   ];
 }
 
-class VideoPreview extends StatelessWidget {
-  const VideoPreview({
+class const VideoPreview({
     super.key,
-    required this.data,
-    required this.time,
-  });
-
-  final ArticleData data;
-  final String time;
-
+    required final ArticleData data,
+    required final String time,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;

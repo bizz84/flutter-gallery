@@ -8,11 +8,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN progressIndicatorsDemo
 
-class ProgressIndicatorDemo extends StatefulWidget {
-  const ProgressIndicatorDemo({super.key, required this.type});
-
-  final ProgressIndicatorDemoType type;
-
+class const ProgressIndicatorDemo({super.key, required final ProgressIndicatorDemoType type}) extends StatefulWidget {
   @override
   State<ProgressIndicatorDemo> createState() => _ProgressIndicatorDemoState();
 }

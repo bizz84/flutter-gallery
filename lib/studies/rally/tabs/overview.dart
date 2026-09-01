@@ -16,9 +16,7 @@ import 'package:gallery/studies/rally/finance.dart';
 import 'package:gallery/studies/rally/formatters.dart';
 
 /// A page that shows a status overview.
-class OverviewView extends StatefulWidget {
-  const OverviewView({super.key});
-
+class const OverviewView({super.key}) extends StatefulWidget {
   @override
   State<OverviewView> createState() => _OverviewViewState();
 }
@@ -79,11 +77,7 @@ class _OverviewViewState extends State<OverviewView> {
   }
 }
 
-class _OverviewGrid extends StatelessWidget {
-  const _OverviewGrid({required this.spacing});
-
-  final double spacing;
-
+class const _OverviewGrid({required final double spacing}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final accountDataList = DummyDataService.getAccountDataList(context);
@@ -155,11 +149,7 @@ class _OverviewGrid extends StatelessWidget {
   }
 }
 
-class _AlertsView extends StatelessWidget {
-  const _AlertsView({this.alerts});
-
-  final List<AlertData>? alerts;
-
+class const _AlertsView({final List<AlertData>? alerts}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
@@ -203,11 +193,7 @@ class _AlertsView extends StatelessWidget {
   }
 }
 
-class _Alert extends StatelessWidget {
-  const _Alert({required this.alert});
-
-  final AlertData alert;
-
+class const _Alert({required final AlertData alert}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MergeSemantics(
@@ -238,21 +224,13 @@ class _Alert extends StatelessWidget {
   }
 }
 
-class _FinancialView extends StatelessWidget {
-  const _FinancialView({
-    this.title,
-    this.total,
-    this.financialItemViews,
-    this.buttonSemanticsLabel,
-    this.order,
-  });
-
-  final String? title;
-  final String? buttonSemanticsLabel;
-  final double? total;
-  final List<FinancialEntityCategoryView>? financialItemViews;
-  final double? order;
-
+class const _FinancialView({
+    final String? title,
+    final double? total,
+    final List<FinancialEntityCategoryView>? financialItemViews,
+    final String? buttonSemanticsLabel,
+    final double? order,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

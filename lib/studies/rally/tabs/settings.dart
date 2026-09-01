@@ -8,9 +8,7 @@ import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/routes.dart' as rally_route;
 
-class SettingsView extends StatefulWidget {
-  const SettingsView({super.key});
-
+class const SettingsView({super.key}) extends StatefulWidget {
   @override
   State<SettingsView> createState() => _SettingsViewState();
 }
@@ -41,11 +39,7 @@ class _SettingsViewState extends State<SettingsView> {
   }
 }
 
-class _SettingsItem extends StatelessWidget {
-  const _SettingsItem(this.title);
-
-  final String title;
-
+class const _SettingsItem(final String title) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(

@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gallery/studies/reply/model/email_store.dart';
 import 'package:provider/provider.dart';
 
-class ComposePage extends StatelessWidget {
-  const ComposePage({super.key});
-
+class const ComposePage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var senderEmail = 'flutterfan@gmail.com';
@@ -68,11 +66,7 @@ class ComposePage extends StatelessWidget {
   }
 }
 
-class _SubjectRow extends StatefulWidget {
-  const _SubjectRow({required this.subject});
-
-  final String subject;
-
+class const _SubjectRow({required final String subject}) extends StatefulWidget {
   @override
   _SubjectRowState createState() => _SubjectRowState();
 }
@@ -143,11 +137,7 @@ class _SubjectRowState extends State<_SubjectRow> {
   }
 }
 
-class _SenderAddressRow extends StatefulWidget {
-  const _SenderAddressRow({required this.senderEmail});
-
-  final String senderEmail;
-
+class const _SenderAddressRow({required final String senderEmail}) extends StatefulWidget {
   @override
   __SenderAddressRowState createState() => __SenderAddressRowState();
 }
@@ -220,15 +210,10 @@ class __SenderAddressRowState extends State<_SenderAddressRow> {
   }
 }
 
-class _RecipientsRow extends StatelessWidget {
-  const _RecipientsRow({
-    required this.recipients,
-    required this.avatar,
-  });
-
-  final String recipients;
-  final String avatar;
-
+class const _RecipientsRow({
+    required final String recipients,
+    required final String avatar,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -269,9 +254,7 @@ class _RecipientsRow extends StatelessWidget {
   }
 }
 
-class _SectionDivider extends StatelessWidget {
-  const _SectionDivider();
-
+class const _SectionDivider() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Divider(

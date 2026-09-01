@@ -6,18 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/colors.dart';
 
-class TabWithSidebar extends StatelessWidget {
-  const TabWithSidebar({
+class const TabWithSidebar({
     super.key,
-    this.restorationId,
-    required this.mainView,
-    required this.sidebarItems,
-  });
-
-  final Widget mainView;
-  final List<Widget> sidebarItems;
-  final String? restorationId;
-
+    final String? restorationId,
+    required final Widget mainView,
+    required final List<Widget> sidebarItems,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (isDisplayDesktop(context)) {
@@ -56,16 +50,11 @@ class TabWithSidebar extends StatelessWidget {
   }
 }
 
-class SidebarItem extends StatelessWidget {
-  const SidebarItem({
+class const SidebarItem({
     super.key,
-    required this.value,
-    required this.title,
-  });
-
-  final String value;
-  final String title;
-
+    required final String value,
+    required final String title,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;

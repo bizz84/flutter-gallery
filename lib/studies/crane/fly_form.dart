@@ -8,8 +8,8 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/crane/backlayer.dart';
 import 'package:gallery/studies/crane/header_form.dart';
 
-class FlyForm extends BackLayerItem {
-  const FlyForm({super.key}) : super(index: 0);
+class const FlyForm({super.key}) extends BackLayerItem {
+  this : super(index: 0);
 
   @override
   State<FlyForm> createState() => _FlyFormState();

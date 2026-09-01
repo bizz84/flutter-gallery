@@ -10,9 +10,7 @@ import 'package:gallery/studies/starter/routes.dart' as routes;
 
 const _primaryColor = Color(0xFF6200EE);
 
-class StarterApp extends StatelessWidget {
-  const StarterApp({super.key});
-
+class const StarterApp({super.key}) extends StatelessWidget {
   static const String defaultRoute = routes.defaultRoute;
 
   @override
@@ -53,9 +51,7 @@ class StarterApp extends StatelessWidget {
   }
 }
 
-class _Home extends StatelessWidget {
-  const _Home();
-
+class const _Home() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ApplyTextOptions(

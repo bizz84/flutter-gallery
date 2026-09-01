@@ -5,9 +5,7 @@ import 'package:gallery/studies/reply/model/email_model.dart';
 import 'package:gallery/studies/reply/model/email_store.dart';
 import 'package:provider/provider.dart';
 
-class MailboxBody extends StatelessWidget {
-  const MailboxBody({super.key});
-
+class const MailboxBody({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);

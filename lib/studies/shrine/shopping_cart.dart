@@ -17,9 +17,7 @@ import 'package:scoped_model/scoped_model.dart';
 const _startColumnWidth = 60.0;
 const _ordinalSortKeyName = 'shopping_cart';
 
-class ShoppingCartPage extends StatefulWidget {
-  const ShoppingCartPage({super.key});
-
+class const ShoppingCartPage({super.key}) extends StatefulWidget {
   @override
   State<ShoppingCartPage> createState() => _ShoppingCartPageState();
 }
@@ -143,14 +141,10 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
   }
 }
 
-class ShoppingCartSummary extends StatelessWidget {
-  const ShoppingCartSummary({
+class const ShoppingCartSummary({
     super.key,
-    required this.model,
-  });
-
-  final AppStateModel model;
-
+    required final AppStateModel model,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final smallAmountStyle = Theme.of(
@@ -249,18 +243,12 @@ class ShoppingCartSummary extends StatelessWidget {
   }
 }
 
-class ShoppingCartRow extends StatelessWidget {
-  const ShoppingCartRow({
+class const ShoppingCartRow({
     super.key,
-    required this.product,
-    required this.quantity,
-    this.onPressed,
-  });
-
-  final Product product;
-  final int? quantity;
-  final VoidCallback? onPressed;
-
+    required final Product product,
+    required final int? quantity,
+    final VoidCallback? onPressed,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final formatter = NumberFormat.simpleCurrency(

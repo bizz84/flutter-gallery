@@ -9,16 +9,11 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN bottomNavigationDemo
 
-class BottomNavigationDemo extends StatefulWidget {
-  const BottomNavigationDemo({
+class const BottomNavigationDemo({
     super.key,
-    required this.restorationId,
-    required this.type,
-  });
-
-  final String restorationId;
-  final BottomNavigationDemoType type;
-
+    required final String restorationId,
+    required final BottomNavigationDemoType type,
+  }) extends StatefulWidget {
   @override
   State<BottomNavigationDemo> createState() => _BottomNavigationDemoState();
 }
@@ -132,14 +127,10 @@ class _BottomNavigationDemoState extends State<BottomNavigationDemo>
   }
 }
 
-class _NavigationDestinationView extends StatelessWidget {
-  const _NavigationDestinationView({
+class const _NavigationDestinationView({
     super.key,
-    required this.item,
-  });
-
-  final BottomNavigationBarItem item;
-
+    required final BottomNavigationBarItem item,
+  }) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(

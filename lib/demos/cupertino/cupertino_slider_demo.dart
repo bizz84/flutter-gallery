@@ -7,9 +7,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN cupertinoSliderDemo
 
-class CupertinoSliderDemo extends StatefulWidget {
-  const CupertinoSliderDemo({super.key});
-
+class const CupertinoSliderDemo({super.key}) extends StatefulWidget {
   @override
   State<CupertinoSliderDemo> createState() => _CupertinoSliderDemoState();
 }
