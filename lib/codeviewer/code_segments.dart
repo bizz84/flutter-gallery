@@ -20,8 +20,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -355,8 +354,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -1205,8 +1203,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -1417,14 +1414,12 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Since FloatingActionButtonLocation is not an enum, the index of the',
+          text: '// Since FloatingActionButtonLocation is not an enum, the index of the',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// selected FloatingActionButtonLocation is used for state restoration.',
+          text: '// selected FloatingActionButtonLocation is used for state restoration.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(style: codeStyle.keywordStyle, text: 'static'),
@@ -2346,8 +2341,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -2383,8 +2377,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -2940,8 +2933,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a            '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Adding [UniqueKey] to make sure the widget rebuilds when transitioning.',
+          text: '// Adding [UniqueKey] to make sure the widget rebuilds when transitioning.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a            key'),
         TextSpan(style: codeStyle.punctuationStyle, text: ':'),
@@ -3325,8 +3317,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -3354,8 +3345,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -3650,8 +3640,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -3679,8 +3668,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -4101,8 +4089,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -4130,8 +4117,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -4409,8 +4395,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -4438,8 +4423,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -4604,8 +4588,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -4633,8 +4616,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -4912,8 +4894,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -4941,8 +4922,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -5220,8 +5200,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -5249,8 +5228,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -5654,8 +5632,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -6039,8 +6016,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// This height will allow for all the Card\u0027s content to fit comfortably within the card.',
+          text: '// This height will allow for all the Card\u0027s content to fit comfortably within the card.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(style: codeStyle.keywordStyle, text: 'static'),
@@ -6155,8 +6131,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a                '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// This ensures that the Card\u0027s children are clipped correctly.',
+          text: '// This ensures that the Card\u0027s children are clipped correctly.',
         ),
         TextSpan(
           style: codeStyle.baseStyle,
@@ -6263,8 +6238,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// This height will allow for all the Card\u0027s content to fit comfortably within the card.',
+          text: '// This height will allow for all the Card\u0027s content to fit comfortably within the card.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(style: codeStyle.keywordStyle, text: 'static'),
@@ -6374,8 +6348,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a                '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// This ensures that the Card\u0027s children (including the ink splash) are clipped correctly.',
+          text: '// This ensures that the Card\u0027s children (including the ink splash) are clipped correctly.',
         ),
         TextSpan(
           style: codeStyle.baseStyle,
@@ -6414,8 +6387,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a                  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Generally, material cards use onSurface with 12% opacity for the pressed state.',
+          text: '// Generally, material cards use onSurface with 12% opacity for the pressed state.',
         ),
         TextSpan(
           style: codeStyle.baseStyle,
@@ -6580,8 +6552,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// This height will allow for all the Card\u0027s content to fit comfortably within the card.',
+          text: '// This height will allow for all the Card\u0027s content to fit comfortably within the card.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(style: codeStyle.keywordStyle, text: 'static'),
@@ -6714,8 +6685,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a                '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// This ensures that the Card\u0027s children (including the ink splash) are clipped correctly.',
+          text: '// This ensures that the Card\u0027s children (including the ink splash) are clipped correctly.',
         ),
         TextSpan(
           style: codeStyle.baseStyle,
@@ -6761,8 +6731,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a                  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Generally, material cards use onSurface with 12% opacity for the pressed state.',
+          text: '// Generally, material cards use onSurface with 12% opacity for the pressed state.',
         ),
         TextSpan(
           style: codeStyle.baseStyle,
@@ -6824,8 +6793,7 @@ class CodeSegments {
         ),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Generally, material cards use primary with 8% opacity for the selected state.',
+          text: '// Generally, material cards use primary with 8% opacity for the selected state.',
         ),
         TextSpan(
           style: codeStyle.baseStyle,
@@ -6833,8 +6801,7 @@ class CodeSegments {
         ),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// See: https://material.io/design/interaction/states.html#anatomy',
+          text: '// See: https://material.io/design/interaction/states.html#anatomy',
         ),
         TextSpan(
           style: codeStyle.baseStyle,
@@ -8236,8 +8203,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -8265,8 +8231,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -8364,8 +8329,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -8393,8 +8357,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -8976,8 +8939,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -9005,8 +8967,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -9596,8 +9557,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -9625,8 +9585,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -9854,8 +9813,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -10587,8 +10545,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0022#\u0024{color.value.toRadixString(16).padLeft(8, \u00270\u0027).toUpperCase()}\u0022',
+          text: '\u0022#\u0024{color.value.toRadixString(16).padLeft(8, \u00270\u0027).toUpperCase()}\u0022',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
@@ -11187,8 +11144,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -11325,8 +11281,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -13051,8 +13006,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.punctuationStyle, text: ':'),
         TextSpan(
           style: codeStyle.baseStyle,
-          text:
-              '\u000a                          _alertWithButtonsOnlyDialogRoute',
+          text: '\u000a                          _alertWithButtonsOnlyDialogRoute',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: '.'),
         TextSpan(style: codeStyle.baseStyle, text: 'present'),
@@ -13601,8 +13555,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -13899,8 +13852,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -14292,8 +14244,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -14939,8 +14890,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -15379,8 +15329,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -16371,16 +16320,14 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027\u0024{(timer.inMinutes % 60).toString().padLeft(2, \u0027',
+          text: '\u0027\u0024{(timer.inMinutes % 60).toString().padLeft(2, \u0027',
         ),
         TextSpan(style: codeStyle.numberStyle, text: '0'),
         TextSpan(style: codeStyle.stringStyle, text: '\u0027)}:\u0027'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027\u0024{(timer.inSeconds % 60).toString().padLeft(2, \u0027',
+          text: '\u0027\u0024{(timer.inSeconds % 60).toString().padLeft(2, \u0027',
         ),
         TextSpan(style: codeStyle.numberStyle, text: '0'),
         TextSpan(style: codeStyle.stringStyle, text: '\u0027)}\u0027'),
@@ -17138,8 +17085,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -17360,8 +17306,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -17949,8 +17894,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -18498,8 +18442,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -18931,8 +18874,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// TODO(guidezpl): See https://github.com/flutter/flutter/issues/106691',
+          text: '// TODO(guidezpl): See https://github.com/flutter/flutter/issues/106691',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              '),
         TextSpan(style: codeStyle.classStyle, text: 'Column'),
@@ -19163,8 +19105,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -19656,8 +19597,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -20236,8 +20176,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -20273,8 +20212,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -22456,8 +22394,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -22582,8 +22519,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '/// Takes a list of [_Dessert]s and saves the row indices of selected rows',
+          text: '/// Takes a list of [_Dessert]s and saves the row indices of selected rows',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(style: codeStyle.commentStyle, text: '/// into a [Set].'),
@@ -25985,8 +25921,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -26022,8 +25957,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -27023,8 +26957,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Adding [ValueKey] to make sure that the widget gets rebuilt when',
+          text: '// Adding [ValueKey] to make sure that the widget gets rebuilt when',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
         TextSpan(style: codeStyle.commentStyle, text: '// changing type.'),
@@ -27660,8 +27593,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a    '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Remove the MediaQuery padding because the demo is rendered inside of a',
+          text: '// Remove the MediaQuery padding because the demo is rendered inside of a',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
@@ -27837,8 +27769,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -27866,8 +27797,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -28070,8 +28000,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -28242,8 +28171,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a          '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// the \u0027HIDE FAB\u0027/\u0027SHOW FAB\u0027 button needs to be updated based',
+          text: '// the \u0027HIDE FAB\u0027/\u0027SHOW FAB\u0027 button needs to be updated based',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a          '),
         TextSpan(
@@ -28427,8 +28355,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027(\u0024{localizations.demoFadeScaleDemoInstructions})\u0027',
+          text: '\u0027(\u0024{localizations.demoFadeScaleDemoInstructions})\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ','),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              style'),
@@ -28762,8 +28689,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.punctuationStyle, text: '('),
         TextSpan(
           style: codeStyle.baseStyle,
-          text:
-              '\u000a                    _isAnimationRunningForwardsOrComplete\u000a                        ',
+          text: '\u000a                    _isAnimationRunningForwardsOrComplete\u000a                        ',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: '?'),
         TextSpan(style: codeStyle.baseStyle, text: ' localizations'),
@@ -28945,8 +28871,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -29131,8 +29056,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027(\u0024{localizations.demoFadeThroughDemoInstructions})\u0027',
+          text: '\u0027(\u0024{localizations.demoFadeThroughDemoInstructions})\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ','),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              style'),
@@ -29918,8 +29842,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.punctuationStyle, text: '('),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027\u0024{localizations!.demoMotionListTileTitle} \u0024{index + 1}\u0027',
+          text: '\u0027\u0024{localizations!.demoMotionListTileTitle} \u0024{index + 1}\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: '),'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a          subtitle'),
@@ -29965,8 +29888,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -29994,8 +29916,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -31001,8 +30922,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -31030,8 +30950,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -31278,8 +31197,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -31307,21 +31225,18 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Pressing the PopupMenuButton on the right of this item shows a menu',
+          text: '// Pressing the PopupMenuButton on the right of this item shows a menu',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// whose items have checked icons that reflect this app\u0027s state.',
+          text: '// whose items have checked icons that reflect this app\u0027s state.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(style: codeStyle.keywordStyle, text: 'class'),
@@ -32197,8 +32112,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -32226,8 +32140,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -32245,8 +32158,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// of this \u0022contextual menu\u0022 would reflect the app\u0027s state.',
+          text: '// of this \u0022contextual menu\u0022 would reflect the app\u0027s state.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(style: codeStyle.keywordStyle, text: 'class'),
@@ -32486,8 +32398,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -32515,8 +32426,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -32877,8 +32787,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -32906,21 +32815,18 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// This entire list item is a PopupMenuButton. Tapping anywhere shows',
+          text: '// This entire list item is a PopupMenuButton. Tapping anywhere shows',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// a menu whose current value is highlighted and aligned over the',
+          text: '// a menu whose current value is highlighted and aligned over the',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -33326,8 +33232,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -33353,8 +33258,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Press the Navigation Drawer button to the left of AppBar to show',
+          text: '// Press the Navigation Drawer button to the left of AppBar to show',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -33693,8 +33597,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -34288,8 +34191,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -34329,80 +34231,67 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \u0027',
+          text: '\u0027Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027tempor incididunt ut labore et dolore magna aliqua. Vulputate dignissim \u0027',
+          text: '\u0027tempor incididunt ut labore et dolore magna aliqua. Vulputate dignissim \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027suspendisse in est. Ut ornare lectus sit amet. Eget nunc lobortis mattis \u0027',
+          text: '\u0027suspendisse in est. Ut ornare lectus sit amet. Eget nunc lobortis mattis \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027aliquam faucibus purus in. Hendrerit gravida rutrum quisque non tellus \u0027',
+          text: '\u0027aliquam faucibus purus in. Hendrerit gravida rutrum quisque non tellus \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027orci ac auctor. Mattis aliquam faucibus purus in massa. Tellus rutrum \u0027',
+          text: '\u0027orci ac auctor. Mattis aliquam faucibus purus in massa. Tellus rutrum \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027tellus pellentesque eu tincidunt tortor. Nunc eget lorem dolor sed. Nulla \u0027',
+          text: '\u0027tellus pellentesque eu tincidunt tortor. Nunc eget lorem dolor sed. Nulla \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027at volutpat diam ut venenatis tellus in metus. Tellus cras adipiscing enim \u0027',
+          text: '\u0027at volutpat diam ut venenatis tellus in metus. Tellus cras adipiscing enim \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027eu turpis. Pretium fusce id velit ut tortor. Adipiscing enim eu turpis \u0027',
+          text: '\u0027eu turpis. Pretium fusce id velit ut tortor. Adipiscing enim eu turpis \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027egestas pretium. Quis varius quam quisque id. Blandit aliquam etiam erat \u0027',
+          text: '\u0027egestas pretium. Quis varius quam quisque id. Blandit aliquam etiam erat \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027velit scelerisque. In nisl nisi scelerisque eu. Semper risus in hendrerit \u0027',
+          text: '\u0027velit scelerisque. In nisl nisi scelerisque eu. Semper risus in hendrerit \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027gravida rutrum quisque. Suspendisse in est ante in nibh mauris cursus \u0027',
+          text: '\u0027gravida rutrum quisque. Suspendisse in est ante in nibh mauris cursus \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027mattis molestie. Adipiscing elit duis tristique sollicitudin nibh sit \u0027',
+          text: '\u0027mattis molestie. Adipiscing elit duis tristique sollicitudin nibh sit \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027amet commodo nulla. Pretium viverra suspendisse potenti nullam ac tortor \u0027',
+          text: '\u0027amet commodo nulla. Pretium viverra suspendisse potenti nullam ac tortor \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
@@ -34414,80 +34303,67 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \u0027',
+          text: '\u0027Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027tempor incididunt ut labore et dolore magna aliqua. Vulputate dignissim \u0027',
+          text: '\u0027tempor incididunt ut labore et dolore magna aliqua. Vulputate dignissim \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027suspendisse in est. Ut ornare lectus sit amet. Eget nunc lobortis mattis \u0027',
+          text: '\u0027suspendisse in est. Ut ornare lectus sit amet. Eget nunc lobortis mattis \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027aliquam faucibus purus in. Hendrerit gravida rutrum quisque non tellus \u0027',
+          text: '\u0027aliquam faucibus purus in. Hendrerit gravida rutrum quisque non tellus \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027orci ac auctor. Mattis aliquam faucibus purus in massa. Tellus rutrum \u0027',
+          text: '\u0027orci ac auctor. Mattis aliquam faucibus purus in massa. Tellus rutrum \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027tellus pellentesque eu tincidunt tortor. Nunc eget lorem dolor sed. Nulla \u0027',
+          text: '\u0027tellus pellentesque eu tincidunt tortor. Nunc eget lorem dolor sed. Nulla \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027at volutpat diam ut venenatis tellus in metus. Tellus cras adipiscing enim \u0027',
+          text: '\u0027at volutpat diam ut venenatis tellus in metus. Tellus cras adipiscing enim \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027eu turpis. Pretium fusce id velit ut tortor. Adipiscing enim eu turpis \u0027',
+          text: '\u0027eu turpis. Pretium fusce id velit ut tortor. Adipiscing enim eu turpis \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027egestas pretium. Quis varius quam quisque id. Blandit aliquam etiam erat \u0027',
+          text: '\u0027egestas pretium. Quis varius quam quisque id. Blandit aliquam etiam erat \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027velit scelerisque. In nisl nisi scelerisque eu. Semper risus in hendrerit \u0027',
+          text: '\u0027velit scelerisque. In nisl nisi scelerisque eu. Semper risus in hendrerit \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027gravida rutrum quisque. Suspendisse in est ante in nibh mauris cursus \u0027',
+          text: '\u0027gravida rutrum quisque. Suspendisse in est ante in nibh mauris cursus \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027mattis molestie. Adipiscing elit duis tristique sollicitudin nibh sit \u0027',
+          text: '\u0027mattis molestie. Adipiscing elit duis tristique sollicitudin nibh sit \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027amet commodo nulla. Pretium viverra suspendisse potenti nullam ac tortor \u0027',
+          text: '\u0027amet commodo nulla. Pretium viverra suspendisse potenti nullam ac tortor \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(style: codeStyle.stringStyle, text: '\u0027vitae\u0027'),
@@ -35027,8 +34903,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Adding [ValueKey] to make sure that the widget gets rebuilt when',
+          text: '// Adding [ValueKey] to make sure that the widget gets rebuilt when',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
         TextSpan(style: codeStyle.commentStyle, text: '// changing type.'),
@@ -35121,8 +34996,7 @@ class CodeSegments {
         ),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027(\u0024{localizations.demoContainerTransformDemoInstructions})\u0027',
+          text: '\u0027(\u0024{localizations.demoContainerTransformDemoInstructions})\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ','),
         TextSpan(
@@ -36053,8 +35927,7 @@ class CodeSegments {
         ),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027\u0024{localizations.demoMotionListTileTitle} \u0024{index + 1}\u0027',
+          text: '\u0027\u0024{localizations.demoMotionListTileTitle} \u0024{index + 1}\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ','),
         TextSpan(
@@ -37651,8 +37524,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -37680,8 +37552,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
@@ -38701,8 +38572,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027\u0024{DateFormat.yMMMd().format(_startDate.value)} - \u0024{DateFormat.yMMMd().format(_endDate.value)}\u0027',
+          text: '\u0027\u0024{DateFormat.yMMMd().format(_startDate.value)} - \u0024{DateFormat.yMMMd().format(_endDate.value)}\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
@@ -38855,8 +38725,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.punctuationStyle, text: ':'),
         TextSpan(
           style: codeStyle.baseStyle,
-          text:
-              '\u000a                          _restorableDatePickerRouteFuture',
+          text: '\u000a                          _restorableDatePickerRouteFuture',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: '.'),
         TextSpan(style: codeStyle.baseStyle, text: 'present'),
@@ -38879,8 +38748,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.punctuationStyle, text: ':'),
         TextSpan(
           style: codeStyle.baseStyle,
-          text:
-              '\u000a                          _restorableTimePickerRouteFuture',
+          text: '\u000a                          _restorableTimePickerRouteFuture',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: '.'),
         TextSpan(style: codeStyle.baseStyle, text: 'present'),
@@ -38903,8 +38771,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.punctuationStyle, text: ':'),
         TextSpan(
           style: codeStyle.baseStyle,
-          text:
-              '\u000a                          _restorableDateRangePickerRouteFuture',
+          text: '\u000a                          _restorableDateRangePickerRouteFuture',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: '.'),
         TextSpan(style: codeStyle.baseStyle, text: 'present'),
@@ -38986,8 +38853,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -39015,8 +38881,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -39604,8 +39469,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -39641,8 +39505,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -40339,8 +40202,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -40368,8 +40230,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -40825,8 +40686,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -40854,8 +40714,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -41191,8 +41050,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -41220,8 +41078,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -41580,8 +41437,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -41775,8 +41631,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027(\u0024{localizations.demoSharedXAxisDemoInstructions})\u0027',
+          text: '\u0027(\u0024{localizations.demoSharedXAxisDemoInstructions})\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ','),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              style'),
@@ -43164,8 +43019,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Adding [UniqueKey] to make sure the widget rebuilds when transitioning.',
+          text: '// Adding [UniqueKey] to make sure the widget rebuilds when transitioning.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    key'),
         TextSpan(style: codeStyle.punctuationStyle, text: ':'),
@@ -43217,8 +43071,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Adding [UniqueKey] to make sure the widget rebuilds when transitioning.',
+          text: '// Adding [UniqueKey] to make sure the widget rebuilds when transitioning.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    key'),
         TextSpan(style: codeStyle.punctuationStyle, text: ':'),
@@ -43368,8 +43221,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027(\u0024{localizations.demoSharedYAxisDemoInstructions})\u0027',
+          text: '\u0027(\u0024{localizations.demoSharedYAxisDemoInstructions})\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ','),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a              style'),
@@ -43659,8 +43511,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.punctuationStyle, text: '.'),
         TextSpan(
           style: codeStyle.baseStyle,
-          text:
-              'demoSharedYAxisAlphabeticalSortTitle\u000a                          ',
+          text: 'demoSharedYAxisAlphabeticalSortTitle\u000a                          ',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ':'),
         TextSpan(style: codeStyle.baseStyle, text: ' localizations'),
@@ -44017,8 +43868,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a            '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027\u0024{localizations.demoSharedYAxisAlbumTileTitle} \u0024_title\u0027',
+          text: '\u0027\u0024{localizations.demoSharedYAxisAlbumTileTitle} \u0024_title\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ','),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a          '),
@@ -44048,14 +43898,12 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a            '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027\u0024{(randomNumberGenerator.nextInt(50) + 10).toString()} \u0027',
+          text: '\u0027\u0024{(randomNumberGenerator.nextInt(50) + 10).toString()} \u0027',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a            '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027\u0024{localizations.demoSharedYAxisAlbumTileDurationUnit}\u0027',
+          text: '\u0027\u0024{localizations.demoSharedYAxisAlbumTileDurationUnit}\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ','),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a          '),
@@ -44258,8 +44106,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a                  '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027(\u0024{localizations.demoSharedZAxisDemoInstructions})\u0027',
+          text: '\u0027(\u0024{localizations.demoSharedZAxisDemoInstructions})\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ','),
         TextSpan(
@@ -45478,8 +45325,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -45515,8 +45361,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -46240,8 +46085,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -46491,8 +46335,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -46520,8 +46363,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -46688,8 +46530,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// When the tab controller\u0027s value is updated, make sure to update the',
+          text: '// When the tab controller\u0027s value is updated, make sure to update the',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
         TextSpan(
@@ -46917,8 +46758,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -46946,8 +46786,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
@@ -47110,8 +46949,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// When the tab controller\u0027s value is updated, make sure to update the',
+          text: '// When the tab controller\u0027s value is updated, make sure to update the',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
         TextSpan(
@@ -47375,8 +47213,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -48474,8 +48311,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.punctuationStyle, text: '('),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              'r\u0027^\u005c(\u005cd\u005cd\u005cd\u005c) \u005cd\u005cd\u005cd\u005c-\u005cd\u005cd\u005cd\u005cd\u0024\u0027',
+          text: 'r\u0027^\u005c(\u005cd\u005cd\u005cd\u005c) \u005cd\u005cd\u005cd\u005c-\u005cd\u005cd\u005cd\u005cd\u0024\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ');'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
@@ -49732,8 +49568,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '/// Format incoming numeric text to fit the format of (###) ###-#### ##',
+          text: '/// Format incoming numeric text to fit the format of (###) ###-#### ##',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(style: codeStyle.keywordStyle, text: 'class'),
@@ -49851,8 +49686,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.punctuationStyle, text: '('),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027\u0024{newValue.text.substring(0, usedSubstringIndex = 3)}) \u0027',
+          text: '\u0027\u0024{newValue.text.substring(0, usedSubstringIndex = 3)}) \u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ');'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
@@ -49892,8 +49726,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.punctuationStyle, text: '('),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027\u0024{newValue.text.substring(3, usedSubstringIndex = 6)}-\u0027',
+          text: '\u0027\u0024{newValue.text.substring(3, usedSubstringIndex = 6)}-\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ');'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
@@ -49930,8 +49763,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.punctuationStyle, text: '('),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027\u0024{newValue.text.substring(6, usedSubstringIndex = 10)} \u0027',
+          text: '\u0027\u0024{newValue.text.substring(6, usedSubstringIndex = 10)} \u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ');'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a      '),
@@ -50021,8 +49853,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -50283,8 +50114,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -50433,8 +50263,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// The radius of the entire board in hexagons, not including the center.',
+          text: '// The radius of the entire board in hexagons, not including the center.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(style: codeStyle.keywordStyle, text: 'static'),
@@ -50689,8 +50518,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// If the user tries to cause a transformation while the reset animation is',
+          text: '// If the user tries to cause a transformation while the reset animation is',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
@@ -50844,8 +50672,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// The scene is drawn by a CustomPaint, but user interaction is handled by',
+          text: '// The scene is drawn by a CustomPaint, but user interaction is handled by',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
@@ -50937,8 +50764,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a            '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// translate beyond that to a visibleSize that\u0027s a bit bigger.',
+          text: '// translate beyond that to a visibleSize that\u0027s a bit bigger.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a            '),
         TextSpan(style: codeStyle.keywordStyle, text: 'final'),
@@ -50966,8 +50792,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a            '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Start the first render, start the scene centered in the viewport.',
+          text: '// Start the first render, start the scene centered in the viewport.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a            '),
         TextSpan(style: codeStyle.keywordStyle, text: 'if'),
@@ -51543,8 +51368,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// CustomPainter is what is passed to CustomPaint and actually draws the scene',
+          text: '// CustomPainter is what is passed to CustomPaint and actually draws the scene',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -51666,8 +51490,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// We should repaint whenever the board changes, such as board.selected.',
+          text: '// We should repaint whenever the board changes, such as board.selected.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(style: codeStyle.keywordStyle, text: '@override'),
@@ -51695,14 +51518,12 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// The entire state of the hex board and abstraction to get information about',
+          text: '// The entire state of the hex board and abstraction to get information about',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// it. Iterable so that all BoardPoints on the board can be iterated over.',
+          text: '// it. Iterable so that all BoardPoints on the board can be iterated over.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(style: codeStyle.keywordStyle, text: '@immutable'),
@@ -51786,8 +51607,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Set up the positions for the center hexagon where the entire board is',
+          text: '// Set up the positions for the center hexagon where the entire board is',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a    '),
         TextSpan(
@@ -52164,14 +51984,12 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// For a given q axial coordinate, get the range of possible r values',
+          text: '// For a given q axial coordinate, get the range of possible r values',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// See the definition of BoardPoint for more information about hex grids and',
+          text: '// See the definition of BoardPoint for more information about hex grids and',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(style: codeStyle.commentStyle, text: '// axial coordinates.'),
@@ -52249,14 +52067,12 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Get the BoardPoint that comes after the given BoardPoint. If given null,',
+          text: '// Get the BoardPoint that comes after the given BoardPoint. If given null,',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// returns the origin BoardPoint. If given BoardPoint is the last, returns',
+          text: '// returns the origin BoardPoint. If given BoardPoint is the last, returns',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(style: codeStyle.commentStyle, text: '// null.'),
@@ -52610,14 +52426,12 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Return the q,r BoardPoint for a point in the scene, where the origin is in',
+          text: '// Return the q,r BoardPoint for a point in the scene, where the origin is in',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// the center of the board in both coordinate systems. If no BoardPoint at the',
+          text: '// the center of the board in both coordinate systems. If no BoardPoint at the',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(
@@ -52784,8 +52598,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Return a scene point for the center of a hexagon given its q,r point.',
+          text: '// Return a scene point for the center of a hexagon given its q,r point.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(style: codeStyle.classStyle, text: 'Point'),
@@ -52865,8 +52678,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a  '),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Get Vertices that can be drawn to a Canvas for the given BoardPoint.',
+          text: '// Get Vertices that can be drawn to a Canvas for the given BoardPoint.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a  '),
         TextSpan(style: codeStyle.classStyle, text: 'Vertices'),
@@ -53348,14 +53160,12 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Axial coordinates use two integers, q and r, to locate a hexagon on a grid.',
+          text: '// Axial coordinates use two integers, q and r, to locate a hexagon on a grid.',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// https://www.redblobgames.com/grids/hexagons/#coordinates-axial',
+          text: '// https://www.redblobgames.com/grids/hexagons/#coordinates-axial',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(style: codeStyle.keywordStyle, text: '@immutable'),
@@ -53583,8 +53393,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -54848,8 +54657,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -55452,8 +55260,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
           style: codeStyle.commentStyle,
-          text:
-              '// Use of this source code is governed by a BSD-style license that can be',
+          text: '// Use of this source code is governed by a BSD-style license that can be',
         ),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a'),
         TextSpan(
@@ -55481,8 +55288,7 @@ class CodeSegments {
         TextSpan(style: codeStyle.baseStyle, text: ' '),
         TextSpan(
           style: codeStyle.stringStyle,
-          text:
-              '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
+          text: '\u0027package:gallery/demos/material/material_demo_types.dart\u0027',
         ),
         TextSpan(style: codeStyle.punctuationStyle, text: ';'),
         TextSpan(style: codeStyle.baseStyle, text: '\u000a\u000a'),

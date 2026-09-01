@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 import 'dart:io';
+
 import 'package:path/path.dart' as path;
 
 bool _hasPubspec(Directory directory) {

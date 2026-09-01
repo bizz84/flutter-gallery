@@ -49,8 +49,7 @@ class _FrontLayer extends StatelessWidget {
                   cursor: SystemMouseCursors.click,
                   child: GestureDetector(
                     behavior: HitTestBehavior.opaque,
-                    excludeFromSemantics:
-                        true, // Because there is already a "Close Menu" button on screen.
+                    excludeFromSemantics: true, // Because there is already a "Close Menu" button on screen.
                     onTap: onTap,
                     child: pageTopArea,
                   ),

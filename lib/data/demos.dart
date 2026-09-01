@@ -1282,8 +1282,7 @@ class Demos {
           GalleryDemoConfiguration(
             title: localizations.demoTwoPaneFoldableLabel,
             description: localizations.demoTwoPaneFoldableDescription,
-            documentationUrl:
-                'https://pub.dev/documentation/dual_screen/latest/dual_screen/TwoPane-class.html',
+            documentationUrl: 'https://pub.dev/documentation/dual_screen/latest/dual_screen/TwoPane-class.html',
             buildRoute: (_) => DeferredWidget(
               twopane_demo.loadLibrary,
               () => twopane_demo.TwoPaneDemo(
@@ -1296,8 +1295,7 @@ class Demos {
           GalleryDemoConfiguration(
             title: localizations.demoTwoPaneTabletLabel,
             description: localizations.demoTwoPaneTabletDescription,
-            documentationUrl:
-                'https://pub.dev/documentation/dual_screen/latest/dual_screen/TwoPane-class.html',
+            documentationUrl: 'https://pub.dev/documentation/dual_screen/latest/dual_screen/TwoPane-class.html',
             buildRoute: (_) => DeferredWidget(
               twopane_demo.loadLibrary,
               () => twopane_demo.TwoPaneDemo(
@@ -1310,8 +1308,7 @@ class Demos {
           GalleryDemoConfiguration(
             title: localizations.demoTwoPaneSmallScreenLabel,
             description: localizations.demoTwoPaneSmallScreenDescription,
-            documentationUrl:
-                'https://pub.dev/documentation/dual_screen/latest/dual_screen/TwoPane-class.html',
+            documentationUrl: 'https://pub.dev/documentation/dual_screen/latest/dual_screen/TwoPane-class.html',
             buildRoute: (_) => DeferredWidget(
               twopane_demo.loadLibrary,
               () => twopane_demo.TwoPaneDemo(

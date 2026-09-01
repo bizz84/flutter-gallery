@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 import 'dart:ui';
+
 import 'package:dual_screen/dual_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';

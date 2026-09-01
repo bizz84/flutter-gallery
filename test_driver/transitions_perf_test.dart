@@ -235,9 +235,8 @@ void main([List<String> args = const <String>[]]) {
       // See _handleMessages() in transitions_perf.dart.
       _allDemos = List<String>.from(
         json.decode(
-              await driver.requestData('demoDescriptions'),
-            )
-            as List<dynamic>,
+          await driver.requestData('demoDescriptions'),
+        ) as List<dynamic>,
       );
       if (_allDemos.isEmpty) throw 'no demo names found';
 
