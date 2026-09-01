@@ -25,9 +25,9 @@ enum _ExpandableSetting {
 }
 
 class const SettingsPage({
-    super.key,
-    required final AnimationController animationController,
-  }) extends StatefulWidget {
+  super.key,
+  required final AnimationController animationController,
+}) extends StatefulWidget {
   @override
   State<SettingsPage> createState() => _SettingsPageState();
 }
@@ -370,10 +370,10 @@ class const SettingsAttribution({super.key}) extends StatelessWidget {
 }
 
 class const _SettingsLink({
-    required final String title,
-    final IconData? icon,
-    final GestureTapCallback? onTap,
-  }) extends StatelessWidget {
+  required final String title,
+  final IconData? icon,
+  final GestureTapCallback? onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -419,9 +419,9 @@ class const _SettingsLink({
 
 /// Animate the settings list items to stagger in from above.
 class const _AnimateSettingsListItems({
-    required final Animation<double> animation,
-    required final List<Widget> children,
-  }) extends StatelessWidget {
+  required final Animation<double> animation,
+  required final List<Widget> children,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const dividingPadding = 4.0;

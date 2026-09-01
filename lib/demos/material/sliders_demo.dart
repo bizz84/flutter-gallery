@@ -8,7 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:gallery/demos/material/material_demo_types.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
-class const SlidersDemo({super.key, required final SlidersDemoType type}) extends StatelessWidget {
+class const SlidersDemo({super.key, required final SlidersDemoType type})
+    extends StatelessWidget {
   String _title(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
     switch (type) {

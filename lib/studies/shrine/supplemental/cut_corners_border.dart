@@ -7,11 +7,11 @@ import 'dart:ui' show lerpDouble;
 import 'package:flutter/material.dart';
 
 class const CutCornersBorder({
-    super.borderSide,
-    super.borderRadius = const BorderRadius.all(Radius.circular(2)),
-    final double cut = 7,
-    super.gapPadding = 2,
-  }) extends OutlineInputBorder {
+  super.borderSide,
+  super.borderRadius = const BorderRadius.all(Radius.circular(2)),
+  final double cut = 7,
+  super.gapPadding = 2,
+}) extends OutlineInputBorder {
   @override
   CutCornersBorder copyWith({
     BorderSide? borderSide,

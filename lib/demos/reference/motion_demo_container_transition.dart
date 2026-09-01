@@ -312,9 +312,9 @@ class _OpenContainerTransformDemoState
 }
 
 class const _OpenContainerWrapper({
-    required final CloseContainerBuilder closedBuilder,
-    required final ContainerTransitionType transitionType,
-  }) extends StatelessWidget {
+  required final CloseContainerBuilder closedBuilder,
+  required final ContainerTransitionType transitionType,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OpenContainer<bool>(
@@ -326,7 +326,8 @@ class const _OpenContainerWrapper({
   }
 }
 
-class const _DetailsCard({required final VoidCallback openContainer}) extends StatelessWidget {
+class const _DetailsCard({required final VoidCallback openContainer})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
@@ -379,9 +380,9 @@ class const _DetailsCard({required final VoidCallback openContainer}) extends St
 }
 
 class const _SmallDetailsCard({
-    required final VoidCallback openContainer,
-    required final String subtitle,
-  }) extends StatelessWidget {
+  required final VoidCallback openContainer,
+  required final String subtitle,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -433,7 +434,8 @@ class const _SmallDetailsCard({
   }
 }
 
-class const _DetailsListTile({required final VoidCallback openContainer}) extends StatelessWidget {
+class const _DetailsListTile({required final VoidCallback openContainer})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -487,10 +489,10 @@ class const _DetailsListTile({required final VoidCallback openContainer}) extend
 }
 
 class const _InkWellOverlay({
-    required final VoidCallback openContainer,
-    required final double height,
-    required final Widget child,
-  }) extends StatelessWidget {
+  required final VoidCallback openContainer,
+  required final double height,
+  required final Widget child,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(

@@ -269,7 +269,8 @@ class _CupertinoPickerDemoState extends State<CupertinoPickerDemo> {
   }
 }
 
-class const _BottomPicker({required final Widget child}) extends StatelessWidget {
+class const _BottomPicker({required final Widget child})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -297,7 +298,8 @@ class const _BottomPicker({required final Widget child}) extends StatelessWidget
   }
 }
 
-class const _Menu({required final List<Widget> children}) extends StatelessWidget {
+class const _Menu({required final List<Widget> children})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

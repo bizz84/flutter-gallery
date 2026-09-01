@@ -5,9 +5,9 @@
 import 'package:flutter/material.dart';
 
 class const BorderTabIndicator({
-    required final double indicatorHeight,
-    required final double textScaleFactor,
-  }) extends Decoration {
+  required final double indicatorHeight,
+  required final double textScaleFactor,
+}) extends Decoration {
   this : super();
 
   @override
@@ -17,11 +17,11 @@ class const BorderTabIndicator({
 }
 
 class BorderPainter(
-    final BorderTabIndicator decoration,
-    final double indicatorHeight,
-    final double textScaleFactor,
-    VoidCallback? onChanged,
-  ) extends BoxPainter {
+  final BorderTabIndicator decoration,
+  final double indicatorHeight,
+  final double textScaleFactor,
+  VoidCallback? onChanged,
+) extends BoxPainter {
   this : assert(indicatorHeight >= 0), super(onChanged);
 
   @override

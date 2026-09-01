@@ -66,7 +66,8 @@ class const ComposePage({super.key}) extends StatelessWidget {
   }
 }
 
-class const _SubjectRow({required final String subject}) extends StatefulWidget {
+class const _SubjectRow({required final String subject})
+    extends StatefulWidget {
   @override
   _SubjectRowState createState() => _SubjectRowState();
 }
@@ -137,7 +138,8 @@ class _SubjectRowState extends State<_SubjectRow> {
   }
 }
 
-class const _SenderAddressRow({required final String senderEmail}) extends StatefulWidget {
+class const _SenderAddressRow({required final String senderEmail})
+    extends StatefulWidget {
   @override
   __SenderAddressRowState createState() => __SenderAddressRowState();
 }
@@ -211,9 +213,9 @@ class __SenderAddressRowState extends State<_SenderAddressRow> {
 }
 
 class const _RecipientsRow({
-    required final String recipients,
-    required final String avatar,
-  }) extends StatelessWidget {
+  required final String recipients,
+  required final String avatar,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(

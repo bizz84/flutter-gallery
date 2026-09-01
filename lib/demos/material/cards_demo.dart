@@ -16,14 +16,14 @@ enum CardType {
 }
 
 class const TravelDestination({
-    required final String assetName,
-    required final String assetPackage,
-    required final String title,
-    required final String description,
-    required final String city,
-    required final String location,
-    final CardType cardType = CardType.standard,
-  }) ;
+  required final String assetName,
+  required final String assetPackage,
+  required final String title,
+  required final String description,
+  required final String city,
+  required final String location,
+  final CardType cardType = CardType.standard,
+});
 
 List<TravelDestination> destinations(BuildContext context) {
   final localizations = GalleryLocalizations.of(context)!;
@@ -59,10 +59,10 @@ List<TravelDestination> destinations(BuildContext context) {
 }
 
 class const TravelDestinationItem({
-    super.key,
-    required final TravelDestination destination,
-    final ShapeBorder? shape,
-  }) extends StatelessWidget {
+  super.key,
+  required final TravelDestination destination,
+  final ShapeBorder? shape,
+}) extends StatelessWidget {
   // This height will allow for all the Card's content to fit comfortably within the card.
   static const height = 360.0;
   @override
@@ -99,10 +99,10 @@ class const TravelDestinationItem({
 }
 
 class const TappableTravelDestinationItem({
-    super.key,
-    required final TravelDestination destination,
-    final ShapeBorder? shape,
-  }) extends StatelessWidget {
+  super.key,
+  required final TravelDestination destination,
+  final ShapeBorder? shape,
+}) extends StatelessWidget {
   // This height will allow for all the Card's content to fit comfortably within the card.
   static const height = 298.0;
   @override
@@ -146,12 +146,12 @@ class const TappableTravelDestinationItem({
 }
 
 class const SelectableTravelDestinationItem({
-    super.key,
-    required final TravelDestination destination,
-    required final bool isSelected,
-    required final VoidCallback onSelected,
-    final ShapeBorder? shape,
-  }) extends StatelessWidget {
+  super.key,
+  required final TravelDestination destination,
+  required final bool isSelected,
+  required final VoidCallback onSelected,
+  final ShapeBorder? shape,
+}) extends StatelessWidget {
   // This height will allow for all the Card's content to fit comfortably within the card.
   static const height = 298.0;
 
@@ -228,9 +228,9 @@ class const SelectableTravelDestinationItem({
 }
 
 class const SectionTitle({
-    super.key,
-    required final String title,
-  }) extends StatelessWidget {
+  super.key,
+  required final String title,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -243,7 +243,10 @@ class const SectionTitle({
   }
 }
 
-class const TravelDestinationContent({super.key, required final TravelDestination destination}) extends StatelessWidget {
+class const TravelDestinationContent({
+  super.key,
+  required final TravelDestination destination,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);

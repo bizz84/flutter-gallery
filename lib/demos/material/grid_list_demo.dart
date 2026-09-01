@@ -8,7 +8,8 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN gridListsDemo
 
-class const GridListDemo({super.key, required final GridListDemoType type}) extends StatelessWidget {
+class const GridListDemo({super.key, required final GridListDemoType type})
+    extends StatelessWidget {
   List<_Photo> _photos(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
     return [
@@ -101,10 +102,10 @@ class const GridListDemo({super.key, required final GridListDemoType type}) exte
 }
 
 class _Photo({
-    required final String assetName,
-    required final String title,
-    required final String subtitle,
-  }) ;
+  required final String assetName,
+  required final String title,
+  required final String subtitle,
+});
 
 /// Allow the text size to shrink to fit in the space
 class const _GridTitleText(final String text) extends StatelessWidget {
@@ -119,9 +120,9 @@ class const _GridTitleText(final String text) extends StatelessWidget {
 }
 
 class const _GridDemoPhotoItem({
-    required final _Photo photo,
-    required final GridListDemoType tileStyle,
-  }) extends StatelessWidget {
+  required final _Photo photo,
+  required final GridListDemoType tileStyle,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Widget image = Semantics(

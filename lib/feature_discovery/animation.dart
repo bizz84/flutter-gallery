@@ -8,11 +8,11 @@ import 'package:flutter/material.dart';
 ///
 /// Values are loosely based on Material Design specs, which are minimal.
 class Animations(
-    final AnimationController openController,
-    final AnimationController tapController,
-    final AnimationController rippleController,
-    final AnimationController dismissController,
-  ) {
+  final AnimationController openController,
+  final AnimationController tapController,
+  final AnimationController rippleController,
+  final AnimationController dismissController,
+) {
   static const backgroundMaxOpacity = 0.96;
   static const backgroundTapRadius = 20.0;
   static const rippleMaxOpacity = 0.75;

@@ -14,9 +14,9 @@ import 'package:gallery/studies/rally/formatters.dart';
 import 'package:intl/intl.dart' as intl;
 
 class const RallyLineChart({
-    super.key,
-    final List<DetailedEventData> events = const <DetailedEventData>[],
-  }) extends StatelessWidget {
+  super.key,
+  final List<DetailedEventData> events = const <DetailedEventData>[],
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
@@ -36,21 +36,21 @@ class const RallyLineChart({
 }
 
 class RallyLineChartPainter({
-    // The format for the dates.
-required final intl.DateFormat dateFormat,
-    // The currency format.
-required final intl.NumberFormat numberFormat,
-    // Events to plot on the line as points.
-required final List<DetailedEventData> events,
-    // The style for the labels.
-required final TextStyle labelStyle,
-    // The text direction for the text.
-required final TextDirection? textDirection,
-    // The text scale factor for the text.
-required final double textScaleFactor,
-    // The padding around the text.
-required final EdgeInsets padding,
-  }) extends CustomPainter {
+  // The format for the dates.
+  required final intl.DateFormat dateFormat,
+  // The currency format.
+  required final intl.NumberFormat numberFormat,
+  // Events to plot on the line as points.
+  required final List<DetailedEventData> events,
+  // The style for the labels.
+  required final TextStyle labelStyle,
+  // The text direction for the text.
+  required final TextDirection? textDirection,
+  // The text scale factor for the text.
+  required final double textScaleFactor,
+  // The padding around the text.
+  required final EdgeInsets padding,
+}) extends CustomPainter {
   // Number of days to plot.
   // This is hardcoded to reflect the dummy data, but would be dynamic in a real
   // app.

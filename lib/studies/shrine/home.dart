@@ -29,11 +29,11 @@ class const ProductPage({super.key}) extends StatelessWidget {
 }
 
 class const HomePage({
-    final ExpandingBottomSheet? expandingBottomSheet,
-    final Widget? scrim,
-    final Widget? backdrop,
-    super.key,
-  }) extends StatelessWidget {
+  final ExpandingBottomSheet? expandingBottomSheet,
+  final Widget? scrim,
+  final Widget? backdrop,
+  super.key,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);

@@ -146,9 +146,9 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo>
 }
 
 class const _DemoBottomAppBar({
-    required final FloatingActionButtonLocation fabLocation,
-    final NotchedShape? shape,
-  }) extends StatelessWidget {
+  required final FloatingActionButtonLocation fabLocation,
+  final NotchedShape? shape,
+}) extends StatelessWidget {
   static final centerLocations = <FloatingActionButtonLocation>[
     FloatingActionButtonLocation.centerDocked,
     FloatingActionButtonLocation.centerFloat,

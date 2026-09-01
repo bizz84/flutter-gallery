@@ -142,9 +142,9 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
 }
 
 class const ShoppingCartSummary({
-    super.key,
-    required final AppStateModel model,
-  }) extends StatelessWidget {
+  super.key,
+  required final AppStateModel model,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final smallAmountStyle = Theme.of(
@@ -244,11 +244,11 @@ class const ShoppingCartSummary({
 }
 
 class const ShoppingCartRow({
-    super.key,
-    required final Product product,
-    required final int? quantity,
-    final VoidCallback? onPressed,
-  }) extends StatelessWidget {
+  super.key,
+  required final Product product,
+  required final int? quantity,
+  final VoidCallback? onPressed,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final formatter = NumberFormat.simpleCurrency(

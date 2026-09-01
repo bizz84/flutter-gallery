@@ -9,7 +9,8 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN dialogDemo
 
-class const DialogDemo({super.key, required final DialogDemoType type}) extends StatefulWidget {
+class const DialogDemo({super.key, required final DialogDemoType type})
+    extends StatefulWidget {
   @override
   State<DialogDemo> createState() => _DialogDemoState();
 }
@@ -238,11 +239,11 @@ class _DialogDemoState extends State<DialogDemo> with RestorationMixin {
 
 /// A MaterialPageRoute without any transition animations.
 class _NoAnimationMaterialPageRoute<T>({
-    required super.builder,
-    super.settings,
-    super.maintainState,
-    super.fullscreenDialog,
-  }) extends MaterialPageRoute<T> {
+  required super.builder,
+  super.settings,
+  super.maintainState,
+  super.fullscreenDialog,
+}) extends MaterialPageRoute<T> {
   @override
   Widget buildTransitions(
     BuildContext context,
@@ -254,7 +255,8 @@ class _NoAnimationMaterialPageRoute<T>({
   }
 }
 
-class const _DialogButton({required final String text}) extends StatelessWidget {
+class const _DialogButton({required final String text})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -267,10 +269,10 @@ class const _DialogButton({required final String text}) extends StatelessWidget 
 }
 
 class const _DialogDemoItem({
-    final IconData? icon,
-    final Color? color,
-    required final String text,
-  }) extends StatelessWidget {
+  final IconData? icon,
+  final Color? color,
+  required final String text,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SimpleDialogOption(

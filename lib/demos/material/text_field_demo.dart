@@ -34,18 +34,18 @@ class PersonData {
 }
 
 class const PasswordField({
-    super.key,
-    final String? restorationId,
-    final Key? fieldKey,
-    final String? hintText,
-    final String? labelText,
-    final String? helperText,
-    final FormFieldSetter<String>? onSaved,
-    final FormFieldValidator<String>? validator,
-    final ValueChanged<String>? onFieldSubmitted,
-    final FocusNode? focusNode,
-    final TextInputAction? textInputAction,
-  }) extends StatefulWidget {
+  super.key,
+  final String? restorationId,
+  final Key? fieldKey,
+  final String? hintText,
+  final String? labelText,
+  final String? helperText,
+  final FormFieldSetter<String>? onSaved,
+  final FormFieldValidator<String>? validator,
+  final ValueChanged<String>? onFieldSubmitted,
+  final FocusNode? focusNode,
+  final TextInputAction? textInputAction,
+}) extends StatefulWidget {
   @override
   State<PasswordField> createState() => _PasswordFieldState();
 }

@@ -9,11 +9,12 @@ import 'gallery_automator.dart';
 
 /// A recorder that measures frame building durations for the Gallery.
 class GalleryRecorder({
-    /// The name of the gallery benchmark to be run.
+  /// The name of the gallery benchmark to be run.
   ///
   /// See `common.dart` for the list of the names of all benchmarks.
-required final String benchmarkName,
-    /// A function that accepts the name of a demo and returns whether we should
+  required final String benchmarkName,
+
+  /// A function that accepts the name of a demo and returns whether we should
   /// run this demo in this benchmark.
   ///
   /// See `common.dart` for examples.
@@ -22,11 +23,14 @@ required final String benchmarkName,
   /// `progress-indicator@material`.
   /// A list of all demo names can be obtained using
   /// [allGalleryDemoDescriptions].
-final bool Function(String)? shouldRunPredicate,
-    /// Whether this benchmark only tests scrolling.
-final bool testScrollingOnly = false,
-  }) extends WidgetRecorder {
-  this : assert(testScrollingOnly || shouldRunPredicate != null), super(name: benchmarkName, useCustomWarmUp: true);
+  final bool Function(String)? shouldRunPredicate,
+
+  /// Whether this benchmark only tests scrolling.
+  final bool testScrollingOnly = false,
+}) extends WidgetRecorder {
+  this
+    : assert(testScrollingOnly || shouldRunPredicate != null),
+      super(name: benchmarkName, useCustomWarmUp: true);
 
   GalleryAutomator? _galleryAutomator;
   bool get _finished => _galleryAutomator?.finished ?? false;

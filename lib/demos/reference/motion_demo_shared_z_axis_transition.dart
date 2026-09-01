@@ -113,7 +113,8 @@ class const _SettingsPage() extends StatelessWidget {
   }
 }
 
-class const _SettingsTile(final _SettingsInfo settingData) extends StatelessWidget {
+class const _SettingsTile(final _SettingsInfo settingData)
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -128,7 +129,10 @@ class const _SettingsTile(final _SettingsInfo settingData) extends StatelessWidg
   }
 }
 
-class const _SettingsInfo(final IconData settingIcon, final String settingsLabel) ;
+class const _SettingsInfo(
+  final IconData settingIcon,
+  final String settingsLabel,
+);
 
 class const _RecipePage() extends StatelessWidget {
   @override
@@ -191,9 +195,14 @@ class const _RecipePage() extends StatelessWidget {
   }
 }
 
-class const _RecipeInfo(final String recipeName, final String recipeDescription, final String recipeImage) ;
+class const _RecipeInfo(
+  final String recipeName,
+  final String recipeDescription,
+  final String recipeImage,
+);
 
-class const _RecipeTile(final _RecipeInfo _recipe, final int _index) extends StatelessWidget {
+class const _RecipeTile(final _RecipeInfo _recipe, final int _index)
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(

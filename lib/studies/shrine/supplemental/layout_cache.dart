@@ -5,10 +5,10 @@
 import 'package:flutter/material.dart';
 
 class const LayoutCache({
-    super.key,
-    required final Map<String, List<List<int>>> layouts,
-    required super.child,
-  }) extends InheritedWidget {
+  super.key,
+  required final Map<String, List<List<int>>> layouts,
+  required super.child,
+}) extends InheritedWidget {
   static Map<String, List<List<int>>> of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<LayoutCache>()!.layouts;
   }

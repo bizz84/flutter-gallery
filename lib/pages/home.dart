@@ -33,7 +33,7 @@ const _carouselItemDesktopMargin = 8.0;
 const _carouselItemMobileMargin = 4.0;
 const _carouselItemWidth = 296.0;
 
-class ToggleSplashNotification extends Notification ;
+class ToggleSplashNotification extends Notification;
 
 class const HomePage({super.key}) extends StatelessWidget {
   @override
@@ -282,7 +282,11 @@ class _CategoriesHeader extends StatelessWidget {
   }
 }
 
-class const Header({super.key, required final Color color, required final String text}) extends StatelessWidget {
+class const Header({
+  super.key,
+  required final Color color,
+  required final String text,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -307,10 +311,10 @@ class const Header({super.key, required final Color color, required final String
 }
 
 class const _AnimatedHomePage({
-    required final String restorationId,
-    required final List<Widget> carouselCards,
-    required final bool isSplashPageAnimationFinished,
-  }) extends StatefulWidget {
+  required final String restorationId,
+  required final List<Widget> carouselCards,
+  required final bool isSplashPageAnimationFinished,
+}) extends StatefulWidget {
   @override
   _AnimatedHomePageState createState() => _AnimatedHomePageState();
 }
@@ -473,7 +477,8 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
   }
 }
 
-class const _DesktopHomeItem({required final Widget child}) extends StatelessWidget {
+class const _DesktopHomeItem({required final Widget child})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -490,10 +495,10 @@ class const _DesktopHomeItem({required final Widget child}) extends StatelessWid
 }
 
 class const _DesktopCategoryItem({
-    required final GalleryDemoCategory category,
-    required final ImageProvider asset,
-    required final List<GalleryDemo> demos,
-  }) extends StatelessWidget {
+  required final GalleryDemoCategory category,
+  required final ImageProvider asset,
+  required final List<GalleryDemo> demos,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -535,9 +540,9 @@ class const _DesktopCategoryItem({
 }
 
 class const _DesktopCategoryHeader({
-    required final GalleryDemoCategory category,
-    required final ImageProvider asset,
-  }) extends StatelessWidget {
+  required final GalleryDemoCategory category,
+  required final ImageProvider asset,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -714,10 +719,10 @@ class _AnimatedCarouselCard extends StatelessWidget {
 }
 
 class const _MobileCarousel({
-    required final AnimationController animationController,
-    final String? restorationId,
-    required final List<Widget> children,
-  }) extends StatefulWidget {
+  required final AnimationController animationController,
+  final String? restorationId,
+  required final List<Widget> children,
+}) extends StatefulWidget {
   @override
   _MobileCarouselState createState() => _MobileCarouselState();
 }
@@ -818,7 +823,10 @@ class _MobileCarouselState extends State<_MobileCarousel>
 /// This class uses a [ListView] with a custom [ScrollPhysics] to enable
 /// snapping behavior. A [PageView] was considered but does not allow for
 /// multiple pages visible without centering the first page.
-class const _DesktopCarousel({required final double height, required final List<Widget> children}) extends StatefulWidget {
+class const _DesktopCarousel({
+  required final double height,
+  required final List<Widget> children,
+}) extends StatefulWidget {
   @override
   _DesktopCarouselState createState() => _DesktopCarouselState();
 }
@@ -959,9 +967,9 @@ class const _SnappingScrollPhysics({super.parent}) extends ScrollPhysics {
 }
 
 class const _DesktopPageButton({
-    final bool isEnd = false,
-    final GestureTapCallback? onTap,
-  }) extends StatelessWidget {
+  final bool isEnd = false,
+  final GestureTapCallback? onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const buttonSize = 58.0;
@@ -1002,14 +1010,14 @@ class const _DesktopPageButton({
 }
 
 class const _CarouselCard({
-    required final GalleryDemo? demo,
-    final ImageProvider? asset,
-    final ImageProvider? assetDark,
-    final Color? assetColor,
-    final Color? assetDarkColor,
-    final Color? textColor,
-    required final String studyRoute,
-  }) extends StatelessWidget {
+  required final GalleryDemo? demo,
+  final ImageProvider? asset,
+  final ImageProvider? assetDark,
+  final Color? assetColor,
+  final Color? assetDarkColor,
+  final Color? textColor,
+  required final String studyRoute,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -1099,11 +1107,11 @@ double _carouselHeight(double scaleFactor, BuildContext context) => math.max(
 /// Wrap the studies with this to display a back button and allow the user to
 /// exit them at any time.
 class const StudyWrapper({
-    super.key,
-    required final Widget study,
-    final AlignmentDirectional alignment = AlignmentDirectional.bottomStart,
-    final bool hasBottomNavBar = false,
-  }) extends StatefulWidget {
+  super.key,
+  required final Widget study,
+  final AlignmentDirectional alignment = AlignmentDirectional.bottomStart,
+  final bool hasBottomNavBar = false,
+}) extends StatefulWidget {
   @override
   State<StudyWrapper> createState() => _StudyWrapperState();
 }
@@ -1169,4 +1177,4 @@ class _StudyWrapperState extends State<StudyWrapper> {
   }
 }
 
-class _BackButtonHeroTag ;
+class _BackButtonHeroTag;

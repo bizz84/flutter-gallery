@@ -10,9 +10,9 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 // BEGIN cupertinoAlertDemo
 
 class const CupertinoAlertDemo({
-    super.key,
-    required final AlertDemoType type,
-  }) extends StatefulWidget {
+  super.key,
+  required final AlertDemoType type,
+}) extends StatefulWidget {
   @override
   State<CupertinoAlertDemo> createState() => _CupertinoAlertDemoState();
 }
@@ -355,10 +355,10 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo>
 }
 
 class const CupertinoDessertDialog({
-    super.key,
-    final Widget? title,
-    final Widget? content,
-  }) extends StatelessWidget {
+  super.key,
+  final Widget? title,
+  final Widget? content,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;

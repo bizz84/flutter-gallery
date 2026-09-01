@@ -236,9 +236,9 @@ class _HomePageState extends State<HomePage>
 }
 
 class const _RallyTabBar({
-    required final List<Widget> tabs,
-    final TabController? tabController,
-  }) extends StatelessWidget {
+  required final List<Widget> tabs,
+  final TabController? tabController,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FocusTraversalOrder(

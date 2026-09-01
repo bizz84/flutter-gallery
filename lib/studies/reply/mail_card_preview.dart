@@ -13,14 +13,14 @@ const _assetsPackage = 'flutter_gallery_assets';
 const _iconAssetLocation = 'reply/icons';
 
 class const MailPreviewCard({
-    super.key,
-    required final int id,
-    required final Email email,
-    required final VoidCallback onDelete,
-    required final VoidCallback onStar,
-    required final bool isStarred,
-    required final bool onStarredMailbox,
-  }) extends StatelessWidget {
+  super.key,
+  required final int id,
+  required final Email email,
+  required final VoidCallback onDelete,
+  required final VoidCallback onStar,
+  required final bool isStarred,
+  required final bool onStarredMailbox,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -107,12 +107,12 @@ class const MailPreviewCard({
 }
 
 class const _DismissibleContainer({
-    required final String icon,
-    required final Color backgroundColor,
-    required final Color iconColor,
-    required final Alignment alignment,
-    required final EdgeInsetsDirectional padding,
-  }) extends StatelessWidget {
+  required final String icon,
+  required final Color backgroundColor,
+  required final Color iconColor,
+  required final Alignment alignment,
+  required final EdgeInsetsDirectional padding,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
@@ -137,12 +137,12 @@ class const _DismissibleContainer({
 }
 
 class const _MailPreview({
-    required final int id,
-    required final Email email,
-    required final VoidCallback onTap,
-    final VoidCallback? onStar,
-    final VoidCallback? onDelete,
-  }) extends StatelessWidget {
+  required final int id,
+  required final Email email,
+  required final VoidCallback onTap,
+  final VoidCallback? onStar,
+  final VoidCallback? onDelete,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -263,11 +263,11 @@ class const _PicturePreview() extends StatelessWidget {
 }
 
 class const _MailPreviewActionBar({
-    required final String avatar,
-    required final bool isStarred,
-    final VoidCallback? onStar,
-    final VoidCallback? onDelete,
-  }) extends StatelessWidget {
+  required final String avatar,
+  required final bool isStarred,
+  final VoidCallback? onStar,
+  final VoidCallback? onDelete,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;

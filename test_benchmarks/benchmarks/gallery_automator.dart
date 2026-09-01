@@ -38,18 +38,21 @@ DemoType typeOfDemo(String demo) {
 
 /// A class that automates the gallery.
 class GalleryAutomator({
-    /// The name of the current benchmark.
-required final String benchmarkName,
-    /// A function deciding whether a demo should be run in this benchmark.
-final bool Function(String)? shouldRunPredicate,
-    /// Whether we only test scrolling in this benchmark.
-final bool testScrollsOnly = false,
-    /// A function to call when warm-up is finished.
+  /// The name of the current benchmark.
+  required final String benchmarkName,
+
+  /// A function deciding whether a demo should be run in this benchmark.
+  final bool Function(String)? shouldRunPredicate,
+
+  /// Whether we only test scrolling in this benchmark.
+  final bool testScrollsOnly = false,
+
+  /// A function to call when warm-up is finished.
   ///
   /// This function is intended to ask `Recorder` to mark the warm-up phase
   /// as over.
-required final void Function() stopWarmingUpCallback,
-  }) {
+  required final void Function() stopWarmingUpCallback,
+}) {
   this : assert(testScrollsOnly || shouldRunPredicate != null);
 
   /// Whether the automation has ended.

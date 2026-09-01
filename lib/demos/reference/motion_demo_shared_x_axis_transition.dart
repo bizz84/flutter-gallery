@@ -129,8 +129,8 @@ class const _CoursePage() extends StatelessWidget {
 }
 
 class const _CourseSwitch({
-    final String? course,
-  }) extends StatefulWidget {
+  final String? course,
+}) extends StatefulWidget {
   @override
   _CourseSwitchState createState() => _CourseSwitchState();
 }

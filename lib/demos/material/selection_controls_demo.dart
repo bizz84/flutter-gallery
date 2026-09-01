@@ -6,7 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:gallery/demos/material/material_demo_types.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
-class const SelectionControlsDemo({super.key, required final SelectionControlsDemoType type}) extends StatelessWidget {
+class const SelectionControlsDemo({
+  super.key,
+  required final SelectionControlsDemoType type,
+}) extends StatelessWidget {
   String _title(BuildContext context) {
     switch (type) {
       case SelectionControlsDemoType.checkbox:

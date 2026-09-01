@@ -47,10 +47,10 @@ double _paddedThumbnailHeight(BuildContext context) {
 }
 
 class const ExpandingBottomSheet({
-    super.key,
-    required final AnimationController hideController,
-    required final AnimationController expandingController,
-  }) extends StatefulWidget {
+  super.key,
+  required final AnimationController hideController,
+  required final AnimationController expandingController,
+}) extends StatefulWidget {
   @override
   ExpandingBottomSheetState createState() => ExpandingBottomSheetState();
 
@@ -743,11 +743,11 @@ class const ExtraProductsNumber({super.key}) extends StatelessWidget {
 }
 
 class const ProductThumbnail(
-    final Animation<double> animation,
-    final Animation<double> opacityAnimation,
-    final Product product, {
-    super.key,
-  }) extends StatelessWidget {
+  final Animation<double> animation,
+  final Animation<double> opacityAnimation,
+  final Product product, {
+  super.key,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
@@ -780,10 +780,11 @@ class const ProductThumbnail(
 
 // _ListModel manipulates an internal list and an AnimatedList
 class _ListModel({
-    required final GlobalKey<AnimatedListState> listKey,
-    required final Widget Function(int, BuildContext, Animation<double>) removedItemBuilder,
-    Iterable<int>? initialItems,
-  }) {
+  required final GlobalKey<AnimatedListState> listKey,
+  required final Widget Function(int, BuildContext, Animation<double>)
+  removedItemBuilder,
+  Iterable<int>? initialItems,
+}) {
   final List<int> _items = initialItems?.toList() ?? [];
 
   AnimatedListState? get _animatedList => listKey.currentState;

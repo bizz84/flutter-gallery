@@ -19,14 +19,15 @@ import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/formatters.dart';
 
 class const FinancialEntityView({
-    super.key,
-    required final String heroLabel,
-    required final double heroAmount,
-    required final double wholeAmount,
-    /// The amounts to assign each item.
-required final List<RallyPieChartSegment> segments,
-    required final List<FinancialEntityCategoryView> financialEntityCards,
-  }) extends StatelessWidget {
+  super.key,
+  required final String heroLabel,
+  required final double heroAmount,
+  required final double wholeAmount,
+
+  /// The amounts to assign each item.
+  required final List<RallyPieChartSegment> segments,
+  required final List<FinancialEntityCategoryView> financialEntityCards,
+}) extends StatelessWidget {
   this : assert(segments.length == financialEntityCards.length);
 
   @override
@@ -75,15 +76,15 @@ required final List<RallyPieChartSegment> segments,
 
 /// A reusable widget to show balance information of a single entity as a card.
 class const FinancialEntityCategoryView({
-    super.key,
-    required final Color indicatorColor,
-    required final double indicatorFraction,
-    required final String title,
-    required final String subtitle,
-    required final String semanticsLabel,
-    required final String amount,
-    required final Widget suffix,
-  }) extends StatelessWidget {
+  super.key,
+  required final Color indicatorColor,
+  required final double indicatorFraction,
+  required final String title,
+  required final String subtitle,
+  required final String semanticsLabel,
+  required final String amount,
+  required final Widget suffix,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -183,13 +184,13 @@ class const FinancialEntityCategoryView({
 
 /// Data model for [FinancialEntityCategoryView].
 class const FinancialEntityCategoryModel(
-    final Color indicatorColor,
-    final double indicatorFraction,
-    final String title,
-    final String subtitle,
-    final double usdAmount,
-    final Widget suffix,
-  ) ;
+  final Color indicatorColor,
+  final double indicatorFraction,
+  final String title,
+  final String subtitle,
+  final double usdAmount,
+  final Widget suffix,
+);
 
 FinancialEntityCategoryView buildFinancialEntityFromAccountData(
   AccountData model,
@@ -347,10 +348,10 @@ class FinancialEntityCategoryDetailsPage({super.key}) extends StatelessWidget {
 }
 
 class const _DetailedEventCard({
-    required final String title,
-    required final DateTime date,
-    required final double amount,
-  }) extends StatelessWidget {
+  required final String title,
+  required final DateTime date,
+  required final double amount,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
@@ -409,7 +410,8 @@ class const _DetailedEventCard({
   }
 }
 
-class const _EventAmount({required final double amount}) extends StatelessWidget {
+class const _EventAmount({required final double amount})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;

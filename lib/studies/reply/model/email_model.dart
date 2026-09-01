@@ -1,25 +1,25 @@
 class Email({
-    required final int id,
-    required final String avatar,
-    final String sender = '',
-    final String time = '',
-    final String subject = '',
-    final String message = '',
-    final String recipients = '',
-    final bool containsPictures = false,
-  }) ;
+  required final int id,
+  required final String avatar,
+  final String sender = '',
+  final String time = '',
+  final String subject = '',
+  final String message = '',
+  final String recipients = '',
+  final bool containsPictures = false,
+});
 
 class InboxEmail({
-    required super.id,
-    required super.sender,
-    super.time,
-    super.subject,
-    super.message,
-    required super.avatar,
-    super.recipients,
-    super.containsPictures,
-    var InboxType inboxType = InboxType.normal,
-  }) extends Email ;
+  required super.id,
+  required super.sender,
+  super.time,
+  super.subject,
+  super.message,
+  required super.avatar,
+  super.recipients,
+  super.containsPictures,
+  var InboxType inboxType = InboxType.normal,
+}) extends Email;
 
 // The different mailbox pages that the Reply app contains.
 enum MailboxPageType {

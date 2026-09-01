@@ -12,10 +12,10 @@ import 'package:intl/intl.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class const MobileProductCard({
-    super.key,
-    final double imageAspectRatio = 33 / 49,
-    required final Product product,
-  }) extends StatelessWidget {
+  super.key,
+  final double imageAspectRatio = 33 / 49,
+  required final Product product,
+}) extends StatelessWidget {
   this : assert(imageAspectRatio > 0);
 
   static const double defaultTextBoxHeight = 65;
@@ -36,10 +36,10 @@ class const MobileProductCard({
 }
 
 class const DesktopProductCard({
-    super.key,
-    required final Product product,
-    required final double imageWidth,
-  }) extends StatelessWidget {
+  super.key,
+  required final Product product,
+  required final double imageWidth,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _buildProductCard(

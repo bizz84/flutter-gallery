@@ -28,10 +28,10 @@ void main() async {
 }
 
 class const GalleryApp({
-    super.key,
-    final String? initialRoute,
-    final bool isTestMode = false,
-  }) extends StatelessWidget {
+  super.key,
+  final String? initialRoute,
+  final bool isTestMode = false,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ModelBinding(
@@ -80,8 +80,8 @@ class const GalleryApp({
 }
 
 class const RootPage({
-    super.key,
-  }) extends StatelessWidget {
+  super.key,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ApplyTextOptions(
