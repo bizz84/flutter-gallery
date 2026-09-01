@@ -12,9 +12,7 @@ import 'package:gallery/studies/crane/routes.dart' as routes;
 import 'package:gallery/studies/crane/sleep_form.dart';
 import 'package:gallery/studies/crane/theme.dart';
 
-class CraneApp extends StatelessWidget {
-  const CraneApp({super.key});
-
+class const CraneApp({super.key}) extends StatelessWidget {
   static const String defaultRoute = routes.defaultRoute;
 
   @override
@@ -37,9 +35,7 @@ class CraneApp extends StatelessWidget {
   }
 }
 
-class _Home extends StatelessWidget {
-  const _Home();
-
+class const _Home() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ApplyTextOptions(

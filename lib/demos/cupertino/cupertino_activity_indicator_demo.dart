@@ -7,9 +7,8 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN cupertinoActivityIndicatorDemo
 
-class CupertinoProgressIndicatorDemo extends StatelessWidget {
-  const CupertinoProgressIndicatorDemo({super.key});
-
+class const CupertinoProgressIndicatorDemo({super.key})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(

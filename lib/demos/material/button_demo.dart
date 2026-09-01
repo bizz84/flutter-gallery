@@ -6,11 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:gallery/demos/material/material_demo_types.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
-class ButtonDemo extends StatelessWidget {
-  const ButtonDemo({super.key, required this.type});
-
-  final ButtonDemoType type;
-
+class const ButtonDemo({super.key, required final ButtonDemoType type})
+    extends StatelessWidget {
   String _title(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
     switch (type) {

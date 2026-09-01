@@ -7,9 +7,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN tooltipDemo
 
-class TooltipDemo extends StatelessWidget {
-  const TooltipDemo({super.key});
-
+class const TooltipDemo({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;

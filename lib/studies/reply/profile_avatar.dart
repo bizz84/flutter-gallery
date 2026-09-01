@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 
-class ProfileAvatar extends StatelessWidget {
-  const ProfileAvatar({
-    super.key,
-    required this.avatar,
-    this.radius = 20,
-  });
-
-  final String avatar;
-  final double radius;
-
+class const ProfileAvatar({
+  super.key,
+  required final String avatar,
+  final double radius = 20,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(

@@ -8,8 +8,8 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/crane/backlayer.dart';
 import 'package:gallery/studies/crane/header_form.dart';
 
-class EatForm extends BackLayerItem {
-  const EatForm({super.key}) : super(index: 2);
+class const EatForm({super.key}) extends BackLayerItem {
+  this : super(index: 2);
 
   @override
   State<EatForm> createState() => _EatFormState();

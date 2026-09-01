@@ -6,11 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:gallery/demos/material/material_demo_types.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
-class TabsDemo extends StatelessWidget {
-  const TabsDemo({super.key, required this.type});
-
-  final TabsDemoType type;
-
+class const TabsDemo({super.key, required final TabsDemoType type})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget tabs;

@@ -41,103 +41,71 @@ double sumOf<T>(List<T> list, double Function(T elt) getValue) {
 /// A data model for an account.
 ///
 /// The [primaryAmount] is the balance of the account in USD.
-class AccountData {
-  const AccountData({
-    required this.name,
-    required this.primaryAmount,
-    required this.accountNumber,
-  });
-
+class const AccountData({
   /// The display name of this entity.
-  final String name;
+  required final String name,
 
   /// The primary amount or value of this entity.
-  final double primaryAmount;
+  required final double primaryAmount,
 
   /// The full displayable account number.
-  final String accountNumber;
-}
+  required final String accountNumber,
+});
 
 /// A data model for a bill.
 ///
 /// The [primaryAmount] is the amount due in USD.
-class BillData {
-  const BillData({
-    required this.name,
-    required this.primaryAmount,
-    required this.dueDate,
-    this.isPaid = false,
-  });
-
+class const BillData({
   /// The display name of this entity.
-  final String name;
+  required final String name,
 
   /// The primary amount or value of this entity.
-  final double primaryAmount;
+  required final double primaryAmount,
 
   /// The due date of this bill.
-  final String dueDate;
+  required final String dueDate,
 
   /// If this bill has been paid.
-  final bool isPaid;
-}
+  final bool isPaid = false,
+});
 
 /// A data model for a budget.
 ///
 /// The [primaryAmount] is the budget cap in USD.
-class BudgetData {
-  const BudgetData({
-    required this.name,
-    required this.primaryAmount,
-    required this.amountUsed,
-  });
-
+class const BudgetData({
   /// The display name of this entity.
-  final String name;
+  required final String name,
 
   /// The primary amount or value of this entity.
-  final double primaryAmount;
+  required final double primaryAmount,
 
   /// Amount of the budget that is consumed or used.
-  final double amountUsed;
-}
+  required final double amountUsed,
+});
 
 /// A data model for an alert.
-class AlertData {
-  AlertData({this.message, this.iconData});
-
+class AlertData({
   /// The alert message to display.
-  final String? message;
+  final String? message,
 
   /// The icon to display with the alert.
-  final IconData? iconData;
-}
+  final IconData? iconData,
+});
 
-class DetailedEventData {
-  const DetailedEventData({
-    required this.title,
-    required this.date,
-    required this.amount,
-  });
-
-  final String title;
-  final DateTime date;
-  final double amount;
-}
+class const DetailedEventData({
+  required final String title,
+  required final DateTime date,
+  required final double amount,
+});
 
 /// A data model for data displayed to the user.
-class UserDetailData {
-  UserDetailData({
-    required this.title,
-    required this.value,
-  });
-
+class UserDetailData({
   /// The display name of this entity.
-  final String title;
+  required final String title,
 
   /// The value of this entity.
-  final String value;
-}
+  required final String value,
+});
 
 /// Class to return dummy data lists.
 ///

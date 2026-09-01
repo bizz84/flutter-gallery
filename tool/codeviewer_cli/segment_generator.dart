@@ -214,12 +214,7 @@ Map<String, String> _createSegments(String sourceDirectoryPath) {
 /// Used to store different subsegments of a code segment.
 /// The [order] of each subsegment is tagged with the code in order to be
 /// sorted in the desired order.
-class TaggedString {
-  TaggedString({required this.text, required this.order});
-
-  final String text;
-  final double order;
-}
+class TaggedString({required final String text, required final double order});
 
 void _combineSegments(Map<String, String> segments, StringBuffer output) {
   output.write(_globalPrologue);
@@ -272,10 +267,7 @@ Future<String> getCodeSegments({
   return codeSegments;
 }
 
-class PreformatterException implements Exception {
-  PreformatterException(this.cause);
-  String cause;
-}
+class PreformatterException(var String cause) implements Exception;
 
 // Function to make sure we capture all of the stdout.
 // Reference: https://github.com/dart-lang/sdk/issues/31666

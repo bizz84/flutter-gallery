@@ -10,47 +10,37 @@ import 'package:flutter/material.dart';
 /// to specify a widget as a [placeholder], instead of just an [ImageProvider].
 /// It also lets you override the [child] argument, in case you want to wrap
 /// the image with another widget, for example an [Ink.image].
-class FadeInImagePlaceholder extends StatelessWidget {
-  const FadeInImagePlaceholder({
-    super.key,
-    required this.image,
-    required this.placeholder,
-    this.child,
-    this.duration = const Duration(milliseconds: 500),
-    this.excludeFromSemantics = false,
-    this.width,
-    this.height,
-    this.fit,
-  });
+class const FadeInImagePlaceholder({
+  super.key,
 
   /// The target image that we are loading into memory.
-  final ImageProvider image;
+  required final ImageProvider image,
 
   /// Widget displayed while the target [image] is loading.
-  final Widget placeholder;
+  required final Widget placeholder,
 
   /// What widget you want to display instead of [placeholder] after [image] is
   /// loaded.
   ///
   /// Defaults to display the [image].
-  final Widget? child;
+  final Widget? child,
 
   /// The duration for how long the fade out of the placeholder and
   /// fade in of [child] should take.
-  final Duration duration;
+  final Duration duration = const Duration(milliseconds: 500),
 
   /// See [Image.excludeFromSemantics].
-  final bool excludeFromSemantics;
+  final bool excludeFromSemantics = false,
 
   /// See [Image.width].
-  final double? width;
+  final double? width,
 
   /// See [Image.height].
-  final double? height;
+  final double? height,
 
   /// See [Image.fit].
-  final BoxFit? fit;
-
+  final BoxFit? fit,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image(

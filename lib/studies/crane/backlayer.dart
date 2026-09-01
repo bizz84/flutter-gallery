@@ -4,22 +4,14 @@
 
 import 'package:flutter/material.dart';
 
-abstract class BackLayerItem extends StatefulWidget {
-  final int index;
+abstract class const BackLayerItem({super.key, required final int index})
+    extends StatefulWidget;
 
-  const BackLayerItem({super.key, required this.index});
-}
-
-class BackLayer extends StatefulWidget {
-  final List<BackLayerItem> backLayerItems;
-  final TabController tabController;
-
-  const BackLayer({
-    super.key,
-    required this.backLayerItems,
-    required this.tabController,
-  });
-
+class const BackLayer({
+  super.key,
+  required final List<BackLayerItem> backLayerItems,
+  required final TabController tabController,
+}) extends StatefulWidget {
   @override
   State<BackLayer> createState() => _BackLayerState();
 }

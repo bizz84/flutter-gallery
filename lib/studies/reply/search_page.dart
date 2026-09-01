@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gallery/studies/reply/model/email_store.dart';
 import 'package:provider/provider.dart';
 
-class SearchPage extends StatelessWidget {
-  const SearchPage({super.key});
-
+class const SearchPage({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,11 +81,8 @@ class SearchPage extends StatelessWidget {
   }
 }
 
-class _SectionHeader extends StatelessWidget {
-  const _SectionHeader({required this.title});
-
-  final String title;
-
+class const _SectionHeader({required final String title})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -104,17 +99,11 @@ class _SectionHeader extends StatelessWidget {
   }
 }
 
-class _SearchHistoryTile extends StatelessWidget {
-  const _SearchHistoryTile({
-    this.icon = Icons.access_time,
-    required this.search,
-    required this.address,
-  });
-
-  final IconData icon;
-  final String search;
-  final String address;
-
+class const _SearchHistoryTile({
+  final IconData icon = Icons.access_time,
+  required final String search,
+  required final String address,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(

@@ -363,27 +363,16 @@ enum HighlightType {
   base,
 }
 
-class _HighlightSpan {
-  _HighlightSpan(this.type, this.start, this.end);
-
-  final HighlightType type;
-  final int start;
-  final int end;
-
+class _HighlightSpan(final HighlightType type, final int start, final int end) {
   String textForSpan(String src) {
     return src.substring(start, end);
   }
 }
 
-class CodeSpan {
-  CodeSpan({
-    this.type = HighlightType.base,
-    required this.text,
-  });
-
-  final HighlightType type;
-  final String text;
-
+class CodeSpan({
+  final HighlightType type = HighlightType.base,
+  required final String text,
+}) {
   @override
   String toString() {
     return 'TextSpan('

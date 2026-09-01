@@ -6,15 +6,11 @@ import 'package:flutter/material.dart';
 
 import 'package:gallery/l10n/gallery_localizations.dart';
 
-class Category {
-  const Category({
-    required this.name,
-  });
-
+class const Category({
   // A function taking a BuildContext as input and
   // returns the internationalized name of the category.
-  final String Function(BuildContext) name;
-}
+  required final String Function(BuildContext) name,
+});
 
 Category categoryAll = Category(
   name: (context) => GalleryLocalizations.of(context)!.shrineCategoryNameAll,
@@ -41,27 +37,16 @@ List<Category> categories = [
   categoryHome,
 ];
 
-class Product {
-  const Product({
-    required this.category,
-    required this.id,
-    required this.isFeatured,
-    required this.name,
-    required this.price,
-    this.assetAspectRatio = 1,
-  });
-
-  final Category category;
-  final int id;
-  final bool isFeatured;
-  final double assetAspectRatio;
-
+class const Product({
+  required final Category category,
+  required final int id,
+  required final bool isFeatured,
   // A function taking a BuildContext as input and
   // returns the internationalized name of the product.
-  final String Function(BuildContext) name;
-
-  final int price;
-
+  required final String Function(BuildContext) name,
+  required final int price,
+  final double assetAspectRatio = 1,
+}) {
   String get assetName => '$id-0.jpg';
 
   String get assetPackage => 'shrine_images';

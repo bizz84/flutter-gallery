@@ -15,15 +15,10 @@ const Cubic _decelerateCurve = Cubic(0.23, 0.94, 0.41, 1);
 const _peakVelocityTime = 0.248210;
 const _peakVelocityProgress = 0.379146;
 
-class _FrontLayer extends StatelessWidget {
-  const _FrontLayer({
-    this.onTap,
-    required this.child,
-  });
-
-  final VoidCallback? onTap;
-  final Widget child;
-
+class const _FrontLayer({
+  final VoidCallback? onTap,
+  required final Widget child,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // An area at the top of the product page.
@@ -185,22 +180,14 @@ class _BackdropTitle extends AnimatedWidget {
 /// by default, and slides down to show the back layer, from which a user
 /// can make a selection. The user can also configure the titles for when the
 /// front or back layer is showing.
-class Backdrop extends StatefulWidget {
-  const Backdrop({
-    super.key,
-    required this.frontLayer,
-    required this.backLayer,
-    required this.frontTitle,
-    required this.backTitle,
-    required this.controller,
-  });
-
-  final Widget frontLayer;
-  final Widget backLayer;
-  final Widget frontTitle;
-  final Widget backTitle;
-  final AnimationController controller;
-
+class const Backdrop({
+  super.key,
+  required final Widget frontLayer,
+  required final Widget backLayer,
+  required final Widget frontTitle,
+  required final Widget backTitle,
+  required final AnimationController controller,
+}) extends StatefulWidget {
   @override
   State<Backdrop> createState() => _BackdropState();
 }
@@ -370,16 +357,11 @@ class _BackdropState extends State<Backdrop>
   }
 }
 
-class DesktopBackdrop extends StatelessWidget {
-  const DesktopBackdrop({
-    super.key,
-    required this.frontLayer,
-    required this.backLayer,
-  });
-
-  final Widget frontLayer;
-  final Widget backLayer;
-
+class const DesktopBackdrop({
+  super.key,
+  required final Widget frontLayer,
+  required final Widget backLayer,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(

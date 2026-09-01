@@ -16,16 +16,11 @@ enum TwoPaneDemoType {
   smallScreen,
 }
 
-class TwoPaneDemo extends StatefulWidget {
-  const TwoPaneDemo({
-    super.key,
-    required this.restorationId,
-    required this.type,
-  });
-
-  final String restorationId;
-  final TwoPaneDemoType type;
-
+class const TwoPaneDemo({
+  super.key,
+  required final String restorationId,
+  required final TwoPaneDemoType type,
+}) extends StatefulWidget {
   @override
   TwoPaneDemoState createState() => TwoPaneDemoState();
 }
@@ -83,16 +78,11 @@ class TwoPaneDemoState extends State<TwoPaneDemo> with RestorationMixin {
   }
 }
 
-class ListPane extends StatelessWidget {
-  final ValueChanged<int> onSelect;
-  final int selectedIndex;
-
-  const ListPane({
-    super.key,
-    required this.onSelect,
-    required this.selectedIndex,
-  });
-
+class const ListPane({
+  super.key,
+  required final ValueChanged<int> onSelect,
+  required final int selectedIndex,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -125,16 +115,11 @@ class ListPane extends StatelessWidget {
   }
 }
 
-class DetailsPane extends StatelessWidget {
-  final VoidCallback? onClose;
-  final int selectedIndex;
-
-  const DetailsPane({
-    super.key,
-    required this.selectedIndex,
-    this.onClose,
-  });
-
+class const DetailsPane({
+  super.key,
+  required final int selectedIndex,
+  final VoidCallback? onClose,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -163,16 +148,11 @@ class DetailsPane extends StatelessWidget {
   }
 }
 
-class SimulateScreen extends StatelessWidget {
-  const SimulateScreen({
-    super.key,
-    required this.type,
-    required this.child,
-  });
-
-  final TwoPaneDemoType type;
-  final TwoPane child;
-
+class const SimulateScreen({
+  super.key,
+  required final TwoPaneDemoType type,
+  required final TwoPane child,
+}) extends StatelessWidget {
   // An approximation of a real foldable
   static const double foldableAspectRatio = 20 / 18;
   // 16x9 candy bar phone

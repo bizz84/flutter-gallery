@@ -15,25 +15,15 @@ enum CardType {
   selectable,
 }
 
-class TravelDestination {
-  const TravelDestination({
-    required this.assetName,
-    required this.assetPackage,
-    required this.title,
-    required this.description,
-    required this.city,
-    required this.location,
-    this.cardType = CardType.standard,
-  });
-
-  final String assetName;
-  final String assetPackage;
-  final String title;
-  final String description;
-  final String city;
-  final String location;
-  final CardType cardType;
-}
+class const TravelDestination({
+  required final String assetName,
+  required final String assetPackage,
+  required final String title,
+  required final String description,
+  required final String city,
+  required final String location,
+  final CardType cardType = CardType.standard,
+});
 
 List<TravelDestination> destinations(BuildContext context) {
   final localizations = GalleryLocalizations.of(context)!;
@@ -68,18 +58,13 @@ List<TravelDestination> destinations(BuildContext context) {
   ];
 }
 
-class TravelDestinationItem extends StatelessWidget {
-  const TravelDestinationItem({
-    super.key,
-    required this.destination,
-    this.shape,
-  });
-
+class const TravelDestinationItem({
+  super.key,
+  required final TravelDestination destination,
+  final ShapeBorder? shape,
+}) extends StatelessWidget {
   // This height will allow for all the Card's content to fit comfortably within the card.
   static const height = 360.0;
-  final TravelDestination destination;
-  final ShapeBorder? shape;
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -113,18 +98,13 @@ class TravelDestinationItem extends StatelessWidget {
   }
 }
 
-class TappableTravelDestinationItem extends StatelessWidget {
-  const TappableTravelDestinationItem({
-    super.key,
-    required this.destination,
-    this.shape,
-  });
-
+class const TappableTravelDestinationItem({
+  super.key,
+  required final TravelDestination destination,
+  final ShapeBorder? shape,
+}) extends StatelessWidget {
   // This height will allow for all the Card's content to fit comfortably within the card.
   static const height = 298.0;
-  final TravelDestination destination;
-  final ShapeBorder? shape;
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -165,20 +145,13 @@ class TappableTravelDestinationItem extends StatelessWidget {
   }
 }
 
-class SelectableTravelDestinationItem extends StatelessWidget {
-  const SelectableTravelDestinationItem({
-    super.key,
-    required this.destination,
-    required this.isSelected,
-    required this.onSelected,
-    this.shape,
-  });
-
-  final TravelDestination destination;
-  final ShapeBorder? shape;
-  final bool isSelected;
-  final VoidCallback onSelected;
-
+class const SelectableTravelDestinationItem({
+  super.key,
+  required final TravelDestination destination,
+  required final bool isSelected,
+  required final VoidCallback onSelected,
+  final ShapeBorder? shape,
+}) extends StatelessWidget {
   // This height will allow for all the Card's content to fit comfortably within the card.
   static const height = 298.0;
 
@@ -254,14 +227,10 @@ class SelectableTravelDestinationItem extends StatelessWidget {
   }
 }
 
-class SectionTitle extends StatelessWidget {
-  const SectionTitle({
-    super.key,
-    required this.title,
-  });
-
-  final String title;
-
+class const SectionTitle({
+  super.key,
+  required final String title,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -274,11 +243,10 @@ class SectionTitle extends StatelessWidget {
   }
 }
 
-class TravelDestinationContent extends StatelessWidget {
-  const TravelDestinationContent({super.key, required this.destination});
-
-  final TravelDestination destination;
-
+class const TravelDestinationContent({
+  super.key,
+  required final TravelDestination destination,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -391,9 +359,7 @@ class TravelDestinationContent extends StatelessWidget {
   }
 }
 
-class CardsDemo extends StatefulWidget {
-  const CardsDemo({super.key});
-
+class const CardsDemo({super.key}) extends StatefulWidget {
   @override
   State<CardsDemo> createState() => _CardsDemoState();
 }

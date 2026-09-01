@@ -17,11 +17,8 @@ const _featureHighlightShownKey = 'feature_highlight_shown';
 ///
 /// Users wanting to use [FeatureDiscovery] need to put this controller
 /// above [FeatureDiscovery] widgets in the widget tree.
-class FeatureDiscoveryController extends StatefulWidget {
-  final Widget child;
-
-  const FeatureDiscoveryController(this.child, {super.key});
-
+class const FeatureDiscoveryController(final Widget child, {super.key})
+    extends StatefulWidget {
   static _FeatureDiscoveryControllerState _of(BuildContext context) {
     final matchResult = context
         .findAncestorStateOfType<_FeatureDiscoveryControllerState>();
@@ -83,45 +80,36 @@ class _FeatureDiscoveryControllerState
 ///
 /// This widget loosely follows the guidelines set forth in the Material Specs:
 /// https://material.io/archive/guidelines/growth-communications/feature-discovery.html.
-class FeatureDiscovery extends StatefulWidget {
+class const FeatureDiscovery({
+  super.key,
+
   /// Title to be displayed in the overlay.
-  final String title;
+  required final String title,
 
   /// Description to be displayed in the overlay.
-  final String description;
+  required final String description,
 
   /// Icon to be promoted.
-  final Icon child;
+  required final Icon child,
 
   /// Flag to indicate whether to show the overlay or not anchored to the
   /// [child].
-  final bool showOverlay;
+  required final bool showOverlay,
 
   /// Callback invoked when the user dismisses an overlay.
-  final void Function()? onDismiss;
+  final void Function()? onDismiss,
 
   /// Callback invoked when the user taps on the tap target of an overlay.
-  final void Function()? onTap;
+  final void Function()? onTap,
 
   /// Color with which to fill the outer circle.
-  final Color? color;
-
+  final Color? color,
+}) extends StatefulWidget {
   @visibleForTesting
   static const overlayKey = Key('overlay key');
 
   @visibleForTesting
   static const gestureDetectorKey = Key('gesture detector key');
-
-  const FeatureDiscovery({
-    super.key,
-    required this.title,
-    required this.description,
-    required this.child,
-    required this.showOverlay,
-    this.onDismiss,
-    this.onTap,
-    this.color,
-  });
 
   @override
   State<FeatureDiscovery> createState() => _FeatureDiscoveryState();

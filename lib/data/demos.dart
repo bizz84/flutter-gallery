@@ -63,49 +63,33 @@ enum GalleryDemoCategory {
   }
 }
 
-class GalleryDemo {
-  const GalleryDemo({
-    required this.title,
-    required this.category,
-    required this.subtitle,
-    // This parameter is required for studies.
-    this.studyId,
-    // Parameters below are required for non-study demos.
-    this.slug,
-    this.icon,
-    this.configurations = const [],
-  }) : assert(
-         category == GalleryDemoCategory.study ||
-             (slug != null && icon != null),
-       ),
-       assert(slug != null || studyId != null);
-
-  final String title;
-  final GalleryDemoCategory category;
-  final String subtitle;
-  final String? studyId;
-  final String? slug;
-  final IconData? icon;
-  final List<GalleryDemoConfiguration> configurations;
+class const GalleryDemo({
+  required final String title,
+  required final GalleryDemoCategory category,
+  required final String subtitle,
+  // This parameter is required for studies.
+  final String? studyId,
+  // Parameters below are required for non-study demos.
+  final String? slug,
+  final IconData? icon,
+  final List<GalleryDemoConfiguration> configurations = const [],
+}) {
+  this
+    : assert(
+        category == GalleryDemoCategory.study || (slug != null && icon != null),
+      ),
+      assert(slug != null || studyId != null);
 
   String get describe => '${slug ?? studyId}@${category.name}';
 }
 
-class GalleryDemoConfiguration {
-  const GalleryDemoConfiguration({
-    required this.title,
-    required this.description,
-    required this.documentationUrl,
-    required this.buildRoute,
-    required this.code,
-  });
-
-  final String title;
-  final String description;
-  final String documentationUrl;
-  final WidgetBuilder buildRoute;
-  final CodeDisplayer code;
-}
+class const GalleryDemoConfiguration({
+  required final String title,
+  required final String description,
+  required final String documentationUrl,
+  required final WidgetBuilder buildRoute,
+  required final CodeDisplayer code,
+});
 
 /// Awaits all deferred libraries for tests.
 Future<void> pumpDeferredLibraries() {

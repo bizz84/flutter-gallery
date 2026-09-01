@@ -8,9 +8,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN fadeScaleTransitionDemo
 
-class FadeScaleTransitionDemo extends StatefulWidget {
-  const FadeScaleTransitionDemo({super.key});
-
+class const FadeScaleTransitionDemo({super.key}) extends StatefulWidget {
   @override
   State<FadeScaleTransitionDemo> createState() =>
       _FadeScaleTransitionDemoState();

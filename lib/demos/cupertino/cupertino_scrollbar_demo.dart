@@ -7,9 +7,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN cupertinoScrollbarDemo
 
-class CupertinoScrollbarDemo extends StatelessWidget {
-  const CupertinoScrollbarDemo({super.key});
-
+class const CupertinoScrollbarDemo({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;

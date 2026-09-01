@@ -4,9 +4,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN sharedZAxisTransitionDemo
 
-class SharedZAxisTransitionDemo extends StatelessWidget {
-  const SharedZAxisTransitionDemo({super.key});
-
+class const SharedZAxisTransitionDemo({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Navigator(
@@ -76,9 +74,7 @@ class SharedZAxisTransitionDemo extends StatelessWidget {
   }
 }
 
-class _SettingsPage extends StatelessWidget {
-  const _SettingsPage();
-
+class const _SettingsPage() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
@@ -117,10 +113,8 @@ class _SettingsPage extends StatelessWidget {
   }
 }
 
-class _SettingsTile extends StatelessWidget {
-  const _SettingsTile(this.settingData);
-  final _SettingsInfo settingData;
-
+class const _SettingsTile(final _SettingsInfo settingData)
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -135,16 +129,12 @@ class _SettingsTile extends StatelessWidget {
   }
 }
 
-class _SettingsInfo {
-  const _SettingsInfo(this.settingIcon, this.settingsLabel);
+class const _SettingsInfo(
+  final IconData settingIcon,
+  final String settingsLabel,
+);
 
-  final IconData settingIcon;
-  final String settingsLabel;
-}
-
-class _RecipePage extends StatelessWidget {
-  const _RecipePage();
-
+class const _RecipePage() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
@@ -205,19 +195,14 @@ class _RecipePage extends StatelessWidget {
   }
 }
 
-class _RecipeInfo {
-  const _RecipeInfo(this.recipeName, this.recipeDescription, this.recipeImage);
+class const _RecipeInfo(
+  final String recipeName,
+  final String recipeDescription,
+  final String recipeImage,
+);
 
-  final String recipeName;
-  final String recipeDescription;
-  final String recipeImage;
-}
-
-class _RecipeTile extends StatelessWidget {
-  const _RecipeTile(this._recipe, this._index);
-  final _RecipeInfo _recipe;
-  final int _index;
-
+class const _RecipeTile(final _RecipeInfo _recipe, final int _index)
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(

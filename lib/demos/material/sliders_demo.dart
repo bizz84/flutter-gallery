@@ -8,11 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:gallery/demos/material/material_demo_types.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
-class SlidersDemo extends StatelessWidget {
-  const SlidersDemo({super.key, required this.type});
-
-  final SlidersDemoType type;
-
+class const SlidersDemo({super.key, required final SlidersDemoType type})
+    extends StatelessWidget {
   String _title(BuildContext context) {
     final localizations = GalleryLocalizations.of(context)!;
     switch (type) {
@@ -321,9 +318,7 @@ Path _upTriangle(double size, Offset thumbCenter) =>
 Path _leftTriangle(double size, Offset thumbCenter) =>
     _rightTriangle(size, thumbCenter, invert: true);
 
-class _CustomRangeThumbShape extends RangeSliderThumbShape {
-  const _CustomRangeThumbShape();
-
+class const _CustomRangeThumbShape() extends RangeSliderThumbShape {
   static const double _thumbSize = 4;
   static const double _disabledThumbSize = 3;
 
@@ -390,9 +385,7 @@ class _CustomRangeThumbShape extends RangeSliderThumbShape {
   }
 }
 
-class _CustomThumbShape extends SliderComponentShape {
-  const _CustomThumbShape();
-
+class const _CustomThumbShape() extends SliderComponentShape {
   static const double _thumbSize = 4;
   static const double _disabledThumbSize = 3;
 
@@ -437,9 +430,7 @@ class _CustomThumbShape extends SliderComponentShape {
   }
 }
 
-class _CustomValueIndicatorShape extends SliderComponentShape {
-  const _CustomValueIndicatorShape();
-
+class const _CustomValueIndicatorShape() extends SliderComponentShape {
   static const double _indicatorSize = 4;
   static const double _disabledIndicatorSize = 3;
   static const double _slideUpHeight = 40;

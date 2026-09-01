@@ -9,11 +9,8 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN dialogDemo
 
-class DialogDemo extends StatefulWidget {
-  const DialogDemo({super.key, required this.type});
-
-  final DialogDemoType type;
-
+class const DialogDemo({super.key, required final DialogDemoType type})
+    extends StatefulWidget {
   @override
   State<DialogDemo> createState() => _DialogDemoState();
 }
@@ -241,14 +238,12 @@ class _DialogDemoState extends State<DialogDemo> with RestorationMixin {
 }
 
 /// A MaterialPageRoute without any transition animations.
-class _NoAnimationMaterialPageRoute<T> extends MaterialPageRoute<T> {
-  _NoAnimationMaterialPageRoute({
-    required super.builder,
-    super.settings,
-    super.maintainState,
-    super.fullscreenDialog,
-  });
-
+class _NoAnimationMaterialPageRoute<T>({
+  required super.builder,
+  super.settings,
+  super.maintainState,
+  super.fullscreenDialog,
+}) extends MaterialPageRoute<T> {
   @override
   Widget buildTransitions(
     BuildContext context,
@@ -260,11 +255,8 @@ class _NoAnimationMaterialPageRoute<T> extends MaterialPageRoute<T> {
   }
 }
 
-class _DialogButton extends StatelessWidget {
-  const _DialogButton({required this.text});
-
-  final String text;
-
+class const _DialogButton({required final String text})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -276,17 +268,11 @@ class _DialogButton extends StatelessWidget {
   }
 }
 
-class _DialogDemoItem extends StatelessWidget {
-  const _DialogDemoItem({
-    this.icon,
-    this.color,
-    required this.text,
-  });
-
-  final IconData? icon;
-  final Color? color;
-  final String text;
-
+class const _DialogDemoItem({
+  final IconData? icon,
+  final Color? color,
+  required final String text,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SimpleDialogOption(

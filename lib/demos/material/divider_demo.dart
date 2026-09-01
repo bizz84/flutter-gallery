@@ -6,11 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:gallery/demos/material/material_demo_types.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
-class DividerDemo extends StatelessWidget {
-  const DividerDemo({super.key, required this.type});
-
-  final DividerDemoType type;
-
+class const DividerDemo({super.key, required final DividerDemoType type})
+    extends StatelessWidget {
   String _title(BuildContext context) {
     switch (type) {
       case DividerDemoType.horizontal:

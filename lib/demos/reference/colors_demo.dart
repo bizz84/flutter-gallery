@@ -10,21 +10,13 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 const double kColorItemHeight = 48;
 
-class _Palette {
-  _Palette({
-    required this.name,
-    required this.primary,
-    this.accent,
-    this.threshold = 900,
-  });
-
-  final String name;
-  final MaterialColor primary;
-  final MaterialAccentColor? accent;
-
+class _Palette({
+  required final String name,
+  required final MaterialColor primary,
+  final MaterialAccentColor? accent,
   // Titles for indices > threshold are white, otherwise black.
-  final int threshold;
-}
+  final int threshold = 900,
+});
 
 List<_Palette> _allPalettes(BuildContext context) {
   final localizations = GalleryLocalizations.of(context)!;
@@ -141,17 +133,11 @@ List<_Palette> _allPalettes(BuildContext context) {
   ];
 }
 
-class _ColorItem extends StatelessWidget {
-  const _ColorItem({
-    required this.index,
-    required this.color,
-    this.prefix = '',
-  });
-
-  final int index;
-  final Color color;
-  final String prefix;
-
+class const _ColorItem({
+  required final int index,
+  required final Color color,
+  final String prefix = '',
+}) extends StatelessWidget {
   String get _colorString =>
       "#${color.toARGB32().toRadixString(16).padLeft(8, '0').toUpperCase()}";
 
@@ -176,10 +162,8 @@ class _ColorItem extends StatelessWidget {
   }
 }
 
-class _PaletteTabView extends StatelessWidget {
-  const _PaletteTabView({required this.colors});
-
-  final _Palette colors;
+class const _PaletteTabView({required final _Palette colors})
+    extends StatelessWidget {
   static const primaryKeys = <int>[
     50,
     100,
@@ -228,9 +212,7 @@ class _PaletteTabView extends StatelessWidget {
   }
 }
 
-class ColorsDemo extends StatelessWidget {
-  const ColorsDemo({super.key});
-
+class const ColorsDemo({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final palettes = _allPalettes(context);

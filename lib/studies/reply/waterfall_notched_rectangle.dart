@@ -11,7 +11,7 @@ class WaterfallNotchedRectangle extends NotchedShape {
   /// Creates a [WaterfallNotchedRectangle].
   ///
   /// The same object can be used to create multiple shapes.
-  const WaterfallNotchedRectangle();
+  const new();
 
   /// Creates a [Path] that describes a rectangle with a smooth circular notch.
   ///

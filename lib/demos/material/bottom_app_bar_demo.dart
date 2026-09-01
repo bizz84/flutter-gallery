@@ -8,9 +8,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN bottomAppBarDemo
 
-class BottomAppBarDemo extends StatefulWidget {
-  const BottomAppBarDemo({super.key});
-
+class const BottomAppBarDemo({super.key}) extends StatefulWidget {
   @override
   State createState() => _BottomAppBarDemoState();
 }
@@ -147,15 +145,10 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo>
   }
 }
 
-class _DemoBottomAppBar extends StatelessWidget {
-  const _DemoBottomAppBar({
-    required this.fabLocation,
-    this.shape,
-  });
-
-  final FloatingActionButtonLocation fabLocation;
-  final NotchedShape? shape;
-
+class const _DemoBottomAppBar({
+  required final FloatingActionButtonLocation fabLocation,
+  final NotchedShape? shape,
+}) extends StatelessWidget {
   static final centerLocations = <FloatingActionButtonLocation>[
     FloatingActionButtonLocation.centerDocked,
     FloatingActionButtonLocation.centerFloat,

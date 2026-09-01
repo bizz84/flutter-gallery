@@ -13,14 +13,10 @@ import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/formatters.dart';
 import 'package:intl/intl.dart' as intl;
 
-class RallyLineChart extends StatelessWidget {
-  const RallyLineChart({
-    super.key,
-    this.events = const <DetailedEventData>[],
-  });
-
-  final List<DetailedEventData> events;
-
+class const RallyLineChart({
+  super.key,
+  final List<DetailedEventData> events = const <DetailedEventData>[],
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
@@ -39,38 +35,22 @@ class RallyLineChart extends StatelessWidget {
   }
 }
 
-class RallyLineChartPainter extends CustomPainter {
-  RallyLineChartPainter({
-    required this.dateFormat,
-    required this.numberFormat,
-    required this.events,
-    required this.labelStyle,
-    required this.textDirection,
-    required this.textScaleFactor,
-    required this.padding,
-  });
-
-  // The style for the labels.
-  final TextStyle labelStyle;
-
-  // The text direction for the text.
-  final TextDirection? textDirection;
-
-  // The text scale factor for the text.
-  final double textScaleFactor;
-
-  // The padding around the text.
-  final EdgeInsets padding;
-
+class RallyLineChartPainter({
   // The format for the dates.
-  final intl.DateFormat dateFormat;
-
+  required final intl.DateFormat dateFormat,
   // The currency format.
-  final intl.NumberFormat numberFormat;
-
+  required final intl.NumberFormat numberFormat,
   // Events to plot on the line as points.
-  final List<DetailedEventData> events;
-
+  required final List<DetailedEventData> events,
+  // The style for the labels.
+  required final TextStyle labelStyle,
+  // The text direction for the text.
+  required final TextDirection? textDirection,
+  // The text scale factor for the text.
+  required final double textScaleFactor,
+  // The padding around the text.
+  required final EdgeInsets padding,
+}) extends CustomPainter {
   // Number of days to plot.
   // This is hardcoded to reflect the dummy data, but would be dynamic in a real
   // app.

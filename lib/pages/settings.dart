@@ -24,14 +24,10 @@ enum _ExpandableSetting {
   theme,
 }
 
-class SettingsPage extends StatefulWidget {
-  const SettingsPage({
-    super.key,
-    required this.animationController,
-  });
-
-  final AnimationController animationController;
-
+class const SettingsPage({
+  super.key,
+  required final AnimationController animationController,
+}) extends StatefulWidget {
   @override
   State<SettingsPage> createState() => _SettingsPageState();
 }
@@ -316,9 +312,7 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 }
 
-class SettingsAbout extends StatelessWidget {
-  const SettingsAbout({super.key});
-
+class const SettingsAbout({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _SettingsLink(
@@ -331,9 +325,7 @@ class SettingsAbout extends StatelessWidget {
   }
 }
 
-class SettingsFeedback extends StatelessWidget {
-  const SettingsFeedback({super.key});
-
+class const SettingsFeedback({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _SettingsLink(
@@ -351,9 +343,7 @@ class SettingsFeedback extends StatelessWidget {
   }
 }
 
-class SettingsAttribution extends StatelessWidget {
-  const SettingsAttribution({super.key});
-
+class const SettingsAttribution({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
@@ -379,17 +369,11 @@ class SettingsAttribution extends StatelessWidget {
   }
 }
 
-class _SettingsLink extends StatelessWidget {
-  final String title;
-  final IconData? icon;
-  final GestureTapCallback? onTap;
-
-  const _SettingsLink({
-    required this.title,
-    this.icon,
-    this.onTap,
-  });
-
+class const _SettingsLink({
+  required final String title,
+  final IconData? icon,
+  final GestureTapCallback? onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -434,15 +418,10 @@ class _SettingsLink extends StatelessWidget {
 }
 
 /// Animate the settings list items to stagger in from above.
-class _AnimateSettingsListItems extends StatelessWidget {
-  const _AnimateSettingsListItems({
-    required this.animation,
-    required this.children,
-  });
-
-  final Animation<double> animation;
-  final List<Widget> children;
-
+class const _AnimateSettingsListItems({
+  required final Animation<double> animation,
+  required final List<Widget> children,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const dividingPadding = 4.0;

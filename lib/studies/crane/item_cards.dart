@@ -11,14 +11,10 @@ import 'package:gallery/studies/crane/model/destination.dart';
 // Width and height for thumbnail images.
 const mobileThumbnailSize = 60.0;
 
-class DestinationCard extends StatelessWidget {
-  const DestinationCard({
-    super.key,
-    required this.destination,
-  });
-
-  final Destination destination;
-
+class const DestinationCard({
+  super.key,
+  required final Destination destination,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
@@ -88,13 +84,9 @@ class DestinationCard extends StatelessWidget {
   }
 }
 
-class _DestinationImage extends StatelessWidget {
-  const _DestinationImage({
-    required this.destination,
-  });
-
-  final Destination destination;
-
+class const _DestinationImage({
+  required final Destination destination,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);

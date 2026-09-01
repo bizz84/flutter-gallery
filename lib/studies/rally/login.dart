@@ -12,9 +12,7 @@ import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/rally/app.dart';
 import 'package:gallery/studies/rally/colors.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
-
+class const LoginPage({super.key}) extends StatefulWidget {
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -56,15 +54,10 @@ class _LoginPageState extends State<LoginPage> with RestorationMixin {
   }
 }
 
-class _MainView extends StatelessWidget {
-  const _MainView({
-    this.usernameController,
-    this.passwordController,
-  });
-
-  final TextEditingController? usernameController;
-  final TextEditingController? passwordController;
-
+class const _MainView({
+  final TextEditingController? usernameController,
+  final TextEditingController? passwordController,
+}) extends StatelessWidget {
   void _login(BuildContext context) {
     Navigator.of(context).restorablePushNamed(RallyApp.homeRoute);
   }
@@ -130,9 +123,7 @@ class _MainView extends StatelessWidget {
   }
 }
 
-class _TopBar extends StatelessWidget {
-  const _TopBar();
-
+class const _TopBar() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const spacing = SizedBox(width: 30);
@@ -195,9 +186,7 @@ class _TopBar extends StatelessWidget {
   }
 }
 
-class _SmallLogo extends StatelessWidget {
-  const _SmallLogo();
-
+class const _SmallLogo() extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
@@ -215,15 +204,10 @@ class _SmallLogo extends StatelessWidget {
   }
 }
 
-class _UsernameInput extends StatelessWidget {
-  const _UsernameInput({
-    this.maxWidth,
-    this.usernameController,
-  });
-
-  final double? maxWidth;
-  final TextEditingController? usernameController;
-
+class const _UsernameInput({
+  final double? maxWidth,
+  final TextEditingController? usernameController,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -243,15 +227,10 @@ class _UsernameInput extends StatelessWidget {
   }
 }
 
-class _PasswordInput extends StatelessWidget {
-  const _PasswordInput({
-    this.maxWidth,
-    this.passwordController,
-  });
-
-  final double? maxWidth;
-  final TextEditingController? passwordController;
-
+class const _PasswordInput({
+  final double? maxWidth,
+  final TextEditingController? passwordController,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -270,13 +249,9 @@ class _PasswordInput extends StatelessWidget {
   }
 }
 
-class _ThumbButton extends StatefulWidget {
-  const _ThumbButton({
-    required this.onTap,
-  });
-
-  final VoidCallback onTap;
-
+class const _ThumbButton({
+  required final VoidCallback onTap,
+}) extends StatefulWidget {
   @override
   _ThumbButtonState createState() => _ThumbButtonState();
 }
@@ -338,15 +313,10 @@ class _ThumbButtonState extends State<_ThumbButton> {
   }
 }
 
-class _LoginButton extends StatelessWidget {
-  const _LoginButton({
-    required this.onTap,
-    this.maxWidth,
-  });
-
-  final double? maxWidth;
-  final VoidCallback onTap;
-
+class const _LoginButton({
+  required final VoidCallback onTap,
+  final double? maxWidth,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -374,11 +344,8 @@ class _LoginButton extends StatelessWidget {
   }
 }
 
-class _BorderButton extends StatelessWidget {
-  const _BorderButton({required this.text});
-
-  final String text;
-
+class const _BorderButton({required final String text})
+    extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
@@ -398,12 +365,10 @@ class _BorderButton extends StatelessWidget {
   }
 }
 
-class _FilledButton extends StatelessWidget {
-  const _FilledButton({required this.text, required this.onTap});
-
-  final String text;
-  final VoidCallback onTap;
-
+class const _FilledButton({
+  required final String text,
+  required final VoidCallback onTap,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(

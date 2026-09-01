@@ -8,9 +8,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 
 // BEGIN cupertinoContextMenuDemo
 
-class CupertinoContextMenuDemo extends StatelessWidget {
-  const CupertinoContextMenuDemo({super.key});
-
+class const CupertinoContextMenuDemo({super.key}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final galleryLocalizations = GalleryLocalizations.of(context)!;

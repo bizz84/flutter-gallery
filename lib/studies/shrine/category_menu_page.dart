@@ -21,14 +21,10 @@ double desktopCategoryMenuPageWidth({
   return 232 * reducedTextScale(context);
 }
 
-class CategoryMenuPage extends StatelessWidget {
-  const CategoryMenuPage({
-    super.key,
-    this.onCategoryTap,
-  });
-
-  final VoidCallback? onCategoryTap;
-
+class const CategoryMenuPage({
+  super.key,
+  final VoidCallback? onCategoryTap,
+}) extends StatelessWidget {
   Widget _buttonText(String caption, TextStyle style) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16),

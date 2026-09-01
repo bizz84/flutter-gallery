@@ -11,15 +11,12 @@ import 'package:gallery/studies/shrine/model/product.dart';
 import 'package:intl/intl.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-class MobileProductCard extends StatelessWidget {
-  const MobileProductCard({
-    super.key,
-    this.imageAspectRatio = 33 / 49,
-    required this.product,
-  }) : assert(imageAspectRatio > 0);
-
-  final double imageAspectRatio;
-  final Product product;
+class const MobileProductCard({
+  super.key,
+  final double imageAspectRatio = 33 / 49,
+  required final Product product,
+}) extends StatelessWidget {
+  this : assert(imageAspectRatio > 0);
 
   static const double defaultTextBoxHeight = 65;
 
@@ -38,16 +35,11 @@ class MobileProductCard extends StatelessWidget {
   }
 }
 
-class DesktopProductCard extends StatelessWidget {
-  const DesktopProductCard({
-    super.key,
-    required this.product,
-    required this.imageWidth,
-  });
-
-  final Product product;
-  final double imageWidth;
-
+class const DesktopProductCard({
+  super.key,
+  required final Product product,
+  required final double imageWidth,
+}) extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _buildProductCard(
